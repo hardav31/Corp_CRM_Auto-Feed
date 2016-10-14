@@ -14,9 +14,11 @@ namespace BLL.Convertors
             throw new NotImplementedException();
         }
 
-        public string Serialize<Entities>(Entities item)
+        public string Serialize<T>(IEnumerable<T> item)
         {
             throw new NotImplementedException();
         }
+
+       
     }
 }

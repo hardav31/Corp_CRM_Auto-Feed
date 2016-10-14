@@ -9,7 +9,7 @@ namespace BLL.Interfaces
     interface IConvertor
     {
 
-        string Serialize<T>(T item);
+        string Serialize<T>(IEnumerable<T> item);
         T DeSerialize<T>(string data);
 
     }
