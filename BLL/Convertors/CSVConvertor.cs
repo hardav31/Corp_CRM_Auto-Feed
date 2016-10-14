@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -11,6 +12,11 @@ namespace BLL.Convertors
 {
     class CSVConvertor : IConvertor
     {
+        public string Filepath { get; set; }
+        public CSVConvertor(string filepath)
+        {
+            Filepath = filepath;
+        }
         public T DeSerialize<T>(string data)
         {
             throw new NotImplementedException();
@@ -18,12 +24,6 @@ namespace BLL.Convertors
 
         public string Serialize<T>(IEnumerable<T> objectlist)
         {
-            //StringBuilder csvData = new StringBuilder();
-            //foreach (var obj in item)
-            //{
-            //    csvData.AppendLine(ToCsvFields(separator, obj));
-            //}
-            //return csvData.ToString();
             Type t = typeof(T);
             PropertyInfo[] properties = t.GetProperties();
 
@@ -58,7 +58,7 @@ namespace BLL.Convertors
                 {
                     line.Append(separator);
                 }
-                if (value == null)
+                if (value == null || value == "")
                 {
                     line.Append("NULL");
                 }
@@ -71,6 +71,13 @@ namespace BLL.Convertors
 
             return line.ToString();
 
+        }
+        public void WriteInCSV<T>(IEnumerable<T> modellist)
+        {
+            using (StreamWriter sw = new StreamWriter(new FileStream(Filepath, FileMode.Create)))
+            {
+                sw.WriteLine(this.Serialize(modellist));
+            }
         }
 
         //private string ToCsv(string separator, IEnumerable<object> objectList)

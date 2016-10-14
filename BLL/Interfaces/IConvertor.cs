@@ -11,6 +11,6 @@ namespace BLL.Interfaces
 
         string Serialize<T>(IEnumerable<T> item);
         T DeSerialize<T>(string data);
-
+        
     }
 }
