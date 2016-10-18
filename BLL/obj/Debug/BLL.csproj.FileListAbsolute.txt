@@ -1,2 +1,0 @@
-C:\Users\user\AppData\Roaming\Skype\My Skype Received Files\Team1Project\Team1Project\BLL\bin\Debug\BLL.exe.config
-C:\Users\user\Desktop\Team1Project\BLL\bin\Debug\BLL.exe.config
