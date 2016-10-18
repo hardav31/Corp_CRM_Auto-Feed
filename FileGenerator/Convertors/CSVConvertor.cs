@@ -1,13 +1,10 @@
-﻿using FileGenerator.DataModel;
-using FileGenerator.Interfaces;
+﻿using FileGenerator.Interfaces;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FileGenerator.Convertors
@@ -97,26 +94,26 @@ namespace FileGenerator.Convertors
             }
         }
 
-        public List<Entities> CreateObject(int count)
-        {
-            Entities model;
-            List<Entities> modellist = new List<Entities>();
-            for (int i = 0; i < count; i++)
-            {
-                model = new Entities();
-                model.MemberId = i.ToString();
-                model.MemberName = "Member" + (10 + i).ToString();
-                model.MemberSurname = "Surname" + (10 * i).ToString();
-                model.ProjectId = (i * 10).ToString();
-                model.ProjectDescription = "Test01";
-                model.ProjectDueDate = "";
-                model.TeamId = (100 + i).ToString();
-                model.TeamName = "team" + (100 + i).ToString();
-                model.ProjectName = "Project" + i.ToString();
-                model.ProjectCreatedDate = DateTime.Now.ToString();
-                modellist.Add(model);
-            }
-            return modellist;
-        }
+        //public List<Entities> CreateObject(int count)
+        //{
+        //    Entities model;
+        //    List<Entities> modellist = new List<Entities>();
+        //    for (int i = 0; i < count; i++)
+        //    {
+        //        model = new Entities();
+        //        model.MemberId = i.ToString();
+        //        model.MemberName = "Member" + (10 + i).ToString();
+        //        model.MemberSurname = "Surname" + (10 * i).ToString();
+        //        model.ProjectId = (i * 10).ToString();
+        //        model.ProjectDescription = "Test01";
+        //        model.ProjectDueDate = "";
+        //        model.TeamId = (100 + i).ToString();
+        //        model.TeamName = "team" + (100 + i).ToString();
+        //        model.ProjectName = "Project" + i.ToString();
+        //        model.ProjectCreatedDate = DateTime.Now.ToString();
+        //        modellist.Add(model);
+        //    }
+        //    return modellist;
+        //}
     }
 }
