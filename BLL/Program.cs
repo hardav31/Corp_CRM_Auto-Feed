@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
