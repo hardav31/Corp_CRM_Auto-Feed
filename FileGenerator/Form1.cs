@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using FileGenerator.Convertors;
 using System.Collections.Generic;
 using FileGenerator.Models;
 
@@ -22,26 +21,34 @@ namespace FileGenerator
 
         private async void button2_Click(object sender, EventArgs e)
         {
+            GenerateObject gen = new GenerateObject();
+            List<Team> teams = gen.GetTeams();
+            Save sv;
+               
 
-            button2.Enabled = false; //TODO with Task
             if (textBox1.Text=="")
             {
                 MessageBox.Show("Please choose folder");
             }
             if (radioButton1.Checked)
             {
+                button2.Enabled = false;
+                sv = new Save(textBox1.Text + "\\CSV.csv");
+                Save.ToCsv(teams);
+                button2.Enabled = true;
                 //CSVConvertor csvConvertor = new CSVConvertor(textBox1.Text + "\\text.csv");
                 //csvConvertor.WriteInCSV(csvConvertor.CreateObject(100000));
                 //button2.Enabled = true;
             }
             else
-                if (radioButton2.Checked)
+            if (radioButton2.Checked)
             {
-                Generate gen = new Generate();
-                List<Team> teams = gen.GetTeams();
+                button2.Enabled = false;
+                sv = new Save(textBox1.Text + "\\XML.txt");
                 Save.ToXml(teams);
+                button2.Enabled = true;
             }
-            
+
         }
     }
 }
