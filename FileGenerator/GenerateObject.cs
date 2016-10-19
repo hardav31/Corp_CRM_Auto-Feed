@@ -2,9 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FileGenerator
 {
@@ -21,7 +18,9 @@ namespace FileGenerator
 
             for (int i = 0; i < pCount; i++)
             {
-                projects.Add(new Project(i, "Project" + i, DateTime.Now, DateTime.Today.AddMonths(1), "Test" + i));
+                int id = DateTime.Now.Millisecond;
+
+                projects.Add(new Project(id + i, "Project" + i, DateTime.Now, DateTime.Today.AddMonths(1), "Test" + i));
             }
         }
         private void GenerateMember()
@@ -29,8 +28,10 @@ namespace FileGenerator
             int mCount = Int32.Parse(ConfigurationManager.AppSettings["membersCount"]);
             for (int i = 0; i < mCount; i++)
             {
-                members.Add(new Member(i, "Name" + i, "Surname" + i, projects[rand.Next(0, projects.Count)]));
-                for (int j = 0; j < 3;)
+                int id = DateTime.Now.Millisecond;
+                members.Add(new Member(id + i, "Name" + i, "Surname" + i, projects[rand.Next(0, projects.Count)]));
+                int a = rand.Next(1, 4);
+                for (int j = 0; j < a;)
                 {
                     var pIndex = rand.Next(0, projects.Count);
                     if (!members[i].Projects.Contains(projects[pIndex]))
@@ -52,7 +53,8 @@ namespace FileGenerator
             while (members.Count != 0)
             {
                 int mIndex = rand.Next(0, members.Count);
-                teams.Add(new Team(i, "Team" + i, members[mIndex]));
+                int id = DateTime.Now.Millisecond;
+                teams.Add(new Team(id + i, "Team" + i, members[mIndex]));
                 members.RemoveAt(mIndex);
                 for (int j = 0; j < tCount - 1; j++)
                 {
