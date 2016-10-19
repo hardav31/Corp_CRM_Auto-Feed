@@ -1,19 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using FileGenerator;
-using FileGenerator.DataModel;
 using FileGenerator.Convertors;
+using System.Collections.Generic;
+using FileGenerator.Models;
 
 namespace FileGenerator
- 
+
 {
     public partial class Form1 : Form
     {
@@ -38,14 +30,16 @@ namespace FileGenerator
             }
             if (radioButton1.Checked)
             {
-                CSVConvertor csvConvertor = new CSVConvertor(textBox1.Text + "\\text.csv");
-                csvConvertor.WriteInCSV(csvConvertor.CreateObject(100000));
-                button2.Enabled = true;
+                //CSVConvertor csvConvertor = new CSVConvertor(textBox1.Text + "\\text.csv");
+                //csvConvertor.WriteInCSV(csvConvertor.CreateObject(100000));
+                //button2.Enabled = true;
             }
             else
                 if (radioButton2.Checked)
             {
-                //call XML generator
+                Generate gen = new Generate();
+                List<Team> teams = gen.GetTeams();
+                Save.ToXml(teams);
             }
             
         }
