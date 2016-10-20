@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using System.Collections.Generic;
 using FileGenerator.Models;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace FileGenerator
 
@@ -18,34 +19,51 @@ namespace FileGenerator
         {
             if (folderBrowserDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 this.textBox1.Text = folderBrowserDialog1.SelectedPath;
+
         }
 
         private async void button2_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "")
             {
-                GenerateObject gen = new GenerateObject();
-                List<Team> teams = await Task.Run(() => (gen.GetTeams()));
-
-                if (radioButton1.Checked)
+                int count;
+                if (!int.TryParse((ConfigurationManager.AppSettings["membersCount"]), out count) || count <= 0 || count > 1000000)
                 {
-                    button2.Enabled = false;
-                    Save.Filepath = textBox1.Text + "\\CSV.csv";
-                    await Task.Run(() => Save.ToCsv(teams));
-                    button2.Enabled = true;
+                    MessageBox.Show("ENTER FROM 1 TO 1000000", "Invalid Count For Members", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                if (radioButton2.Checked)
+                if (!int.TryParse((ConfigurationManager.AppSettings["projectsCount"]), out count) || count <= 0 || count > 10000)
                 {
-                    button2.Enabled = false;
-                    Save.Filepath = textBox1.Text + "\\CSV.csv";
-                    await Task.Run(() => Save.ToXml(teams));
-                    button2.Enabled = true;
+                    MessageBox.Show("ENTER FROM 1 TO 10000", "Invalid Count For Project", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+
+                else
+                {
+                    loadLable.Visible = true;
+                    GenerateObject gen = new GenerateObject();
+                    List<Team> teams = await Task.Run(() => (gen.GetTeams()));
+                    
+                    if (radioButton1.Checked)
+                    {
+                        Save.Filepath = textBox1.Text + "\\CSV.csv";
+                        await Task.Run(() => Save.ToCsv(teams));
+                        loadLable.Visible = false;
+                    }
+                    if (radioButton2.Checked)
+                    {
+
+                        Save.Filepath = textBox1.Text + "\\XML.csv";
+                        await Task.Run(() => Save.ToXml(teams));
+                        loadLable.Visible = false;
+                    }
                 }
             }
             else
             {
-                MessageBox.Show("Please choose a folder","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("Please choose a folder", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+     
     }
 }

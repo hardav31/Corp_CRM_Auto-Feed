@@ -21,12 +21,24 @@ namespace FileGenerator
                     s.Serialize(fs, teams);
                 }
             }
-            catch (Exception e)
+            catch (DirectoryNotFoundException e)
             {
 
-                MessageBox.Show(e.Message,"ERROR",MessageBoxButtons.RetryCancel,MessageBoxIcon.Error);
+                MessageBox.Show(e.Message,"ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
-           
+            catch (UnauthorizedAccessException e)
+            {
+                MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (IOException e)
+            {
+                MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         public static void ToCsv(List<Team> teams)
@@ -60,36 +72,22 @@ namespace FileGenerator
                     }
                 }
             }
+            catch (DirectoryNotFoundException e)
+            {
+
+                MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (UnauthorizedAccessException e)
+            {
+                MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (IOException e)
+            {
+                MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             catch (Exception e)
             {
-
-                MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-            }
-            using (StreamWriter sw = new StreamWriter(new FileStream(Filepath, FileMode.Create)))
-            {
-                for (var i = 0; i < teams.Count; i++)
-                {
-                    for (var j = 0; j < teams[i].Members.Count; j++)
-                    {
-                        for (var k = 0; k < teams[i].Members[j].Projects.Count; k++)
-                        {
-
-                            List<string> row = new List<string>();
-                            row.Add(teams[i].TeamID.ToString());
-                            row.Add(teams[i].TeamName);
-                            row.Add(teams[i].Members[j].MemberID.ToString());
-                            row.Add(teams[i].Members[j].MemberName);
-                            row.Add(teams[i].Members[j].MemberSurname);
-                            row.Add(teams[i].Members[j].Projects[k].ProjectID.ToString());
-                            row.Add(teams[i].Members[j].Projects[k].ProjectName);
-                            row.Add(teams[i].Members[j].Projects[k].ProjectDescription);
-                            row.Add(teams[i].Members[j].Projects[k].ProjectCreatedDate.ToString());
-                            row.Add(teams[i].Members[j].Projects[k].ProjectDueDate.ToString());
-                            sw.WriteLine(String.Join(",", row.ToArray()));
-
-                        }
-                    }
-                }
+                MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
