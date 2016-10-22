@@ -1,0 +1,9 @@
+C:\Users\Home\Desktop\Public2\Teamproject\FileGenerator\bin\Debug\FileGenerator.exe.config
+C:\Users\Home\Desktop\Public2\Teamproject\FileGenerator\bin\Debug\FileGenerator.exe
+C:\Users\Home\Desktop\Public2\Teamproject\FileGenerator\bin\Debug\FileGenerator.pdb
+C:\Users\Home\Desktop\Public2\Teamproject\FileGenerator\obj\Debug\FileGenerator.csprojResolveAssemblyReference.cache
+C:\Users\Home\Desktop\Public2\Teamproject\FileGenerator\obj\Debug\FileGenerator.Form1.resources
+C:\Users\Home\Desktop\Public2\Teamproject\FileGenerator\obj\Debug\FileGenerator.Properties.Resources.resources
+C:\Users\Home\Desktop\Public2\Teamproject\FileGenerator\obj\Debug\FileGenerator.csproj.GenerateResource.Cache
+C:\Users\Home\Desktop\Public2\Teamproject\FileGenerator\obj\Debug\FileGenerator.exe
+C:\Users\Home\Desktop\Public2\Teamproject\FileGenerator\obj\Debug\FileGenerator.pdb

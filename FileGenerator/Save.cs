@@ -24,7 +24,7 @@ namespace FileGenerator
             catch (DirectoryNotFoundException e)
             {
 
-                MessageBox.Show(e.Message,"ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (UnauthorizedAccessException e)
             {
@@ -47,6 +47,13 @@ namespace FileGenerator
             {
                 using (StreamWriter sw = new StreamWriter(new FileStream(Filepath, FileMode.Create)))
                 {
+                    string[] dest =
+                        {
+                        "TeamID", "TeamName",
+                        "MemberID","MemberName","MemberSurname",
+                        "ProjectID","ProjectName","ProjectCreatedDate","ProjectDueDate","ProjectDescription"
+                        };
+                    sw.WriteLine(string.Join(",", dest));
                     for (var i = 0; i < teams.Count; i++)
                     {
                         for (var j = 0; j < teams[i].Members.Count; j++)
@@ -62,9 +69,9 @@ namespace FileGenerator
                                 row.Add(teams[i].Members[j].MemberSurname);
                                 row.Add(teams[i].Members[j].Projects[k].ProjectID.ToString());
                                 row.Add(teams[i].Members[j].Projects[k].ProjectName);
-                                row.Add(teams[i].Members[j].Projects[k].ProjectDescription);
                                 row.Add(teams[i].Members[j].Projects[k].ProjectCreatedDate.ToString());
                                 row.Add(teams[i].Members[j].Projects[k].ProjectDueDate.ToString());
+                                row.Add(teams[i].Members[j].Projects[k].ProjectDescription);
                                 sw.WriteLine(String.Join(",", row.ToArray()));
 
                             }

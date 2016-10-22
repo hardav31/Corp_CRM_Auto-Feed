@@ -1,2 +1,0 @@
-c:\users\ldavtyan\documents\visual studio 2015\Projects\Work\Team1Project\bin\Debug\Team1Project.exe.config
-C:\Users\ldavtyan\Source\Repos\Team1Project\bin\Debug\Team1Project.exe.config
