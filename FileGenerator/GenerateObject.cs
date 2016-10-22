@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Windows.Forms;
 
 namespace FileGenerator
 {
@@ -10,28 +9,30 @@ namespace FileGenerator
     {
         Random rand = new Random();
         private List<Project> projects = new List<Project>();
-        private List<Member> members = new List<Member>();
+        private Dictionary<int, Member> members = new Dictionary<int, Member>();
         private List<Team> teams = new List<Team>();
+        private Queue<Member> m = new Queue<Member>();
 
         private void GenerateProject()
         {
-
-            int pCount=int.Parse(ConfigurationManager.AppSettings["projectsCount"]);
+            
+            int pCount = int.Parse(ConfigurationManager.AppSettings["projectsCount"]);
 
             for (int i = 0; i < pCount; i++)
             {
-                int id = DateTime.Now.Millisecond;
-                projects.Add(new Project(id + i, "Project" + i, DateTime.Now, DateTime.Today.AddMonths(1), "Test" + i));
+                int id = int.Parse(DateTime.Now.ToString("hhmmssfff"));
+                projects.Add(new Project(id + i, "Project" + i, DateTime.Today, DateTime.Today.AddMonths(1), "Test" + i));
             }
         }
         private void GenerateMember()
         {
-            int mCount=int.Parse(ConfigurationManager.AppSettings["membersCount"]);
-            
+            int mCount = int.Parse(ConfigurationManager.AppSettings["membersCount"]);
+
             for (int i = 0; i < mCount; i++)
             {
-                int id = DateTime.Now.Millisecond;
-                members.Add(new Member(id + i, "Name" + i, "Surname" + i, projects[rand.Next(0, projects.Count)]));
+                int id = int.Parse(DateTime.Now.ToString("hhmmssfff"));
+
+                members.Add(i, new Member(id + i, "Name" + id, "Surname" + id, projects[rand.Next(0, projects.Count)]));
                 int r_count = rand.Next(1, 4);
                 for (int j = 0; j < r_count;)
                 {
@@ -50,19 +51,19 @@ namespace FileGenerator
         }
         private void GenerateTeam()
         {
-            int i = 0;
+            int i = 0; int mIndex = 0;
             while (members.Count != 0)
             {
-                int mIndex = rand.Next(0, members.Count);
-                int id = DateTime.Now.Millisecond;
-                teams.Add(new Team(id + i, "Team" + i, members[mIndex]));
-                members.RemoveAt(mIndex);
+                int id = int.Parse(DateTime.Now.ToString("hhmmssfff"));
+                teams.Add(new Team(id + i, "Team" + id, members[mIndex]));
+                members.Remove(mIndex);
+                mIndex++;
                 for (int j = 0; j < 9; j++)
                 {
                     if (members.Count == 0) break;
-                    var mIndex1 = rand.Next(0, members.Count);
-                    teams[i].Members.Add(members[mIndex1]);
-                    members.RemoveAt(mIndex1);
+                    teams[i].Members.Add(members[mIndex]);
+                    members.Remove(mIndex);
+                    mIndex++;
                 }
                 i++;
             }
