@@ -29,13 +29,11 @@ namespace FileGenerator
                 int count;
                 if (!int.TryParse((ConfigurationManager.AppSettings["membersCount"]), out count) || count <= 0 || count > 1000000)
                 {
-                    MessageBox.Show("ENTER FROM 1 TO 1000000", "Invalid Count For Project", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    
+                    MessageBox.Show("ENTER FROM 1 TO 1000000", "Invalid Count For Member", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-               else  if (!int.TryParse((ConfigurationManager.AppSettings["projectsCount"]), out count) || count <= 0 || count > 10000)
+                else if (!int.TryParse((ConfigurationManager.AppSettings["projectsCount"]), out count) || count <= 0 || count > 10000)
                 {
                     MessageBox.Show("ENTER FROM 1 TO 10000", "Invalid Count For Project", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
                 }
 
                 else 

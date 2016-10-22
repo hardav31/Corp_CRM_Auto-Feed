@@ -31,8 +31,7 @@ namespace FileGenerator
             for (int i = 0; i < mCount; i++)
             {
                 int id = int.Parse(DateTime.Now.ToString("hhmmssfff"));
-
-                members.Add(i, new Member(id + i, "Name" + id, "Surname" + id, projects[rand.Next(0, projects.Count)]));
+                members.Add(i, new Member(id + i, "Name" + id + i, "Surname" + id + i, projects[rand.Next(0, projects.Count)]));
                 int r_count = rand.Next(1, 4);
                 for (int j = 0; j < r_count;)
                 {
@@ -51,7 +50,7 @@ namespace FileGenerator
         }
         private void GenerateTeam()
         {
-            int i = 0; int mIndex = 0;
+            int i = 0, mIndex = 0;
             while (members.Count != 0)
             {
                 int id = int.Parse(DateTime.Now.ToString("hhmmssfff"));
