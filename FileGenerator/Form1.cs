@@ -15,14 +15,13 @@ namespace FileGenerator
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void browse_Click(object sender, EventArgs e)
         {
             if (folderBrowserDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 this.textBox1.Text = folderBrowserDialog1.SelectedPath;
-
         }
 
-        private async void button2_Click(object sender, EventArgs e)
+        private async void generate_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "")
             {
@@ -42,16 +41,16 @@ namespace FileGenerator
                     GenerateObject gen = new GenerateObject();
                     List<Team> teams = await Task.Run(() => (gen.GetTeams()));
                     
-                    if (radioButton1.Checked)
+                    if (csvRadioButton.Checked)
                     {
                         Save.Filepath = textBox1.Text + "\\CSV.csv";
                         await Task.Run(() => Save.ToCsv(teams));
                         loadLable.Visible = false;
                     }
-                    if (radioButton2.Checked)
+                    if (xmlRadioButton.Checked)
                     {
 
-                        Save.Filepath = textBox1.Text + "\\XML.csv";
+                        Save.Filepath = textBox1.Text + "\\XML.xml";
                         await Task.Run(() => Save.ToXml(teams));
                         loadLable.Visible = false;
                     }

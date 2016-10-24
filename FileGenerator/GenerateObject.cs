@@ -11,7 +11,6 @@ namespace FileGenerator
         private List<Project> projects = new List<Project>();
         private Dictionary<int, Member> members = new Dictionary<int, Member>();
         private List<Team> teams = new List<Team>();
-        private Queue<Member> m = new Queue<Member>();
 
         private void GenerateProject()
         {
@@ -54,7 +53,7 @@ namespace FileGenerator
             while (members.Count != 0)
             {
                 int id = int.Parse(DateTime.Now.ToString("hhmmssfff"));
-                teams.Add(new Team(id + i, "Team" + id, members[mIndex]));
+                teams.Add(new Team(id + i, "Team" + id + i, members[mIndex]));
                 members.Remove(mIndex);
                 mIndex++;
                 for (int j = 0; j < 9; j++)

@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 
@@ -23,7 +22,6 @@ namespace FileGenerator
             }
             catch (DirectoryNotFoundException e)
             {
-
                 MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (UnauthorizedAccessException e)
