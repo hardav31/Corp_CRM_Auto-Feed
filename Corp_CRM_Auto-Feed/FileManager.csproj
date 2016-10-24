@@ -7,7 +7,7 @@
     <ProjectGuid>{940D638C-DA5F-41FB-93E0-C540CDC037D4}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Corp_CRM_Auto_Feed</RootNamespace>
+    <RootNamespace>FileManager</RootNamespace>
     <AssemblyName>Corp_CRM_Auto-Feed</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
