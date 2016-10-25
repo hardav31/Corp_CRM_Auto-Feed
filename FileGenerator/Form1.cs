@@ -40,13 +40,13 @@ namespace FileGenerator
                 else
                 {
                     loadLable.Visible = true;
+                    generate.Enabled = false;
                     GenerateObject gen = new GenerateObject();
                     List<Team> teams = await Task.Run(() => (gen.GetTeams()));
 
                     if (csvRadioButton.Checked)
                     {
                         Save.Filepath = textBox1.Text + "\\CSV.csv";
-                        generate.Enabled = false;
                         await Task.Run(() => Save.ToCsv(teams));
                         generate.Enabled = true;
                         loadLable.Visible = false;
@@ -55,7 +55,6 @@ namespace FileGenerator
                     {
 
                         Save.Filepath = textBox1.Text + "\\XML.xml";
-                        generate.Enabled = false;
                         await Task.Run(() => Save.ToXml(teams));
                         generate.Enabled = true;
                         loadLable.Visible = false;
