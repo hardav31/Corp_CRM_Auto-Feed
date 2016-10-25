@@ -52,14 +52,13 @@ namespace FileGenerator
                         "ProjectID","ProjectName","ProjectCreatedDate","ProjectDueDate","ProjectDescription"
                         };
                     sw.WriteLine(string.Join(",", headers));
+                    List<string> row = new List<string> { Capacity = 10 };
                     for (var i = 0; i < teams.Count; i++)
                     {
                         for (var j = 0; j < teams[i].Members.Count; j++)
                         {
                             for (var k = 0; k < teams[i].Members[j].Projects.Count; k++)
                             {
-
-                                List<string> row = new List<string>();
                                 row.Add(teams[i].TeamID.ToString());
                                 row.Add(teams[i].TeamName);
                                 row.Add(teams[i].Members[j].MemberID.ToString());
@@ -71,7 +70,7 @@ namespace FileGenerator
                                 row.Add(teams[i].Members[j].Projects[k].ProjectDueDate.ToString());
                                 row.Add(teams[i].Members[j].Projects[k].ProjectDescription);
                                 sw.WriteLine(String.Join(",", row.ToArray()));
-
+                                row.Clear();
                             }
                         }
                     }
