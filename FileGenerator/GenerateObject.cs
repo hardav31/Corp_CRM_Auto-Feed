@@ -30,8 +30,8 @@ namespace FileGenerator
             for (int i = 0; i < mCount; i++)
             {
                 int id = int.Parse(DateTime.Now.ToString("hhmmssfff"));
-                members.Add(i, new Member(id + i, "Name" + id + i, "Surname" + id + i, projects[rand.Next(0, projects.Count)]));
-                int r_count = rand.Next(1, 4);
+                members.Add(i, new Member(id + i, "Name" + id + i, "Surname" + id + i));
+                int r_count = rand.Next(1, 5);
                 for (int j = 0; j < r_count;)
                 {
                     var pIndex = rand.Next(0, projects.Count);
@@ -53,15 +53,14 @@ namespace FileGenerator
             while (members.Count != 0)
             {
                 int id = int.Parse(DateTime.Now.ToString("hhmmssfff"));
-                teams.Add(new Team(id + i, "Team" + id + i, members[mIndex]));
-                members.Remove(mIndex);
-                mIndex++;
-                for (int j = 0; j < 9; j++)
+                teams.Add(new Team(id + i, "Team" + id + i));
+                for (int j = 0; j < 10; j++)
                 {
-                    if (members.Count == 0) break;
                     teams[i].Members.Add(members[mIndex]);
                     members.Remove(mIndex);
                     mIndex++;
+                    if (members.Count == 0)
+                        break;
                 }
                 i++;
             }

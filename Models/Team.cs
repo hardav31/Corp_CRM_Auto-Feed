@@ -15,12 +15,10 @@ namespace FileGenerator.Models
         public string TeamName { get; set; }
 
         public List<Member> Members = new List<Member>();
-        public Team(int teamId, string teamName, Member member)
+        public Team(int teamId, string teamName)
         {
             TeamID = teamId;
             TeamName = teamName;
-            Members.Add(member);
-
         }
         public Team()
         {
