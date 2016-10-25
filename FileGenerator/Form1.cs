@@ -23,6 +23,7 @@ namespace FileGenerator
 
         private async void generate_Click(object sender, EventArgs e)
         {
+            generate.Enabled = false;
             if (textBox1.Text != "")
             {
                 int count;
@@ -44,7 +45,9 @@ namespace FileGenerator
                     if (csvRadioButton.Checked)
                     {
                         Save.Filepath = textBox1.Text + "\\CSV.csv";
+                       
                         await Task.Run(() => Save.ToCsv(teams));
+                        generate.Enabled = true;
                         loadLable.Visible = false;
                     }
                     if (xmlRadioButton.Checked)
@@ -52,6 +55,7 @@ namespace FileGenerator
 
                         Save.Filepath = textBox1.Text + "\\XML.xml";
                         await Task.Run(() => Save.ToXml(teams));
+                        generate.Enabled = true;
                         loadLable.Visible = false;
                     }
                 }
@@ -61,7 +65,5 @@ namespace FileGenerator
                 MessageBox.Show("Please choose a folder", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
-     
     }
 }
