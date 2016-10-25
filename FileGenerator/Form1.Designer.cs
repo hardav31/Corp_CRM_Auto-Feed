@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
+            this.generate = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.xmlRadioButton = new System.Windows.Forms.RadioButton();
+            this.csvRadioButton = new System.Windows.Forms.RadioButton();
+            this.browse = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.loadLable = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button2
+            // generate
             // 
-            this.button2.Location = new System.Drawing.Point(148, 75);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(217, 30);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Generate";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.generate.Location = new System.Drawing.Point(148, 75);
+            this.generate.Margin = new System.Windows.Forms.Padding(2);
+            this.generate.Name = "generate";
+            this.generate.Size = new System.Drawing.Size(217, 30);
+            this.generate.TabIndex = 6;
+            this.generate.Text = "Generate";
+            this.generate.UseVisualStyleBackColor = true;
+            this.generate.Click += new System.EventHandler(this.generate_Click);
             // 
             // textBox1
             // 
@@ -68,40 +68,40 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Choose file type";
             // 
-            // radioButton2
+            // xmlRadioButton
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(193, 54);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(47, 17);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.Text = "XML";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.xmlRadioButton.AutoSize = true;
+            this.xmlRadioButton.Location = new System.Drawing.Point(193, 54);
+            this.xmlRadioButton.Margin = new System.Windows.Forms.Padding(2);
+            this.xmlRadioButton.Name = "xmlRadioButton";
+            this.xmlRadioButton.Size = new System.Drawing.Size(47, 17);
+            this.xmlRadioButton.TabIndex = 4;
+            this.xmlRadioButton.Text = "XML";
+            this.xmlRadioButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // csvRadioButton
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(102, 54);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(49, 17);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "CSV;";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.csvRadioButton.AutoSize = true;
+            this.csvRadioButton.Checked = true;
+            this.csvRadioButton.Location = new System.Drawing.Point(102, 54);
+            this.csvRadioButton.Margin = new System.Windows.Forms.Padding(2);
+            this.csvRadioButton.Name = "csvRadioButton";
+            this.csvRadioButton.Size = new System.Drawing.Size(46, 17);
+            this.csvRadioButton.TabIndex = 3;
+            this.csvRadioButton.TabStop = true;
+            this.csvRadioButton.Text = "CSV";
+            this.csvRadioButton.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // browse
             // 
-            this.button1.Location = new System.Drawing.Point(442, 23);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(61, 20);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Browse";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.browse.Location = new System.Drawing.Point(442, 23);
+            this.browse.Margin = new System.Windows.Forms.Padding(2);
+            this.browse.Name = "browse";
+            this.browse.Size = new System.Drawing.Size(61, 20);
+            this.browse.TabIndex = 2;
+            this.browse.Text = "Browse";
+            this.browse.UseVisualStyleBackColor = true;
+            this.browse.Click += new System.EventHandler(this.browse_Click);
             // 
             // label1
             // 
@@ -130,11 +130,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(514, 147);
             this.Controls.Add(this.loadLable);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.generate);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.xmlRadioButton);
+            this.Controls.Add(this.csvRadioButton);
+            this.Controls.Add(this.browse);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -147,12 +147,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button generate;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RadioButton xmlRadioButton;
+        private System.Windows.Forms.RadioButton csvRadioButton;
+        private System.Windows.Forms.Button browse;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Label loadLable;

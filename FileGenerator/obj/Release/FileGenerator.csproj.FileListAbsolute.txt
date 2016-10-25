@@ -7,3 +7,5 @@ C:\Users\Home\Desktop\Public2\Teamproject\FileGenerator\obj\Release\FileGenerato
 C:\Users\Home\Desktop\Public2\Teamproject\FileGenerator\obj\Release\FileGenerator.exe
 C:\Users\Home\Desktop\Public2\Teamproject\FileGenerator\obj\Release\FileGenerator.pdb
 C:\Users\Home\Desktop\Public2\Teamproject\FileGenerator\obj\Release\FileGenerator.csprojResolveAssemblyReference.cache
+C:\Users\Home\Desktop\Public2\Teamproject\FileGenerator\bin\Release\Models.dll
+C:\Users\Home\Desktop\Public2\Teamproject\FileGenerator\bin\Release\Models.pdb

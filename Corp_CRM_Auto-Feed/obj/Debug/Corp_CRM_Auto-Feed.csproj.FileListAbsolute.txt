@@ -1,0 +1,6 @@
+C:\Users\Home\Desktop\Public2\Teamproject\Corp_CRM_Auto-Feed\bin\Debug\Corp_CRM_Auto-Feed.exe.config
+C:\Users\Home\Desktop\Public2\Teamproject\Corp_CRM_Auto-Feed\bin\Debug\Corp_CRM_Auto-Feed.exe
+C:\Users\Home\Desktop\Public2\Teamproject\Corp_CRM_Auto-Feed\bin\Debug\Corp_CRM_Auto-Feed.pdb
+C:\Users\Home\Desktop\Public2\Teamproject\Corp_CRM_Auto-Feed\obj\Debug\Corp_CRM_Auto-Feed.csprojResolveAssemblyReference.cache
+C:\Users\Home\Desktop\Public2\Teamproject\Corp_CRM_Auto-Feed\obj\Debug\Corp_CRM_Auto-Feed.exe
+C:\Users\Home\Desktop\Public2\Teamproject\Corp_CRM_Auto-Feed\obj\Debug\Corp_CRM_Auto-Feed.pdb
