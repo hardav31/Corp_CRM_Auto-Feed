@@ -45,13 +45,13 @@ namespace FileGenerator
             {
                 using (StreamWriter sw = new StreamWriter(new FileStream(Filepath, FileMode.Create)))
                 {
-                    string[] dest =
+                    string[] headers =
                         {
                         "TeamID", "TeamName",
                         "MemberID","MemberName","MemberSurname",
                         "ProjectID","ProjectName","ProjectCreatedDate","ProjectDueDate","ProjectDescription"
                         };
-                    sw.WriteLine(string.Join(",", dest));
+                    sw.WriteLine(string.Join(",", headers));
                     for (var i = 0; i < teams.Count; i++)
                     {
                         for (var j = 0; j < teams[i].Members.Count; j++)
