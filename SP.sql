@@ -1,9 +1,9 @@
-﻿IF EXISTS (SELECT * FROM sys.objects so join sys.schemas sc on so.schema_id = sc.schema_id WHERE so.type = 'P' AND so.name = 'getProjectMemberTeam' and sc.name=N'dbo')
-	DROP PROCEDURE [dbo].[getProjectMemberTeam]
+﻿IF EXISTS (SELECT * FROM sys.objects so join sys.schemas sc on so.schema_id = sc.schema_id WHERE so.type = 'P' AND so.name = 'getAllRecords' and sc.name=N'dbo')
+	DROP PROCEDURE [dbo].[getAllRecords]
 GO
-CREATE PROCEDURE dbo.getProjectMemberTeam
+CREATE PROC [dbo].[getAllRecords]
 (
-	@condition nvarchar(255)
+	@condition nvarchar(500)
 )
 AS
 BEGIN
@@ -58,10 +58,10 @@ BEGIN
 
 		MERGE Team AS targetTeam
 		USING (SELECT TeamID, TeamName FROM @sourcetable) AS sourceTeam   
-		ON (targetTeam.TeamID=sourceTeam.TeamID)
+		ON (targetTeam.TeamID=sourceTeam.TeamID AND targetTeam.isDeleted=0)
 		WHEN MATCHED AND targetTeam.TeamName<>sourceTeam.TeamName 
 		THEN
-			UPDATE SET targetTeam.TeamName=sourceTeam.TeamName  
+			UPDATE SET targetTeam.TeamName=sourceTeam.TeamName, targetTeam.Modified=GETDATE() 
 		WHEN NOT MATCHED  BY TARGET 
 		THEN  
 			INSERT (TeamID, TeamName)  
@@ -78,14 +78,14 @@ BEGIN
 
 		MERGE Member AS targetMember
 		USING (SELECT MemberID, MemberName, MemberSurname, TeamID FROM @sourcetable) AS sourceMember   
-		ON (targetMember.MemberID=sourceMember.MemberID)  
+		ON (targetMember.MemberID=sourceMember.MemberID AND targetMember.isDeleted=0 )  
 		WHEN MATCHED AND targetMember.MemberName<>sourceMember.MemberName 
 			OR targetMember.MemberSurname<>sourceMember.MemberSurname 
 			OR targetMember.TeamID<>sourceMember.TeamID
 		THEN
 			UPDATE SET targetMember.MemberName=sourceMember.MemberName, 
 			targetMember.MemberSurname=sourceMember.MemberSurname,
-			targetMember.TeamID=sourceMember.TeamID
+			targetMember.TeamID=sourceMember.TeamID,targetMember.Modified=GETDATE()
 		WHEN NOT MATCHED  BY TARGET 
 		THEN  
 			INSERT  (MemberID, MemberName, MemberSurname, TeamID)  
@@ -104,7 +104,7 @@ BEGIN
 
 		MERGE Project AS targetProject
 		USING (SELECT ProjectID, ProjectName, ProjectCreatedDate, ProjectDueDate, ProjectDescription FROM @sourcetable) AS sourceProject   
-		ON (targetProject.ProjectID=sourceProject.ProjectID)  
+		ON (targetProject.ProjectID=sourceProject.ProjectID AND targetProject.isDeleted=0)  
 		WHEN MATCHED AND targetProject.ProjectName<>sourceProject.ProjectName 
 			OR targetProject.ProjectCreatedDate<>sourceProject.ProjectCreatedDate
 			OR targetProject.ProjectDueDate<>sourceProject.ProjectDueDate
@@ -113,7 +113,8 @@ BEGIN
 			UPDATE SET targetProject.ProjectName=sourceProject.ProjectName,
 			targetProject.ProjectCreatedDate=sourceProject.ProjectCreatedDate,
 			targetProject.ProjectDueDate=sourceProject.ProjectDueDate,
-			targetProject.ProjectDescription=sourceProject.ProjectDescription
+			targetProject.ProjectDescription=sourceProject.ProjectDescription,
+			targetProject.Modified=GETDATE()
 		
 		WHEN NOT MATCHED  BY TARGET 
 		THEN  
@@ -160,12 +161,13 @@ BEGIN
 		ROLLBACK
 		END CATCH
 END
+GO
 
 IF EXISTS (SELECT * FROM sys.objects so join sys.schemas sc on so.schema_id = sc.schema_id WHERE so.type = 'P' AND so.name = 'DeleteRecords' and sc.name=N'dbo')
 	DROP PROCEDURE [dbo].[DeleteRecords]
 GO
 
-CREATE PROC DeleteRecords
+CREATE PROC [dbo].[deleteRecords]
 (
 	@teamID		BIGINT=NULL,
 	@memberID	BIGINT=NULL,
@@ -185,23 +187,17 @@ BEGIN
 	BEGIN Try
 		BEGIN TRANSACTION
 			IF (@teamID IS NOT NULL)
-			Update  Team
-			SET isDeleted = 1 WHERE TeamID = @teamID
+			Update  Team SET isDeleted = 1, Modified = GETDATE() WHERE TeamID = @teamID
 
 			IF (@memberID IS NOT NULL)
 			BEGIN
-				UPDATE  MEMBER 
-				SET isDeleted = 1 WHERE MemberID = @memberID
-				DELETE FROM ProjectMember
-				WHERE MemberID = @memberID
+				UPDATE MEMBER SET isDeleted = 1, Modified = GETDATE()WHERE MemberID = @memberID
 			END
 
 			IF (@projectID IS NOT NULL)
 			BEGIN
-				UPDATE Project
-				SET isDeleted = 1 WHERE ProjectID = @projectID
-				DELETE FROM ProjectMember
-				WHERE ProjectID = @projectID
+				UPDATE Project SET isDeleted = 1, Modified = GETDATE() WHERE ProjectID = @projectID
+				DELETE FROM ProjectMember WHERE ProjectID = @projectID
 			END
 		COMMIT
 	END TRY
