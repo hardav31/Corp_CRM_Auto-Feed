@@ -23,7 +23,7 @@ namespace FileGenerator
 
         private async void generate_Click(object sender, EventArgs e)
         {
-            generate.Enabled = false;
+           
             if (textBox1.Text != "")
             {
                 int count;
@@ -45,7 +45,7 @@ namespace FileGenerator
                     if (csvRadioButton.Checked)
                     {
                         Save.Filepath = textBox1.Text + "\\CSV.csv";
-                       
+                        generate.Enabled = false;
                         await Task.Run(() => Save.ToCsv(teams));
                         generate.Enabled = true;
                         loadLable.Visible = false;
@@ -54,6 +54,7 @@ namespace FileGenerator
                     {
 
                         Save.Filepath = textBox1.Text + "\\XML.xml";
+                        generate.Enabled = false;
                         await Task.Run(() => Save.ToXml(teams));
                         generate.Enabled = true;
                         loadLable.Visible = false;
