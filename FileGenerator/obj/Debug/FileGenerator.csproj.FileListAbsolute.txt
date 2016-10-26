@@ -9,3 +9,14 @@ C:\Users\Home\Desktop\Public2\Teamproject\FileGenerator\obj\Debug\FileGenerator.
 C:\Users\Home\Desktop\Public2\Teamproject\FileGenerator\obj\Debug\FileGenerator.pdb
 C:\Users\Home\Desktop\Public2\Teamproject\FileGenerator\bin\Debug\Models.dll
 C:\Users\Home\Desktop\Public2\Teamproject\FileGenerator\bin\Debug\Models.pdb
+C:\Users\ldavtyan\Desktop\PR Project\Project\FileGenerator\bin\Debug\FileGenerator.exe.config
+C:\Users\ldavtyan\Desktop\PR Project\Project\FileGenerator\obj\Debug\FileGenerator.exe
+C:\Users\ldavtyan\Desktop\PR Project\Project\FileGenerator\obj\Debug\FileGenerator.pdb
+C:\Users\ldavtyan\Desktop\PR Project\Project\FileGenerator\bin\Debug\FileGenerator.exe
+C:\Users\ldavtyan\Desktop\PR Project\Project\FileGenerator\bin\Debug\FileGenerator.pdb
+C:\Users\ldavtyan\Desktop\PR Project\Project\FileGenerator\bin\Debug\Models.dll
+C:\Users\ldavtyan\Desktop\PR Project\Project\FileGenerator\bin\Debug\Models.pdb
+C:\Users\ldavtyan\Desktop\PR Project\Project\FileGenerator\obj\Debug\FileGenerator.csprojResolveAssemblyReference.cache
+C:\Users\ldavtyan\Desktop\PR Project\Project\FileGenerator\obj\Debug\FileGenerator.Form1.resources
+C:\Users\ldavtyan\Desktop\PR Project\Project\FileGenerator\obj\Debug\FileGenerator.Properties.Resources.resources
+C:\Users\ldavtyan\Desktop\PR Project\Project\FileGenerator\obj\Debug\FileGenerator.csproj.GenerateResource.Cache
