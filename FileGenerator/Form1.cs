@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using FileGenerator.Models;
 using System.Threading.Tasks;
 using System.Configuration;
+using System.IO;
 
 namespace FileGenerator
 
@@ -23,8 +24,8 @@ namespace FileGenerator
 
         private async void generate_Click(object sender, EventArgs e)
         {
-           
-            if (textBox1.Text != "")
+
+            if (Directory.Exists(textBox1.Text))
             {
                 int count;
                 if (!int.TryParse((ConfigurationManager.AppSettings["membersCount"]), out count) || count <= 0 || count > 1000000)
@@ -36,16 +37,16 @@ namespace FileGenerator
                     MessageBox.Show("ENTER FROM 1 TO 10000", "Invalid Count For Project", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
-                else 
+                else
                 {
                     loadLable.Visible = true;
+                    generate.Enabled = false;
                     GenerateObject gen = new GenerateObject();
                     List<Team> teams = await Task.Run(() => (gen.GetTeams()));
-                    
+
                     if (csvRadioButton.Checked)
                     {
                         Save.Filepath = textBox1.Text + "\\CSV.csv";
-                        generate.Enabled = false;
                         await Task.Run(() => Save.ToCsv(teams));
                         generate.Enabled = true;
                         loadLable.Visible = false;
@@ -54,7 +55,6 @@ namespace FileGenerator
                     {
 
                         Save.Filepath = textBox1.Text + "\\XML.xml";
-                        generate.Enabled = false;
                         await Task.Run(() => Save.ToXml(teams));
                         generate.Enabled = true;
                         loadLable.Visible = false;
@@ -63,7 +63,7 @@ namespace FileGenerator
             }
             else
             {
-                MessageBox.Show("Please choose a folder", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please choose a currect folder", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }
