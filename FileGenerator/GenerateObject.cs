@@ -67,7 +67,8 @@ namespace FileGenerator
 
         }
 
-        public List<Team> GetTeams()
+
+        public List<Team> GetTeamList()
         {
 
             if (projects.Count != 0)

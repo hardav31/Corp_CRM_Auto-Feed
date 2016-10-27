@@ -17,6 +17,10 @@ namespace FileGenerator.Models
         [XmlAttribute]
         public string ProjectDescription { get; set; }
 
+        public Project()
+        {
+
+        }
         public Project(int projectId, string projectName, DateTime projectCreatedDate, DateTime projectDueDate, string projectDescription)
         {
             ProjectID = projectId;
@@ -24,10 +28,6 @@ namespace FileGenerator.Models
             ProjectCreatedDate = projectCreatedDate;
             ProjectDueDate = projectDueDate;
             ProjectDescription = projectDescription;
-        }
-        public Project()
-        {
-
         }
     }
 }

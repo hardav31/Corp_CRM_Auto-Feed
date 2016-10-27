@@ -13,17 +13,17 @@ namespace FileGenerator.Models
         public string MemberName { get; set; }
         [XmlAttribute]
         public string MemberSurname { get; set; }
-
         public List<Project> Projects = new List<Project>();
+
+        public Member()
+        {
+
+        }
         public Member(int memberId, string memberName, string memberSurname)
         {
             MemberID = memberId;
             MemberName = memberName;
             MemberSurname = memberSurname;
-        }
-        public Member()
-        {
-
         }
     }
 }

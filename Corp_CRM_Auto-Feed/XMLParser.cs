@@ -13,23 +13,10 @@ namespace PraemiumProject
 {
     class XMLParser
     {
-        public void XMLStartReadingAsync(string direction)
+       //In Progress
+        private void XMLFileReader(string direction)
         {
-
-            List<Team> teams = XMLConvertToObject(direction);
-
-            foreach (var x in teams)
-            {
-                Console.WriteLine(x.TeamID + x.TeamName + " " + direction);
-            }
-
-        }
-        private List<Team> XMLConvertToObject(string direction)
-        {
-
-
             //TODO: if (file.Length > 1000000)
-
             List<Team> list = new List<Team>();
 
             using (FileStream fs = new FileStream(direction, FileMode.Open))
@@ -39,8 +26,8 @@ namespace PraemiumProject
                 list = (List<Team>)s.Deserialize(reader);
                 Console.WriteLine("XML file was deserializen correct in list!!!");
             }
-
-            return list;
+            
         }
+        //TODO: Invoke Json or Saving Data in DB methods
     }
 }

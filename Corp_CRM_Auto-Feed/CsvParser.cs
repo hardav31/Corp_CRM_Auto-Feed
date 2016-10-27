@@ -11,16 +11,8 @@ namespace PraemiumProject
 {
     class CsvParser
     {
-
-        public static async void StartReadingAsync(string direction)
-        {
-
-            Dictionary<int, Team> TeamDictionary = await Task.Run(() => CsvParser.ConvertToObject(direction));
-
-            // File.Delete(direction);
-        }
-
-        public static Dictionary<int, Team> ConvertToObject(string direction)
+        
+        public static void CSVFileReader(string direction)
         {
 
             int i = 0;
@@ -35,7 +27,6 @@ namespace PraemiumProject
             bool new_projecr;
             try
             {
-
                 foreach (var e in File.ReadAllLines(direction).Where(line => !string.IsNullOrEmpty(line)))
                 {
                     i++;
@@ -43,32 +34,32 @@ namespace PraemiumProject
 
                     if (line.Length != 10)
                     {
-                        //log
+                        //TODO:log
                         continue;
                     }
 
 
                     if (Array.Exists(line, s => string.IsNullOrEmpty(s)))
                     {
-                        //Log
+                        //TODO:log
                         continue;
                     }
 
                     if (!int.TryParse(line[0], out team_Id))
                     {
-                        //log
+                        //TODO:log
                         continue;
                     }
 
                     if (!int.TryParse(line[2], out member_Id))
                     {
-                        //log
+                        //TODO:log
                         continue;
                     }
 
                     if (!int.TryParse(line[5], out project_Id))
                     {
-                        //log
+                        //TODO:log
                         continue;
                     }
 
@@ -88,7 +79,7 @@ namespace PraemiumProject
                         ProjectsD.Add(project_Id, new Project(project_Id, line[6], DateTime.Parse(line[7]), DateTime.Parse(line[8]), line[9]));
                     }
 
-
+                    // Checking duplicate rows
                     if ((!new_member && !new_team) && (!new_projecr))
                     {
                         if (MembersD[member_Id].Projects.Contains(ProjectsD[project_Id]))
@@ -97,9 +88,10 @@ namespace PraemiumProject
                         }
                     }
 
+                    // Checking if member is part of only one team
                     if ((new_team) && (!new_member))
                     {
-                        //log
+                        //TODO:log
                         continue;
                     }
 
@@ -130,8 +122,7 @@ namespace PraemiumProject
                 MembersD = null;
                 Console.WriteLine(i);
             }
-
-            return TeamsD;
         }
+        //TODO: Invoke Json or Saving Data in DB methods
     }
 }

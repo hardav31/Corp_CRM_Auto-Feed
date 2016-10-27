@@ -12,7 +12,7 @@ namespace PraemiumProject
         static void Main(string[] args)
         {
 
-            Check_Folder check = new Check_Folder(@"C:\Users\Galust\Desktop\New folder");
+            FolderMonitor check = new FolderMonitor(@"C:\Users\Home\Desktop\New folder");
             
             Console.WriteLine(DateTime.Now.ToLocalTime());
 
