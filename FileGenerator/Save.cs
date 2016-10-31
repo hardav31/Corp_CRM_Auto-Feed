@@ -9,8 +9,14 @@ namespace FileGenerator
 {
     class Save
     {
-        public static string Filepath { get; set; }
-        public static void ToXml(List<Team> teams)
+        public string Filepath { get; set; }
+
+        public Save(string filepath)
+        {
+            Filepath = filepath;
+        }
+
+        public void ToXml(List<Team> teams)
         {
             try
             {
@@ -39,7 +45,7 @@ namespace FileGenerator
 
         }
 
-        public static void ToCsv(List<Team> teams)
+        public void ToCsv(List<Team> teams)
         {
             try
             {

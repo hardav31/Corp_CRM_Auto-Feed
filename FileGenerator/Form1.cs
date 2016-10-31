@@ -27,7 +27,7 @@ namespace FileGenerator
 
             if (Directory.Exists(textBox1.Text))
             {
-
+                
                 int count;
                 if (!int.TryParse((ConfigurationManager.AppSettings["membersCount"]), out count) || count <= 0 || count > 1000000)
                 {
@@ -39,6 +39,7 @@ namespace FileGenerator
                 }
                 else
                 {
+                    Save sv = new Save(textBox1.Text + "\\CSV.csv");
                     loadLable.Visible = true;
                     generate.Enabled = false;
                     GenerateObject gen = new GenerateObject();
@@ -46,15 +47,13 @@ namespace FileGenerator
 
                     if (csvRadioButton.Checked)
                     {
-                        Save.Filepath = textBox1.Text + "\\CSV.csv";
-                        await Task.Run(() => Save.ToCsv(teams));
+                        await Task.Run(() => sv.ToCsv(teams));
                         generate.Enabled = true;
                         loadLable.Visible = false;
                     }
                     if (xmlRadioButton.Checked)
                     {
-                        Save.Filepath = textBox1.Text + "\\XML.xml";
-                        await Task.Run(() => Save.ToXml(teams));
+                        await Task.Run(() => sv.ToXml(teams));
                         generate.Enabled = true;
                         loadLable.Visible = false;
                     }
@@ -63,6 +62,7 @@ namespace FileGenerator
                 }
             }
             else
+
             {
                 MessageBox.Show("Please choose a currect folder", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
