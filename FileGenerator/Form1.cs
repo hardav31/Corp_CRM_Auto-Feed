@@ -27,6 +27,7 @@ namespace FileGenerator
 
             if (Directory.Exists(textBox1.Text))
             {
+
                 int count;
                 if (!int.TryParse((ConfigurationManager.AppSettings["membersCount"]), out count) || count <= 0 || count > 1000000)
                 {
@@ -36,7 +37,6 @@ namespace FileGenerator
                 {
                     MessageBox.Show("ENTER FROM 1 TO 10000", "Invalid Count For Project", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-
                 else
                 {
                     loadLable.Visible = true;
@@ -53,12 +53,14 @@ namespace FileGenerator
                     }
                     if (xmlRadioButton.Checked)
                     {
-
                         Save.Filepath = textBox1.Text + "\\XML.xml";
                         await Task.Run(() => Save.ToXml(teams));
                         generate.Enabled = true;
                         loadLable.Visible = false;
                     }
+                    Save.Filepath = null;
+                    textBox1.Text= "";
+
                 }
             }
             else
