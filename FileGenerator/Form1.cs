@@ -39,7 +39,7 @@ namespace FileGenerator
                 }
                 else
                 {
-                    Save sv = new Save(textBox1.Text + "\\CSV.csv");
+                    
                     loadLable.Visible = true;
                     generate.Enabled = false;
                     GenerateObject gen = new GenerateObject();
@@ -47,12 +47,14 @@ namespace FileGenerator
 
                     if (csvRadioButton.Checked)
                     {
+                        Save sv = new Save(textBox1.Text + "\\CSV.csv");
                         await Task.Run(() => sv.ToCsv(teams));
                         generate.Enabled = true;
                         loadLable.Visible = false;
                     }
                     if (xmlRadioButton.Checked)
                     {
+                        Save sv = new Save(textBox1.Text + "\\XML.xml");
                         await Task.Run(() => sv.ToXml(teams));
                         generate.Enabled = true;
                         loadLable.Visible = false;
