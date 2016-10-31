@@ -13,22 +13,16 @@ namespace FileGenerator.Models
         public int TeamID { get; set; }
         [XmlAttribute]
         public string TeamName { get; set; }
-
         public List<Member> Members = new List<Member>();
+
+        public Team()
+        {
+
+        }
         public Team(int teamId, string teamName)
         {
             TeamID = teamId;
             TeamName = teamName;
         }
-        public Team()
-        {
-
-        }
-
-        public override string ToString()
-        {
-            return TeamID + "," + TeamName;
-        }
-
     }
 }

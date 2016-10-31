@@ -42,7 +42,7 @@ namespace FileGenerator
                     loadLable.Visible = true;
                     generate.Enabled = false;
                     GenerateObject gen = new GenerateObject();
-                    List<Team> teams = await Task.Run(() => (gen.GetTeams()));
+                    List<Team> teams = await Task.Run(() => (gen.GetTeamList()));
 
                     if (csvRadioButton.Checked)
                     {

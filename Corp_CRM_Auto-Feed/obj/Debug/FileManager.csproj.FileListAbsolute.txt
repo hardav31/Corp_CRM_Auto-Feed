@@ -6,3 +6,6 @@ C:\Users\Home\Desktop\Public2\Teamproject\Corp_CRM_Auto-Feed\obj\Debug\Corp_CRM_
 C:\Users\Home\Desktop\Public2\Teamproject\Corp_CRM_Auto-Feed\obj\Debug\Corp_CRM_Auto-Feed.pdb
 C:\Users\Home\Desktop\Public2\Teamproject\Corp_CRM_Auto-Feed\bin\Debug\Models.dll
 C:\Users\Home\Desktop\Public2\Teamproject\Corp_CRM_Auto-Feed\bin\Debug\Models.pdb
+C:\Users\user\Source\Repos\Teamproject\Corp_CRM_Auto-Feed\bin\Debug\Corp_CRM_Auto-Feed.exe.config
+C:\Users\user\Source\Repos\Teamproject\Corp_CRM_Auto-Feed\obj\Debug\Corp_CRM_Auto-Feed.exe
+C:\Users\user\Source\Repos\Teamproject\Corp_CRM_Auto-Feed\obj\Debug\Corp_CRM_Auto-Feed.pdb

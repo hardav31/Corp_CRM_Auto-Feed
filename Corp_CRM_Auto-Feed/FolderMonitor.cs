@@ -10,12 +10,12 @@ using System.Threading.Tasks;
 
 namespace PraemiumProject
 {
-    class Check_Folder
+    class FolderMonitor
     {
         FileSystemWatcher watcher = new FileSystemWatcher();
 
 
-        public Check_Folder(string path)
+        public FolderMonitor(string path)
         {
             watcher.Path = path;
             watcher.IncludeSubdirectories = true;
@@ -24,10 +24,10 @@ namespace PraemiumProject
             watcher.Created += Watcher_Created;
             watcher.Filter = "*.*";
         }
+        //TODO : Checking Path exeption
 
         private static void Watcher_Created(object sender, FileSystemEventArgs e)
         {
-
             bool isloaded = false;
             while (!isloaded)
             {
@@ -37,13 +37,13 @@ namespace PraemiumProject
             if (Path.GetExtension(e.FullPath) == ".xml")
             {
                 XMLParser ob = new XMLParser();
-                Task.Run(() => ob.XMLStartReadingAsync(e.FullPath));
+                Task.Run(() => ob.XMLStartReading(e.FullPath));
             }
 
             else if (Path.GetExtension(e.FullPath) == ".csv")
             {
                 Console.WriteLine("File {0} was Created at {1}", e.Name, DateTime.Now.ToLocalTime());
-                CsvParser.StartReadingAsync(e.FullPath);
+                CsvParser.CSVFileReader(e.FullPath);
             }
             else
             {
@@ -59,8 +59,10 @@ namespace PraemiumProject
         }
 
 
+        //Dear Armen is this a right solution?
         public static bool IsFileLoaded(string direction)
         {
+            
             try
             {
                 using (FileStream stream = File.Open(direction, FileMode.Open, FileAccess.Read, FileShare.None))
