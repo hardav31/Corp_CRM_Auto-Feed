@@ -43,7 +43,8 @@ namespace PraemiumProject
             else if (Path.GetExtension(e.FullPath) == ".csv")
             {
                 Console.WriteLine("File {0} was Created at {1}", e.Name, DateTime.Now.ToLocalTime());
-                CsvParser.CSVFileReader(e.FullPath);
+                CsvParser cscParser = new CsvParser();
+                cscParser.CSVFileReader(e.FullPath);
             }
             else
             {

@@ -24,9 +24,7 @@ namespace PraemiumProject
             Team current_Team = null;
             Member current_Member = null;
             Project current_Project = null;
-
-
-
+            
             int Teamattributecount = 2;
             int Memberattributecount = 3;
             int Projectattributecount = 5;

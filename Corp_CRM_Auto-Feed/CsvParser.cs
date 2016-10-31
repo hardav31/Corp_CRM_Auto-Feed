@@ -6,15 +6,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using FileGenerator.Models;
+using System.Xml;
 
 namespace PraemiumProject
 {
     class CsvParser
     {
-        
-        public static void CSVFileReader(string direction)
-        {
+       
 
+        public void CSVFileReader(string direction)
+        {
             int i = 0;
             int team_Id;
             int member_Id;
@@ -123,6 +124,7 @@ namespace PraemiumProject
                 Console.WriteLine(i);
             }
         }
-        //TODO: Invoke Json or Saving Data in DB methods
+      
+       //TODO: Invoke Json or Saving Data in DB methods
     }
 }
