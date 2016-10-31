@@ -58,7 +58,6 @@ namespace FileGenerator
                         generate.Enabled = true;
                         loadLable.Visible = false;
                     }
-                    Save.Filepath = null;
                     textBox1.Text= "";
 
                 }
