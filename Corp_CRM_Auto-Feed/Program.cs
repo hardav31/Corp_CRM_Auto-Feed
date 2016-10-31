@@ -12,7 +12,7 @@ namespace PraemiumProject
         static void Main(string[] args)
         {
 
-            FolderMonitor check = new FolderMonitor(@"C:\Users\Home\Desktop\New folder");
+            FolderMonitor check = new FolderMonitor(@"C:\Users\ldavtyan\Desktop\PR Project\CreatingCSV");
             
             Console.WriteLine(DateTime.Now.ToLocalTime());
 

@@ -9,3 +9,11 @@ C:\Users\Home\Desktop\Public2\Teamproject\Corp_CRM_Auto-Feed\bin\Debug\Models.pd
 C:\Users\user\Source\Repos\Teamproject\Corp_CRM_Auto-Feed\bin\Debug\Corp_CRM_Auto-Feed.exe.config
 C:\Users\user\Source\Repos\Teamproject\Corp_CRM_Auto-Feed\obj\Debug\Corp_CRM_Auto-Feed.exe
 C:\Users\user\Source\Repos\Teamproject\Corp_CRM_Auto-Feed\obj\Debug\Corp_CRM_Auto-Feed.pdb
+C:\Users\ldavtyan\Desktop\PR Project\Project\Corp_CRM_Auto-Feed\obj\Debug\FileManager.csprojResolveAssemblyReference.cache
+C:\Users\ldavtyan\Desktop\PR Project\Project\Corp_CRM_Auto-Feed\obj\Debug\Corp_CRM_Auto-Feed.exe
+C:\Users\ldavtyan\Desktop\PR Project\Project\Corp_CRM_Auto-Feed\obj\Debug\Corp_CRM_Auto-Feed.pdb
+C:\Users\ldavtyan\Desktop\PR Project\Project\Corp_CRM_Auto-Feed\bin\Debug\Corp_CRM_Auto-Feed.exe.config
+C:\Users\ldavtyan\Desktop\PR Project\Project\Corp_CRM_Auto-Feed\bin\Debug\Corp_CRM_Auto-Feed.exe
+C:\Users\ldavtyan\Desktop\PR Project\Project\Corp_CRM_Auto-Feed\bin\Debug\Corp_CRM_Auto-Feed.pdb
+C:\Users\ldavtyan\Desktop\PR Project\Project\Corp_CRM_Auto-Feed\bin\Debug\Models.dll
+C:\Users\ldavtyan\Desktop\PR Project\Project\Corp_CRM_Auto-Feed\bin\Debug\Models.pdb

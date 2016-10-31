@@ -14,7 +14,7 @@ namespace PraemiumProject
     class XMLParser
     {
        //In Progress
-        private void XMLFileReader(string direction)
+        public void XMLFileReader(string direction)
         {
             //TODO: if (file.Length > 1000000)
             Dictionary<int, Team> TeamD = new Dictionary<int, Team>();

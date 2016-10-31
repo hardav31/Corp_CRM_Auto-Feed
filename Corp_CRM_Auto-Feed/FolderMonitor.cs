@@ -37,7 +37,7 @@ namespace PraemiumProject
             if (Path.GetExtension(e.FullPath) == ".xml")
             {
                 XMLParser ob = new XMLParser();
-                Task.Run(() => ob.XMLStartReading(e.FullPath));
+                Task.Run(() => ob.XMLFileReader(e.FullPath));
             }
 
             else if (Path.GetExtension(e.FullPath) == ".csv")
