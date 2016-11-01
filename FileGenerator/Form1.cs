@@ -16,6 +16,17 @@ namespace FileGenerator
             InitializeComponent();
         }
 
+        private void buttonDisable(Button button)
+        {
+            button.Enabled = false;
+        }
+
+        private void buttonEnable(Button button)
+        {
+            button.Enabled = true;
+        }
+
+
         private void browse_Click(object sender, EventArgs e)
         {
             if (folderBrowserDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
@@ -41,20 +52,20 @@ namespace FileGenerator
                 {
                     Save sv = new Save(textBox1.Text + "\\CSV.csv");
                     loadLable.Visible = true;
-                    generate.Enabled = false;
+                    buttonDisable(generate);
                     GenerateObject gen = new GenerateObject();
                     List<Team> teams = await Task.Run(() => (gen.GetTeamList()));
 
                     if (csvRadioButton.Checked)
                     {
                         await Task.Run(() => sv.ToCsv(teams));
-                        generate.Enabled = true;
+                        buttonEnable(generate);
                         loadLable.Visible = false;
                     }
                     if (xmlRadioButton.Checked)
                     {
                         await Task.Run(() => sv.ToXml(teams));
-                        generate.Enabled = true;
+                        buttonEnable(generate);
                         loadLable.Visible = false;
                     }
                     textBox1.Text= "";
