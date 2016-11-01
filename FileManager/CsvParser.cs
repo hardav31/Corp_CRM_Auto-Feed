@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using FileGenerator.Models;
+using Models;
 
 namespace FileManager
 {
