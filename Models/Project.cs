@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Xml.Serialization;
 
-namespace FileGenerator.Models
+namespace Models
 {
     [Serializable]
     public class Project

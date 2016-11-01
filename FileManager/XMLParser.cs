@@ -9,7 +9,7 @@ using System.Xml;
 using System.Collections.Specialized;
 using FileGenerator.Models;
 
-namespace PraemiumProject
+namespace FileManager
 {
     class XMLParser
     {

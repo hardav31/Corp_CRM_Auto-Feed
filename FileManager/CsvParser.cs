@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using FileGenerator.Models;
 
-namespace PraemiumProject
+namespace FileManager
 {
     class CsvParser
     {
