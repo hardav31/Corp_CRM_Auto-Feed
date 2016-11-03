@@ -1,0 +1,5 @@
+C:\Users\Galust\Source\Repos\Teamproject\LogManager\bin\Debug\LogManager.dll
+C:\Users\Galust\Source\Repos\Teamproject\LogManager\bin\Debug\LogManager.pdb
+C:\Users\Galust\Source\Repos\Teamproject\LogManager\obj\Debug\LogManager.csprojResolveAssemblyReference.cache
+C:\Users\Galust\Source\Repos\Teamproject\LogManager\obj\Debug\LogManager.dll
+C:\Users\Galust\Source\Repos\Teamproject\LogManager\obj\Debug\LogManager.pdb

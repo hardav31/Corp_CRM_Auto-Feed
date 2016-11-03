@@ -36,3 +36,13 @@ C:\Users\ldavtyan\Desktop\PR Project\TeamProject\FileManager\bin\Debug\FileManag
 C:\Users\ldavtyan\Desktop\PR Project\TeamProject\FileManager\bin\Debug\FileManager.pdb
 C:\Users\ldavtyan\Desktop\PR Project\TeamProject\FileManager\bin\Debug\Models.dll
 C:\Users\ldavtyan\Desktop\PR Project\TeamProject\FileManager\bin\Debug\Models.pdb
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\FileManager.exe.config
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\obj\Debug\FileManager.exe
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\obj\Debug\FileManager.pdb
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\FileManager.exe
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\FileManager.pdb
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\LogManager.dll
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\Models.dll
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\LogManager.pdb
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\Models.pdb
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\obj\Debug\FileManager.csprojResolveAssemblyReference.cache

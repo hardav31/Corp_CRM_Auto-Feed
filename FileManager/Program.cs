@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LogManager;
+using System;
 using System.IO;
 
 namespace FileManager
@@ -8,7 +9,8 @@ namespace FileManager
         static void Main(string[] args)
         {
             //TODO: Configuring via APPConfig
-            FolderMonitor check = new FolderMonitor(@"C:\Users\ldavtyan\Desktop\PR Project\CreatingCSV");
+            Log log = new Log();
+            FolderMonitor check = new FolderMonitor(@"C:\Users\Galust\Desktop\New folder");
             check.watcher.WaitForChanged(WatcherChangeTypes.All);//Test
             Console.WriteLine(DateTime.Now.ToLocalTime());
             Console.ReadKey();
