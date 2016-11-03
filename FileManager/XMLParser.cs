@@ -15,12 +15,12 @@ namespace FileManager
         public void XMLFileReader(string direction)
         {
             //TODO: if (file.Length > 1000000)
+            bool IsAllRight = true;
+            Dictionary<int, Team> TeamD = new Dictionary<int, Team>();
+            Dictionary<int, string> DicMember = new Dictionary<int, string>(); // for compare all Member's id
+            Dictionary<int, string> DicProject = new Dictionary<int, string>(); // for compare Project's id in one Member
             try
-            {
-                Dictionary<int, Team> TeamD = new Dictionary<int, Team>();
-                Dictionary<int, string> DicMember = new Dictionary<int, string>(); // for compare all Member's id
-                Dictionary<int, string> DicProject = new Dictionary<int, string>(); // for compare Project's id in one Member
-
+            { 
                 Team current_Team = null;
                 Member current_Member = null;
                 Project current_Project = null;
@@ -238,21 +238,24 @@ namespace FileManager
                 Console.WriteLine("The file has been successfuly parsing to JSON and saving in aprropriate folder");
                 Console.WriteLine("XmlClose " + DateTime.Now);
             }
-            catch (StackOverflowException e)
-            {
-                Console.WriteLine(e);
-            }
-            catch (OutOfMemoryException e)
-            {
-                Console.WriteLine(e);
-            }
+           
             catch (IOException e)
             {
+                IsAllRight = false;
                 Console.WriteLine(e);
             }
             catch (Exception e)
             {
+                IsAllRight = false;
                 Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                if (!IsAllRight)
+                {
+                    TeamD.Clear();
+                    FolderMonitor.MoveFile(direction, @"C:\Users\ldavtyan\Desktop\PR Project\CreatingCSV" + Path.GetFileName(direction));
+                }
             }
             
             //foreach (var x in TeamD.Values)
