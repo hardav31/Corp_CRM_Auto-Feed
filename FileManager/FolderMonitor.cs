@@ -12,7 +12,7 @@ namespace FileManager
 {
     class FolderMonitor
     {
-        FileSystemWatcher watcher = new FileSystemWatcher();
+       public FileSystemWatcher watcher = new FileSystemWatcher();
 
 
         public FolderMonitor(string path)
@@ -28,28 +28,39 @@ namespace FileManager
 
         private static void Watcher_Created(object sender, FileSystemEventArgs e)
         {
-            bool isloaded = false;
-            while (!isloaded)
+            try
             {
-                isloaded = IsFileLoaded(e.FullPath);
-            }
+                if (new FileInfo(e.FullPath).Length / (1024 * 1024) > 1000)//if(size>1gb)
+                {
+                    //log: File is very big;
+                    MoveFile(e.FullPath, @"C:\Users\user\Desktop\XMLGENERAIT\" + e.Name);
+                    return;
+                }
+                bool isloaded = false;
+                while (!isloaded)
+                {
+                    isloaded = IsFileLoaded(e.FullPath);
+                }
 
-            if (Path.GetExtension(e.FullPath) == ".xml")
-            {
-                XMLParser ob = new XMLParser();
-                Task.Run(() => ob.XMLFileReader(e.FullPath));
-            }
+                if (Path.GetExtension(e.FullPath) == ".xml")
+                {
+                    XMLParser ob = new XMLParser();
+                    Task.Run(() => ob.XMLFileReader(e.FullPath));
+                }
 
-            else if (Path.GetExtension(e.FullPath) == ".csv")
-            {
-                Console.WriteLine("File {0} was Created at {1}", e.Name, DateTime.Now.ToLocalTime());
-                CsvParser cscParser = new CsvParser();
-                cscParser.CSVFileReader(e.FullPath);
+                else if (Path.GetExtension(e.FullPath) == ".csv")
+                {
+                    Console.WriteLine("File {0} was Created at {1}", e.Name, DateTime.Now.ToLocalTime());
+                    CsvParser cscParser = new CsvParser();
+                    cscParser.CSVFileReader(e.FullPath);
+                }
+                else
+                {
+                    Console.WriteLine("File {0} has uexpected file extention", e.Name);
+                }
             }
-            else
-            {
-                Console.WriteLine("File {0} has uexpected file extention", e.Name);
-            }
+            catch (IOException) { }
+            catch (Exception) { }
 
 
         }
@@ -75,6 +86,10 @@ namespace FileManager
             {
                 return false;
             }
+        }
+        public static void MoveFile(string path1, string path2)
+        {
+                File.Move(path1, path2);
         }
     }
 

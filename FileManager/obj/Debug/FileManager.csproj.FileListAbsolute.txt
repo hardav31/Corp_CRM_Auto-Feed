@@ -25,3 +25,6 @@ C:\Users\Home\Desktop\Public2\Teamproject\FileManager\bin\Debug\FileManager.exe
 C:\Users\Home\Desktop\Public2\Teamproject\FileManager\bin\Debug\FileManager.pdb
 C:\Users\Home\Desktop\Public2\Teamproject\FileManager\obj\Debug\FileManager.exe
 C:\Users\Home\Desktop\Public2\Teamproject\FileManager\obj\Debug\FileManager.pdb
+C:\Users\user\Source\Repos\Teamproject\FileManager\bin\Debug\FileManager.exe.config
+C:\Users\user\Source\Repos\Teamproject\FileManager\obj\Debug\FileManager.exe
+C:\Users\user\Source\Repos\Teamproject\FileManager\obj\Debug\FileManager.pdb

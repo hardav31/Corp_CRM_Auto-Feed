@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace FileManager
 {
@@ -8,7 +9,7 @@ namespace FileManager
         {
             //TODO: Configuring via APPConfig
             FolderMonitor check = new FolderMonitor(@"C:\Users\Home\Desktop\New folder");
-            
+            check.watcher.WaitForChanged(WatcherChangeTypes.All);//Test
             Console.WriteLine(DateTime.Now.ToLocalTime());
 
             Console.ReadKey();
