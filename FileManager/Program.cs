@@ -1,19 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Threading.Tasks;
 
-namespace PraemiumProject
+namespace FileManager
 {
     class Program
     {
         static void Main(string[] args)
         {
             //TODO: Configuring via APPConfig
-            FolderMonitor check = new FolderMonitor(@"C:\Users\ldavtyan\Desktop\PR Project\CreatingCSV");
-            
+            FolderMonitor check = new FolderMonitor(@"C:\Users\Home\Desktop\New folder");
+            check.watcher.WaitForChanged(WatcherChangeTypes.All);//Test
             Console.WriteLine(DateTime.Now.ToLocalTime());
 
             Console.ReadKey();

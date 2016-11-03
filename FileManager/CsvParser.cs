@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using FileGenerator.Models;
+using Models;
 
-namespace PraemiumProject
+namespace FileManager
 {
     class CsvParser
     {
@@ -119,6 +119,8 @@ namespace PraemiumProject
                 MembersD = null;
                 Console.WriteLine(i);
             }
+            CreateDS cds = new CreateDS();
+            cds.DS(TeamsD);
         }
       
        //TODO: Invoke Json or Saving Data in DB methods

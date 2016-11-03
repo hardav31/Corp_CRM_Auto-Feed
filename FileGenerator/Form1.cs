@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Collections.Generic;
-using FileGenerator.Models;
+using Models;
 using System.Threading.Tasks;
 using System.Configuration;
 using System.IO;
