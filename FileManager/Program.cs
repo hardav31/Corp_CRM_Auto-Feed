@@ -8,10 +8,9 @@ namespace FileManager
         static void Main(string[] args)
         {
             //TODO: Configuring via APPConfig
-            FolderMonitor check = new FolderMonitor(@"C:\Users\Home\Desktop\New folder");
+            FolderMonitor check = new FolderMonitor(@"C:\Users\ldavtyan\Desktop\PR Project\CreatingCSV");
             check.watcher.WaitForChanged(WatcherChangeTypes.All);//Test
             Console.WriteLine(DateTime.Now.ToLocalTime());
-
             Console.ReadKey();
         }
 

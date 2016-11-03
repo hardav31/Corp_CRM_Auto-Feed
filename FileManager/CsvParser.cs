@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Models;
+using System.Text;
+using System.Configuration;
 
 namespace FileManager
 {
@@ -101,9 +103,12 @@ namespace FileManager
                     {
                         TeamsD[team_Id].Members.Add(MembersD[member_Id]);
                     }
-
                 }
 
+                StringBuilder sb = new StringBuilder();
+                JsonParser jsParser = new JsonParser();
+                jsParser.FilePath = sb.Append(@ConfigurationManager.AppSettings["JSONFolderForCSV"] + jsParser.jsonFoldername(direction)).ToString();
+                jsParser.JsonWrite(TeamsD);
             }
             catch (OutOfMemoryException ex)
             {
@@ -119,6 +124,8 @@ namespace FileManager
                 MembersD = null;
                 Console.WriteLine(i);
             }
+
+
             CreateDS cds = new CreateDS();
             cds.DS(TeamsD);
         }

@@ -31,3 +31,8 @@ C:\Users\user\Source\Repos\Teamproject\FileManager\obj\Debug\FileManager.pdb
 C:\Users\ldavtyan\Desktop\PR Project\TeamProject\FileManager\bin\Debug\FileManager.exe.config
 C:\Users\ldavtyan\Desktop\PR Project\TeamProject\FileManager\obj\Debug\FileManager.exe
 C:\Users\ldavtyan\Desktop\PR Project\TeamProject\FileManager\obj\Debug\FileManager.pdb
+C:\Users\ldavtyan\Desktop\PR Project\TeamProject\FileManager\obj\Debug\FileManager.csprojResolveAssemblyReference.cache
+C:\Users\ldavtyan\Desktop\PR Project\TeamProject\FileManager\bin\Debug\FileManager.exe
+C:\Users\ldavtyan\Desktop\PR Project\TeamProject\FileManager\bin\Debug\FileManager.pdb
+C:\Users\ldavtyan\Desktop\PR Project\TeamProject\FileManager\bin\Debug\Models.dll
+C:\Users\ldavtyan\Desktop\PR Project\TeamProject\FileManager\bin\Debug\Models.pdb

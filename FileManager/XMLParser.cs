@@ -4,6 +4,8 @@ using System.Linq;
 using System.Xml;
 using Models;
 using System.IO;
+using System.Text;
+using System.Configuration;
 
 namespace FileManager
 {
@@ -228,7 +230,13 @@ namespace FileManager
                                 break;
                         }
                     }
+                    StringBuilder sb = new StringBuilder();
+                    JsonParser jsParser = new JsonParser();
+                    jsParser.FilePath = sb.Append(@ConfigurationManager.AppSettings["JSONFolderForXML"] + jsParser.jsonFoldername(direction)).ToString();
+                    jsParser.JsonWrite(TeamD);
                 }
+                Console.WriteLine("The file has been successfuly parsing to JSON and saving in aprropriate folder");
+                Console.WriteLine("XmlClose " + DateTime.Now);
             }
             catch (StackOverflowException e)
             {
@@ -246,7 +254,7 @@ namespace FileManager
             {
                 Console.WriteLine(e.Message);
             }
-            Console.WriteLine("XmlClose " + DateTime.Now);
+            
             //foreach (var x in TeamD.Values)
             //{
             //    Console.WriteLine(x.TeamID + " " + x.TeamName);
