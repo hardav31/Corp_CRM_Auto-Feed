@@ -7,7 +7,7 @@ namespace FileManager
         static void Main(string[] args)
         {
             //TODO: Configuring via APPConfig
-            FolderMonitor check = new FolderMonitor(@"C:\Users\ldavtyan\Desktop\PR Project\CreatingCSV");
+            FolderMonitor check = new FolderMonitor(@"C:\Users\Home\Desktop\New folder");
             
             Console.WriteLine(DateTime.Now.ToLocalTime());
 

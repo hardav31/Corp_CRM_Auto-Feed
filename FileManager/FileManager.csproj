@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateDS.cs" />
     <Compile Include="FolderMonitor.cs" />
     <Compile Include="CsvParser.cs" />
     <Compile Include="Program.cs" />
