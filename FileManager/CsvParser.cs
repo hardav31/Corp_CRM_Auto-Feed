@@ -5,6 +5,7 @@ using System.Linq;
 using Models;
 using System.Text;
 using System.Configuration;
+using LogManager;
 
 namespace FileManager
 {
@@ -33,7 +34,7 @@ namespace FileManager
 
                     if (line.Length != 10)
                     {
-                        //TODO:log
+                        Log.Warning(direction, i.ToString());
                         continue;
                     }
 
@@ -46,7 +47,7 @@ namespace FileManager
 
                     if (!int.TryParse(line[0], out team_Id))
                     {
-                        //TODO:log
+                        Log.Error(direction, i.ToString());
                         continue;
                     }
 
