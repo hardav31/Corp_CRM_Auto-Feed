@@ -30,6 +30,13 @@ IF EXISTS (SELECT * FROM sys.objects so join sys.schemas sc on so.schema_id = sc
 	DROP PROCEDURE [dbo].[insertData]
 GO
 
+USE [praemium1]
+GO
+/****** Object:  StoredProcedure [dbo].[insertData]    Script Date: 11/4/2016 12:35:49 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
 CREATE PROC [dbo].[insertData]
 (
 	@sourcetable Source READONLY
@@ -57,7 +64,7 @@ BEGIN
 -----------------------------Inset/Update Team table------------------------------------
 
 		MERGE Team AS targetTeam
-		USING (SELECT TeamID, TeamName FROM @sourcetable) AS sourceTeam   
+		USING (SELECT Distinct TeamID, TeamName FROM @sourcetable) AS sourceTeam   
 		ON (targetTeam.TeamID=sourceTeam.TeamID AND targetTeam.isDeleted=0)
 		WHEN MATCHED AND targetTeam.TeamName<>sourceTeam.TeamName 
 		THEN
@@ -77,7 +84,7 @@ BEGIN
 -----------------------------Inset/Update Member table------------------------------------
 
 		MERGE Member AS targetMember
-		USING (SELECT MemberID, MemberName, MemberSurname, TeamID FROM @sourcetable) AS sourceMember   
+		USING (SELECT Distinct MemberID, MemberName, MemberSurname, TeamID FROM @sourcetable) AS sourceMember   
 		ON (targetMember.MemberID=sourceMember.MemberID AND targetMember.isDeleted=0 )  
 		WHEN MATCHED AND targetMember.MemberName<>sourceMember.MemberName 
 			OR targetMember.MemberSurname<>sourceMember.MemberSurname 
@@ -103,7 +110,7 @@ BEGIN
 -----------------------------Inset/Update Project table------------------------------------
 
 		MERGE Project AS targetProject
-		USING (SELECT ProjectID, ProjectName, ProjectCreatedDate, ProjectDueDate, ProjectDescription FROM @sourcetable) AS sourceProject   
+		USING (SELECT Distinct ProjectID, ProjectName, ProjectCreatedDate, ProjectDueDate, ProjectDescription FROM @sourcetable) AS sourceProject   
 		ON (targetProject.ProjectID=sourceProject.ProjectID AND targetProject.isDeleted=0)  
 		WHEN MATCHED AND targetProject.ProjectName<>sourceProject.ProjectName 
 			OR targetProject.ProjectCreatedDate<>sourceProject.ProjectCreatedDate
