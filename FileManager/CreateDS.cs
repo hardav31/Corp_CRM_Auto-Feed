@@ -30,7 +30,7 @@ namespace FileManager
             dt.Columns.Add("ProjectCreatedDate", typeof(DateTime));
             dt.Columns.Add("ProjectDueDate", typeof(DateTime));
             dt.Columns.Add("ProjecDescription", typeof(string));
-            int i = 0;
+            
             foreach (var team in teams)
             {
                 foreach (var member in team.Members)
@@ -47,23 +47,8 @@ namespace FileManager
 
                     }
                 }
-                i++;
-                if (i == 10) break;
-
-
             }
-            //for (int i = 0; i < 2; i++)
-            //{
-            //    DataRow dr = dt.NewRow();
-            //    dr.ItemArray = new object[]
-            //    {
-            //                teams[i].Members[i].MemberID, teams[i].Members[i].MemberName,teams[i].Members[i].MemberSurname,
-            //                teams[i].TeamID, teams[i].TeamName,
-            //                teams[i].Members[i].Projects[i].ProjectID, teams[i].Members[i].Projects[i].ProjectName, teams[i].Members[i].Projects[i].ProjectCreatedDate, teams[i].Members[i].Projects[i].ProjectDueDate, teams[0].Members[0].Projects[0].ProjectDescription
-            //     };
-            //    dt.Rows.Add(dr);
-            //}
-
+            
             SqlConnection con = new SqlConnection(@"Data Source=tcp:micinternship.database.windows.net,1433; Initial Catalog = praemium1;Persist Security Info=True;User ID=mic;Password=Admin.Pa$$");
             SqlCommand cmd = new SqlCommand("dbo.insertData", con);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -71,7 +56,7 @@ namespace FileManager
             param.ParameterName = @"@sourcetable";
             param.Value = dt;
             cmd.Parameters.Add(param);
-           // cmd.CommandTimeout = 0;
+            cmd.CommandTimeout = 0;
 
             con.Open();
             cmd.ExecuteNonQuery();

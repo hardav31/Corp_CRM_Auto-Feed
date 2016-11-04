@@ -234,6 +234,9 @@ namespace FileManager
                     JsonParser jsParser = new JsonParser();
                     jsParser.FilePath = sb.Append(@ConfigurationManager.AppSettings["JSONFolderForXML"] + jsParser.jsonFoldername(direction)).ToString();
                     jsParser.JsonWrite(TeamD);
+                     
+                    CreateDS ds = new CreateDS();
+                    ds.DS(TeamD);
                 }
                 Console.WriteLine("The file has been successfuly parsing to JSON and saving in aprropriate folder");
                 Console.WriteLine("XmlClose " + DateTime.Now);
@@ -254,7 +257,7 @@ namespace FileManager
             {
                 Console.WriteLine(e.Message);
             }
-            
+
             //foreach (var x in TeamD.Values)
             //{
             //    Console.WriteLine(x.TeamID + " " + x.TeamName);
@@ -268,6 +271,7 @@ namespace FileManager
             //    }
             //}
 
+           
         }
         //TODO: Invoke Json or Saving Data in DB methods
     }
