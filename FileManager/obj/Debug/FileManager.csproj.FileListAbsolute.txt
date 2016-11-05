@@ -48,3 +48,5 @@ C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\Models.pdb
 C:\Users\Galust\Source\Repos\Teamproject\FileManager\obj\Debug\FileManager.csprojResolveAssemblyReference.cache
 C:\Users\Home\Desktop\Public2\Teamproject\FileManager\bin\Debug\LogManager.dll
 C:\Users\Home\Desktop\Public2\Teamproject\FileManager\bin\Debug\LogManager.pdb
+C:\Users\Home\Desktop\Public2\Teamproject\FileManager\bin\Debug\DAL.dll
+C:\Users\Home\Desktop\Public2\Teamproject\FileManager\bin\Debug\DAL.pdb

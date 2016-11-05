@@ -6,6 +6,7 @@ using Models;
 using System.IO;
 using System.Text;
 using System.Configuration;
+using DAL;
 
 namespace FileManager
 {
@@ -16,9 +17,9 @@ namespace FileManager
         {
             //TODO: if (file.Length > 1000000)
             bool IsAllRight = true;
-            Dictionary<int, Team> TeamD = new Dictionary<int, Team>();
-            Dictionary<int, string> DicMember = new Dictionary<int, string>(); // for compare all Member's id
-            Dictionary<int, string> DicProject = new Dictionary<int, string>(); // for compare Project's id in one Member
+            Dictionary<int, Team> TeamsD = new Dictionary<int, Team>();
+            Dictionary<int, string> MembersD = new Dictionary<int, string>(); // for compare all Member's id
+            Dictionary<int, string> ProjectsD = new Dictionary<int, string>(); // for compare Project's id in one Member
             try
             { 
                 Team current_Team = null;
@@ -76,9 +77,9 @@ namespace FileManager
                                             break;
                                         }
                                     }
-                                    if (current_Team != null && current_Team.TeamID != -1 && !TeamD.Keys.Contains(current_Team.TeamID))
+                                    if (current_Team != null && current_Team.TeamID != -1 && !TeamsD.Keys.Contains(current_Team.TeamID))
                                     {
-                                        TeamD[current_Team.TeamID] = current_Team;
+                                        TeamsD[current_Team.TeamID] = current_Team;
                                     }
                                     else
                                     {
@@ -128,9 +129,9 @@ namespace FileManager
                                             break;
                                         }
                                     }
-                                    if (current_Member != null && current_Member.MemberID != -1 && !DicMember.Keys.Contains(current_Member.MemberID))
+                                    if (current_Member != null && current_Member.MemberID != -1 && !MembersD.Keys.Contains(current_Member.MemberID))
                                     {
-                                        DicMember.Add(current_Member.MemberID, "eakan chi");
+                                        MembersD.Add(current_Member.MemberID, "eakan chi");
                                     }
                                     else
                                     {
@@ -205,9 +206,9 @@ namespace FileManager
                                             break;
                                         }
                                     }
-                                    if (current_Project != null && current_Project.ProjectID != -1 && !DicProject.Keys.Contains(current_Project.ProjectID))
+                                    if (current_Project != null && current_Project.ProjectID != -1 && !ProjectsD.Keys.Contains(current_Project.ProjectID))
                                     {
-                                        DicProject.Add(current_Project.ProjectID, "a");
+                                        ProjectsD.Add(current_Project.ProjectID, "a");
                                         current_Member.Projects.Add(current_Project);
                                     }
                                     else
@@ -224,22 +225,30 @@ namespace FileManager
                                     if (current_Member != null)
                                     {
                                         current_Team.Members.Add(current_Member);
-                                        DicProject.Clear();
+                                        ProjectsD.Clear();
                                     }
                                 }
                                 break;
                         }
                     }
-                    StringBuilder sb = new StringBuilder();
-                    JsonParser jsParser = new JsonParser();
-                    jsParser.FilePath = sb.Append(@ConfigurationManager.AppSettings["JSONFolderForXML"] + jsParser.jsonFoldername(direction)).ToString();
-                    jsParser.JsonWrite(TeamD);
-                     
-                    CreateDS ds = new CreateDS();
-                    ds.DS(TeamD);
+                    if (bool.Parse(ConfigurationManager.AppSettings["saveInDB"]))
+                    {
+                        DataUpdater du = new DataUpdater();
+                        du.Update(TeamsD);
+                    }
+
+                    if (bool.Parse(ConfigurationManager.AppSettings["saveInJSON"]))
+                    {
+                        StringBuilder sb = new StringBuilder();
+                        JsonParser jsParser = new JsonParser();
+                        jsParser.FilePath = sb.Append(@ConfigurationManager.AppSettings["JSONFolderForXML"] + jsParser.jsonFoldername(direction)).ToString();
+                        jsParser.JsonWrite(TeamsD);
+                        Console.WriteLine("The file has been successfuly parsing to JSON and saving in aprropriate folder");
+                        Console.WriteLine("XmlClose " + DateTime.Now);
+                    }
+                    
                 }
-                Console.WriteLine("The file has been successfuly parsing to JSON and saving in aprropriate folder");
-                Console.WriteLine("XmlClose " + DateTime.Now);
+                
             }
            
             catch (IOException e)
@@ -256,7 +265,7 @@ namespace FileManager
             {
                 if (!IsAllRight)
                 {
-                    TeamD.Clear();
+                    TeamsD.Clear();
                     FolderMonitor.MoveFile(direction, @"C:\Users\ldavtyan\Desktop\PR Project\CreatingCSV" + Path.GetFileName(direction));
                 }
             }
