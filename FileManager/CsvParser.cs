@@ -6,6 +6,7 @@ using Models;
 using System.Text;
 using System.Configuration;
 using LogManager;
+using DAL;
 
 namespace FileManager
 {
@@ -104,11 +105,20 @@ namespace FileManager
                         TeamsD[team_Id].Members.Add(MembersD[member_Id]);
                     }
                 }
+                if (bool.Parse(ConfigurationManager.AppSettings["saveInDB"]))
+                {
+                DataUpdater du = new DataUpdater();
+                du.Update(TeamsD);
+
+                }
+                if (bool.Parse(ConfigurationManager.AppSettings["saveInJSON"]))
+                {
 
                 StringBuilder sb = new StringBuilder();
                 JsonParser jsParser = new JsonParser();
                 jsParser.FilePath = sb.Append(@ConfigurationManager.AppSettings["JSONFolderForCSV"] + jsParser.jsonFoldername(direction)).ToString();
                 jsParser.JsonWrite(TeamsD);
+                }
             }
             catch (OutOfMemoryException ex)
             {
@@ -125,9 +135,6 @@ namespace FileManager
                 Console.WriteLine(i);
             }
 
-
-            CreateDS cds = new CreateDS();
-            cds.DS(TeamsD);
         }
       
        //TODO: Invoke Json or Saving Data in DB methods
