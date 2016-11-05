@@ -11,7 +11,6 @@ namespace FileManager
 {
     class CsvParser
     {
-       
 
         public void CSVFileReader(string direction)
         {
@@ -34,7 +33,7 @@ namespace FileManager
 
                     if (line.Length != 10)
                     {
-                        Log.Warning(direction, i.ToString());
+                        Log.DoLog(Chois.Warning, direction, i.ToString());
                         continue;
                     }
 
@@ -47,7 +46,7 @@ namespace FileManager
 
                     if (!int.TryParse(line[0], out team_Id))
                     {
-                        Log.Error(direction, i.ToString());
+                        Log.DoLog(Chois.Error, direction, i.ToString());
                         continue;
                     }
 

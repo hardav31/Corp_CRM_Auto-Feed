@@ -9,8 +9,9 @@ namespace FileManager
         static void Main(string[] args)
         {
             //TODO: Configuring via APPConfig
-            Log log = new Log();
-            FolderMonitor check = new FolderMonitor(@"C:\Users\Home\Desktop\New folder");
+            
+            Log.InIt();
+            FolderMonitor check = new FolderMonitor(@"C:\Users\Galust\Desktop\New folder");
             check.watcher.WaitForChanged(WatcherChangeTypes.All);//Test
             Console.WriteLine(DateTime.Now.ToLocalTime());
             Console.ReadKey();

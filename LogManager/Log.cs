@@ -8,130 +8,69 @@ using System.Threading.Tasks;
 
 namespace LogManager
 {
-    public class Log
+   public class Log
     {
-        static EventLog myLog;
+        static LogToEventLog logtoEventLog;
+        static LogToFile logToTextFile;
         static bool logToFile;
         static bool logToEventLog;
-        public Log()
+        public static void InIt()
         {
-            if (!EventLog.SourceExists("Skype"))
-            {
-                EventLog.CreateEventSource("Skype", "MyLogName");
-            }
-            myLog = new EventLog("MyLogName");
-            myLog.Source = "Skype";
             bool.TryParse(ConfigurationManager.AppSettings["WriteToFile"], out logToFile);
             bool.TryParse(ConfigurationManager.AppSettings["WriteToWinEventLog"], out logToEventLog);
-        }
-        public static void Info(string fileName, string massage)
-        {
             if (logToFile)
             {
-                WriteToFile(fileName, "info", massage);
+                logToTextFile = new LogToFile();
             }
             if (logToEventLog)
             {
-                myLog.WriteEntry(FileInformation(fileName, massage), EventLogEntryType.Information);
+                logtoEventLog = new LogToEventLog();
+                if (!EventLog.SourceExists("Skype"))
+                {
+                    EventLog.CreateEventSource("Skype", "MyLogName");
+                }
+                logtoEventLog.myLog = new EventLog("MyLogName");
+                logtoEventLog.myLog.Source = "Skype";
             }
         }
-        public static void Warning(string fileName, string line)
+        public static void DoLog(Chois chois, string fileName, string line)
         {
-            if (logToFile)
+            switch (chois)
             {
-                WriteToFile(fileName, "Warning", line);
-            }
-            if (logToEventLog)
-            {
-                myLog.WriteEntry(FileInformation(fileName, line), EventLogEntryType.Warning);
+                case Chois.Info:
+                    if (logToFile)
+                        logToTextFile.Info(fileName, line);
+                    if (logToEventLog)
+                        logtoEventLog.Info(fileName, line);
+                    break;
+                case Chois.Warning:
+                    if (logToFile)
+                        logToTextFile.Warning(fileName, line);
+                    if (logToEventLog)
+                        logtoEventLog.Warning(fileName, line);
+                    break;
+                case Chois.Error:
+                    if (logToFile)
+                        logToTextFile.Error(fileName, line);
+                    if (logToEventLog)
+                        logtoEventLog.Error(fileName, line);
+                    break;
             }
         }
-        public static void Error(string fileName, string line)
+        public static void DoLog(string fileName, Exception ex)
         {
-            if (logToFile)
-            {
-                WriteToFile(fileName, "Error", line);
-            }
-            if (logToEventLog)
-            {
-                myLog.WriteEntry(FileInformation(fileName, line), EventLogEntryType.Error);
-            }
+            if (logToTextFile != null)
+                logToTextFile.Exceptin(fileName, ex);
+            if (logtoEventLog != null)
+                logtoEventLog.Exceptin(fileName, ex);
         }
-        public static void Exception(string fileName, Exception ex)
-        {
-            if (logToFile)
-            {
-                WriteExceptionToFile(fileName, ex);
-            }
-            if (logToEventLog)
-            {
-                WriteExceptionToEventLog(fileName, ex);
-            }
-        }
-        private static void WriteToFile(string fileName, string type, string line)
-        {
-            Trace.WriteLine(string.Format("DateTime = {0}, Type = {1}, Line =  {2}, FileName = {3}",
-                                   DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
-                                   type,
-                                   line,
-                                   fileName));
-        }
-        private static void WriteExceptionToFile(string fileName, Exception ex)
-        {
-            StringBuilder str = new StringBuilder();
-            str.Append(Environment.NewLine + fileName + Environment.NewLine);
-            str.Append("Exception Type" + Environment.NewLine);
-            str.Append(ex.GetType().Name);
-            str.Append(Environment.NewLine + Environment.NewLine);
-            str.Append("Massage" + Environment.NewLine);
-            str.Append(ex.Message + Environment.NewLine + Environment.NewLine);
-            str.Append("Stack Trace" + Environment.NewLine);
-            str.Append(ex.StackTrace + Environment.NewLine + Environment.NewLine);
-            Exception innerException = ex.InnerException;
-            while (innerException != null)
-            {
-                str.Append("Exception Type" + Environment.NewLine);
-                str.Append(innerException.GetType().Name);
-                str.Append(Environment.NewLine + Environment.NewLine);
-                str.Append("Massage" + Environment.NewLine);
-                str.Append(innerException.Message + Environment.NewLine + Environment.NewLine);
-                str.Append("Stack Trace" + Environment.NewLine);
-                str.Append(innerException.StackTrace + Environment.NewLine + Environment.NewLine);
-            }
-            Trace.WriteLine(string.Format("DateTime = {0}, {1}",
-                                                            DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
-                                                            str.ToString()));
-        }
-        private static string FileInformation(string fileName, string line)
-        {
-            StringBuilder str = new StringBuilder();
-            str.Append(fileName + Environment.NewLine);
-            str.Append(line + Environment.NewLine);
-            return str.ToString();
-        }
-        private static void WriteExceptionToEventLog(string fileName, Exception ex)
-        {
-            StringBuilder str = new StringBuilder();
-            str.Append(Environment.NewLine + fileName + Environment.NewLine);
-            str.Append("Exception Type" + Environment.NewLine);
-            str.Append(ex.GetType().Name);
-            str.Append(Environment.NewLine + Environment.NewLine);
-            str.Append("Massage" + Environment.NewLine);
-            str.Append(ex.Message + Environment.NewLine + Environment.NewLine);
-            str.Append("Stack Trace" + Environment.NewLine);
-            str.Append(ex.StackTrace + Environment.NewLine + Environment.NewLine);
-            Exception innerException = ex.InnerException;
-            while (innerException != null)
-            {
-                str.Append("Exception Type" + Environment.NewLine);
-                str.Append(innerException.GetType().Name);
-                str.Append(Environment.NewLine + Environment.NewLine);
-                str.Append("Massage" + Environment.NewLine);
-                str.Append(innerException.Message + Environment.NewLine + Environment.NewLine);
-                str.Append("Stack Trace" + Environment.NewLine);
-                str.Append(innerException.StackTrace + Environment.NewLine + Environment.NewLine);
-            }
-            myLog.WriteEntry(str.ToString(), EventLogEntryType.Error);
-        }
+    }
+
+    public enum Chois
+    {
+        Info,
+        Warning,
+        Error,
+        Exception
     }
 }
