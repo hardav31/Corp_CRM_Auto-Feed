@@ -6,13 +6,11 @@ using Models;
 using System.Text;
 using System.Configuration;
 using LogManager;
-using DAL;
 
 namespace FileManager
 {
     class CsvParser
     {
-
 
         public void CSVFileReader(string direction)
         {
@@ -35,7 +33,7 @@ namespace FileManager
 
                     if (line.Length != 10)
                     {
-                        Log.Warning(direction, i.ToString());
+                        Log.DoLog(Chois.Warning, direction, i.ToString());
                         continue;
                     }
 
@@ -48,7 +46,7 @@ namespace FileManager
 
                     if (!int.TryParse(line[0], out team_Id))
                     {
-                        Log.Error(direction, i.ToString());
+                        Log.DoLog(Chois.Error, direction, i.ToString());
                         continue;
                     }
 
@@ -106,21 +104,11 @@ namespace FileManager
                         TeamsD[team_Id].Members.Add(MembersD[member_Id]);
                     }
                 }
-                if (bool.Parse(ConfigurationManager.AppSettings["saveInDB"]))
-                {
-                    DataUpdater du = new DataUpdater();
-                    du.Update(TeamsD);
-                    DataSelector ds = new DataSelector();
-                    ds.select();
-                }
 
-                if (bool.Parse(ConfigurationManager.AppSettings["saveInJSON"]))
-                {
-                    StringBuilder sb = new StringBuilder();
-                    JsonParser jsParser = new JsonParser();
-                    jsParser.FilePath = sb.Append(@ConfigurationManager.AppSettings["JSONFolderForCSV"] + jsParser.jsonFoldername(direction)).ToString();
-                    jsParser.JsonWrite(TeamsD);
-                }
+                StringBuilder sb = new StringBuilder();
+                JsonParser jsParser = new JsonParser();
+                jsParser.FilePath = sb.Append(@ConfigurationManager.AppSettings["JSONFolderForCSV"] + jsParser.jsonFoldername(direction)).ToString();
+                jsParser.JsonWrite(TeamsD);
             }
             catch (OutOfMemoryException ex)
             {
@@ -138,8 +126,10 @@ namespace FileManager
             }
 
 
+            CreateDS cds = new CreateDS();
+            cds.DS(TeamsD);
         }
-
-        //TODO: Invoke Json or Saving Data in DB methods
+      
+       //TODO: Invoke Json or Saving Data in DB methods
     }
 }
