@@ -25,7 +25,6 @@ namespace DAL
                             team.Value.TeamID, team.Value.TeamName,
                             project.ProjectID,project.ProjectName,project.ProjectCreatedDate,project.ProjectDueDate,project.ProjectDescription
                          };
-
                         dt.Rows.Add(dr);
                     }
                 }
@@ -40,8 +39,7 @@ namespace DAL
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                
+                Console.WriteLine(e); 
             }
             
             

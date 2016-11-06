@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+using LogManager;
+
 
 namespace FileManager
 {
@@ -44,8 +39,11 @@ namespace FileManager
 
                 if (Path.GetExtension(e.FullPath) == ".xml")
                 {
+
                     XMLParser ob = new XMLParser();
+                    LogConsole.StartProgressBar();
                     ob.XMLFileReader(e.FullPath);
+                    LogConsole.EndProgressBar();
                 }
 
                 else if (Path.GetExtension(e.FullPath) == ".csv")
