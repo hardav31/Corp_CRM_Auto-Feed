@@ -45,7 +45,7 @@ namespace FileManager
                 if (Path.GetExtension(e.FullPath) == ".xml")
                 {
                     XMLParser ob = new XMLParser();
-                    Task.Run(() => ob.XMLFileReader(e.FullPath));
+                    ob.XMLFileReader(e.FullPath);
                 }
 
                 else if (Path.GetExtension(e.FullPath) == ".csv")

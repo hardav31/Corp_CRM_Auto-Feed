@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App_Configuration;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -7,12 +8,17 @@ using System.Threading.Tasks;
 
 namespace LogManager
 {
-    class LogToEventLog : ILoger
+    class LogToEventLog : ILogger
     {
         public EventLog myLog;
         public LogToEventLog()
         {
-            myLog = new EventLog();
+            if (!EventLog.SourceExists(ReadAppConfig.Instance.EventLogAppName))
+            {
+                EventLog.CreateEventSource(ReadAppConfig.Instance.EventLogAppName, ReadAppConfig.Instance.EventLogFileName);
+            }
+            myLog = new EventLog(ReadAppConfig.Instance.EventLogFileName);
+            myLog.Source = ReadAppConfig.Instance.EventLogAppName;
         }
         public void Error(string fileName, string line)
         {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LogManager
 {
-    class LogToFile : ILoger
+    class LogToFile : ILogger
     {
         public void Error(string fileName, string line)
         {

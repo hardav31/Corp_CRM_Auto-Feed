@@ -1,4 +1,5 @@
-﻿using LogManager;
+﻿using App_Configuration;
+using LogManager;
 using System;
 using System.IO;
 
@@ -8,12 +9,9 @@ namespace FileManager
     {
         static void Main(string[] args)
         {
-            //TODO: Configuring via APPConfig
-            
-            Log.InIt();
-            FolderMonitor check = new FolderMonitor(@"C:\Users\Galust\Desktop\New folder");
-            check.watcher.WaitForChanged(WatcherChangeTypes.All);//Test
-            Console.WriteLine(DateTime.Now.ToLocalTime());
+            ReadAppConfig.Instance.AppReader();
+            Logger.CreateLogger(ReadAppConfig.Instance);
+            FolderMonitor check = new FolderMonitor($@"{ReadAppConfig.Instance.FolderMonitorPath}");
             Console.ReadKey();
         }
 

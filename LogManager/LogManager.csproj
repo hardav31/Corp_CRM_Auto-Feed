@@ -41,11 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ILoger.cs" />
+    <Compile Include="FileEventLogger.cs" />
+    <Compile Include="ILogger.cs" />
     <Compile Include="Log.cs" />
+    <Compile Include="Logger.cs" />
     <Compile Include="LogToEventLog.cs" />
     <Compile Include="LogToFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\App_Configuration\App_Configuration.csproj">
+      <Project>{CC42D27D-2737-4216-8FCC-6D3EF0EFC955}</Project>
+      <Name>App_Configuration</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

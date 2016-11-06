@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LogManager
 {
-    interface ILoger
+    interface ILogger
     {
         void Info(string fileName, string massage);
         void Warning(string fileName, string line);

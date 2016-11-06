@@ -1,0 +1,5 @@
+C:\Users\Galust\Source\Repos\Teamproject\App_Configuration\obj\Debug\App_Configuration.csprojResolveAssemblyReference.cache
+C:\Users\Galust\Source\Repos\Teamproject\App_Configuration\bin\Debug\App_Configuration.dll
+C:\Users\Galust\Source\Repos\Teamproject\App_Configuration\bin\Debug\App_Configuration.pdb
+C:\Users\Galust\Source\Repos\Teamproject\App_Configuration\obj\Debug\App_Configuration.dll
+C:\Users\Galust\Source\Repos\Teamproject\App_Configuration\obj\Debug\App_Configuration.pdb
