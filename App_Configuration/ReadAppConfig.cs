@@ -21,10 +21,10 @@ namespace App_Configuration
         public bool SaveInJson { get; set; }
         public bool LogToFile { get; set; }
         public bool LogToEventLog { get; set; }
-        public bool LogToConsole { get; set; }
         public string FolderMonitorPath { get; set; }
         public string EventLogAppName { get; set; }
         public string EventLogFileName { get; set; }
+        public string WrongFilePath { get; set; }
         public void AppReader()
         {
             bool value;
@@ -32,9 +32,11 @@ namespace App_Configuration
             ConString = array[0];
             JsonFolder_forXmml = array[1];
             JsonFolder_forCsv = array[2];
-            FolderMonitorPath = array[8];
-            EventLogAppName = array[9];
-            EventLogFileName = array[10];
+            FolderMonitorPath = array[7];
+            EventLogAppName = array[8];
+            EventLogFileName = array[9];
+            WrongFilePath = array[10];
+
             if (bool.TryParse(array[3], out value))
             {
                 SaveInDB = value;
@@ -51,10 +53,7 @@ namespace App_Configuration
             {
                 LogToEventLog = value;
             }
-            if (bool.TryParse(array[7], out value))
-            {
-                LogToConsole = value;
-            }
+           
 
         }
     }

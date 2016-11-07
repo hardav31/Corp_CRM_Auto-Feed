@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
-using LogManager;
-
+using Pbar;
+using App_Configuration;
 
 namespace FileManager
 {
@@ -28,7 +28,7 @@ namespace FileManager
                 if (new FileInfo(e.FullPath).Length / (1024 * 1024) > 1000)//if(size>1gb)
                 {
                     //log: File is very big;
-                    MoveFile(e.FullPath, @"C:\Users\ldavtyan\Desktop\PR Project\CreatingCSV" + e.Name);
+                    MoveFile(e.FullPath, ReadAppConfig.Instance.JsonFolder_forCsv + e.Name);
                     return;
                 }
                 bool isloaded = false;
@@ -39,18 +39,22 @@ namespace FileManager
 
                 if (Path.GetExtension(e.FullPath) == ".xml")
                 {
-
+                    Console.WriteLine("File {0} was Created at {1}", e.Name, DateTime.Now.ToLocalTime());
                     XMLParser ob = new XMLParser();
-                    LogConsole.StartProgressBar();
+
+                    ProgressBar.StartProgressBar();
                     ob.XMLFileReader(e.FullPath);
-                    LogConsole.EndProgressBar();
+                    ProgressBar.EndProgressBar();
                 }
 
                 else if (Path.GetExtension(e.FullPath) == ".csv")
                 {
                     Console.WriteLine("File {0} was Created at {1}", e.Name, DateTime.Now.ToLocalTime());
                     CsvParser cscParser = new CsvParser();
+
+                    ProgressBar.StartProgressBar();
                     cscParser.CSVFileReader(e.FullPath);
+                    ProgressBar.EndProgressBar();
                 }
                 else
                 {

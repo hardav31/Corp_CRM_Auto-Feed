@@ -33,6 +33,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,19 +42,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FileEventLogger.cs" />
+    <Compile Include="WinEventConsoleLogger.cs" />
+    <Compile Include="FileConsoleLogger.cs" />
+    <Compile Include="FileWinEventConsoleLogger.cs" />
+    <Compile Include="FileWinEventLogger.cs" />
     <Compile Include="ILogger.cs" />
-    <Compile Include="Log.cs" />
-    <Compile Include="LogConsole.cs" />
-    <Compile Include="Logger.cs" />
-    <Compile Include="LogToEventLog.cs" />
-    <Compile Include="LogToFile.cs" />
+    <Compile Include="LoggerType.cs" />
+    <Compile Include="ConsoleLogger.cs" />
+    <Compile Include="WinEventLogger.cs" />
+    <Compile Include="FileLogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\App_Configuration\App_Configuration.csproj">
       <Project>{CC42D27D-2737-4216-8FCC-6D3EF0EFC955}</Project>
       <Name>App_Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pbar\Pbar.csproj">
+      <Project>{A51E600D-BE45-4E4C-A5B3-97E40274F45B}</Project>
+      <Name>Pbar</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -7,3 +7,12 @@ C:\Users\Home\Desktop\Public2\Teamproject\DataManager\bin\Debug\DAL.pdb
 C:\Users\Home\Desktop\Public2\Teamproject\DataManager\bin\Debug\Models.pdb
 C:\Users\Home\Desktop\Public2\Teamproject\DataManager\obj\Debug\DataManager.dll
 C:\Users\Home\Desktop\Public2\Teamproject\DataManager\obj\Debug\DataManager.pdb
+C:\Users\Galust\Source\Repos\Teamproject\DataManager\bin\Debug\DataManager.dll
+C:\Users\Galust\Source\Repos\Teamproject\DataManager\bin\Debug\DataManager.pdb
+C:\Users\Galust\Source\Repos\Teamproject\DataManager\bin\Debug\DAL.dll
+C:\Users\Galust\Source\Repos\Teamproject\DataManager\bin\Debug\Models.dll
+C:\Users\Galust\Source\Repos\Teamproject\DataManager\bin\Debug\DAL.pdb
+C:\Users\Galust\Source\Repos\Teamproject\DataManager\bin\Debug\Models.pdb
+C:\Users\Galust\Source\Repos\Teamproject\DataManager\obj\Debug\DataManager.csprojResolveAssemblyReference.cache
+C:\Users\Galust\Source\Repos\Teamproject\DataManager\obj\Debug\DataManager.dll
+C:\Users\Galust\Source\Repos\Teamproject\DataManager\obj\Debug\DataManager.pdb

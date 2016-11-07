@@ -1,0 +1,5 @@
+C:\Users\Galust\Source\Repos\Teamproject\Pbar\bin\Debug\Pbar.dll
+C:\Users\Galust\Source\Repos\Teamproject\Pbar\bin\Debug\Pbar.pdb
+C:\Users\Galust\Source\Repos\Teamproject\Pbar\obj\Debug\Pbar.dll
+C:\Users\Galust\Source\Repos\Teamproject\Pbar\obj\Debug\Pbar.pdb
+C:\Users\Galust\Source\Repos\Teamproject\Pbar\obj\Debug\Pbar.csprojResolveAssemblyReference.cache

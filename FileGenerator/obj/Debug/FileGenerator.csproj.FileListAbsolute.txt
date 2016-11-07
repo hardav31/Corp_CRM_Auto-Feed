@@ -31,3 +31,14 @@ C:\Users\ldavtyan\Desktop\PR Project\TeamProject\FileGenerator\obj\Debug\FileGen
 C:\Users\ldavtyan\Desktop\PR Project\TeamProject\FileGenerator\obj\Debug\FileGenerator.csproj.GenerateResource.Cache
 C:\Users\ldavtyan\Desktop\PR Project\TeamProject\FileGenerator\obj\Debug\FileGenerator.exe
 C:\Users\ldavtyan\Desktop\PR Project\TeamProject\FileGenerator\obj\Debug\FileGenerator.pdb
+C:\Users\Galust\Source\Repos\Teamproject\FileGenerator\bin\Debug\FileGenerator.exe.config
+C:\Users\Galust\Source\Repos\Teamproject\FileGenerator\bin\Debug\FileGenerator.exe
+C:\Users\Galust\Source\Repos\Teamproject\FileGenerator\bin\Debug\FileGenerator.pdb
+C:\Users\Galust\Source\Repos\Teamproject\FileGenerator\bin\Debug\Models.dll
+C:\Users\Galust\Source\Repos\Teamproject\FileGenerator\bin\Debug\Models.pdb
+C:\Users\Galust\Source\Repos\Teamproject\FileGenerator\obj\Debug\FileGenerator.csprojResolveAssemblyReference.cache
+C:\Users\Galust\Source\Repos\Teamproject\FileGenerator\obj\Debug\FileGenerator.Form1.resources
+C:\Users\Galust\Source\Repos\Teamproject\FileGenerator\obj\Debug\FileGenerator.Properties.Resources.resources
+C:\Users\Galust\Source\Repos\Teamproject\FileGenerator\obj\Debug\FileGenerator.csproj.GenerateResource.Cache
+C:\Users\Galust\Source\Repos\Teamproject\FileGenerator\obj\Debug\FileGenerator.exe
+C:\Users\Galust\Source\Repos\Teamproject\FileGenerator\obj\Debug\FileGenerator.pdb

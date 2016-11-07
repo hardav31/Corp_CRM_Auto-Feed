@@ -10,3 +10,5 @@ C:\Users\Home\Desktop\Public2\Teamproject\LogManager\obj\Debug\LogManager.dll
 C:\Users\Home\Desktop\Public2\Teamproject\LogManager\obj\Debug\LogManager.pdb
 C:\Users\Galust\Source\Repos\Teamproject\LogManager\bin\Debug\App_Configuration.dll
 C:\Users\Galust\Source\Repos\Teamproject\LogManager\bin\Debug\App_Configuration.pdb
+C:\Users\Galust\Source\Repos\Teamproject\LogManager\bin\Debug\Pbar.dll
+C:\Users\Galust\Source\Repos\Teamproject\LogManager\bin\Debug\Pbar.pdb

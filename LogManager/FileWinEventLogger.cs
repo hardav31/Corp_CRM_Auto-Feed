@@ -10,11 +10,11 @@ namespace LogManager
     {
         public FileEventLogLogger()
         {
-            fileLogger = new LogToFile();
-            eventLogLogger = new LogToEventLog();
+            fileLogger = new FileLogger();
+            eventLogLogger = new WinEventLogger();
         }
-        private LogToFile fileLogger;
-        private LogToEventLog eventLogLogger;
+        private FileLogger fileLogger;
+        private WinEventLogger eventLogLogger;
         public void Error(string fileName, string line)
         {
             fileLogger.Error(fileName, line);

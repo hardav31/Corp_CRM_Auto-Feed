@@ -10,7 +10,7 @@ namespace FileManager
         static void Main(string[] args)
         {
             ReadAppConfig.Instance.AppReader();
-            Logger.CreateLogger(ReadAppConfig.Instance);
+            LoggerType.CreateLogger(ReadAppConfig.Instance);
             FolderMonitor check = new FolderMonitor($@"{ReadAppConfig.Instance.FolderMonitorPath}");
             Console.ReadKey();
         }

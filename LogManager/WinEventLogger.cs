@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace LogManager
 {
-    class LogToEventLog : ILogger
+    class WinEventLogger : ILogger
     {
         public EventLog myLog;
-        public LogToEventLog()
+        public WinEventLogger()
         {
             if (!EventLog.SourceExists(ReadAppConfig.Instance.EventLogAppName))
             {

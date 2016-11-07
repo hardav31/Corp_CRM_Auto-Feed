@@ -59,6 +59,10 @@
       <Project>{CC42D27D-2737-4216-8FCC-6D3EF0EFC955}</Project>
       <Name>App_Configuration</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DataManager\DataManager.csproj">
+      <Project>{47D45165-BF5A-46F8-9868-32856E277144}</Project>
+      <Name>DataManager</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LogManager\LogManager.csproj">
       <Project>{6361CB74-ADFB-4788-9D39-0581874FC991}</Project>
       <Name>LogManager</Name>
@@ -66,6 +70,10 @@
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{DC8A9219-AB4D-4F33-9E2F-C107016F0192}</Project>
       <Name>Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pbar\Pbar.csproj">
+      <Project>{A51E600D-BE45-4E4C-A5B3-97E40274F45B}</Project>
+      <Name>Pbar</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

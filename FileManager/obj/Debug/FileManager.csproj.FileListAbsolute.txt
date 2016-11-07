@@ -54,3 +54,7 @@ C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\App_Configuration
 C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\DAL.dll
 C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\App_Configuration.pdb
 C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\DAL.pdb
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\DataManager.dll
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\DataManager.pdb
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\Pbar.dll
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\Pbar.pdb

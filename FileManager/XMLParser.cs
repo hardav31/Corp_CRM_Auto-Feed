@@ -6,16 +6,15 @@ using Models;
 using System.IO;
 using System.Text;
 using System.Configuration;
-using DAL;
+using App_Configuration;
+using DataManager;
 
 namespace FileManager
 {
     class XMLParser
     {
-       //In Progress
         public void XMLFileReader(string direction)
         {
-            //TODO: if (file.Length > 1000000)
             bool IsAllRight = true;
             Dictionary<int, Team> TeamsD = new Dictionary<int, Team>();
             Dictionary<int, string> MembersD = new Dictionary<int, string>(); // for compare all Member's id
@@ -228,25 +227,27 @@ namespace FileManager
                                         ProjectsD.Clear();
                                     }
                                 }
+                                // ToDO 
                                 break;
                         }
                     }
-                    if (bool.Parse(ConfigurationManager.AppSettings["saveInDB"]))
+                    if (IsAllRight)
                     {
-                        DataUpdater du = new DataUpdater();
-                        du.Update(TeamsD);
-                    }
+                        if (ReadAppConfig.Instance.SaveInDB)
+                        {
+                            DataUpdater du = new DataUpdater();
+                            du.UpdateData(TeamsD);
 
-                    if (bool.Parse(ConfigurationManager.AppSettings["saveInJSON"]))
-                    {
-                        StringBuilder sb = new StringBuilder();
-                        JsonParser jsParser = new JsonParser();
-                        jsParser.FilePath = sb.Append(@ConfigurationManager.AppSettings["JSONFolderForXML"] + jsParser.jsonFoldername(direction)).ToString();
-                        jsParser.JsonWrite(TeamsD);
-                        Console.WriteLine("The file has been successfuly parsing to JSON and saving in aprropriate folder");
-                        Console.WriteLine("XmlClose " + DateTime.Now);
+                        }
+                        if (ReadAppConfig.Instance.SaveInJson)
+                        {
+
+                            StringBuilder sb = new StringBuilder();
+                            JsonParser jsParser = new JsonParser();
+                            jsParser.FilePath = sb.Append(ReadAppConfig.Instance.JsonFolder_forCsv + jsParser.jsonFoldername(direction)).ToString();
+                            jsParser.JsonWrite(TeamsD);
+                        }
                     }
-                    
                 }
                 
             }
@@ -266,25 +267,12 @@ namespace FileManager
                 if (!IsAllRight)
                 {
                     TeamsD.Clear();
-                    FolderMonitor.MoveFile(direction, @"C:\Users\ldavtyan\Desktop\PR Project\CreatingCSV" + Path.GetFileName(direction));
+                    FolderMonitor.MoveFile(direction, ReadAppConfig.Instance.WrongFilePath + Path.GetFileName(direction));
                 }
             }
 
-            //foreach (var x in TeamD.Values)
-            //{
-            //    Console.WriteLine(x.TeamID + " " + x.TeamName);
-            //    foreach (var y in x.Members)
-            //    {
-            //        Console.WriteLine("   " + y.MemberID + " " + y.MemberName + " " + y.MemberSurname);
-            //        foreach (var z in y.Projects)
-            //        {
-            //            Console.WriteLine("      " + z.ProjectID + " " + z.ProjectName + " " + z.ProjectCreatedDate.ToString() + " " + z.ProjectDueDate.ToString() + " " + z.ProjectDescription);
-            //        }
-            //    }
-            //}
-
-           
+                      
         }
-        //TODO: Invoke Json or Saving Data in DB methods
+        
     }
 }

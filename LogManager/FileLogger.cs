@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace LogManager
 {
-    class LogToFile : ILogger
+    class FileLogger : ILogger
     {
+       
+
         public void Error(string fileName, string line)
         {
             WriteToFile(fileName, "Error", line);
