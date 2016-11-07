@@ -2,17 +2,28 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
 
-namespace DAL
+namespace DataManager
 {
-    public class DataUpdater
+    class DTable
     {
-        public void Update(Dictionary<int, Team> teamsD)
+        public DataTable Create()
         {
-            DataTableCreator dtcreator = new DataTableCreator();
-            DataTable dt = dtcreator.Create();
-
+            DataTable dt = new DataTable();
+            dt.Columns.Add("MemberID", typeof(int));
+            dt.Columns.Add("MemberName", typeof(string));
+            dt.Columns.Add("MemberSurname", typeof(string));
+            dt.Columns.Add("TeamID", typeof(int));
+            dt.Columns.Add("TeamName", typeof(string));
+            dt.Columns.Add("ProjectID", typeof(int));
+            dt.Columns.Add("ProjectName", typeof(string));
+            dt.Columns.Add("ProjectCreatedDate", typeof(DateTime));
+            dt.Columns.Add("ProjectDueDate", typeof(DateTime));
+            dt.Columns.Add("ProjecDescription", typeof(string));
+            return dt;
+        }
+        public DataTable Fill(DataTable dt, Dictionary<int, Team> teamsD)
+        {
             foreach (var team in teamsD)
             {
                 foreach (var member in team.Value.Members)
@@ -25,24 +36,12 @@ namespace DAL
                             team.Value.TeamID, team.Value.TeamName,
                             project.ProjectID,project.ProjectName,project.ProjectCreatedDate,project.ProjectDueDate,project.ProjectDescription
                          };
+
                         dt.Rows.Add(dr);
                     }
                 }
             }
-            try
-            {
-                using (DBConnection dbcon = new DBConnection())
-                {
-                    SqlCommand cmd = dbcon.getCommand("dbo.insertData", "@sourcetable", dt, CommandType.StoredProcedure);
-                    cmd.ExecuteNonQuery();
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e); 
-            }
-            
-            
+            return dt;
         }
     }
 }

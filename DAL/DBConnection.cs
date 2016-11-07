@@ -2,31 +2,49 @@
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-
 namespace DAL
 {
-    class DBConnection : IDisposable
+    public sealed class DBConnection : IDisposable
     {
-        string conString = ConfigurationManager.AppSettings["conString"];
-        SqlConnection con = null;
-        public SqlCommand getCommand(string cmdTxt, string parametrName, object value,CommandType cmdType)
+        readonly string conString = ConfigurationManager.AppSettings["conString"];
+        private SqlConnection connection;
+        public DBConnection()
         {
-            con = new SqlConnection(conString);
-
-            SqlCommand cmd = new SqlCommand(cmdTxt, con);
-            cmd.CommandType = cmdType;
-            SqlParameter param = new SqlParameter();
-            param.ParameterName = parametrName;
-            param.Value = value;
-            cmd.Parameters.Add(param);
-            cmd.CommandTimeout = 0;
-            con.Open();
-            return cmd;
+            InitSqlConnection();
         }
+        private void InitSqlConnection()
+        {
+            if (connection == null)
+            {
+                connection = new SqlConnection();
+                connection.ConnectionString = conString;
+                connection.Open();
+            }
+            else
+            {
+                if (connection.State != ConnectionState.Closed)
+                {
+                    try
+                    {
+                        connection.Close();
 
+                    }
+                    catch (Exception)
+                    {
+
+                        throw;
+                    }
+                }
+                connection.ConnectionString = conString;
+                connection.Open();
+            }
+        }
         public void Dispose()
         {
-            con.Close();
+            if (connection != null)
+                connection.Close();
         }
+
+        public SqlConnection Connection { get { return connection; } }
     }
 }
