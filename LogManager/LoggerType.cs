@@ -13,7 +13,7 @@ namespace LogManager
 
         protected LoggerType() { }
         private static ILogger logger;
-        public static void CreateLogger(ReadAppConfig reader)
+        public static void CreateLogger(AppConfigManager reader)
         {
             if (reader.LogToEventLog && reader.LogToFile)
             {

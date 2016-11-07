@@ -26,7 +26,7 @@ namespace DataManager
                 {
                     SQLHelper sqlHelper = new SQLHelper();
                     sqlHelper.ExecuteNonQuery(dbcon.Connection, "dbo.insertData", CommandType.StoredProcedure, parameters);
-
+                    Console.WriteLine("sucses");
                 }
             }
             catch (Exception e)

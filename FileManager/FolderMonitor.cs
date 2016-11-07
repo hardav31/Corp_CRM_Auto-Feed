@@ -28,7 +28,7 @@ namespace FileManager
                 if (new FileInfo(e.FullPath).Length / (1024 * 1024) > 1000)//if(size>1gb)
                 {
                     //log: File is very big;
-                    MoveFile(e.FullPath, ReadAppConfig.Instance.JsonFolder_forCsv + e.Name);
+                    MoveFile(e.FullPath, AppConfigManager.Instance.JsonFolder_forCsv + e.Name);
                     return;
                 }
                 bool isloaded = false;

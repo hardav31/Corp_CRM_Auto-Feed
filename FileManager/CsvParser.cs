@@ -107,18 +107,18 @@ namespace FileManager
                     }
                 }
 
-                if (ReadAppConfig.Instance.SaveInDB)
+                if (AppConfigManager.Instance.SaveInDB)
                 {
                     DataUpdater du = new DataUpdater();
                     du.UpdateData(TeamsD);
 
                 }
-                if (ReadAppConfig.Instance.SaveInJson)
+                if (AppConfigManager.Instance.SaveInJson)
                 {
 
                     StringBuilder sb = new StringBuilder();
                     JsonParser jsParser = new JsonParser();
-                    jsParser.FilePath = sb.Append(ReadAppConfig.Instance.JsonFolder_forCsv + jsParser.jsonFoldername(direction)).ToString();
+                    jsParser.FilePath = sb.Append(AppConfigManager.Instance.JsonFolder_forCsv + jsParser.jsonFoldername(direction)).ToString();
                     jsParser.JsonWrite(TeamsD);
                 }
             }

@@ -13,12 +13,12 @@ namespace LogManager
         public EventLog myLog;
         public WinEventLogger()
         {
-            if (!EventLog.SourceExists(ReadAppConfig.Instance.EventLogAppName))
+            if (!EventLog.SourceExists(AppConfigManager.Instance.EventLogAppName))
             {
-                EventLog.CreateEventSource(ReadAppConfig.Instance.EventLogAppName, ReadAppConfig.Instance.EventLogFileName);
+                EventLog.CreateEventSource(AppConfigManager.Instance.EventLogAppName, AppConfigManager.Instance.EventLogFileName);
             }
-            myLog = new EventLog(ReadAppConfig.Instance.EventLogFileName);
-            myLog.Source = ReadAppConfig.Instance.EventLogAppName;
+            myLog = new EventLog(AppConfigManager.Instance.EventLogFileName);
+            myLog.Source = AppConfigManager.Instance.EventLogAppName;
         }
         public void Error(string fileName, string line)
         {

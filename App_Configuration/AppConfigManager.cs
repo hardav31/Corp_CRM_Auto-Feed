@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace App_Configuration
 {
-    public class ReadAppConfig
+    public class AppConfigManager
     {
-        private static readonly Lazy<ReadAppConfig> lazy = new Lazy<ReadAppConfig>(() => new ReadAppConfig());
-        public static ReadAppConfig Instance { get { return lazy.Value; } }
-        private ReadAppConfig()
+        private static readonly Lazy<AppConfigManager> lazy = new Lazy<AppConfigManager>(() => new AppConfigManager());
+        public static AppConfigManager Instance { get { return lazy.Value; } }
+        private AppConfigManager()
         {
         }
         public string ConString { get; set; }
