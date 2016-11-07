@@ -5,11 +5,11 @@ using System.Data;
 
 namespace DataManager
 {
-    class DTable
+    class DTable :IDisposable
     {
-        public DataTable Create()
+        DataTable dt = new DataTable();
+        public DataTable Create() 
         {
-            DataTable dt = new DataTable();
             dt.Columns.Add("MemberID", typeof(int));
             dt.Columns.Add("MemberName", typeof(string));
             dt.Columns.Add("MemberSurname", typeof(string));
@@ -22,6 +22,8 @@ namespace DataManager
             dt.Columns.Add("ProjecDescription", typeof(string));
             return dt;
         }
+
+
         public DataTable Fill(DataTable dt, Dictionary<int, Team> teamsD)
         {
             foreach (var team in teamsD)
@@ -42,6 +44,10 @@ namespace DataManager
                 }
             }
             return dt;
+        }
+        public void Dispose()
+        {
+           dt.Dispose();
         }
     }
 }

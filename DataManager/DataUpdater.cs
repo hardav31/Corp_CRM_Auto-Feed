@@ -11,22 +11,24 @@ namespace DataManager
     {
         public void UpdateData(Dictionary<int, Team> teamsD)
         {
-            DTable dTable = new DTable();
-            DataTable dt = dTable.Create();
-            var filledDT = dTable.Fill(dt, teamsD);
-
-            List<ParamNameValuePair> pNamesValues = new List<ParamNameValuePair>();
-            pNamesValues.Add(new ParamNameValuePair("@sourcetable", filledDT));
-
-            CommandParameter cmdParam = new CommandParameter();
-            var parameters = cmdParam.CreateParametersArray(pNamesValues);
             try
             {
-                using (DBConnection dbcon = new DBConnection())
+                using (DTable dTable = new DTable())
                 {
-                    SQLHelper sqlHelper = new SQLHelper();
-                    sqlHelper.ExecuteNonQuery(dbcon.Connection, "dbo.insertData", CommandType.StoredProcedure, parameters);
-                    Console.WriteLine("sucses");
+                    DataTable dt = dTable.Create();
+
+                    var filledDT = dTable.Fill(dt, teamsD);
+
+                    CommandParameter cmdParam = new CommandParameter();
+                    cmdParam.AddParameter("@sourcetable", filledDT);
+                    var parameters=cmdParam.GetSqlParameters();
+
+                    using (DBConnection dbcon = new DBConnection())
+                    {
+                        SQLHelper sqlHelper = new SQLHelper();
+                        sqlHelper.ExecuteNonQuery(dbcon.Connection, "dbo.insertData", CommandType.StoredProcedure, parameters);
+                        //TODO: LOG
+                    }
                 }
             }
             catch (Exception e)

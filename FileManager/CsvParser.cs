@@ -109,8 +109,12 @@ namespace FileManager
 
                 if (AppConfigManager.Instance.SaveInDB)
                 {
-                    DataUpdater du = new DataUpdater();
-                    du.UpdateData(TeamsD);
+                    DataUpdater dUpdater = new DataUpdater();
+                    dUpdater.UpdateData(TeamsD);
+                    //DataSelector ds = new DataSelector();
+                    //ds.SelectData();
+                    //DataEraser de = new DataEraser();
+                    //de.DeleteData();
 
                 }
                 if (AppConfigManager.Instance.SaveInJson)

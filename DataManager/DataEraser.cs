@@ -2,9 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataManager
 {
@@ -13,23 +10,24 @@ namespace DataManager
 
         public void DeleteData()
         {
-            List<ParamNameValuePair> pNamesValues = new List<ParamNameValuePair>();
-            pNamesValues.Add(new ParamNameValuePair("@teamID", 1));
-            pNamesValues.Add(new ParamNameValuePair("@memberID", 2));
 
             CommandParameter cmdParam = new CommandParameter();
-            var parameteres = cmdParam.CreateParametersArray(pNamesValues);
+            cmdParam.AddParameter("@teamID", 121);
+            cmdParam.AddParameter("@memberID", 2);
+            var parameters = cmdParam.GetSqlParameters();
+
             try
             {
                 using (DBConnection dbc = new DBConnection())
                 {
                     SQLHelper sqlHelper = new SQLHelper();
-                    sqlHelper.ExecuteNonQuery(dbc.Connection, "dbo.deleteRecords", CommandType.StoredProcedure, parameteres);
+                    sqlHelper.ExecuteNonQuery(dbc.Connection, "dbo.deleteRecords", CommandType.StoredProcedure, parameters);
+                    //TODO: log
                 }
             }
+
             catch (Exception e)
             {
-
                 Console.WriteLine(e);
             }
 

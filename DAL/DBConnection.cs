@@ -29,7 +29,7 @@ namespace DAL
                         connection.Close();
 
                     }
-                    catch (Exception)
+                    catch (Exception e)
                     {
 
                         throw;

@@ -5,18 +5,25 @@ namespace DataManager
 {
     public class CommandParameter
     {
-       
         List<SqlParameter> parameters = new List<SqlParameter>();
-        public SqlParameter[] CreateParametersArray(List<ParamNameValuePair> pNamesValues)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pName">The command parameter name</param>
+        /// <param name="pValue">The command parameter name</param>
+        public void AddParameter(string pName, object pValue)
         {
-            foreach (var pNameValue in pNamesValues)
-            {
-                SqlParameter param = new SqlParameter();
-                param.ParameterName = pNameValue.ParameterName;
-                param.Value = pNameValue.parameterValue;
-                parameters.Add(param);
-            }
-            return  parameters.ToArray();
+            SqlParameter param = new SqlParameter();
+            param.ParameterName = pName;
+            param.Value = pValue;
+            parameters.Add(param);
         }
+
+        public SqlParameter[] GetSqlParameters()
+        {
+            return parameters.ToArray();
+        }
+
+       
     }
 }

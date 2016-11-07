@@ -1,26 +1,36 @@
-﻿using System;
+﻿using DAL;
+using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataManager
 {
-    //public class DataSelector
-    //{
-    //    public void select()
-    //    {
-    //        DTable dtc = new DTable();
-    //        DataTable dt = dtc.Create();
+    public class DataSelector
+    {
+        public void SelectData()
+        {
+            try
+            {
+                using (DTable dtc = new DTable())
+                {
+                    DataTable dt = dtc.Create();
 
-    //        DBConnection dbc = new DBConnection();
-    //        var cmd = dbc.getCommand("dbo.getAllRecords", "Team.TeamID=123245437 and member.memberid=123245436", CommandType.StoredProcedure, "@condition");
+                    using (DBConnection dbc = new DBConnection())
+                    {
+                        SQLHelper helper = new SQLHelper();
+                        CommandParameter cmdParam = new CommandParameter();
+                        cmdParam.AddParameter("@condition", "Team.TeamId=1");
+                        var parameters = cmdParam.GetSqlParameters();
+                        var a = helper.ExecuteDataTable(dbc.Connection, "dbo.getAllRecords", CommandType.StoredProcedure, dt, parameters);
+                    }
+                }
 
-    //        SqlDataAdapter da = new SqlDataAdapter(cmd);
-    //        da.Fill(dt);
-
-    //    }
-    //}
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+    }
 }
+

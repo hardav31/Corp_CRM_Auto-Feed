@@ -42,9 +42,9 @@ namespace FileManager
                     Console.WriteLine("File {0} was Created at {1}", e.Name, DateTime.Now.ToLocalTime());
                     XMLParser ob = new XMLParser();
 
-                    ProgressBar.StartProgressBar();
+                    //ProgressBar.StartProgressBar();
                     ob.XMLFileReader(e.FullPath);
-                    ProgressBar.EndProgressBar();
+                    //ProgressBar.EndProgressBar();
                 }
 
                 else if (Path.GetExtension(e.FullPath) == ".csv")
@@ -52,9 +52,9 @@ namespace FileManager
                     Console.WriteLine("File {0} was Created at {1}", e.Name, DateTime.Now.ToLocalTime());
                     CsvParser cscParser = new CsvParser();
 
-                    ProgressBar.StartProgressBar();
+                    //ProgressBar.StartProgressBar();
                     cscParser.CSVFileReader(e.FullPath);
-                    ProgressBar.EndProgressBar();
+                    //ProgressBar.EndProgressBar();
                 }
                 else
                 {
