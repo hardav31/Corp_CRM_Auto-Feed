@@ -52,6 +52,10 @@
       <Project>{8423F123-3119-486B-8A92-2122644363C2}</Project>
       <Name>DAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LogManager\LogManager.csproj">
+      <Project>{6361CB74-ADFB-4788-9D39-0581874FC991}</Project>
+      <Name>LogManager</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{DC8A9219-AB4D-4F33-9E2F-C107016F0192}</Project>
       <Name>Models</Name>

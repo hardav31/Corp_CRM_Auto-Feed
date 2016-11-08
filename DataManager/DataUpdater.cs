@@ -25,8 +25,11 @@ namespace DataManager
 
                     using (DBConnection dbcon = new DBConnection())
                     {
+                        
                         SQLHelper sqlHelper = new SQLHelper();
+                        Console.WriteLine("success");
                         sqlHelper.ExecuteNonQuery(dbcon.Connection, "dbo.insertData", CommandType.StoredProcedure, parameters);
+                        
                         //TODO: LOG
                     }
                 }

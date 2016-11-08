@@ -13,7 +13,7 @@ namespace Models
         public int TeamID { get; set; }
         [XmlAttribute]
         public string TeamName { get; set; }
-        public List<Member> Members = new List<Member>();
+        public List<Member> Members;
 
         public Team()
         {
@@ -23,6 +23,7 @@ namespace Models
         {
             TeamID = teamId;
             TeamName = teamName;
+            Members = new List<Member>();
         }
     }
 }

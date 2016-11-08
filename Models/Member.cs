@@ -13,7 +13,7 @@ namespace Models
         public string MemberName { get; set; }
         [XmlAttribute]
         public string MemberSurname { get; set; }
-        public List<Project> Projects = new List<Project>();
+        public List<Project> Projects;
 
         public Member()
         {
@@ -24,6 +24,9 @@ namespace Models
             MemberID = memberId;
             MemberName = memberName;
             MemberSurname = memberSurname;
+            Projects = new List<Project>();
+
+
         }
     }
 }

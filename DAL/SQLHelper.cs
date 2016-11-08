@@ -29,11 +29,12 @@ namespace DAL
             if (con == null) throw new Exception("connection");
             SqlCommand cmd = new SqlCommand(cmdTxt, con);
             cmd.CommandType = cmdType;
+            cmd.CommandTimeout = 0;
             if (cmdparameters.Length != 0)
             {
                 Attach(cmd, cmdparameters);
             }
-           var a =  cmd.ExecuteNonQuery();
+            cmd.ExecuteNonQuery();
         }
         #endregion ExecuteNonQuery
 
@@ -64,6 +65,7 @@ namespace DAL
             if (con == null) throw new Exception("connection");
             SqlCommand cmd = new SqlCommand(cmdTxt, con);
             cmd.CommandType = cmdType;
+            cmd.CommandTimeout = 0;
             if (cmdparameters.Length != 0)
             {
                 Attach(cmd, cmdparameters);
@@ -75,7 +77,7 @@ namespace DAL
             return dt;
         }
 
-        
+
         #endregion ExecuteDataTable
 
         private void Attach(SqlCommand cmd, params SqlParameter[] cmdparameters)

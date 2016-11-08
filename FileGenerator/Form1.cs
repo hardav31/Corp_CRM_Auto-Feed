@@ -40,11 +40,11 @@ namespace FileGenerator
             {
                 
                 int count;
-                if (!int.TryParse((ConfigurationManager.AppSettings["membersCount"]), out count) || count <= 0 || count > 100)
+                if (!int.TryParse((ConfigurationManager.AppSettings["membersCount"]), out count) || count <= 0 || count > 100000)
                 {
                     MessageBox.Show("ENTER FROM 1 TO 100", "Invalid Count For Member", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else if (!int.TryParse((ConfigurationManager.AppSettings["projectsCount"]), out count) || count <= 0 || count > 10)
+                else if (!int.TryParse((ConfigurationManager.AppSettings["projectsCount"]), out count) || count <= 0 || count > 10000)
                 {
                     MessageBox.Show("ENTER FROM 1 TO 10", "Invalid Count For Project", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }

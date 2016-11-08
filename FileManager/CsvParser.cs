@@ -111,6 +111,7 @@ namespace FileManager
                 {
                     DataUpdater dUpdater = new DataUpdater();
                     dUpdater.UpdateData(TeamsD);
+
                     //DataSelector ds = new DataSelector();
                     //ds.SelectData();
                     //DataEraser de = new DataEraser();
