@@ -16,3 +16,12 @@ C:\Users\Home\Desktop\Public2\Teamproject\LogManager\bin\Debug\App_Configuration
 C:\Users\Home\Desktop\Public2\Teamproject\LogManager\bin\Debug\Pbar.dll
 C:\Users\Home\Desktop\Public2\Teamproject\LogManager\bin\Debug\App_Configuration.pdb
 C:\Users\Home\Desktop\Public2\Teamproject\LogManager\bin\Debug\Pbar.pdb
+C:\Users\user\Source\Repos\Teamproject\LogManager\bin\Debug\LogManager.dll
+C:\Users\user\Source\Repos\Teamproject\LogManager\bin\Debug\LogManager.pdb
+C:\Users\user\Source\Repos\Teamproject\LogManager\bin\Debug\App_Configuration.dll
+C:\Users\user\Source\Repos\Teamproject\LogManager\bin\Debug\Pbar.dll
+C:\Users\user\Source\Repos\Teamproject\LogManager\bin\Debug\App_Configuration.pdb
+C:\Users\user\Source\Repos\Teamproject\LogManager\bin\Debug\Pbar.pdb
+C:\Users\user\Source\Repos\Teamproject\LogManager\obj\Debug\LogManager.csprojResolveAssemblyReference.cache
+C:\Users\user\Source\Repos\Teamproject\LogManager\obj\Debug\LogManager.dll
+C:\Users\user\Source\Repos\Teamproject\LogManager\obj\Debug\LogManager.pdb
