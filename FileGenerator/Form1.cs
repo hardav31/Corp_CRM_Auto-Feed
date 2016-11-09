@@ -40,13 +40,13 @@ namespace FileGenerator
             {
                 
                 int count;
-                if (!int.TryParse((ConfigurationManager.AppSettings["membersCount"]), out count) || count <= 0 || count > 100000)
+                if (!int.TryParse((ConfigurationManager.AppSettings["membersCount"]), out count) || count <= 0 || count > 1000)
                 {
-                    MessageBox.Show("ENTER FROM 1 TO 100", "Invalid Count For Member", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("ENTER FROM 1 TO 1000", "Invalid Count For Member", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else if (!int.TryParse((ConfigurationManager.AppSettings["projectsCount"]), out count) || count <= 0 || count > 10000)
+                else if (!int.TryParse((ConfigurationManager.AppSettings["projectsCount"]), out count) || count <= 0 || count > 100)
                 {
-                    MessageBox.Show("ENTER FROM 1 TO 10", "Invalid Count For Project", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("ENTER FROM 1 TO 100", "Invalid Count For Project", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -58,14 +58,14 @@ namespace FileGenerator
 
                     if (csvRadioButton.Checked)
                     {
-                        Save sv = new Save(textBox1.Text + "\\CSV.csv");
+                        Save sv = new Save(textBox1.Text + $"\\{Guid.NewGuid()}.csv");
                         await Task.Run(() => sv.ToCsv(teams));
                         buttonEnable(generate);
                         loadLable.Visible = false;
                     }
                     if (xmlRadioButton.Checked)
                     {
-                        Save sv = new Save(textBox1.Text + "\\XML.xml");
+                        Save sv = new Save(textBox1.Text + $"\\{Guid.NewGuid()}.xml");
                         await Task.Run(() => sv.ToXml(teams));
                         buttonEnable(generate);
                         loadLable.Visible = false;

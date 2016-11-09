@@ -10,7 +10,7 @@ namespace App_Configuration
     public class AppConfigManager
     {
         private static readonly Lazy<AppConfigManager> lazy = new Lazy<AppConfigManager>(() => new AppConfigManager());
-        public static AppConfigManager Instance { get { return lazy.Value; } }
+        public static AppConfigManager appSettings { get { return lazy.Value; } }
         private AppConfigManager()
         {
         }

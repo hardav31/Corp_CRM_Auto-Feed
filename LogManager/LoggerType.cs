@@ -47,21 +47,21 @@ namespace LogManager
         {
             logger = ilogger;
         }
-        public static void Error(string fileName, string line)
+        public static void Error(string info, string message)
         {
-            logger.Error(fileName, line);
+            logger.Error(info, message);
         }
-        public static void Exceptin(string fileName, Exception ex)
+        public static void Exceptin(string info, Exception ex)
         {
-            logger.Exceptin(fileName, ex);
+            logger.Exceptin(info, ex);
         }
-        public static void Info(string fileName, string massage)
+        public static void Info(string info, string message)
         {
-            logger.Info(fileName, massage);
+            logger.Info(info, message);
         }
-        public static void Warning(string fileName, string line)
+        public static void Warning(string info, string message)
         {
-            logger.Warning(fileName, line);
+            logger.Warning(info, message);
         }
     }
 }

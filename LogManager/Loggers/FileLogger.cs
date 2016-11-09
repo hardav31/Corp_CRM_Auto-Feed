@@ -11,34 +11,34 @@ namespace LogManager
     {
        
 
-        public void Error(string fileName, string line)
+        public void Error(string info, string message)
         {
-            WriteToFile(fileName, "Error", line);
+            WriteToFile(info, "Error", message);
         }
-        public void Exceptin(string fileName, Exception ex)
+        public void Exceptin(string info, Exception ex)
         {
-            WriteExceptionToFile(fileName, ex);
+            WriteExceptionToFile(info, ex);
         }
-        public void Info(string fileName, string massage)
+        public void Info(string info, string massage)
         {
-            WriteToFile(fileName, "info", massage);
+            WriteToFile(info, "info", massage);
         }
-        public void Warning(string fileName, string line)
+        public void Warning(string info, string message)
         {
-            WriteToFile(fileName, "Warning", line);
+            WriteToFile(info, "Warning", message);
         }
-        private static void WriteToFile(string fileName, string type, string line)
+        private static void WriteToFile(string info, string type, string message)
         {
-            Trace.WriteLine(string.Format("DateTime = {0}, Type = {1}, Line =  {2}, FileName = {3}",
-                                   DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
+            Trace.WriteLine(string.Format(" {0},  {1},  {2},  {3}",
                                    type,
-                                   line,
-                                   fileName));
+                                   message,
+                                   info,
+                                   DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")));
         }
-        private static void WriteExceptionToFile(string fileName, Exception ex)
+        private static void WriteExceptionToFile(string info, Exception ex)
         {
             StringBuilder str = new StringBuilder();
-            str.Append(Environment.NewLine + fileName + Environment.NewLine);
+            str.Append(Environment.NewLine + info + Environment.NewLine);
             str.Append("Exception Type" + Environment.NewLine);
             str.Append(ex.GetType().Name);
             str.Append(Environment.NewLine + Environment.NewLine);
@@ -57,9 +57,9 @@ namespace LogManager
                 str.Append("Stack Trace" + Environment.NewLine);
                 str.Append(innerException.StackTrace + Environment.NewLine + Environment.NewLine);
             }
-            Trace.WriteLine(string.Format("DateTime = {0}, {1}",
-                                                            DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
-                                                            str.ToString()));
+            Trace.WriteLine(string.Format(" {0}, {1}",
+                                                      str.ToString(),
+                                                      DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")));
         }
     }
 }

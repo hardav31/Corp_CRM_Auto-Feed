@@ -1,4 +1,5 @@
-﻿using LogManager;
+﻿using App_Configuration;
+using LogManager;
 using System;
 using System.Configuration;
 using System.Data;
@@ -7,7 +8,7 @@ namespace DAL
 {
     public sealed class DBConnection : IDisposable
     {
-        readonly string conString = ConfigurationManager.AppSettings["conString"];
+        readonly string conString = AppConfigManager.appSettings.ConString;
         private SqlConnection connection;
         public DBConnection()
         {

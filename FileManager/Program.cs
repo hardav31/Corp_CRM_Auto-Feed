@@ -9,9 +9,9 @@ namespace FileManager
     {
         static void Main(string[] args)
         {
-            AppConfigManager.Instance.AppReader();
-            LoggerType.CreateLogger(AppConfigManager.Instance);
-            FolderMonitor check = new FolderMonitor($@"{AppConfigManager.Instance.FolderMonitorPath}");
+            AppConfigManager.appSettings.AppReader();
+            LoggerType.CreateLogger(AppConfigManager.appSettings);
+            FolderMonitor check = new FolderMonitor($@"{AppConfigManager.appSettings.FolderMonitorPath}");
             Console.ReadKey();
         }
 

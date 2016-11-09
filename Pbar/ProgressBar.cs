@@ -52,12 +52,12 @@ namespace Pbar
             }
             ClearCurrentConsoleLine();
         }
-        public static void Print(string fileName, string line, string type)
+        public static void Print(string info, string message, string type)
         {
             lock (obj)
             {
                 Console.SetCursorPosition(0, index);
-                Console.WriteLine("FileName = {0}, Line = {1}, type = {2}", fileName, line, type);
+                Console.WriteLine("{0},  {1},  {2}", info, message, type);
                 currentCursor = currentCursordynamic;
                 index++;
             }
@@ -72,12 +72,12 @@ namespace Pbar
                 index++;
             }
         }
-        public static void Print(string fileName, Exception ex)
+        public static void Print(string info, Exception ex)
         {
             lock (obj)
             {
                 Console.SetCursorPosition(0, index);
-                Console.WriteLine("FileName = {0}, Exeeption Massage = {1}", fileName, ex.Message);
+                Console.WriteLine("{0},  {1}", info, ex.Message);
                 currentCursor = currentCursordynamic;
                 index++;
             }

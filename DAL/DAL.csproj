@@ -46,6 +46,10 @@
     <Compile Include="SQLHelper.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\App_Configuration\App_Configuration.csproj">
+      <Project>{CC42D27D-2737-4216-8FCC-6D3EF0EFC955}</Project>
+      <Name>App_Configuration</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LogManager\LogManager.csproj">
       <Project>{6361CB74-ADFB-4788-9D39-0581874FC991}</Project>
       <Name>LogManager</Name>

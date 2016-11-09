@@ -13,40 +13,40 @@ namespace LogManager
         public EventLog myLog;
         public WinEventLogger()
         {
-            if (!EventLog.SourceExists(AppConfigManager.Instance.EventLogAppName))
+            if (!EventLog.SourceExists(AppConfigManager.appSettings.EventLogAppName))
             {
-                EventLog.CreateEventSource(AppConfigManager.Instance.EventLogAppName, AppConfigManager.Instance.EventLogFileName);
+                EventLog.CreateEventSource(AppConfigManager.appSettings.EventLogAppName, AppConfigManager.appSettings.EventLogFileName);
             }
-            myLog = new EventLog(AppConfigManager.Instance.EventLogFileName);
-            myLog.Source = AppConfigManager.Instance.EventLogAppName;
+            myLog = new EventLog(AppConfigManager.appSettings.EventLogFileName);
+            myLog.Source = AppConfigManager.appSettings.EventLogAppName;
         }
-        public void Error(string fileName, string line)
+        public void Error(string info, string message)
         {
-            myLog.WriteEntry(FileInformation(fileName, line), EventLogEntryType.Error);
+            myLog.WriteEntry(FileInformation(info, message), EventLogEntryType.Error);
         }
-        public void Exceptin(string fileName, Exception ex)
+        public void Exceptin(string info, Exception ex)
         {
-            WriteExceptionToEventLog(fileName, ex);
+            WriteExceptionToEventLog(info, ex);
         }
-        public void Info(string fileName, string massage)
+        public void Info(string info, string message)
         {
-            myLog.WriteEntry(FileInformation(fileName, massage), EventLogEntryType.Information);
+            myLog.WriteEntry(FileInformation(info, message), EventLogEntryType.Information);
         }
-        public void Warning(string fileName, string line)
+        public void Warning(string info, string message)
         {
-            myLog.WriteEntry(FileInformation(fileName, line), EventLogEntryType.Warning);
+            myLog.WriteEntry(FileInformation(info, message), EventLogEntryType.Warning);
         }
-        private static string FileInformation(string fileName, string line)
+        private static string FileInformation(string info, string message)
         {
             StringBuilder str = new StringBuilder();
-            str.Append(fileName + Environment.NewLine);
-            str.Append(line + Environment.NewLine);
+            str.Append(info + Environment.NewLine);
+            str.Append(message + Environment.NewLine);
             return str.ToString();
         }
-        private void WriteExceptionToEventLog(string fileName, Exception ex)
+        private void WriteExceptionToEventLog(string info, Exception ex)
         {
             StringBuilder str = new StringBuilder();
-            str.Append(Environment.NewLine + fileName + Environment.NewLine);
+            str.Append(Environment.NewLine + info + Environment.NewLine);
             str.Append("Exception Type" + Environment.NewLine);
             str.Append(ex.GetType().Name);
             str.Append(Environment.NewLine + Environment.NewLine);

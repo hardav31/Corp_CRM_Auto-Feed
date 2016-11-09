@@ -13,6 +13,11 @@ namespace FileManager
 {
     class CsvParser
     {
+        private static readonly Lazy<CsvParser> lazy = new Lazy<CsvParser>(() => new CsvParser());
+        public static CsvParser csvParserObj { get { return lazy.Value; } }
+        private CsvParser()
+        {
+        }
 
         public void CSVFileReader(string direction)
         {
@@ -26,6 +31,7 @@ namespace FileManager
             bool new_team;
             bool new_member;
             bool new_projecr;
+            bool IsAllRight = true;
             try
             {
                 foreach (var e in File.ReadAllLines(direction).Where(line => !string.IsNullOrEmpty(line)).Skip(1))
@@ -36,7 +42,7 @@ namespace FileManager
                     if (line.Length != 10)
                     {
                         LoggerType.Warning(Path.GetFileName(direction), i.ToString());
-                        TeamsD = null;
+                        IsAllRight = false;
                         break;
                     }
 
@@ -44,29 +50,29 @@ namespace FileManager
                     if (Array.Exists(line, s => string.IsNullOrEmpty(s)))
                     {
                         LoggerType.Warning(Path.GetFileName(direction), i.ToString());
-                        TeamsD = null;
+                        IsAllRight = false;
                         break;
                     }
 
                     if (!int.TryParse(line[0], out team_Id))
                     {
                         LoggerType.Error(Path.GetFileName(direction), i.ToString());
-                        TeamsD = null;
+                        IsAllRight = false;
                         break;
                     }
 
                     if (!int.TryParse(line[2], out member_Id))
                     {
                         LoggerType.Error(Path.GetFileName(direction), i.ToString());
-                        TeamsD = null;
+                        IsAllRight = false;
                         break;
                     }
 
                     if (!int.TryParse(line[5], out project_Id))
                     {
                         LoggerType.Error(Path.GetFileName(direction), i.ToString());
-                        TeamsD = null;
-                        continue;
+                        IsAllRight = false;
+                        break;
                     }
 
 
@@ -116,23 +122,24 @@ namespace FileManager
                 MembersD = null;
                 ProjectsD = null;
                 
-                if(TeamsD != null)
+                if(IsAllRight)
                 {
-                    if (AppConfigManager.Instance.SaveInJson)
+                    if (AppConfigManager.appSettings.SaveInJson)
                     {
                         StringBuilder sb = new StringBuilder();
                         JsonParser jsParser = new JsonParser();
-                        jsParser.FilePath = sb.Append(AppConfigManager.Instance.JsonFolder_forCsv + jsParser.jsonFoldername(direction)).ToString();
+                        jsParser.FilePath = sb.Append(AppConfigManager.appSettings.JsonFolder_forCsv + jsParser.jsonFoldername(direction)).ToString();
                         jsParser.JsonWrite(TeamsD);
                         LoggerType.Info(Path.GetFileName(direction), "Json Success");
                     }
-                    if (AppConfigManager.Instance.SaveInDB)
+                    if (AppConfigManager.appSettings.SaveInDB)
                     {
                         DataUpdater dUpdater = new DataUpdater();
                         dUpdater.UpdateData(TeamsD);
                         LoggerType.Info(Path.GetFileName(direction), "DB Success");
                     }
                 }
+
                
             }
            
@@ -142,6 +149,18 @@ namespace FileManager
                 LoggerType.Exceptin(Path.GetFileName(direction), ex);                
             }
 
+            finally
+            {
+                if (!IsAllRight)
+                {
+                    File.Move(direction, AppConfigManager.appSettings.WrongFilePath + Path.GetFileName(direction));
+                    ProgressBar.Print("___________________________________________________________--");
+                }
+                else
+                {
+                    File.Delete(direction);
+                }
+            }
         }
 
     }

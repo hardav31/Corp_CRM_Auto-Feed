@@ -36,23 +36,21 @@ namespace FileManager
                 if (Path.GetExtension(e.FullPath) == ".xml")
                 {
                    
-                    ProgressBar.Print("File "+ e.Name+ "was Created at " + DateTime.Now.ToLocalTime());
-                    XMLParser ob = new XMLParser();
+                    ProgressBar.Print("File "+ e.Name+ "is in processing " + DateTime.Now.ToLocalTime());
 
-                    ProgressBar.StartProgressBar();
-                    ob.XMLFileReader(e.FullPath);
-                    ProgressBar.EndProgressBar();
+                  //  ProgressBar.StartProgressBar();
+                    XMLParser.xmlParserObj.XMLFileReader(e.FullPath);
+                  //  ProgressBar.EndProgressBar();
                 }
 
                 else if (Path.GetExtension(e.FullPath) == ".csv")
                 {
                    
-                    ProgressBar.Print("File " + e.Name + "was Created at " + DateTime.Now.ToLocalTime());
-                    CsvParser cscParser = new CsvParser();
+                    ProgressBar.Print("File " + e.Name + "is in processing  " + DateTime.Now.ToLocalTime());
 
-                    ProgressBar.StartProgressBar();
-                    cscParser.CSVFileReader(e.FullPath);
-                    ProgressBar.EndProgressBar();
+                   // ProgressBar.StartProgressBar();
+                    CsvParser.csvParserObj.CSVFileReader(e.FullPath);
+                   // ProgressBar.EndProgressBar();
                 }
                 else
                 {
@@ -73,7 +71,6 @@ namespace FileManager
         }
 
 
-        //Dear Armen is this a right solution?
         public static bool IsFileLoaded(string direction)
         {
             

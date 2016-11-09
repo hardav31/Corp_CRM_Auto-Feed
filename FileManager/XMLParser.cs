@@ -15,6 +15,12 @@ namespace FileManager
 {
     class XMLParser
     {
+        private static readonly Lazy<XMLParser> lazy = new Lazy<XMLParser>(() => new XMLParser());
+        public static XMLParser xmlParserObj { get { return lazy.Value; } }
+        private XMLParser()
+        {
+        }
+
         public void XMLFileReader(string direction)
         {
             bool IsAllRight = true;
@@ -246,22 +252,22 @@ namespace FileManager
                     if (IsAllRight)
                     {
                         LoggerType.Info(Path.GetFileName(direction), "XML Success");
-                        if (AppConfigManager.Instance.SaveInJson)
+                        if (AppConfigManager.appSettings.SaveInJson)
                         {
                             StringBuilder sb = new StringBuilder();
                             JsonParser jsParser = new JsonParser();
-                            jsParser.FilePath = sb.Append(AppConfigManager.Instance.JsonFolder_forCsv + jsParser.jsonFoldername(direction)).ToString();
+                            jsParser.FilePath = sb.Append(AppConfigManager.appSettings.JsonFolder_forCsv + jsParser.jsonFoldername(direction)).ToString();
                             jsParser.JsonWrite(TeamsD);
                             LoggerType.Info(Path.GetFileName(direction), "Json Success");
                         }
-                        if (AppConfigManager.Instance.SaveInDB)
+                        if (AppConfigManager.appSettings.SaveInDB)
                         {
                             DataUpdater dUpdater = new DataUpdater();
                             dUpdater.UpdateData(TeamsD);
                             LoggerType.Info(Path.GetFileName(direction), "DB Success");
                         }
                     }
-                    LoggerType.Info(Path.GetFileName(direction), "Prc");
+                    LoggerType.Info(Path.GetFileName(direction), "All Success" + DateTime.Now.ToLocalTime());
                 }
                 
             }
@@ -280,7 +286,12 @@ namespace FileManager
             {
                 if (!IsAllRight)
                 {
-                   // FolderMonitor.MoveFile(direction, AppConfigManager.Instance.WrongFilePath + Path.GetFileName(direction));
+                    // FolderMonitor.MoveFile(direction, AppConfigManager.Instance.WrongFilePath + Path.GetFileName(direction));
+                    File.Move(direction, AppConfigManager.appSettings.WrongFilePath + Path.GetFileName(direction));
+                }
+                else
+                {
+                    File.Delete(direction);
                 }
             }
 
