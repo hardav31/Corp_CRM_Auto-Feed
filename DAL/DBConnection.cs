@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LogManager;
+using System;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
@@ -14,30 +15,30 @@ namespace DAL
         }
         private void InitSqlConnection()
         {
-            if (connection == null)
+            try
             {
-                connection = new SqlConnection();
-                connection.ConnectionString = conString;
-                connection.Open();
-            }
-            else
-            {
-                if (connection.State != ConnectionState.Closed)
+                if (connection == null)
                 {
-                    try
+                    connection = new SqlConnection();
+                    connection.ConnectionString = conString;
+                    connection.Open();
+                }
+                else
+                {
+                    if (connection.State != ConnectionState.Closed)
                     {
                         connection.Close();
 
                     }
-                    catch (Exception e)
-                    {
-
-                        throw;
-                    }
+                    connection.ConnectionString = conString;
+                    connection.Open();
                 }
-                connection.ConnectionString = conString;
-                connection.Open();
             }
+            catch (Exception ex)
+            {
+                LoggerType.Exceptin("Problems with connection",ex);
+            }
+            
         }
         public void Dispose()
         {

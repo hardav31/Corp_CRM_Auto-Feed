@@ -4,10 +4,10 @@ using System.IO;
 using System.Linq;
 using Models;
 using System.Text;
-using System.Configuration;
 using LogManager;
 using DataManager;
 using App_Configuration;
+using Pbar;
 
 namespace FileManager
 {
@@ -28,39 +28,44 @@ namespace FileManager
             bool new_projecr;
             try
             {
-                foreach (var e in File.ReadAllLines(direction).Where(line => !string.IsNullOrEmpty(line)))
+                foreach (var e in File.ReadAllLines(direction).Where(line => !string.IsNullOrEmpty(line)).Skip(1))
                 {
                     i++;
                     string[] line = e.Split(',');
 
                     if (line.Length != 10)
                     {
-                        //TODO:log
-                        continue;
+                        LoggerType.Warning(Path.GetFileName(direction), i.ToString());
+                        TeamsD = null;
+                        break;
                     }
 
 
                     if (Array.Exists(line, s => string.IsNullOrEmpty(s)))
                     {
-                        //TODO:log
-                        continue;
+                        LoggerType.Warning(Path.GetFileName(direction), i.ToString());
+                        TeamsD = null;
+                        break;
                     }
 
                     if (!int.TryParse(line[0], out team_Id))
                     {
-                        //TODO:log
-                        continue;
+                        LoggerType.Error(Path.GetFileName(direction), i.ToString());
+                        TeamsD = null;
+                        break;
                     }
 
                     if (!int.TryParse(line[2], out member_Id))
                     {
-                        //TODO:log
-                        continue;
+                        LoggerType.Error(Path.GetFileName(direction), i.ToString());
+                        TeamsD = null;
+                        break;
                     }
 
                     if (!int.TryParse(line[5], out project_Id))
                     {
-                        //TODO:log
+                        LoggerType.Error(Path.GetFileName(direction), i.ToString());
+                        TeamsD = null;
                         continue;
                     }
 
@@ -90,11 +95,12 @@ namespace FileManager
                     }
 
                     // Checking if member is part of only one team
-                    if ((new_team) && (!new_member))
-                    {
-                        //TODO:log
-                        continue;
-                    }
+                    // Sql abdate
+                    //if ((new_team) && (!new_member))
+                    //{
+                    //    //TODO:log
+                    //    continue;
+                    //}
 
                     if (!MembersD[member_Id].Projects.Exists(p => p.ProjectID == project_Id))
                     {
@@ -107,43 +113,36 @@ namespace FileManager
                     }
                 }
 
-                if (AppConfigManager.Instance.SaveInDB)
+                MembersD = null;
+                ProjectsD = null;
+                
+                if(TeamsD != null)
                 {
-                    DataUpdater dUpdater = new DataUpdater();
-                    dUpdater.UpdateData(TeamsD);
-
-                    //DataSelector ds = new DataSelector();
-                    //ds.SelectData();
-                    //DataEraser de = new DataEraser();
-                    //de.DeleteData();
-
+                    if (AppConfigManager.Instance.SaveInJson)
+                    {
+                        StringBuilder sb = new StringBuilder();
+                        JsonParser jsParser = new JsonParser();
+                        jsParser.FilePath = sb.Append(AppConfigManager.Instance.JsonFolder_forCsv + jsParser.jsonFoldername(direction)).ToString();
+                        jsParser.JsonWrite(TeamsD);
+                        LoggerType.Info(Path.GetFileName(direction), "Json Success");
+                    }
+                    if (AppConfigManager.Instance.SaveInDB)
+                    {
+                        DataUpdater dUpdater = new DataUpdater();
+                        dUpdater.UpdateData(TeamsD);
+                        LoggerType.Info(Path.GetFileName(direction), "DB Success");
+                    }
                 }
-                if (AppConfigManager.Instance.SaveInJson)
-                {
+               
+            }
+           
 
-                    StringBuilder sb = new StringBuilder();
-                    JsonParser jsParser = new JsonParser();
-                    jsParser.FilePath = sb.Append(AppConfigManager.Instance.JsonFolder_forCsv + jsParser.jsonFoldername(direction)).ToString();
-                    jsParser.JsonWrite(TeamsD);
-                }
-            }
-            catch (OutOfMemoryException ex)
-            {
-                Console.WriteLine(ex);
-            }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
-            }
-            finally
-            {
-                ProjectsD = null;
-                MembersD = null;
-                Console.WriteLine(i);
+                LoggerType.Exceptin(Path.GetFileName(direction), ex);                
             }
 
         }
 
-        //TODO: Invoke Json or Saving Data in DB methods
     }
 }

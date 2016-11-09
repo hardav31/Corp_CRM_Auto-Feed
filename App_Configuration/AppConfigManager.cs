@@ -25,6 +25,7 @@ namespace App_Configuration
         public string EventLogAppName { get; set; }
         public string EventLogFileName { get; set; }
         public string WrongFilePath { get; set; }
+        public bool LogToConsole { get; set; }
         public void AppReader()
         {
             bool value;
@@ -53,7 +54,11 @@ namespace App_Configuration
             {
                 LogToEventLog = value;
             }
-           
+            if (bool.TryParse(array[11], out value))
+            {
+                LogToConsole = value;
+            }
+
 
         }
     }

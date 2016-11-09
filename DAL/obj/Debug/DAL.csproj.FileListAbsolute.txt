@@ -12,3 +12,9 @@ C:\Users\Galust\Source\Repos\Teamproject\DAL\bin\Debug\Models.pdb
 C:\Users\Galust\Source\Repos\Teamproject\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\Galust\Source\Repos\Teamproject\DAL\obj\Debug\DAL.dll
 C:\Users\Galust\Source\Repos\Teamproject\DAL\obj\Debug\DAL.pdb
+C:\Users\Galust\Source\Repos\Teamproject\DAL\bin\Debug\LogManager.dll
+C:\Users\Galust\Source\Repos\Teamproject\DAL\bin\Debug\App_Configuration.dll
+C:\Users\Galust\Source\Repos\Teamproject\DAL\bin\Debug\Pbar.dll
+C:\Users\Galust\Source\Repos\Teamproject\DAL\bin\Debug\LogManager.pdb
+C:\Users\Galust\Source\Repos\Teamproject\DAL\bin\Debug\App_Configuration.pdb
+C:\Users\Galust\Source\Repos\Teamproject\DAL\bin\Debug\Pbar.pdb

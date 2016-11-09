@@ -106,26 +106,21 @@ namespace FileManager
                 }
 
             }
-            catch (DirectoryNotFoundException)
+            catch (DirectoryNotFoundException e)
             {
-                //TODO: Loging
-                Console.WriteLine("Directore where must be writing data in Json format not found");
+                throw e;
             }
-            catch (UnauthorizedAccessException)
+            catch (UnauthorizedAccessException e)
             {
-                //TODO: Loging
-                Console.WriteLine("You don't have enought access to the directore where must be writing data in Json format");
+                throw e;
             }
-            catch (IOException)
-            {
-                //TODO: Loging
-                Console.WriteLine("You don't have enought access to the directore where must be writing data in Json format");
+            catch (IOException e)
+            {               
+                throw e;
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                //TODO: Loging
-                Console.WriteLine("There were some problems during parsing data to JSON, for more information please the application log");
+                throw e;               
             }
         }
     }

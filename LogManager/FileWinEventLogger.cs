@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace LogManager
 {
-    class FileEventLogLogger : ILogger
+    class FileWinEventLogger : ILogger
     {
-        public FileEventLogLogger()
+        public FileWinEventLogger()
         {
             fileLogger = new FileLogger();
             eventLogLogger = new WinEventLogger();

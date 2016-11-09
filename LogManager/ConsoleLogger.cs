@@ -11,23 +11,22 @@ namespace LogManager
     {
         public void Error(string fileName, string line)
         {
-           // ProgressBar.Print(fileName, line, "Error");
-          
+           ProgressBar.Print(fileName, line, "Error");         
         }
 
         public void Exceptin(string fileName, Exception ex)
         {
-           // ProgressBar.Print(fileName, ex);
+           ProgressBar.Print(fileName, ex);
         }
 
         public void Info(string fileName, string message)
         {
-            //ProgressBar.Print(fileName, message, "Info");
+            ProgressBar.Print(fileName, message, "Info");
         }
 
         public void Warning(string fileName, string line)
         {
-           // ProgressBar.Print(fileName, line, "Warning");
+            ProgressBar.Print(fileName, line, "Warning");
         }
        
     }

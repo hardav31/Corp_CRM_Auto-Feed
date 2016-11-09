@@ -10,22 +10,37 @@ namespace LogManager
         private static ILogger logger;
         public static void CreateLogger(AppConfigManager reader)
         {
-            if (reader.LogToEventLog && reader.LogToFile)
+            if (reader.LogToConsole && reader.LogToEventLog && reader.LogToFile)
             {
                 CreateLogger(new FileWinEventConsoleLogger());
             }
-
-            else if (reader.LogToEventLog && !reader.LogToFile)
+            else if (reader.LogToConsole && reader.LogToEventLog && !reader.LogToFile)
             {
                 CreateLogger(new WinEventConsoleLogger());
             }
-            else if (!reader.LogToEventLog && reader.LogToFile)
+            else if (reader.LogToConsole && !reader.LogToEventLog && reader.LogToFile)
             {
                 CreateLogger(new FileConsoleLogger());
             }
-            else
+            else if(!reader.LogToConsole && reader.LogToEventLog && reader.LogToFile)
+            {
+                CreateLogger(new FileWinEventLogger());
+            }
+            else if(!reader.LogToConsole && !reader.LogToEventLog && reader.LogToFile)
+            {
+                CreateLogger(new FileLogger());
+            }
+            else if(!reader.LogToConsole && reader.LogToEventLog && !reader.LogToFile)
+            {
+                CreateLogger(new WinEventLogger());
+            }
+            else if(reader.LogToConsole && !reader.LogToEventLog && !reader.LogToFile)
             {
                 CreateLogger(new ConsoleLogger());
+            }
+            else
+            {
+                Console.WriteLine("Log does'n set");
             }
         }
         private static void CreateLogger(ILogger ilogger)

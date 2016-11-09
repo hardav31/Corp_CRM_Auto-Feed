@@ -28,7 +28,7 @@ namespace DataManager
 
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                throw e;
             }
 
 

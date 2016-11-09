@@ -1,4 +1,5 @@
 ﻿using DAL;
+using LogManager;
 using Models;
 using System;
 using System.Collections.Generic;
@@ -24,20 +25,15 @@ namespace DataManager
                     var parameters=cmdParam.GetSqlParameters();
 
                     using (DBConnection dbcon = new DBConnection())
-                    {
-                        
+                    { 
                         SQLHelper sqlHelper = new SQLHelper();
-                        Console.WriteLine("success");
                         sqlHelper.ExecuteNonQuery(dbcon.Connection, "dbo.insertData", CommandType.StoredProcedure, parameters);
-                        
-                        //TODO: LOG
                     }
                 }
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-
+                throw e;
             }
 
 

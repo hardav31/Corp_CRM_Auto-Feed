@@ -7,3 +7,4 @@ C:\Users\Home\Desktop\Public2\Teamproject\Pbar\bin\Debug\Pbar.pdb
 C:\Users\Home\Desktop\Public2\Teamproject\Pbar\obj\Debug\Pbar.csprojResolveAssemblyReference.cache
 C:\Users\Home\Desktop\Public2\Teamproject\Pbar\obj\Debug\Pbar.dll
 C:\Users\Home\Desktop\Public2\Teamproject\Pbar\obj\Debug\Pbar.pdb
+C:\Users\Galust\Source\Repos\Teamproject\Pbar\obj\Debug\Pbar.csprojResolveAssemblyReference.cache

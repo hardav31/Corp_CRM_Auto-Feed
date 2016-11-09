@@ -8,6 +8,8 @@ using System.Text;
 using System.Configuration;
 using App_Configuration;
 using DataManager;
+using Pbar;
+using LogManager;
 
 namespace FileManager
 {
@@ -20,7 +22,7 @@ namespace FileManager
             Dictionary<int, string> MembersD = new Dictionary<int, string>(); // for compare all Member's id
             Dictionary<int, string> ProjectsD = new Dictionary<int, string>(); // for compare Project's id in one Member
             try
-            { 
+            {
                 Team current_Team = null;
                 Member current_Member = null;
                 Project current_Project = null;
@@ -31,7 +33,7 @@ namespace FileManager
 
                 using (XmlTextReader xml = new XmlTextReader(direction))
                 {
-                    Console.WriteLine("XmlOpen " + DateTime.Now);
+                    ProgressBar.Print("XmlOpen " + DateTime.Now);
                     while (xml.Read())
                     {
                         switch (xml.NodeType)
@@ -40,7 +42,7 @@ namespace FileManager
                                 #region Team
                                 if (xml.Name == "Team")
                                 {
-                                    current_Team = new Team() { TeamID = -1 };
+                                    current_Team = new Team() { TeamID = -1,Members=new List<Member>() };
 
                                     if (xml.AttributeCount != 2)
                                     {
@@ -56,9 +58,10 @@ namespace FileManager
                                                 {
                                                     current_Team.TeamID = Int32.Parse(xml.GetAttribute(i));
                                                 }
-                                                catch (FormatException e)
+                                                catch (FormatException)
                                                 {
                                                     //loging : ID isn't correct
+                                                    
                                                     current_Team = null;
                                                     break;
                                                 }
@@ -82,8 +85,9 @@ namespace FileManager
                                     }
                                     else
                                     {
-                                        xml.Skip();
+                                        LoggerType.Error(Path.GetFileName(direction), xml.LineNumber.ToString());
                                         current_Team = null;
+                                        xml.Skip();
                                     }
                                     Teamattributecount = 2;
                                 }
@@ -91,7 +95,7 @@ namespace FileManager
                                 #region Member
                                 if (xml.Name == "Member")
                                 {
-                                    current_Member = new Member() { MemberID = -1 };
+                                    current_Member = new Member() { MemberID = -1,Projects=new List<Project>() };
                                     if (xml.AttributeCount != 3)
                                     {
                                         Memberattributecount = 0;
@@ -107,11 +111,12 @@ namespace FileManager
                                                 {
                                                     current_Member.MemberID = Int32.Parse(xml.GetAttribute(i));
                                                 }
-                                                catch (FormatException e)
+                                                catch (FormatException)
                                                 {
                                                     current_Member = null;
                                                     break;
                                                 }
+
                                             }
                                             if (i == 1)
                                             {
@@ -134,6 +139,7 @@ namespace FileManager
                                     }
                                     else
                                     {
+                                        LoggerType.Error(Path.GetFileName(direction), xml.LineNumber.ToString());
                                         current_Member = null;
                                         xml.Skip();
                                     }
@@ -159,7 +165,7 @@ namespace FileManager
                                                 {
                                                     current_Project.ProjectID = Int32.Parse(xml.GetAttribute(i));
                                                 }
-                                                catch (FormatException e)
+                                                catch (FormatException)
                                                 {
                                                     //loging
                                                     current_Member = null;
@@ -176,7 +182,7 @@ namespace FileManager
                                                 {
                                                     current_Project.ProjectCreatedDate = DateTime.Parse(xml.GetAttribute(i));
                                                 }
-                                                catch (FormatException e)
+                                                catch (FormatException)
                                                 {
                                                     current_Project = null;
                                                     break;
@@ -188,7 +194,7 @@ namespace FileManager
                                                 {
                                                     current_Project.ProjectDueDate = DateTime.Parse(xml.GetAttribute(i));
                                                 }
-                                                catch (FormatException e)
+                                                catch (FormatException)
                                                 {
                                                     current_Project = null;
                                                     break;
@@ -212,6 +218,7 @@ namespace FileManager
                                     }
                                     else
                                     {
+                                        LoggerType.Error(Path.GetFileName(direction), xml.LineNumber.ToString());
                                         current_Project = null;
                                     }
                                     Projectattributecount = 5;
@@ -230,22 +237,28 @@ namespace FileManager
                                 // ToDO 
                                 break;
                         }
+                        if (!IsAllRight)
+                        {
+                            TeamsD = null;
+                            break;
+                        }
                     }
                     if (IsAllRight)
                     {
-                        if (AppConfigManager.Instance.SaveInDB)
-                        {
-                            DataUpdater du = new DataUpdater();
-                            du.UpdateData(TeamsD);
-
-                        }
+                        LoggerType.Info(Path.GetFileName(direction), "XML Success");
                         if (AppConfigManager.Instance.SaveInJson)
                         {
-
                             StringBuilder sb = new StringBuilder();
                             JsonParser jsParser = new JsonParser();
                             jsParser.FilePath = sb.Append(AppConfigManager.Instance.JsonFolder_forCsv + jsParser.jsonFoldername(direction)).ToString();
                             jsParser.JsonWrite(TeamsD);
+                            LoggerType.Info(Path.GetFileName(direction), "Json Success");
+                        }
+                        if (AppConfigManager.Instance.SaveInDB)
+                        {
+                            DataUpdater dUpdater = new DataUpdater();
+                            dUpdater.UpdateData(TeamsD);
+                            LoggerType.Info(Path.GetFileName(direction), "DB Success");
                         }
                     }
                 }
@@ -255,19 +268,18 @@ namespace FileManager
             catch (IOException e)
             {
                 IsAllRight = false;
-                Console.WriteLine(e);
+                LoggerType.Exceptin(Path.GetFileName(direction), e);
             }
             catch (Exception e)
             {
                 IsAllRight = false;
-                Console.WriteLine(e.Message);
+                LoggerType.Exceptin(Path.GetFileName(direction), e);
             }
             finally
             {
                 if (!IsAllRight)
                 {
-                    TeamsD.Clear();
-                    FolderMonitor.MoveFile(direction, AppConfigManager.Instance.WrongFilePath + Path.GetFileName(direction));
+                   // FolderMonitor.MoveFile(direction, AppConfigManager.Instance.WrongFilePath + Path.GetFileName(direction));
                 }
             }
 
