@@ -13,7 +13,7 @@ namespace Pbar
         private static CancellationTokenSource cts;
         private static Task tsk;
 
-
+        private static readonly int length = 15;
         private static int currentCursor = 0;
         private static int currentCursordynamic = 0;
         private static int index = 0;
@@ -29,8 +29,6 @@ namespace Pbar
             cts.Cancel();
             tsk.Wait();
             Console.CursorTop = index++;
-            currentCursordynamic = currentCursor = index = 0;
-
         }
         private static void Progress(object obj)
         {
@@ -39,8 +37,9 @@ namespace Pbar
             index = currentCursordynamic + 1;
             while (!ct.IsCancellationRequested)
             {
-                for (int i = 0; i < 15; i++)
+                for (int i = 0; i < length; i++)
                 {
+                    if (ct.IsCancellationRequested) { break; }
                     lock (obj)
                     {
                         Console.SetCursorPosition(i, currentCursor);
@@ -86,7 +85,7 @@ namespace Pbar
         private static void ClearCurrentConsoleLine()
         {
             Console.SetCursorPosition(0, currentCursor);
-            Console.Write(new string(' ', Console.WindowWidth));
+            Console.Write(new string(' ', length));
             Console.SetCursorPosition(0, currentCursor);
         }
     }

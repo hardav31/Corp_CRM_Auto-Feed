@@ -164,3 +164,38 @@ DateTime = 2016-11-09 05:55:31, Type = info, Line =  Json Success, FileName = XM
 DateTime = 2016-11-09 05:56:18, Type = info, Line =  XML Success, FileName = XML.xml
 DateTime = 2016-11-09 05:56:18, Type = info, Line =  Json Success, FileName = XML.xml
 DateTime = 2016-11-09 05:56:22, Type = info, Line =  Json Success, FileName = InvalidCSV.csv
+DateTime = 2016-11-09 20:15:26, Type = info, Line =  XML Success, FileName = newXML1.xml
+DateTime = 2016-11-09 20:15:26, Type = info, Line =  Json Success, FileName = newXML1.xml
+DateTime = 2016-11-09 20:16:44, Type = Error, Line =  5, FileName = uuu — копия (3).xml
+DateTime = 2016-11-09 20:16:44, Type = Error, Line =  13, FileName = uuu — копия (3).xml
+DateTime = 2016-11-09 20:16:44, Type = Error, Line =  16, FileName = uuu — копия (3).xml
+DateTime = 2016-11-09 20:16:44, Type = Error, Line =  34, FileName = uuu — копия (3).xml
+DateTime = 2016-11-09 20:16:44, Type = info, Line =  XML Success, FileName = uuu — копия (3).xml
+DateTime = 2016-11-09 20:16:44, Type = info, Line =  Json Success, FileName = uuu — копия (3).xml
+DateTime = 2016-11-09 20:16:44, Type = info, Line =  Prc, FileName = uuu — копия (3).xml
+DateTime = 2016-11-09 20:17:53, Type = info, Line =  XML Success, FileName = newXML1.xml
+DateTime = 2016-11-09 20:17:53, Type = info, Line =  Json Success, FileName = newXML1.xml
+DateTime = 2016-11-09 20:18:01, Type = info, Line =  DB Success, FileName = newXML1.xml
+DateTime = 2016-11-09 20:18:01, Type = info, Line =  Prc, FileName = newXML1.xml
+DateTime = 2016-11-09 20:19:07, Type = Error, Line =  5, FileName = uuu — копия (3).xml
+DateTime = 2016-11-09 20:19:07, Type = Error, Line =  13, FileName = uuu — копия (3).xml
+DateTime = 2016-11-09 20:19:07, Type = Error, Line =  16, FileName = uuu — копия (3).xml
+DateTime = 2016-11-09 20:19:07, Type = Error, Line =  34, FileName = uuu — копия (3).xml
+DateTime = 2016-11-09 20:19:07, Type = info, Line =  XML Success, FileName = uuu — копия (3).xml
+DateTime = 2016-11-09 20:19:07, Type = info, Line =  Json Success, FileName = uuu — копия (3).xml
+DateTime = 2016-11-09 20:19:08, Type = info, Line =  DB Success, FileName = uuu — копия (3).xml
+DateTime = 2016-11-09 20:19:08, Type = info, Line =  Prc, FileName = uuu — копия (3).xml
+DateTime = 2016-11-09 20:23:30, Type = Error, Line =  5, FileName = uuu — копия (3).xml
+DateTime = 2016-11-09 20:23:30, Type = info, Line =  Prc, FileName = uuu — копия (3).xml
+DateTime = 2016-11-09 20:24:50, Type = Error, Line =  5, FileName = uuu — копия (4).xml
+DateTime = 2016-11-09 20:24:50, Type = info, Line =  Prc, FileName = uuu — копия (4).xml
+DateTime = 2016-11-09 20:32:38, Type = Error, Line =  5, FileName = uuu — копия (3).xml
+DateTime = 2016-11-09 20:32:38, Type = info, Line =  Prc, FileName = uuu — копия (3).xml
+DateTime = 2016-11-09 20:34:29, Type = Error, Line =  5, FileName = uuu — копия (4).xml
+DateTime = 2016-11-09 20:34:29, Type = info, Line =  Prc, FileName = uuu — копия (4).xml
+DateTime = 2016-11-09 21:29:39, Type = Error, Line =  5, FileName = uuu — копия (4).xml
+DateTime = 2016-11-09 21:29:39, Type = info, Line =  Prc, FileName = uuu — копия (4).xml
+DateTime = 2016-11-09 21:29:45, Type = Error, Line =  5, FileName = uuu — копия (3).xml
+DateTime = 2016-11-09 21:29:45, Type = info, Line =  Prc, FileName = uuu — копия (3).xml
+DateTime = 2016-11-09 21:39:13, Type = Error, Line =  7, FileName = uuu — копия (4).xml
+DateTime = 2016-11-09 21:39:13, Type = info, Line =  Prc, FileName = uuu — копия (4).xml
