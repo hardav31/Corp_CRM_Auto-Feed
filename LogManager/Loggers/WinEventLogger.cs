@@ -64,6 +64,7 @@ namespace LogManager
                 str.Append(innerException.Message + Environment.NewLine + Environment.NewLine);
                 str.Append("Stack Trace" + Environment.NewLine);
                 str.Append(innerException.StackTrace + Environment.NewLine + Environment.NewLine);
+                innerException = innerException.InnerException;
             }
             myLog.WriteEntry(str.ToString(), EventLogEntryType.Error);
         }

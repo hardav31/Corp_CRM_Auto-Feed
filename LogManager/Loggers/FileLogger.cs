@@ -9,7 +9,7 @@ namespace LogManager
 {
     class FileLogger : ILogger
     {
-       
+
 
         public void Error(string info, string message)
         {
@@ -56,6 +56,7 @@ namespace LogManager
                 str.Append(innerException.Message + Environment.NewLine + Environment.NewLine);
                 str.Append("Stack Trace" + Environment.NewLine);
                 str.Append(innerException.StackTrace + Environment.NewLine + Environment.NewLine);
+                innerException = innerException.InnerException;
             }
             Trace.WriteLine(string.Format(" {0}, {1}",
                                                       str.ToString(),

@@ -38,9 +38,9 @@ namespace FileManager
                    
                     ProgressBar.Print("File "+ e.Name+ "is in processing " + DateTime.Now.ToLocalTime());
 
-                  //  ProgressBar.StartProgressBar();
+                    ProgressBar.StartProgressBar();
                     XMLParser.xmlParserObj.XMLFileReader(e.FullPath);
-                  //  ProgressBar.EndProgressBar();
+                    ProgressBar.EndProgressBar();
                 }
 
                 else if (Path.GetExtension(e.FullPath) == ".csv")
@@ -48,9 +48,9 @@ namespace FileManager
                    
                     ProgressBar.Print("File " + e.Name + "is in processing  " + DateTime.Now.ToLocalTime());
 
-                   // ProgressBar.StartProgressBar();
+                    ProgressBar.StartProgressBar();
                     CsvParser.csvParserObj.CSVFileReader(e.FullPath);
-                   // ProgressBar.EndProgressBar();
+                    ProgressBar.EndProgressBar();
                 }
                 else
                 {
