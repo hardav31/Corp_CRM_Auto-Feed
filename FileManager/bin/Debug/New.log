@@ -109,3 +109,5 @@ Stack Trace
    at FileManager.XMLParser.XMLFileReader(String direction) in C:\Users\Galust\Source\Repos\Teamproject\FileManager\XMLParser.cs:line 266
 
 , 2016-11-10 05:23:16
+ Error,  7,  454795ea-dcdb-44be-94fd-844d82688c51.xml,  2016-11-11 15:52:17
+ info,  All Success11/11/2016 3:52:17 PM,  454795ea-dcdb-44be-94fd-844d82688c51.xml,  2016-11-11 15:52:17

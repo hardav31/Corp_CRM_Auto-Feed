@@ -8,7 +8,7 @@ namespace FileGenerator
     class GenerateObject
     {
         Random rand = new Random();
-        private List<Project> projects = new List<Project>();
+        private static List<Project> projects = new List<Project>();
         private Dictionary<int, Member> members = new Dictionary<int, Member>();
         private List<Team> teams = new List<Team>();
 
@@ -89,6 +89,11 @@ namespace FileGenerator
             }
             GenerateTeam();
             return teams;
+        }
+
+        public static List<Project> GetProjectsList()
+        {
+            return projects;
         }
 
     }

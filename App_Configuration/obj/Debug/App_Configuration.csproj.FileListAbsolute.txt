@@ -8,3 +8,8 @@ C:\Users\user\Source\Repos\Teamproject\App_Configuration\bin\Debug\App_Configura
 C:\Users\user\Source\Repos\Teamproject\App_Configuration\obj\Debug\App_Configuration.csprojResolveAssemblyReference.cache
 C:\Users\user\Source\Repos\Teamproject\App_Configuration\obj\Debug\App_Configuration.dll
 C:\Users\user\Source\Repos\Teamproject\App_Configuration\obj\Debug\App_Configuration.pdb
+C:\Users\labuser06\Desktop\rrr\App_Configuration\bin\Debug\App_Configuration.dll
+C:\Users\labuser06\Desktop\rrr\App_Configuration\bin\Debug\App_Configuration.pdb
+C:\Users\labuser06\Desktop\rrr\App_Configuration\obj\Debug\App_Configuration.csprojResolveAssemblyReference.cache
+C:\Users\labuser06\Desktop\rrr\App_Configuration\obj\Debug\App_Configuration.dll
+C:\Users\labuser06\Desktop\rrr\App_Configuration\obj\Debug\App_Configuration.pdb
