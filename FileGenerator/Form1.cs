@@ -50,7 +50,6 @@ namespace FileGenerator
                 }
                 else
                 {
-                    
                     loadLable.Visible = true;
                     buttonDisable(generate);
                     GenerateObject gen = new GenerateObject();
@@ -70,7 +69,6 @@ namespace FileGenerator
                         buttonEnable(generate);
                         loadLable.Visible = false;
                     }
-                    textBox1.Text= "";
 
                 }
             }

@@ -13,3 +13,8 @@ C:\Users\user\Source\Repos\Teamproject\Pbar\bin\Debug\Pbar.pdb
 C:\Users\user\Source\Repos\Teamproject\Pbar\obj\Debug\Pbar.csprojResolveAssemblyReference.cache
 C:\Users\user\Source\Repos\Teamproject\Pbar\obj\Debug\Pbar.dll
 C:\Users\user\Source\Repos\Teamproject\Pbar\obj\Debug\Pbar.pdb
+C:\Users\labuser06\Desktop\rrr\Pbar\bin\Debug\Pbar.dll
+C:\Users\labuser06\Desktop\rrr\Pbar\bin\Debug\Pbar.pdb
+C:\Users\labuser06\Desktop\rrr\Pbar\obj\Debug\Pbar.csprojResolveAssemblyReference.cache
+C:\Users\labuser06\Desktop\rrr\Pbar\obj\Debug\Pbar.dll
+C:\Users\labuser06\Desktop\rrr\Pbar\obj\Debug\Pbar.pdb

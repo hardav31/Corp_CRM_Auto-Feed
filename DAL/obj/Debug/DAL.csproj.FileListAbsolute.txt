@@ -31,3 +31,16 @@ C:\Users\user\Source\Repos\Teamproject\DAL\bin\Debug\Pbar.pdb
 C:\Users\user\Source\Repos\Teamproject\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\user\Source\Repos\Teamproject\DAL\obj\Debug\DAL.dll
 C:\Users\user\Source\Repos\Teamproject\DAL\obj\Debug\DAL.pdb
+C:\Users\labuser06\Desktop\rrr\DAL\bin\Debug\DAL.dll
+C:\Users\labuser06\Desktop\rrr\DAL\bin\Debug\DAL.pdb
+C:\Users\labuser06\Desktop\rrr\DAL\bin\Debug\App_Configuration.dll
+C:\Users\labuser06\Desktop\rrr\DAL\bin\Debug\LogManager.dll
+C:\Users\labuser06\Desktop\rrr\DAL\bin\Debug\Models.dll
+C:\Users\labuser06\Desktop\rrr\DAL\bin\Debug\Pbar.dll
+C:\Users\labuser06\Desktop\rrr\DAL\bin\Debug\App_Configuration.pdb
+C:\Users\labuser06\Desktop\rrr\DAL\bin\Debug\LogManager.pdb
+C:\Users\labuser06\Desktop\rrr\DAL\bin\Debug\Models.pdb
+C:\Users\labuser06\Desktop\rrr\DAL\bin\Debug\Pbar.pdb
+C:\Users\labuser06\Desktop\rrr\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\labuser06\Desktop\rrr\DAL\obj\Debug\DAL.dll
+C:\Users\labuser06\Desktop\rrr\DAL\obj\Debug\DAL.pdb

@@ -22,3 +22,8 @@ C:\Users\user\Source\Repos\Teamproject\Models\bin\Debug\Models.pdb
 C:\Users\user\Source\Repos\Teamproject\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
 C:\Users\user\Source\Repos\Teamproject\Models\obj\Debug\Models.dll
 C:\Users\user\Source\Repos\Teamproject\Models\obj\Debug\Models.pdb
+C:\Users\labuser06\Desktop\rrr\Models\bin\Debug\Models.dll
+C:\Users\labuser06\Desktop\rrr\Models\bin\Debug\Models.pdb
+C:\Users\labuser06\Desktop\rrr\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+C:\Users\labuser06\Desktop\rrr\Models\obj\Debug\Models.dll
+C:\Users\labuser06\Desktop\rrr\Models\obj\Debug\Models.pdb
