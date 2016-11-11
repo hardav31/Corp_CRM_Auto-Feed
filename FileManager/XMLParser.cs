@@ -255,7 +255,7 @@ namespace FileManager
                         {
                             StringBuilder sb = new StringBuilder();
                             JsonParser jsParser = new JsonParser();
-                            jsParser.FilePath = sb.Append(AppConfigManager.appSettings.JsonFolder_forCsv + jsParser.jsonFoldername(direction)).ToString();
+                            jsParser.FilePath = sb.Append(AppConfigManager.appSettings.JsonFolderPath + jsParser.jsonFoldername(direction)).ToString();
                             jsParser.JsonWrite(TeamsD);
                             LoggerType.Info(Path.GetFileName(direction), "Json Success");
                         }

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,8 +17,7 @@ namespace App_Configuration
         {
         }
         public string ConString { get; set; }
-        public string JsonFolder_forXmml { get; set; }
-        public string JsonFolder_forCsv { get; set; }
+        public string JsonFolderPath{ get; set; }
         public bool SaveInDB { get; set; }
         public bool SaveInJson { get; set; }
         public bool LogToFile { get; set; }
@@ -26,39 +27,83 @@ namespace App_Configuration
         public string EventLogFileName { get; set; }
         public string WrongFilePath { get; set; }
         public bool LogToConsole { get; set; }
+
+
         public void AppReader()
         {
-            bool value;
-            string[] array = ConfigurationManager.AppSettings.AllKeys.Select(v => ConfigurationManager.AppSettings[v]).ToArray();
-            ConString = array[0];
-            JsonFolder_forXmml = array[1];
-            JsonFolder_forCsv = array[2];
-            FolderMonitorPath = array[7];
-            EventLogAppName = array[8];
-            EventLogFileName = array[9];
-            WrongFilePath = array[10];
+            Dictionary<string, string> AppDictionary = ConfigurationManager.AppSettings.AllKeys.ToDictionary(
+                                                                            k => k, v => ConfigurationManager.AppSettings[v]);
 
-            if (bool.TryParse(array[3], out value))
+            bool value;
+            ConString = AppDictionary["conString"];
+            JsonFolderPath = AppDictionary["JsonFolderPath"];
+            FolderMonitorPath = AppDictionary["FolderMonitorPath"];
+            WrongFilePath = AppDictionary["WrongFilePath"];
+            EventLogFileName = AppDictionary["EventLogFileName"];
+            EventLogAppName = AppDictionary["EventLogSource"];
+
+            if (bool.TryParse(AppDictionary["saveInDB"], out value))
             {
                 SaveInDB = value;
             }
-            if (bool.TryParse(array[4], out value))
+            if (bool.TryParse(AppDictionary["saveInJSON"], out value))
             {
                 SaveInJson = value;
             }
-            if (bool.TryParse(array[5], out value))
+            if (bool.TryParse(AppDictionary["LogToFile"], out value))
             {
                 LogToFile = value;
             }
-            if (bool.TryParse(array[6], out value))
+            if (bool.TryParse(AppDictionary["LogToWinEventLog"], out value))
             {
                 LogToEventLog = value;
             }
-            if (bool.TryParse(array[11], out value))
+            if (bool.TryParse(AppDictionary["LogToConsole"], out value))
             {
                 LogToConsole = value;
             }
 
+            if (!Directory.Exists(FolderMonitorPath))
+            {
+                Console.WriteLine("Wrong directory for Monitoring");
+                Console.ReadKey();
+                Environment.Exit(0);                
+            }
+
+            if (SaveInDB)
+            {
+                try
+                {
+                    using (SqlConnection conn = new SqlConnection(ConString))
+                    {
+                        conn.Open(); 
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Connection string is not valud,  {0}", ex.Message);
+                    Console.ReadKey();
+                    Environment.Exit(0);
+                }
+            }
+
+            if (SaveInJson)
+            {
+                if (!Directory.Exists(JsonFolderPath))
+                {
+                    Console.WriteLine("Wrong directory for Json");
+                    Console.ReadKey();
+                    Environment.Exit(0);
+                }
+            }
+
+            if (!Directory.Exists(WrongFilePath))
+            {
+                Console.WriteLine("Directory of wrong files is invalid");
+                Console.ReadKey();
+                Environment.Exit(0);
+            }
+            
 
         }
     }
