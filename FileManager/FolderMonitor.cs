@@ -59,7 +59,7 @@ namespace FileManager
             }
             catch (Exception ex)
             {
-                LoggerType.Exceptin(Path.GetFileName(e.FullPath), ex);
+                LoggerType.WriteToLog(Path.GetFileName(e.FullPath), ex);
             }
 
 

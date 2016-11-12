@@ -76,7 +76,7 @@ namespace App_Configuration
                 {
                     using (SqlConnection conn = new SqlConnection(ConString))
                     {
-                        conn.Open(); 
+                        conn.Open();
                     }
                 }
                 catch (Exception ex)

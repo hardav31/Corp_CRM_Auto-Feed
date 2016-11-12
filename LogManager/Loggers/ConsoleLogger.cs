@@ -9,25 +9,28 @@ namespace LogManager
 {
     class ConsoleLogger : ILogger
     {
-        public void Error(string info, string message)
+        
+        public void WriteToLog(string info, Exception ex)
         {
-           ProgressBar.Print(info, message, "Error");         
+            ProgressBar.Print(info, ex);
         }
 
-        public void Exceptin(string info, Exception ex)
+        public void WriteToLog(LogType logeType, string info, string message)
         {
-           ProgressBar.Print(info, ex);
+            switch (logeType)
+            {
+                case LogType.Info:
+                    ProgressBar.Print(LogType.Info.ToString(), info, message);
+                    break;
+                case LogType.Warning:
+                    ProgressBar.Print(LogType.Warning.ToString(), info, message);
+                    break;
+                case LogType.Error:
+                    ProgressBar.Print(LogType.Error.ToString(), info, message);
+                    break;
+                default:
+                    break;
+            }
         }
-
-        public void Info(string info, string message)
-        {
-            ProgressBar.Print(info, message, "Info");
-        }
-
-        public void Warning(string info, string message)
-        {
-            ProgressBar.Print(info, message, "Warning");
-        }
-       
     }
 }

@@ -41,7 +41,7 @@ namespace FileManager
 
                     if (line.Length != 10)
                     {
-                        LoggerType.Warning(Path.GetFileName(direction), i.ToString());
+                        LoggerType.WriteToLog(LogType.Warning, Path.GetFileName(direction), i.ToString());
                         IsAllRight = false;
                         break;
                     }
@@ -49,28 +49,28 @@ namespace FileManager
 
                     if (Array.Exists(line, s => string.IsNullOrEmpty(s)))
                     {
-                        LoggerType.Warning(Path.GetFileName(direction), i.ToString());
+                        LoggerType.WriteToLog(LogType.Warning, Path.GetFileName(direction), i.ToString());
                         IsAllRight = false;
                         break;
                     }
 
                     if (!int.TryParse(line[0], out team_Id))
                     {
-                        LoggerType.Error(Path.GetFileName(direction), i.ToString());
+                        LoggerType.WriteToLog(LogType.Error, Path.GetFileName(direction), i.ToString());
                         IsAllRight = false;
                         break;
                     }
 
                     if (!int.TryParse(line[2], out member_Id))
                     {
-                        LoggerType.Error(Path.GetFileName(direction), i.ToString());
+                        LoggerType.WriteToLog(LogType.Error, Path.GetFileName(direction), i.ToString());
                         IsAllRight = false;
                         break;
                     }
 
                     if (!int.TryParse(line[5], out project_Id))
                     {
-                        LoggerType.Error(Path.GetFileName(direction), i.ToString());
+                        LoggerType.WriteToLog(LogType.Error, Path.GetFileName(direction), i.ToString());
                         IsAllRight = false;
                         break;
                     }
@@ -130,13 +130,13 @@ namespace FileManager
                         JsonParser jsParser = new JsonParser();
                         jsParser.FilePath = sb.Append(AppConfigManager.appSettings.JsonFolderPath + jsParser.jsonFoldername(direction)).ToString();
                         jsParser.JsonWrite(TeamsD);
-                        LoggerType.Info(Path.GetFileName(direction), "Json Success");
+                        LoggerType.WriteToLog(LogType.Info, Path.GetFileName(direction), i.ToString());
                     }
                     if (AppConfigManager.appSettings.SaveInDB)
                     {
                         DataUpdater dUpdater = new DataUpdater();
                         dUpdater.UpdateData(TeamsD);
-                        LoggerType.Info(Path.GetFileName(direction), "DB Success");
+                        LoggerType.WriteToLog(LogType.Info, Path.GetFileName(direction), "DB success");
                     }
                 }
 
@@ -146,7 +146,7 @@ namespace FileManager
 
             catch (Exception ex)
             {
-                LoggerType.Exceptin(Path.GetFileName(direction), ex);                
+                LoggerType.WriteToLog(Path.GetFileName(direction), ex);                
             }
 
             finally

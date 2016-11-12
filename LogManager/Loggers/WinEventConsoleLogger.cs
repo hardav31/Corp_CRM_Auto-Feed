@@ -15,25 +15,32 @@ namespace LogManager
         }
         private WinEventLogger eventLogLogger;
         private ConsoleLogger consoleLogger;
-        public void Error(string info, string message)
+
+        public void WriteToLog(LogType logeType, string info, string message)
         {
-            eventLogLogger.Error(info, message);
-            consoleLogger.Error(info, message);
+            switch (logeType)
+            {
+                case LogType.Info:
+                    consoleLogger.WriteToLog(LogType.Info, info, message);
+                    eventLogLogger.WriteToLog(LogType.Info, info, message);
+                    break;
+                case LogType.Warning:
+                    consoleLogger.WriteToLog(LogType.Warning, info, message);
+                    eventLogLogger.WriteToLog(LogType.Warning, info, message);
+                    break;
+                case LogType.Error:
+                    consoleLogger.WriteToLog(LogType.Error, info, message);
+                    eventLogLogger.WriteToLog(LogType.Error, info, message);
+                    break;
+                default:
+                    break;
+            }
         }
-        public void Exceptin(string info, Exception ex)
+
+        public void WriteToLog(string info, Exception ex)
         {
-            eventLogLogger.Exceptin(info, ex);
-            consoleLogger.Exceptin(info, ex);
-        }
-        public void Info(string info, string message)
-        {
-            eventLogLogger.Info(info, message);
-            consoleLogger.Info(info, message);
-        }
-        public void Warning(string info, string message)
-        {
-            eventLogLogger.Warning(info, message);
-            consoleLogger.Warning(info, message);
-        }
+            eventLogLogger.WriteToLog(info, ex);
+            consoleLogger.WriteToLog(info, ex);
+        }       
     }
 }
