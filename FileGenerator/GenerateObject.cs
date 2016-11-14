@@ -22,7 +22,7 @@ namespace FileGenerator
         {
             for (int i = 0; i < pCount; i++)
             {
-                int id = int.Parse(DateTime.Now.ToString("hhmmssfff"));
+                int id = int.Parse(DateTime.Now.ToString("hhmmssff"));
                 projects.Add(new Project(id + i, "Project" + i, DateTime.Today, DateTime.Today.AddMonths(1), "Test" + i));
             }
         }
@@ -53,7 +53,7 @@ namespace FileGenerator
             int i = 0, mIndex = 0;
             while (members.Count != 0)
             {
-                int id = int.Parse(DateTime.Now.ToString("hhmmssfff"));
+                int id = int.Parse(DateTime.Now.ToString("hhmmssffff"));
                 teams.Add(new Team(id + i, "Team" + id + i));
                 for (int j = 0; j < 10; j++)
                 {
