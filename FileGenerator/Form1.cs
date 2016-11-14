@@ -40,11 +40,11 @@ namespace FileGenerator
             {
                 
                 int count;
-                if (!int.TryParse((ConfigurationManager.AppSettings["membersCount"]), out count) || count <= 0 || count > 1000)
+                if (!int.TryParse((ConfigurationManager.AppSettings["membersCount"]), out count) || count <= 0 || count > 100000)
                 {
                     MessageBox.Show("ENTER FROM 1 TO 1000", "Invalid Count For Member", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else if (!int.TryParse((ConfigurationManager.AppSettings["projectsCount"]), out count) || count <= 0 || count > 100)
+                else if (!int.TryParse((ConfigurationManager.AppSettings["projectsCount"]), out count) || count <= 0 || count > 10000)
                 {
                     MessageBox.Show("ENTER FROM 1 TO 100", "Invalid Count For Project", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -52,20 +52,23 @@ namespace FileGenerator
                 {
                     loadLable.Visible = true;
                     buttonDisable(generate);
-                    GenerateObject gen = new GenerateObject();
-                    List<Team> teams = await Task.Run(() => (gen.GetTeamList()));
+                    GenerateObject.generateObject.Generate();
+                    List<Team> teams = await Task.Run(() => (GenerateObject.generateObject.GetTeamsList()));
 
                     if (csvRadioButton.Checked)
                     {
-                        Save sv = new Save(textBox1.Text + $"\\{Guid.NewGuid()}.csv");
+                        Save sv = new Save(textBox1.Text + $"\\{DateTime.Now.ToString("hhmmssfff")}.csv");
                         await Task.Run(() => sv.ToCsv(teams));
                         buttonEnable(generate);
                         loadLable.Visible = false;
                     }
                     if (xmlRadioButton.Checked)
                     {
-                        Save sv = new Save(textBox1.Text + $"\\{Guid.NewGuid()}.xml");
-                        await Task.Run(() => sv.ToXml(teams));
+                        Save sv = new Save(textBox1.Text + $"\\{DateTime.Now.ToString("hhmmssfff")}.xml");
+                        Records rec = new Records();
+                        rec.xTeams = TeamToxTeam.Convert(GenerateObject.generateObject.GetTeamsList());
+                        rec.Projects = GenerateObject.generateObject.GetProjectsList();
+                        await Task.Run(() => sv.ToXml(rec));
                         buttonEnable(generate);
                         loadLable.Visible = false;
                     }

@@ -56,7 +56,11 @@
     <Compile Include="GenerateObject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Records.cs" />
     <Compile Include="Save.cs" />
+    <Compile Include="TeamToxTeam.cs" />
+    <Compile Include="xMember.cs" />
+    <Compile Include="xTeam.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

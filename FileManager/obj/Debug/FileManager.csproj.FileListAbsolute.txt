@@ -97,3 +97,6 @@ C:\Users\labuser06\Desktop\rrr\FileManager\bin\Debug\Models.pdb
 C:\Users\labuser06\Desktop\rrr\FileManager\bin\Debug\Pbar.pdb
 C:\Users\labuser06\Desktop\rrr\FileManager\bin\Debug\DAL.pdb
 C:\Users\labuser06\Desktop\rrr\FileManager\obj\Debug\FileManager.csprojResolveAssemblyReference.cache
+C:\Users\LabUser08\Desktop\New folder (2)\FileManager\bin\Debug\FileManager.exe.config
+C:\Users\LabUser08\Desktop\New folder (2)\FileManager\obj\Debug\FileManager.exe
+C:\Users\LabUser08\Desktop\New folder (2)\FileManager\obj\Debug\FileManager.pdb

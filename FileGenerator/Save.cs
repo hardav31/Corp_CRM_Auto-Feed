@@ -16,26 +16,14 @@ namespace FileGenerator
             Filepath = filepath;
         }
 
-        public void ToXml(List<Team> teams)
+        public void ToXml(Records rec)
         {
             try
             {
-                XmlAttributeOverrides overrides = new XmlAttributeOverrides();
-                XmlAttributes attributes = new XmlAttributes();
-                attributes.XmlIgnore = true;
-                overrides.Add(typeof(Project), "ProjectName", attributes);
-                overrides.Add(typeof(Project), "ProjectCreatedDate", attributes);
-                overrides.Add(typeof(Project), "ProjectDueDate", attributes);
-                overrides.Add(typeof(Project), "ProjectDescription", attributes);
-                
                 using (FileStream fs = new FileStream(Filepath, FileMode.Create))
                 {
-                    XmlSerializer s = new XmlSerializer(teams.GetType(),overrides);
-                    s.Serialize(fs, teams);
-                    
-                    var projects = GenerateObject.GetProjectsList();
-                    s = new XmlSerializer(projects.GetType());
-                    s.Serialize(fs, projects);
+                    XmlSerializer s = new XmlSerializer(rec.GetType());
+                    s.Serialize(fs, rec);
                 }
             }
             catch (DirectoryNotFoundException e)

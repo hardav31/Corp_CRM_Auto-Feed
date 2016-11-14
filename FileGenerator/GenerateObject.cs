@@ -7,8 +7,11 @@ namespace FileGenerator
 {
     class GenerateObject
     {
+        private static readonly Lazy<GenerateObject> lazy = new Lazy<GenerateObject>(() => new GenerateObject());
+        public static GenerateObject generateObject { get { return lazy.Value; } }
+       
         Random rand = new Random();
-        private static List<Project> projects = new List<Project>();
+        private List<Project> projects = new List<Project>();
         private Dictionary<int, Member> members = new Dictionary<int, Member>();
         private List<Team> teams = new List<Team>();
 
@@ -68,9 +71,8 @@ namespace FileGenerator
         }
 
 
-        public List<Team> GetTeamList()
-        {
-
+        public void Generate()
+        { 
             if (projects.Count != 0)
             {
                 projects.Clear();
@@ -88,12 +90,19 @@ namespace FileGenerator
                 teams.Clear();
             }
             GenerateTeam();
-            return teams;
         }
 
-        public static List<Project> GetProjectsList()
+        public List<Project> GetProjectsList()
         {
             return projects;
+        }
+        public Dictionary<int,Member> GetMembersList()
+        {
+            return members;
+        }
+        public List<Team> GetTeamsList()
+        {
+            return teams;
         }
 
     }
