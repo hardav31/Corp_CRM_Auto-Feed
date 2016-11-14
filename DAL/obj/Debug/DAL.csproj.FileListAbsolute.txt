@@ -44,3 +44,9 @@ C:\Users\labuser06\Desktop\rrr\DAL\bin\Debug\Pbar.pdb
 C:\Users\labuser06\Desktop\rrr\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\labuser06\Desktop\rrr\DAL\obj\Debug\DAL.dll
 C:\Users\labuser06\Desktop\rrr\DAL\obj\Debug\DAL.pdb
+C:\Users\Home\Desktop\Public2\Teamproject\DAL\bin\Debug\App_Configuration.dll
+C:\Users\Home\Desktop\Public2\Teamproject\DAL\bin\Debug\LogManager.dll
+C:\Users\Home\Desktop\Public2\Teamproject\DAL\bin\Debug\Pbar.dll
+C:\Users\Home\Desktop\Public2\Teamproject\DAL\bin\Debug\App_Configuration.pdb
+C:\Users\Home\Desktop\Public2\Teamproject\DAL\bin\Debug\LogManager.pdb
+C:\Users\Home\Desktop\Public2\Teamproject\DAL\bin\Debug\Pbar.pdb

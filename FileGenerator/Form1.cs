@@ -26,59 +26,48 @@ namespace FileGenerator
             button.Enabled = true;
         }
 
-
         private void browse_Click(object sender, EventArgs e)
         {
-            if (folderBrowserDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
                 this.textBox1.Text = folderBrowserDialog1.SelectedPath;
         }
 
         private async void generate_Click(object sender, EventArgs e)
         {
-
             if (Directory.Exists(textBox1.Text))
             {
-                
-                int count;
-                if (!int.TryParse((ConfigurationManager.AppSettings["membersCount"]), out count) || count <= 0 || count > 100000)
-                {
-                    MessageBox.Show("ENTER FROM 1 TO 1000", "Invalid Count For Member", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else if (!int.TryParse((ConfigurationManager.AppSettings["projectsCount"]), out count) || count <= 0 || count > 10000)
-                {
-                    MessageBox.Show("ENTER FROM 1 TO 100", "Invalid Count For Project", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
-                {
-                    loadLable.Visible = true;
-                    buttonDisable(generate);
-                    GenerateObject.generateObject.Generate();
-                    List<Team> teams = await Task.Run(() => (GenerateObject.generateObject.GetTeamsList()));
+                GenerateObject.generateObject.pCount = (int)projectsCount.Value;
+                GenerateObject.generateObject.mCount = (int)membersCount.Value;
 
-                    if (csvRadioButton.Checked)
-                    {
-                        Save sv = new Save(textBox1.Text + $"\\{DateTime.Now.ToString("hhmmssfff")}.csv");
-                        await Task.Run(() => sv.ToCsv(teams));
-                        buttonEnable(generate);
-                        loadLable.Visible = false;
-                    }
-                    if (xmlRadioButton.Checked)
-                    {
-                        Save sv = new Save(textBox1.Text + $"\\{DateTime.Now.ToString("hhmmssfff")}.xml");
-                        Records rec = new Records();
-                        rec.xTeams = TeamToxTeam.Convert(GenerateObject.generateObject.GetTeamsList());
-                        rec.Projects = GenerateObject.generateObject.GetProjectsList();
-                        await Task.Run(() => sv.ToXml(rec));
-                        buttonEnable(generate);
-                        loadLable.Visible = false;
-                    }
+                loadLable.Visible = true;
+                buttonDisable(generate);
+                await Task.Run(() => GenerateObject.generateObject.Generate());
+                List<Team> teams = await Task.Run(() => (GenerateObject.generateObject.GetTeamsList()));
+                string fileName = $"{DateTime.Now.ToString("hhmmssfff")}";
+                if (csvRadioButton.Checked)
+                {
+                    Save sv = new Save(textBox1.Text + $"\\{fileName}.csv");
+                    await Task.Run(() => sv.ToCsv(teams));
+                    buttonEnable(generate);
+                    loadLable.Visible = false;
+                    MessageBox.Show(fileName + ".csv Created in " + textBox1.Text, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                }
+                if (xmlRadioButton.Checked)
+                {
+                    Save sv = new Save(textBox1.Text + $"\\{fileName}.xml");
+                    Records rec = new Records();
+                    rec.xTeams = TeamToxTeam.Convert(GenerateObject.generateObject.GetTeamsList());
+                    rec.Projects = GenerateObject.generateObject.GetProjectsList();
+                    await Task.Run(() => sv.ToXml(rec));
+                    buttonEnable(generate);
+                    loadLable.Visible = false;
+                    MessageBox.Show(fileName + ".xml Created in " + textBox1.Text, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
-
             {
-                MessageBox.Show("Please choose a currect folder", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please choose a currect folder", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
         }
     }

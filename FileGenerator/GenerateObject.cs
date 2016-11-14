@@ -9,17 +9,17 @@ namespace FileGenerator
     {
         private static readonly Lazy<GenerateObject> lazy = new Lazy<GenerateObject>(() => new GenerateObject());
         public static GenerateObject generateObject { get { return lazy.Value; } }
-       
+
         Random rand = new Random();
         private List<Project> projects = new List<Project>();
         private Dictionary<int, Member> members = new Dictionary<int, Member>();
         private List<Team> teams = new List<Team>();
 
+        public int pCount { get; set; }
+        public int mCount { get; set; }
+
         private void GenerateProject()
         {
-            
-            int pCount = int.Parse(ConfigurationManager.AppSettings["projectsCount"]);
-
             for (int i = 0; i < pCount; i++)
             {
                 int id = int.Parse(DateTime.Now.ToString("hhmmssfff"));
@@ -28,8 +28,6 @@ namespace FileGenerator
         }
         private void GenerateMember()
         {
-            int mCount = int.Parse(ConfigurationManager.AppSettings["membersCount"]);
-
             for (int i = 0; i < mCount; i++)
             {
                 int id = int.Parse(DateTime.Now.ToString("hhmmssfff"));
@@ -72,7 +70,7 @@ namespace FileGenerator
 
 
         public void Generate()
-        { 
+        {
             if (projects.Count != 0)
             {
                 projects.Clear();
@@ -96,7 +94,7 @@ namespace FileGenerator
         {
             return projects;
         }
-        public Dictionary<int,Member> GetMembersList()
+        public Dictionary<int, Member> GetMembersList()
         {
             return members;
         }
