@@ -37,7 +37,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                LoggerType.Exceptin("Problems with connection",ex);
+                LoggerType.WriteToLog("Problems with connection",ex);
             }
             
         }

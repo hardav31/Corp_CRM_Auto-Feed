@@ -17,29 +17,36 @@ namespace LogManager
         private FileLogger fileLogger;
         private WinEventLogger eventLogLogger;
         private ConsoleLogger consoleLogger;
-        public void Error(string info, string message)
+
+        public void WriteToLog(LogType logeType, string info, string message)
         {
-            fileLogger.Error(info, message);
-            eventLogLogger.Error(info, message);
-            consoleLogger.Error(info, message);
+            switch (logeType)
+            {
+                case LogType.Info:
+                    fileLogger.WriteToLog(LogType.Info, info, message);
+                    eventLogLogger.WriteToLog(LogType.Info, info, message);
+                    consoleLogger.WriteToLog(LogType.Info, info, message);
+                    break;
+                case LogType.Warning:
+                    fileLogger.WriteToLog(LogType.Warning, info, message);
+                    eventLogLogger.WriteToLog(LogType.Warning, info, message);
+                    consoleLogger.WriteToLog(LogType.Warning, info, message);
+                    break;
+                case LogType.Error:
+                    fileLogger.WriteToLog(LogType.Error, info, message);
+                    eventLogLogger.WriteToLog(LogType.Error, info, message);
+                    consoleLogger.WriteToLog(LogType.Error, info, message);
+                    break;
+                default:
+                    break;
+            }
         }
-        public void Exceptin(string info, Exception ex)
+        public void WriteToLog(string info, Exception ex)
         {
-            fileLogger.Exceptin(info, ex);
-            eventLogLogger.Exceptin(info, ex);
-            consoleLogger.Exceptin(info, ex);
+            fileLogger.WriteToLog(info, ex);
+            eventLogLogger.WriteToLog(info, ex);
+            consoleLogger.WriteToLog(info, ex);
         }
-        public void Info(string info, string message)
-        {
-            fileLogger.Info(info, message);
-            eventLogLogger.Info(info, message);
-            consoleLogger.Info(info, message);
-        }
-        public void Warning(string info, string message)
-        {
-            fileLogger.Warning(info, message);
-            eventLogLogger.Warning(info, message);
-            consoleLogger.Warning(info, message);
-        }
+        
     }
 }

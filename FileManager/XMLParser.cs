@@ -90,7 +90,7 @@ namespace FileManager
                                     }
                                     else
                                     {
-                                        LoggerType.Error(Path.GetFileName(direction), xml.LineNumber.ToString());
+                                        LoggerType.WriteToLog(LogType.Error, Path.GetFileName(direction), xml.LineNumber.ToString());
                                         xml.Skip();
                                     }
                                 }
@@ -144,7 +144,7 @@ namespace FileManager
                                     }
                                     else
                                     {
-                                        LoggerType.Error(Path.GetFileName(direction), xml.LineNumber.ToString());
+                                        LoggerType.WriteToLog(LogType.Error,Path.GetFileName(direction), xml.LineNumber.ToString());
                                         xml.Skip();
                                     }
                                 }
@@ -225,7 +225,7 @@ namespace FileManager
                                     }
                                     else
                                     {
-                                        LoggerType.Error(Path.GetFileName(direction), xml.LineNumber.ToString());
+                                        LoggerType.WriteToLog(LogType.Error,Path.GetFileName(direction), xml.LineNumber.ToString());
                                         xml.Skip();
                                     }
                                 }
@@ -250,23 +250,23 @@ namespace FileManager
                     }
                     if (IsAllRight)
                     {
-                        LoggerType.Info(Path.GetFileName(direction), "XML Success");
+                        LoggerType.WriteToLog(LogType.Info, Path.GetFileName(direction), "XML success");
                         if (AppConfigManager.appSettings.SaveInJson)
                         {
                             StringBuilder sb = new StringBuilder();
                             JsonParser jsParser = new JsonParser();
                             jsParser.FilePath = sb.Append(AppConfigManager.appSettings.JsonFolderPath + jsParser.jsonFoldername(direction)).ToString();
                             jsParser.JsonWrite(TeamsD);
-                            LoggerType.Info(Path.GetFileName(direction), "Json Success");
+                            LoggerType.WriteToLog(LogType.Info, Path.GetFileName(direction), "XML success");
                         }
                         if (AppConfigManager.appSettings.SaveInDB)
                         {
                             DataUpdater dUpdater = new DataUpdater();
                             dUpdater.UpdateData(TeamsD);
-                            LoggerType.Info(Path.GetFileName(direction), "DB Success");
+                            LoggerType.WriteToLog(LogType.Info, Path.GetFileName(direction), "DB success");
                         }
                     }
-                    LoggerType.Info(Path.GetFileName(direction), "All Success" + DateTime.Now.ToLocalTime());
+                    LoggerType.WriteToLog(LogType.Info, Path.GetFileName(direction), "All Success " + DateTime.Now.ToLocalTime());
                 }
                 
             }
@@ -274,12 +274,12 @@ namespace FileManager
             catch (IOException e)
             {
                 IsAllRight = false;
-                LoggerType.Exceptin(Path.GetFileName(direction), e);
+                LoggerType.WriteToLog(Path.GetFileName(direction), e);
             }
             catch (Exception e)
             {
                 IsAllRight = false;
-                LoggerType.Exceptin(Path.GetFileName(direction), e);
+                LoggerType.WriteToLog(Path.GetFileName(direction), e);
             }
             finally
             {

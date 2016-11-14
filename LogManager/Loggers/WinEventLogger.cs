@@ -20,21 +20,28 @@ namespace LogManager
             myLog = new EventLog(AppConfigManager.appSettings.EventLogFileName);
             myLog.Source = AppConfigManager.appSettings.EventLogAppName;
         }
-        public void Error(string info, string message)
-        {
-            myLog.WriteEntry(FileInformation(info, message), EventLogEntryType.Error);
-        }
-        public void Exceptin(string info, Exception ex)
+        
+        public void WriteToLog(string info, Exception ex)
         {
             WriteExceptionToEventLog(info, ex);
         }
-        public void Info(string info, string message)
+
+        public void WriteToLog(LogType logeType, string info, string message)
         {
-            myLog.WriteEntry(FileInformation(info, message), EventLogEntryType.Information);
-        }
-        public void Warning(string info, string message)
-        {
-            myLog.WriteEntry(FileInformation(info, message), EventLogEntryType.Warning);
+            switch (logeType)
+            {
+                case LogType.Info:
+                    myLog.WriteEntry(FileInformation(info, message), EventLogEntryType.Information);
+                    break;
+                case LogType.Warning:
+                    myLog.WriteEntry(FileInformation(info, message), EventLogEntryType.Warning);
+                    break;
+                case LogType.Error:
+                    myLog.WriteEntry(FileInformation(info, message), EventLogEntryType.Error);
+                    break;
+                default:
+                    break;
+            }
         }
         private static string FileInformation(string info, string message)
         {
@@ -43,6 +50,8 @@ namespace LogManager
             str.Append(message + Environment.NewLine);
             return str.ToString();
         }
+
+
         private void WriteExceptionToEventLog(string info, Exception ex)
         {
             StringBuilder str = new StringBuilder();

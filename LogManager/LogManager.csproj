@@ -51,6 +51,7 @@
     <Compile Include="Loggers\ConsoleLogger.cs" />
     <Compile Include="Loggers\WinEventLogger.cs" />
     <Compile Include="Loggers\FileLogger.cs" />
+    <Compile Include="LogType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

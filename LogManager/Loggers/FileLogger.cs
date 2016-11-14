@@ -10,23 +10,30 @@ namespace LogManager
     class FileLogger : ILogger
     {
 
-
-        public void Error(string info, string message)
+        public void WriteToLog(LogType logeType, string info, string message)
         {
-            WriteToFile(info, "Error", message);
+            switch (logeType)
+            {
+                case LogType.Info:
+                    WriteToFile(info, LogType.Info.ToString(), message);
+                    break;
+                case LogType.Warning:
+                    WriteToFile(info, LogType.Warning.ToString(), message);
+                    break;
+                case LogType.Error:
+                    WriteToFile(info, LogType.Error.ToString(), message);
+                    break;
+                default:
+                    break;
+            }
         }
-        public void Exceptin(string info, Exception ex)
+
+        public void WriteToLog( string info, Exception ex)
         {
             WriteExceptionToFile(info, ex);
         }
-        public void Info(string info, string massage)
-        {
-            WriteToFile(info, "info", massage);
-        }
-        public void Warning(string info, string message)
-        {
-            WriteToFile(info, "Warning", message);
-        }
+
+
         private static void WriteToFile(string info, string type, string message)
         {
             Trace.WriteLine(string.Format(" {0},  {1},  {2},  {3}",
@@ -62,5 +69,6 @@ namespace LogManager
                                                       str.ToString(),
                                                       DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")));
         }
+
     }
 }
