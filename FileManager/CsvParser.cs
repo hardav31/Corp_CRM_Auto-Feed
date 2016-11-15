@@ -120,28 +120,35 @@ namespace FileManager
                 }
 
                 MembersD = null;
+                ProjectsD = null;
                 
                 if(IsAllRight)
                 {
                     if (AppConfigManager.appSettings.SaveInJson)
                     {
+                        ProgressBar.Print("Starting Json");
                         StringBuilder sb = new StringBuilder();
                         JsonParser jsParser = new JsonParser();
                         jsParser.FilePath = sb.Append(AppConfigManager.appSettings.JsonFolderPath + jsParser.jsonFoldername(direction)).ToString();
-                        jsParser.JsonWrite(TeamsD, ProjectsD);
-                        LoggerType.WriteToLog(LogType.Info, Path.GetFileName(direction), i.ToString());
+                        jsParser.JsonWrite(TeamsD);
+                        LoggerType.WriteToLog(LogType.Info, Path.GetFileName(direction), "Json success");
                     }
                     if (AppConfigManager.appSettings.SaveInDB)
                     {
+                        ProgressBar.Print("starting DB");
                         DataUpdater dUpdater = new DataUpdater();
                         dUpdater.UpdateData(TeamsD);
                         LoggerType.WriteToLog(LogType.Info, Path.GetFileName(direction), "DB success");
                     }
                 }
-                ProjectsD = null;
+
+               
             }
+           
+
             catch (Exception ex)
             {
+                IsAllRight = false;
                 LoggerType.WriteToLog(Path.GetFileName(direction), ex);                
             }
 
@@ -150,11 +157,12 @@ namespace FileManager
                 if (!IsAllRight)
                 {
                     File.Move(direction, AppConfigManager.appSettings.WrongFilePath + Path.GetFileName(direction));
-                    ProgressBar.Print("___________________________________________________________--");
+                    LoggerType.WriteToLog(LogType.Info, Path.GetFileName(direction), " was moved to Wrong Files folder");
                 }
                 else
                 {
                     File.Delete(direction);
+                    ProgressBar.Print($"{ Path.GetFileName(direction)} file was deleted at {DateTime.Now}");
                 }
             }
         }

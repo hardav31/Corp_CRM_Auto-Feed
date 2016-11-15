@@ -17,9 +17,8 @@ namespace FileManager
             watcher.Path = path;
             watcher.IncludeSubdirectories = true;
             watcher.EnableRaisingEvents = true;
-            watcher.Deleted += Watcher_Deleted;
             watcher.Created += Watcher_Created;
-            watcher.Filter = "*.*";
+            //watcher.Filter = "*.*";
         }
 
         private static  void Watcher_Created(object sender, FileSystemEventArgs e)
@@ -30,6 +29,7 @@ namespace FileManager
                 bool isloaded = false;
                 while (!isloaded)
                 {
+                    
                     isloaded = IsFileLoaded(e.FullPath);
                 }
 
@@ -54,7 +54,8 @@ namespace FileManager
                 }
                 else
                 {
-                    ProgressBar.Print($"File { e.Name} has uexpected file extention");
+                    File.Move(e.FullPath, AppConfigManager.appSettings.WrongFilePath + Path.GetFileName(e.FullPath));
+                    LoggerType.WriteToLog(LogType.Warning, Path.GetFileName(e.FullPath), "has uexpected file extention and moved to Wrong Files folder");
                 }
             }
             catch (Exception ex)
@@ -65,11 +66,6 @@ namespace FileManager
 
         }
 
-        private static void Watcher_Deleted(object sender, FileSystemEventArgs e)
-        {
-            ProgressBar.Print($"File {e.Name} was deleted");
-        }
-
 
         public static bool IsFileLoaded(string direction)
         {
@@ -78,10 +74,15 @@ namespace FileManager
             {
                 using (FileStream stream = File.Open(direction, FileMode.Open, FileAccess.Read, FileShare.None))
                 {
-                    return stream.Length > 0;
+                    //if (stream.Length == 0)
+                    //{
+                    //    File.Move(direction, AppConfigManager.appSettings.WrongFilePath + Path.GetFileName(direction));
+                    //    LoggerType.WriteToLog(LogType.Warning, Path.GetFileName(direction), " file was empty and moved to wrong files folder");
+                    //}
+                    return stream.Length >= 0;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return false;
             }

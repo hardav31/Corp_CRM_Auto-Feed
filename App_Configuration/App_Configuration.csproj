@@ -44,6 +44,12 @@
     <Compile Include="AppConfigManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pbar\Pbar.csproj">
+      <Project>{a51e600d-be45-4e4c-a5b3-97e40274f45b}</Project>
+      <Name>Pbar</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

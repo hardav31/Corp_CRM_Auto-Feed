@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Pbar;
 
 namespace App_Configuration
 {
@@ -65,7 +66,7 @@ namespace App_Configuration
 
             if (!Directory.Exists(FolderMonitorPath))
             {
-                Console.WriteLine("Wrong directory for Monitoring");
+                ProgressBar.Print("Wrong directory for Monitoring");
                 Console.ReadKey();
                 Environment.Exit(0);                
             }
@@ -81,7 +82,7 @@ namespace App_Configuration
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Connection string is not valud,  {0}", ex.Message);
+                    ProgressBar.Print($"Connection string is not valud,  {ex.Message}");
                     Console.ReadKey();
                     Environment.Exit(0);
                 }
@@ -91,7 +92,7 @@ namespace App_Configuration
             {
                 if (!Directory.Exists(JsonFolderPath))
                 {
-                    Console.WriteLine("Wrong directory for Json");
+                    ProgressBar.Print("Wrong directory for Json");
                     Console.ReadKey();
                     Environment.Exit(0);
                 }
@@ -99,7 +100,7 @@ namespace App_Configuration
 
             if (!Directory.Exists(WrongFilePath))
             {
-                Console.WriteLine("Directory of wrong files is invalid");
+                ProgressBar.Print("Directory of wrong files is invalid");
                 Console.ReadKey();
                 Environment.Exit(0);
             }
