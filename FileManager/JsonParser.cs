@@ -60,26 +60,26 @@ namespace FileManager
                                 projectCount--;
                                 jsonrow.AppendLine("\t\t\t  {");
                                 jsonrow.AppendLine("\t\t\t    \"ProjectID\":" + projects.ProjectID + ",");
-                            //    if (!isdublicate)
-                            //    {
-                            //        try
-                            //        {
-                            //            projectD.Add(projects.ProjectID, new Project(projects.ProjectID, projects.ProjectName, projects.ProjectCreatedDate, projects.ProjectDueDate, projects.ProjectDescription));
-                            //        }
-                            //        catch (ArgumentException e)
-                            //        {
-                            //            continue;
-                            //        }
-                            //    }
+                                //    if (!isdublicate)
+                                //    {
+                                //        try
+                                //        {
+                                //            projectD.Add(projects.ProjectID, new Project(projects.ProjectID, projects.ProjectName, projects.ProjectCreatedDate, projects.ProjectDueDate, projects.ProjectDescription));
+                                //        }
+                                //        catch (ArgumentException e)
+                                //        {
+                                //            continue;
+                                //        }
+                                //    }
 
-                            //    if (projectCount != 0)
-                            //    {
-                            //        jsonrow.AppendLine("\t\t\t  },");
-                            //    }
-                            //    else
-                            //    {
-                            //        jsonrow.AppendLine("\t\t\t  }");
-                            //    }
+                                if (projectCount != 0)
+                                {
+                                    jsonrow.AppendLine("\t\t\t  },");
+                                }
+                                else
+                                {
+                                    jsonrow.AppendLine("\t\t\t  }");
+                                }
 
                             }
 
@@ -123,6 +123,8 @@ namespace FileManager
                         jsonrow.AppendLine("\t    \"ProjectName\":" + "\""+ item.ProjectName + "\",");
                         jsonrow.AppendLine("\t    \"ProjectDescription\":" + "\""+item.ProjectDescription + "\",");
                         jsonrow.AppendLine("\t    \"ProjectCreatedDate\":" + "\""+ item.ProjectCreatedDate + "\",");
+                        jsonrow.AppendLine("\t    \"ProjectDueDate\":" + "\""+ item.ProjectDueDate + "\",");
+
                         if (projectCount != 0)
                         {
                             jsonrow.AppendLine("\t  },");

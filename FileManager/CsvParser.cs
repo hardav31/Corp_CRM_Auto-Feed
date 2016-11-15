@@ -119,8 +119,6 @@ namespace FileManager
                     }
                 }
 
-                MembersD = null;
-              //  ProjectsD = null;
                 
                 if(IsAllRight)
                 {
@@ -130,7 +128,7 @@ namespace FileManager
                         StringBuilder sb = new StringBuilder();
                         JsonParser jsParser = new JsonParser();
                         jsParser.FilePath = sb.Append(AppConfigManager.appSettings.JsonFolderPath + jsParser.jsonFoldername(direction)).ToString();
-                        jsParser.JsonWrite(TeamsD);
+                        jsParser.JsonWrite(TeamsD, ProjectsD);
                         LoggerType.WriteToLog(LogType.Info, Path.GetFileName(direction), "Json success");
                     }
                     if (AppConfigManager.appSettings.SaveInDB)
@@ -141,7 +139,6 @@ namespace FileManager
                         LoggerType.WriteToLog(LogType.Info, Path.GetFileName(direction), "DB success");
                     }
                 }
-                ProjectsD = null;
 
             }
            
