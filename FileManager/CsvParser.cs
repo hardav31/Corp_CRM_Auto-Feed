@@ -120,7 +120,7 @@ namespace FileManager
                 }
 
                 MembersD = null;
-                ProjectsD = null;
+              //  ProjectsD = null;
                 
                 if(IsAllRight)
                 {
@@ -141,8 +141,8 @@ namespace FileManager
                         LoggerType.WriteToLog(LogType.Info, Path.GetFileName(direction), "DB success");
                     }
                 }
+                ProjectsD = null;
 
-               
             }
            
 
