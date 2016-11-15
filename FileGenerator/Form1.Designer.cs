@@ -134,7 +134,7 @@
             // 
             this.membersCount.Location = new System.Drawing.Point(105, 66);
             this.membersCount.Maximum = new decimal(new int[] {
-            500,
+            1000000,
             0,
             0,
             0});
@@ -155,6 +155,11 @@
             // projectsCount
             // 
             this.projectsCount.Location = new System.Drawing.Point(210, 66);
+            this.projectsCount.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.projectsCount.Minimum = new decimal(new int[] {
             1,
             0,
