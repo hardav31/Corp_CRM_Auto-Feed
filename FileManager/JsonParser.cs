@@ -2,15 +2,14 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace FileManager
 {
     class JsonParser
     {
         public string FilePath;
+        Dictionary<int, Project> projectD = new Dictionary<int, Project>();
 
         public string jsonFoldername(string filepath)
         {
@@ -23,7 +22,7 @@ namespace FileManager
         public void JsonWrite(Dictionary<int, Team> teamlist)
         {
             int teamCount, memberCount, projectCount;
-
+            bool isdublicate = false;
             StringBuilder jsonrow = new StringBuilder();
 
             try
@@ -40,7 +39,7 @@ namespace FileManager
                         jsonrow.Clear();
                         jsonrow.AppendLine("\t  {");
                         jsonrow.AppendLine("\t    \"TeamID\":" + teams.TeamID + ",");
-                        jsonrow.AppendLine("\t    \"TeamName:\"" + teams.TeamName + "\",");
+                        jsonrow.AppendLine("\t    \"TeamName\":" + teams.TeamName + "\",");
                         jsonrow.AppendLine("\t    \"Member\":");
                         jsonrow.AppendLine("\t\t[");
 
@@ -60,11 +59,18 @@ namespace FileManager
                             {
                                 projectCount--;
                                 jsonrow.AppendLine("\t\t\t  {");
-                                jsonrow.AppendLine("\t\t\t    \"ProjectID:" + projects.ProjectID + ",");
-                                jsonrow.AppendLine("\t\t\t    \"ProjectName:" + "\"" + projects.ProjectName + "\",");
-                                jsonrow.AppendLine("\t\t\t    \"ProjectDescription:" + "\"" + projects.ProjectDescription + "\",");
-                                jsonrow.AppendLine("\t\t\t    \"ProjectCreatedDate:" + "\"" + projects.ProjectCreatedDate + "\",");
-                                jsonrow.AppendLine("\t\t\t    \"ProjectDueDate:" + "\"" + projects.ProjectDueDate + "\"");
+                                jsonrow.AppendLine("\t\t\t    \"ProjectID\":" + projects.ProjectID + ",");
+                                if (!isdublicate)
+                                {
+                                    try
+                                    {
+                                        projectD.Add(projects.ProjectID, new Project(projects.ProjectID, projects.ProjectName, projects.ProjectCreatedDate, projects.ProjectDueDate, projects.ProjectDescription));
+                                    }
+                                    catch (ArgumentException e)
+                                    {
+                                        continue;
+                                    }
+                                }
 
                                 if (projectCount != 0)
                                 {
@@ -103,9 +109,35 @@ namespace FileManager
                     sw.WriteLine("\t]");
                     sw.WriteLine("}");
 
+                    jsonrow.Clear();
+                    sw.WriteLine("{");
+                    sw.WriteLine("\"Project\":");
+                    sw.WriteLine("\t[");
+                    projectCount = projectD.Values.Count;
+                    foreach (Project item in projectD.Values)
+                    {
+                        projectCount--;
+                        jsonrow.Clear();
+                        jsonrow.AppendLine("\t  {");
+                        jsonrow.AppendLine("\t    \"ProjectID\":" + item.ProjectID + ",");
+                        jsonrow.AppendLine("\t    \"ProjectName\":" + "\""+ item.ProjectName + "\",");
+                        jsonrow.AppendLine("\t    \"ProjectDescription\":" + "\""+item.ProjectDescription + "\",");
+                        jsonrow.AppendLine("\t    \"ProjectCreatedDate\":" + "\""+ item.ProjectCreatedDate + "\",");
+                        if (projectCount != 0)
+                        {
+                            jsonrow.AppendLine("\t  },");
+                        }
+                        else
+                        {
+                            jsonrow.AppendLine("\t  }");
+                        }
+                        sw.Write(jsonrow);
+                    }
+                    sw.WriteLine("\t]");
+                    sw.WriteLine("}");
                 }
-
             }
+
             catch (DirectoryNotFoundException e)
             {
                 throw e;
@@ -115,12 +147,12 @@ namespace FileManager
                 throw e;
             }
             catch (IOException e)
-            {               
+            {
                 throw e;
             }
             catch (Exception e)
             {
-                throw e;               
+                throw e;
             }
         }
     }

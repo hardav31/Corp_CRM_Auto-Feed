@@ -34,3 +34,12 @@ C:\Users\labuser06\Desktop\rrr\LogManager\bin\Debug\Pbar.pdb
 C:\Users\labuser06\Desktop\rrr\LogManager\obj\Debug\LogManager.csprojResolveAssemblyReference.cache
 C:\Users\labuser06\Desktop\rrr\LogManager\obj\Debug\LogManager.dll
 C:\Users\labuser06\Desktop\rrr\LogManager\obj\Debug\LogManager.pdb
+C:\Users\ldavtyan\Desktop\PR Project\New\LogManager\bin\Debug\LogManager.dll
+C:\Users\ldavtyan\Desktop\PR Project\New\LogManager\bin\Debug\LogManager.pdb
+C:\Users\ldavtyan\Desktop\PR Project\New\LogManager\bin\Debug\App_Configuration.dll
+C:\Users\ldavtyan\Desktop\PR Project\New\LogManager\bin\Debug\Pbar.dll
+C:\Users\ldavtyan\Desktop\PR Project\New\LogManager\bin\Debug\App_Configuration.pdb
+C:\Users\ldavtyan\Desktop\PR Project\New\LogManager\bin\Debug\Pbar.pdb
+C:\Users\ldavtyan\Desktop\PR Project\New\LogManager\obj\Debug\LogManager.csprojResolveAssemblyReference.cache
+C:\Users\ldavtyan\Desktop\PR Project\New\LogManager\obj\Debug\LogManager.dll
+C:\Users\ldavtyan\Desktop\PR Project\New\LogManager\obj\Debug\LogManager.pdb

@@ -100,3 +100,21 @@ C:\Users\labuser06\Desktop\rrr\FileManager\obj\Debug\FileManager.csprojResolveAs
 C:\Users\LabUser08\Desktop\New folder (2)\FileManager\bin\Debug\FileManager.exe.config
 C:\Users\LabUser08\Desktop\New folder (2)\FileManager\obj\Debug\FileManager.exe
 C:\Users\LabUser08\Desktop\New folder (2)\FileManager\obj\Debug\FileManager.pdb
+C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\bin\Debug\FileManager.exe.config
+C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\obj\Debug\FileManager.exe
+C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\obj\Debug\FileManager.pdb
+C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\bin\Debug\FileManager.exe
+C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\bin\Debug\FileManager.pdb
+C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\bin\Debug\App_Configuration.dll
+C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\bin\Debug\DataManager.dll
+C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\bin\Debug\LogManager.dll
+C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\bin\Debug\Models.dll
+C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\bin\Debug\Pbar.dll
+C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\bin\Debug\DAL.dll
+C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\bin\Debug\App_Configuration.pdb
+C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\bin\Debug\DataManager.pdb
+C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\bin\Debug\LogManager.pdb
+C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\bin\Debug\Models.pdb
+C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\bin\Debug\Pbar.pdb
+C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\bin\Debug\DAL.pdb
+C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\obj\Debug\FileManager.csprojResolveAssemblyReference.cache
