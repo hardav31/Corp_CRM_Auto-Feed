@@ -22,7 +22,6 @@ namespace FileManager
         public void JsonWrite(Dictionary<int, Team> teamlist,Dictionary<int, Project> projectlist)
         {
             int teamCount, memberCount, projectCount;
-            bool isdublicate = false;
             StringBuilder jsonrow = new StringBuilder();
 
             try
@@ -60,18 +59,7 @@ namespace FileManager
                                 projectCount--;
                                 jsonrow.AppendLine("\t\t\t  {");
                                 jsonrow.AppendLine("\t\t\t    \"ProjectID\":" + projects.ProjectID + ",");
-                                //    if (!isdublicate)
-                                //    {
-                                //        try
-                                //        {
-                                //            projectD.Add(projects.ProjectID, new Project(projects.ProjectID, projects.ProjectName, projects.ProjectCreatedDate, projects.ProjectDueDate, projects.ProjectDescription));
-                                //        }
-                                //        catch (ArgumentException e)
-                                //        {
-                                //            continue;
-                                //        }
-                                //    }
-
+                             
                                 if (projectCount != 0)
                                 {
                                     jsonrow.AppendLine("\t\t\t  },");
