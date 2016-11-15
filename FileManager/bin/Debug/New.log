@@ -126,3 +126,31 @@ Stack Trace
  Info,  XML success,  113538554 - Copy.xml,  2016-11-15 11:49:54
  Info,  XML success,  113538554 - Copy.xml,  2016-11-15 11:49:54
  Info,  All Success 11/15/2016 11:49:54 AM,  113538554 - Copy.xml,  2016-11-15 11:49:54
+ Info,  28,  110854027 - Copy.csv,  2016-11-15 23:09:33
+ 
+110854027 - Copy.csv
+Exception Type
+NullReferenceException
+
+Massage
+Object reference not set to an instance of an object.
+
+Stack Trace
+   at FileManager.JsonParser.JsonWrite(Dictionary`2 teamlist, Dictionary`2 projectlist) in C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\JsonParser.cs:line 155
+   at FileManager.CsvParser.CSVFileReader(String direction) in C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\CsvParser.cs:line 132
+
+, 2016-11-15 23:19:49
+ 
+112116850 - Copy.csv
+Exception Type
+NullReferenceException
+
+Massage
+Object reference not set to an instance of an object.
+
+Stack Trace
+   at FileManager.JsonParser.JsonWrite(Dictionary`2 teamlist, Dictionary`2 projectlist) in C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\JsonParser.cs:line 155
+   at FileManager.CsvParser.CSVFileReader(String direction) in C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\CsvParser.cs:line 132
+
+, 2016-11-15 23:22:16
+ Info,  37401,  112116850 - Copy.csv,  2016-11-15 23:26:17

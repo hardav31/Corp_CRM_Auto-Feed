@@ -256,7 +256,7 @@ namespace FileManager
                             StringBuilder sb = new StringBuilder();
                             JsonParser jsParser = new JsonParser();
                             jsParser.FilePath = sb.Append(AppConfigManager.appSettings.JsonFolderPath + jsParser.jsonFoldername(direction)).ToString();
-                            jsParser.JsonWrite(TeamsD);
+                          //  jsParser.JsonWrite(TeamsD, ProjectsD);
                             LoggerType.WriteToLog(LogType.Info, Path.GetFileName(direction), "XML success");
                         }
                         if (AppConfigManager.appSettings.SaveInDB)

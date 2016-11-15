@@ -19,7 +19,7 @@ namespace FileManager
             return sb.ToString();
         }
 
-        public void JsonWrite(Dictionary<int, Team> teamlist)
+        public void JsonWrite(Dictionary<int, Team> teamlist,Dictionary<int, Project> projectlist)
         {
             int teamCount, memberCount, projectCount;
             bool isdublicate = false;
@@ -60,26 +60,26 @@ namespace FileManager
                                 projectCount--;
                                 jsonrow.AppendLine("\t\t\t  {");
                                 jsonrow.AppendLine("\t\t\t    \"ProjectID\":" + projects.ProjectID + ",");
-                                if (!isdublicate)
-                                {
-                                    try
-                                    {
-                                        projectD.Add(projects.ProjectID, new Project(projects.ProjectID, projects.ProjectName, projects.ProjectCreatedDate, projects.ProjectDueDate, projects.ProjectDescription));
-                                    }
-                                    catch (ArgumentException e)
-                                    {
-                                        continue;
-                                    }
-                                }
+                            //    if (!isdublicate)
+                            //    {
+                            //        try
+                            //        {
+                            //            projectD.Add(projects.ProjectID, new Project(projects.ProjectID, projects.ProjectName, projects.ProjectCreatedDate, projects.ProjectDueDate, projects.ProjectDescription));
+                            //        }
+                            //        catch (ArgumentException e)
+                            //        {
+                            //            continue;
+                            //        }
+                            //    }
 
-                                if (projectCount != 0)
-                                {
-                                    jsonrow.AppendLine("\t\t\t  },");
-                                }
-                                else
-                                {
-                                    jsonrow.AppendLine("\t\t\t  }");
-                                }
+                            //    if (projectCount != 0)
+                            //    {
+                            //        jsonrow.AppendLine("\t\t\t  },");
+                            //    }
+                            //    else
+                            //    {
+                            //        jsonrow.AppendLine("\t\t\t  }");
+                            //    }
 
                             }
 
@@ -113,11 +113,11 @@ namespace FileManager
                     sw.WriteLine("{");
                     sw.WriteLine("\"Project\":");
                     sw.WriteLine("\t[");
-                    projectCount = projectD.Values.Count;
-                    foreach (Project item in projectD.Values)
+                    projectCount = projectlist.Values.Count;
+                    foreach (Project item in projectlist.Values)
                     {
                         projectCount--;
-                        jsonrow.Clear();
+                       // jsonrow.Clear();
                         jsonrow.AppendLine("\t  {");
                         jsonrow.AppendLine("\t    \"ProjectID\":" + item.ProjectID + ",");
                         jsonrow.AppendLine("\t    \"ProjectName\":" + "\""+ item.ProjectName + "\",");
