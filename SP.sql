@@ -3,25 +3,47 @@
 GO
 CREATE PROC [dbo].[getAllRecords]
 (
-	@condition nvarchar(500)
-)
+	@MemberName nvarchar(50)=null,
+	@MemberSurname nvarchar(50)=null,
+	@TeamName nvarchar(50)=null,
+	@ProjectName nvarchar(50)=null,
+	@ProjectCreatedDate nvarchar(50)=null,
+	@ProjectDueDate nvarchar(50)=null,
+	@ProjectDescription nvarchar(50)=null
+	)
 AS
 BEGIN
 	SET NOCOUNT ON
-	--DECLARE @condition NVARCHAR(255)
-	--SET @condition='Project.ProjectName Like N''%Project1%'''
+
+	DECLARE @condition nvarchar(1000)
 	
-	DECLARE @sql Nvarchar(MAX)
+	SET @condition=concat(iif(@MemberName is not null, concat('MemberName=''',@MemberName, ''''), ''),
+	iif(@TeamName is not null, concat(',TeamName=''', @TeamName,''''), ''),
+	iif(@MemberSurname is not null, concat(',MemberSurname=''', @MemberSurname,''''), ''),
+	iif(@ProjectName is not null, concat(',ProjectName=''', @ProjectName,''''), ''),
+	iif(@ProjectCreatedDate is not null, concat(',ProjectCreatedDate=''', @ProjectCreatedDate,''''), ''),
+	iif(@ProjectDueDate is not null, concat(',ProjectDueDate=''', @ProjectDueDate,''''), ''),
+	iif(@ProjectDescription is not null, concat(' ProjectDescription=''', @ProjectDescription,''''), '')
+	)
+
+	IF (left(@condition, 1)) =','
+	SET @condition=right(@condition, len(@condition)-1)
+
+	SET @condition=replace(@condition, ',', ' and ')
+	
+	DECLARE @sql nvarchar(max)
+		
 	SET @sql='SELECT Member.MemberName, Member.MemberSurname,Team.TeamName,Project.ProjectName,Project.ProjectCreatedDate,Project.ProjectDueDate,Project.ProjectDescription FROM 
 	Member INNER JOIN Team ON Member.TeamID=Team.TeamID
-    INNER JOIN ProjectMember ON Member.MemberID=ProjectMember.MemberID
-    INNER JOIN Project ON Project.ProjectID=ProjectMember.ProjectID'
+	INNER JOIN ProjectMember ON Member.MemberID=ProjectMember.MemberID
+	INNER JOIN Project ON Project.ProjectID=ProjectMember.ProjectID'
 	
-	IF (@condition<>'' AND @condition IS NOT NULL)
-		SET @sql=concat(@sql, ' where ', @condition)
-	
+	IF (@condition<>'')
+    SET @sql=concat(@sql,' where ', @condition)
+    
 	EXECUTE sp_executesql  @sql
 END
+
 GO
 
 --exec dbo.getProjectMemberTeam @condition='Project.ProjectName Like N''%Project1%'''
