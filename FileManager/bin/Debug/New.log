@@ -1,27 +1,8 @@
-﻿
- Warning,  has uexpected file extention,  New Text Document.txt,  2016-11-15 01:37:28
+﻿ Error,  1,  WrongFilePathWrongFilePathWrongFilePathWrongFilePathWrongFilePath79b425ec-b784-4474-9867-0eecfd0473a2.csv,  2016-11-09 19:35:32
+ info,  XML Success,  da68fa8a-355d-4fd8-b2ae-a841c6e7db5c.xml,  2016-11-09 23:21:00
+ info,  Json Success,  da68fa8a-355d-4fd8-b2ae-a841c6e7db5c.xml,  2016-11-09 23:21:00
  
-New Text Document.txt
-Exception Type
-IOException
-
-Massage
-Cannot create a file when that file already exists.
-
-
-Stack Trace
-   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   at System.IO.__Error.WinIOError()
-   at System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
-   at System.IO.File.Move(String sourceFileName, String destFileName)
-   at FileManager.FolderMonitor.Watcher_Created(Object sender, FileSystemEventArgs e) in C:\Users\Galust\Source\Repos\Teamproject\FileManager\FolderMonitor.cs:line 57
-
-, 2016-11-15 02:19:21
- Info,  Json success,  125512934.csv,  2016-11-15 02:19:39
- Info,  DB success,  125512934.csv,  2016-11-15 02:19:41
- Info,  Json success,  023453076.csv,  2016-11-15 02:37:40
- 
-023453076.csv
+da68fa8a-355d-4fd8-b2ae-a841c6e7db5c.xml
 Exception Type
 OutOfMemoryException
 
@@ -30,12 +11,12 @@ Exception of type 'System.OutOfMemoryException' was thrown.
 
 Stack Trace
    at DataManager.DataUpdater.UpdateData(Dictionary`2 teamsD) in C:\Users\Galust\Source\Repos\Teamproject\DataManager\DataUpdater.cs:line 36
-   at FileManager.CsvParser.CSVFileReader(String direction) in C:\Users\Galust\Source\Repos\Teamproject\FileManager\CsvParser.cs:line 140
+   at FileManager.XMLParser.XMLFileReader(String direction) in C:\Users\Galust\Source\Repos\Teamproject\FileManager\XMLParser.cs:line 266
 
-, 2016-11-15 02:37:55
- Info,  Json success,  023453076.csv,  2016-11-15 02:39:11
+, 2016-11-09 23:21:22
+ info,  Json Success,  03f7493f-f0d6-457b-92df-095701eec0f6.csv,  2016-11-09 23:22:05
  
-023453076.csv
+03f7493f-f0d6-457b-92df-095701eec0f6.csv
 Exception Type
 OutOfMemoryException
 
@@ -44,12 +25,26 @@ Exception of type 'System.OutOfMemoryException' was thrown.
 
 Stack Trace
    at DataManager.DataUpdater.UpdateData(Dictionary`2 teamsD) in C:\Users\Galust\Source\Repos\Teamproject\DataManager\DataUpdater.cs:line 36
-   at FileManager.CsvParser.CSVFileReader(String direction) in C:\Users\Galust\Source\Repos\Teamproject\FileManager\CsvParser.cs:line 140
+   at FileManager.CsvParser.CSVFileReader(String direction) in C:\Users\Galust\Source\Repos\Teamproject\FileManager\CsvParser.cs:line 138
 
-, 2016-11-15 02:39:25
- Info,  Json success,  023426365.csv,  2016-11-15 02:41:52
+, 2016-11-09 23:22:27
+ Error,  5,  WrongFilePath1adf1043-97a9-4970-99b8-9cc453c2c234.xml,  2016-11-09 23:37:26
+ info,  All Success11/9/2016 11:37:26 PM,  WrongFilePath1adf1043-97a9-4970-99b8-9cc453c2c234.xml,  2016-11-09 23:37:26
+ Error,  1,  WrongFilePathWrongFilePathWrongFilePathWrongFilePathWrongFilePath79b425ec-b784-4474-9867-0eecfd0473a2.csv,  2016-11-09 23:37:27
+ info,  XML Success,  8954ce33-1a77-4f86-80b5-48d3f3e9a04e.xml,  2016-11-09 23:38:29
+ info,  Json Success,  8954ce33-1a77-4f86-80b5-48d3f3e9a04e.xml,  2016-11-09 23:38:29
+ info,  DB Success,  8954ce33-1a77-4f86-80b5-48d3f3e9a04e.xml,  2016-11-09 23:38:31
+ info,  All Success11/9/2016 11:38:31 PM,  8954ce33-1a77-4f86-80b5-48d3f3e9a04e.xml,  2016-11-09 23:38:31
+ info,  Json Success,  e9e6d96d-ddfc-4114-983b-24002e2942ca.csv,  2016-11-09 23:38:43
+ info,  DB Success,  e9e6d96d-ddfc-4114-983b-24002e2942ca.csv,  2016-11-09 23:38:44
+ info,  Json Success,  3ea16df3-9d82-4439-ae2f-bd99a30fc93a.csv,  2016-11-10 02:46:36
+ info,  XML Success,  cc37adb5-a342-44a9-9761-d070df162eea.xml,  2016-11-10 02:47:05
+ info,  Json Success,  cc37adb5-a342-44a9-9761-d070df162eea.xml,  2016-11-10 02:47:05
+ info,  All Success11/10/2016 2:47:05 AM,  cc37adb5-a342-44a9-9761-d070df162eea.xml,  2016-11-10 02:47:05
+ info,  Json Success,  3756491b-cb53-4eea-9e51-7e783c446834.csv,  2016-11-10 05:00:08
+ info,  Json Success,  3756491b-cb53-4eea-9e51-7e783c446834.csv,  2016-11-10 05:01:33
  
-023426365.csv
+3756491b-cb53-4eea-9e51-7e783c446834.csv
 Exception Type
 OutOfMemoryException
 
@@ -58,11 +53,76 @@ Exception of type 'System.OutOfMemoryException' was thrown.
 
 Stack Trace
    at DataManager.DataUpdater.UpdateData(Dictionary`2 teamsD) in C:\Users\Galust\Source\Repos\Teamproject\DataManager\DataUpdater.cs:line 36
-   at FileManager.CsvParser.CSVFileReader(String direction) in C:\Users\Galust\Source\Repos\Teamproject\FileManager\CsvParser.cs:line 140
+   at FileManager.CsvParser.CSVFileReader(String direction) in C:\Users\Galust\Source\Repos\Teamproject\FileManager\CsvParser.cs:line 138
 
-, 2016-11-15 02:42:06
- Info,   was moved to Wrong Files folder,  023426365.csv,  2016-11-15 02:42:06
- Info,  Json success,  125510985.csv,  2016-11-15 04:24:59
- Info,  DB success,  125510985.csv,  2016-11-15 04:25:01
- Info,  Json success,  023426365.csv,  2016-11-15 04:25:34
- Info,  Json success,  043005154.csv,  2016-11-15 04:54:05
+, 2016-11-10 05:01:54
+ info,  XML Success,  d5a46d9f-f8cf-4047-8726-19e6f7e84ef7.xml,  2016-11-10 05:03:31
+ info,  Json Success,  d5a46d9f-f8cf-4047-8726-19e6f7e84ef7.xml,  2016-11-10 05:03:31
+ info,  XML Success,  d5a46d9f-f8cf-4047-8726-19e6f7e84ef7.xml,  2016-11-10 05:05:40
+ info,  Json Success,  d5a46d9f-f8cf-4047-8726-19e6f7e84ef7.xml,  2016-11-10 05:05:40
+ info,  XML Success,  d5a46d9f-f8cf-4047-8726-19e6f7e84ef7.xml,  2016-11-10 05:22:58
+ info,  Json Success,  d5a46d9f-f8cf-4047-8726-19e6f7e84ef7.xml,  2016-11-10 05:22:58
+ 
+Problems with connection
+Exception Type
+SqlException
+
+Massage
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No such host is known.)
+
+Stack Trace
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at DAL.DBConnection.InitSqlConnection() in C:\Users\Galust\Source\Repos\Teamproject\DAL\DBConnection.cs:line 25
+
+Exception Type
+Win32Exception
+
+Massage
+No such host is known
+
+Stack Trace
+
+
+, 2016-11-10 05:23:16
+ 
+d5a46d9f-f8cf-4047-8726-19e6f7e84ef7.xml
+Exception Type
+InvalidOperationException
+
+Massage
+ExecuteNonQuery requires an open and available Connection. The connection's current state is closed.
+
+Stack Trace
+   at DataManager.DataUpdater.UpdateData(Dictionary`2 teamsD) in C:\Users\Galust\Source\Repos\Teamproject\DataManager\DataUpdater.cs:line 36
+   at FileManager.XMLParser.XMLFileReader(String direction) in C:\Users\Galust\Source\Repos\Teamproject\FileManager\XMLParser.cs:line 266
+
+, 2016-11-10 05:23:16
+ Error,  7,  454795ea-dcdb-44be-94fd-844d82688c51.xml,  2016-11-11 15:52:17
+ info,  All Success11/11/2016 3:52:17 PM,  454795ea-dcdb-44be-94fd-844d82688c51.xml,  2016-11-11 15:52:17
+ Error,  1,  WrongFilePathWrongFilePathWrongFilePathWrongFilePathWrongFilePath79b425ec-b784-4474-9867-0eecfd0473a2.csv,  2016-11-12 13:38:41
+ Error,  1,  79b425ec-b784-4474-9867-0eecfd0473a2.csv,  2016-11-12 13:42:28
+ Info,  XML success,  113538554 - Copy.xml,  2016-11-15 11:42:07
+ Info,  5,  113553854 - Copy.csv,  2016-11-15 11:43:54
+ Info,  XML success,  113538554 - Copy.xml,  2016-11-15 11:44:01
+ Info,  XML success,  113538554 - Copy.xml,  2016-11-15 11:44:01
+ Info,  All Success 11/15/2016 11:44:01 AM,  113538554 - Copy.xml,  2016-11-15 11:44:01
+ Info,  XML success,  113538554 - Copy.xml,  2016-11-15 11:47:43
+ Info,  XML success,  113538554 - Copy.xml,  2016-11-15 11:47:43
+ Info,  All Success 11/15/2016 11:47:43 AM,  113538554 - Copy.xml,  2016-11-15 11:47:43
+ Info,  5,  113553854 - Copy.csv,  2016-11-15 11:47:43
+ Info,  5,  113553854 - Copy.csv,  2016-11-15 11:49:54
+ Info,  XML success,  113538554 - Copy.xml,  2016-11-15 11:49:54
+ Info,  XML success,  113538554 - Copy.xml,  2016-11-15 11:49:54
+ Info,  All Success 11/15/2016 11:49:54 AM,  113538554 - Copy.xml,  2016-11-15 11:49:54
