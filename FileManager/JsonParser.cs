@@ -1,8 +1,11 @@
 ﻿using Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Web.Script.Serialization;
+using Models;
 
 namespace FileManager
 {
@@ -38,7 +41,7 @@ namespace FileManager
                         jsonrow.Clear();
                         jsonrow.AppendLine("\t  {");
                         jsonrow.AppendLine("\t    \"TeamID\":" + teams.TeamID + ",");
-                        jsonrow.AppendLine("\t    \"TeamName\":" + teams.TeamName + "\",");
+                        jsonrow.AppendLine("\t    \"TeamName\":" + "\""+ teams.TeamName + "\",");
                         jsonrow.AppendLine("\t    \"Member\":");
                         jsonrow.AppendLine("\t\t[");
 
@@ -58,7 +61,7 @@ namespace FileManager
                             {
                                 projectCount--;
                                 jsonrow.AppendLine("\t\t\t  {");
-                                jsonrow.AppendLine("\t\t\t    \"ProjectID\":" + projects.ProjectID + ",");
+                                jsonrow.AppendLine("\t\t\t    \"ProjectID\":" + projects.ProjectID);
                              
                                 if (projectCount != 0)
                                 {
@@ -111,7 +114,7 @@ namespace FileManager
                         jsonrow.AppendLine("\t    \"ProjectName\":" + "\""+ item.ProjectName + "\",");
                         jsonrow.AppendLine("\t    \"ProjectDescription\":" + "\""+item.ProjectDescription + "\",");
                         jsonrow.AppendLine("\t    \"ProjectCreatedDate\":" + "\""+ item.ProjectCreatedDate + "\",");
-                        jsonrow.AppendLine("\t    \"ProjectDueDate\":" + "\""+ item.ProjectDueDate + "\",");
+                        jsonrow.AppendLine("\t    \"ProjectDueDate\":" + "\""+ item.ProjectDueDate + "\"");
 
                         if (projectCount != 0)
                         {
