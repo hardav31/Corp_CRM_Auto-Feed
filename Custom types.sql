@@ -7,7 +7,7 @@ CREATE TYPE Source AS TABLE
   TeamID BIGINT NOT NULL,
   TeamName nvarchar(50) NOT NULL,
   ProjectID bigint NOT NULL ,
-  ProjectName nvarchar(50) NOT NULL,
+  ProjectName nvarchar(50)  NULL,
   ProjectCreatedDate date NOT NULL,
   ProjectDueDate date NOT NULL,
   ProjectDescription nvarchar(50) NOT NULL
