@@ -137,3 +137,29 @@ Stack Trace
  Info,  XML success,  aaaa.xml,  2016-11-15 23:06:10
  Info,  Json success,  aaaa.xml,  2016-11-15 23:06:10
  Info,  All Success 15.11.2016 23:06:10,  aaaa.xml,  2016-11-15 23:06:10
+ Info,  XML success,  110325432 - Copy.xml,  2016-11-16 01:36:11
+ Info,  Json success,  110325432 - Copy.xml,  2016-11-16 01:36:13
+ Info,  All Success 11/16/2016 1:36:13 AM,  110325432 - Copy.xml,  2016-11-16 01:36:13
+ Info,  XML success,  110325432 - Copy.xml,  2016-11-16 01:36:49
+ Info,  Json success,  110325432 - Copy.xml,  2016-11-16 01:36:49
+ 
+110325432 - Copy.xml
+Exception Type
+SqlException
+
+Massage
+Cannot insert the value NULL into column 'ProjectName', table '@sourcetable'; column does not allow nulls. INSERT fails.
+The data for table-valued parameter "@sourcetable" doesn't conform to the table type of the parameter. SQL Server error is: 515, state: 2
+The statement has been terminated.
+
+Stack Trace
+   at DataManager.DataUpdater.UpdateData(Dictionary`2 teamsD) in C:\Users\ldavtyan\Desktop\PR Project\New\DataManager\DataUpdater.cs:line 36
+   at FileManager.XMLParser.XMLFileReader(String direction) in C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\XMLParser.cs:line 297
+
+, 2016-11-16 01:37:16
+ Info,  XML success,  110325432 - Copy.xml,  2016-11-16 01:50:30
+ Info,  Json success,  110325432 - Copy.xml,  2016-11-16 01:50:31
+ Info,  Json success,  010157568 - Copy.csv,  2016-11-16 13:02:47
+ Info,  Json success,  010157568 - Copy.csv,  2016-11-16 13:03:04
+ Info,  Json success,  010157568 - Copy.csv,  2016-11-16 13:04:39
+ Info,  DB success,  010157568 - Copy.csv,  2016-11-16 13:04:59
