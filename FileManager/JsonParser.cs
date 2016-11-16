@@ -105,7 +105,7 @@ namespace FileManager
                     foreach (Project item in projectlist.Values)
                     {
                         projectCount--;
-                       // jsonrow.Clear();
+                        jsonrow.Clear();
                         jsonrow.AppendLine("\t  {");
                         jsonrow.AppendLine("\t    \"ProjectID\":" + item.ProjectID + ",");
                         jsonrow.AppendLine("\t    \"ProjectName\":" + "\""+ item.ProjectName + "\",");
