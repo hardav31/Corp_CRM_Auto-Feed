@@ -119,13 +119,15 @@ namespace FileManager
                     }
                 }
 
-                MembersD = null;
-              //  ProjectsD = null;
                 
                 if(IsAllRight)
                 {
                     if (AppConfigManager.appSettings.SaveInJson)
                     {
+                        ProgressBar.Print(TeamsD.Count.ToString());
+                        ProgressBar.Print(MembersD.Count.ToString());
+                        ProgressBar.Print(ProjectsD.Count.ToString());
+                        
                         ProgressBar.Print("Starting Json");
                         StringBuilder sb = new StringBuilder();
                         JsonParser jsParser = new JsonParser();
@@ -141,7 +143,6 @@ namespace FileManager
                         LoggerType.WriteToLog(LogType.Info, Path.GetFileName(direction), "DB success");
                     }
                 }
-                ProjectsD = null;
 
             }
            

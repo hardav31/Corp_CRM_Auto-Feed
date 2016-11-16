@@ -137,13 +137,23 @@ Stack Trace
  Info,  XML success,  aaaa.xml,  2016-11-15 23:06:10
  Info,  Json success,  aaaa.xml,  2016-11-15 23:06:10
  Info,  All Success 15.11.2016 23:06:10,  aaaa.xml,  2016-11-15 23:06:10
- Info,  XML success,  110325432 - Copy.xml,  2016-11-16 01:36:11
- Info,  Json success,  110325432 - Copy.xml,  2016-11-16 01:36:13
- Info,  All Success 11/16/2016 1:36:13 AM,  110325432 - Copy.xml,  2016-11-16 01:36:13
- Info,  XML success,  110325432 - Copy.xml,  2016-11-16 01:36:49
- Info,  Json success,  110325432 - Copy.xml,  2016-11-16 01:36:49
+ Info,  Json success,  120316356.csv,  2016-11-16 00:03:40
+ Info,  XML success,  120311778.xml,  2016-11-16 00:03:48
+ Info,  Json success,  120311778.xml,  2016-11-16 00:03:48
+ Info,  All Success 11/16/2016 12:03:48 AM,  120311778.xml,  2016-11-16 00:03:48
+ Info,  XML success,  114309681.xml,  2016-11-16 00:09:15
+ Info,  Json success,  121139047.csv,  2016-11-16 00:12:12
+ Info,  XML success,  121143222.xml,  2016-11-16 00:12:25
+ Info,  Json success,  121143222.xml,  2016-11-16 00:12:25
+ Info,  All Success 11/16/2016 12:12:25 AM,  121143222.xml,  2016-11-16 00:12:25
+ Info,  Json success,  121147259.csv,  2016-11-16 00:17:49
+ Info,  Json success,  121150219.csv,  2016-11-16 00:17:49
+ Info,  Json success,  121153004.xml,  2016-11-16 00:17:49
+ Info,  Json success,  122318666.csv,  2016-11-16 00:24:44
+ Info,  DB success,  122318666.csv,  2016-11-16 00:26:02
+ Info,  Json success,  122324816.xml,  2016-11-16 00:26:03
  
-110325432 - Copy.xml
+122324816.xml
 Exception Type
 SqlException
 
@@ -153,13 +163,175 @@ The data for table-valued parameter "@sourcetable" doesn't conform to the table 
 The statement has been terminated.
 
 Stack Trace
-   at DataManager.DataUpdater.UpdateData(Dictionary`2 teamsD) in C:\Users\ldavtyan\Desktop\PR Project\New\DataManager\DataUpdater.cs:line 36
-   at FileManager.XMLParser.XMLFileReader(String direction) in C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\XMLParser.cs:line 297
+   at DataManager.DataUpdater.UpdateData(Dictionary`2 teamsD) in C:\Users\Galust\Source\Repos\Teamproject\DataManager\DataUpdater.cs:line 36
+   at FileManager.XMLParser.XMLFileReader(String direction) in C:\Users\Galust\Source\Repos\Teamproject\FileManager\XMLParser.cs:line 297
 
-, 2016-11-16 01:37:16
- Info,  XML success,  110325432 - Copy.xml,  2016-11-16 01:50:30
- Info,  Json success,  110325432 - Copy.xml,  2016-11-16 01:50:31
- Info,  Json success,  010157568 - Copy.csv,  2016-11-16 13:02:47
- Info,  Json success,  010157568 - Copy.csv,  2016-11-16 13:03:04
- Info,  Json success,  010157568 - Copy.csv,  2016-11-16 13:04:39
- Info,  DB success,  010157568 - Copy.csv,  2016-11-16 13:04:59
+, 2016-11-16 00:26:14
+ Info,   was moved to Wrong Files folder,  122324816.xml,  2016-11-16 00:26:14
+ Info,  Json success,  122324816.xml,  2016-11-16 00:33:54
+ 
+122324816.xml
+Exception Type
+SqlException
+
+Massage
+Cannot insert the value NULL into column 'ProjectName', table '@sourcetable'; column does not allow nulls. INSERT fails.
+The data for table-valued parameter "@sourcetable" doesn't conform to the table type of the parameter. SQL Server error is: 515, state: 2
+The statement has been terminated.
+
+Stack Trace
+   at DataManager.DataUpdater.UpdateData(Dictionary`2 teamsD) in C:\Users\Galust\Source\Repos\Teamproject\DataManager\DataUpdater.cs:line 36
+   at FileManager.XMLParser.XMLFileReader(String direction) in C:\Users\Galust\Source\Repos\Teamproject\FileManager\XMLParser.cs:line 297
+
+, 2016-11-16 00:34:02
+ Info,   was moved to Wrong Files folder,  122324816.xml,  2016-11-16 00:34:02
+ Info,  Json success,  122324816.xml,  2016-11-16 00:37:57
+ Info,  Json success,  122339078.csv,  2016-11-16 00:48:53
+ Info,  DB success,  122339078.csv,  2016-11-16 00:50:27
+ Info,  Json success,  122334935.xml,  2016-11-16 00:50:40
+ 
+122334935.xml
+Exception Type
+SqlException
+
+Massage
+Cannot insert the value NULL into column 'ProjectName', table '@sourcetable'; column does not allow nulls. INSERT fails.
+The data for table-valued parameter "@sourcetable" doesn't conform to the table type of the parameter. SQL Server error is: 515, state: 2
+The statement has been terminated.
+
+Stack Trace
+   at DataManager.DataUpdater.UpdateData(Dictionary`2 teamsD) in C:\Users\Galust\Source\Repos\Teamproject\DataManager\DataUpdater.cs:line 36
+   at FileManager.XMLParser.XMLFileReader(String direction) in C:\Users\Galust\Source\Repos\Teamproject\FileManager\XMLParser.cs:line 297
+
+, 2016-11-16 00:50:51
+ Info,   was moved to Wrong Files folder,  122334935.xml,  2016-11-16 00:50:51
+ Info,  Json success,  122334935.xml,  2016-11-16 00:55:29
+ Info,  Json success,  010335626.xml,  2016-11-16 01:05:29
+ 
+010335626.xml
+Exception Type
+SqlException
+
+Massage
+Cannot insert the value NULL into column 'ProjectName', table '@sourcetable'; column does not allow nulls. INSERT fails.
+The data for table-valued parameter "@sourcetable" doesn't conform to the table type of the parameter. SQL Server error is: 515, state: 2
+The statement has been terminated.
+
+Stack Trace
+   at DataManager.DataUpdater.UpdateData(Dictionary`2 teamsD) in C:\Users\Galust\Source\Repos\Teamproject\DataManager\DataUpdater.cs:line 36
+   at FileManager.XMLParser.XMLFileReader(String direction) in C:\Users\Galust\Source\Repos\Teamproject\FileManager\XMLParser.cs:line 301
+
+, 2016-11-16 01:05:30
+ Info,   was moved to Wrong Files folder,  010335626.xml,  2016-11-16 01:05:30
+ Info,  Json success,  010335626.xml,  2016-11-16 01:08:10
+ Info,  Json success,  010335626.xml,  2016-11-16 01:10:42
+ 
+010335626.xml
+Exception Type
+SqlException
+
+Massage
+Cannot insert the value NULL into column 'ProjectDescription', table '@sourcetable'; column does not allow nulls. INSERT fails.
+The data for table-valued parameter "@sourcetable" doesn't conform to the table type of the parameter. SQL Server error is: 515, state: 2
+The statement has been terminated.
+
+Stack Trace
+   at DataManager.DataUpdater.UpdateData(Dictionary`2 teamsD) in C:\Users\Galust\Source\Repos\Teamproject\DataManager\DataUpdater.cs:line 36
+   at FileManager.XMLParser.XMLFileReader(String direction) in C:\Users\Galust\Source\Repos\Teamproject\FileManager\XMLParser.cs:line 307
+
+, 2016-11-16 01:10:42
+ Info,   was moved to Wrong Files folder,  010335626.xml,  2016-11-16 01:10:42
+ Info,  Json success,  091306515.csv,  2016-11-15 21:22:32
+ Info,  DB success,  091306515.csv,  2016-11-15 21:22:37
+ Info,  Json success,  091301212.xml,  2016-11-15 21:22:59
+ 
+091301212.xml
+Exception Type
+SqlException
+
+Massage
+Cannot insert the value NULL into column 'ProjectName', table '@sourcetable'; column does not allow nulls. INSERT fails.
+The data for table-valued parameter "@sourcetable" doesn't conform to the table type of the parameter. SQL Server error is: 515, state: 2
+The statement has been terminated.
+
+Stack Trace
+   at DataManager.DataUpdater.UpdateData(Dictionary`2 teamsD) in C:\Users\Galust\Source\Repos\Teamproject\DataManager\DataUpdater.cs:line 36
+   at FileManager.XMLParser.XMLFileReader(String direction) in C:\Users\Galust\Source\Repos\Teamproject\FileManager\XMLParser.cs:line 296
+
+, 2016-11-15 21:22:59
+ Info,   was moved to Wrong Files folder,  091301212.xml,  2016-11-15 21:22:59
+ Info,  Json success,  091301212.xml,  2016-11-15 21:25:26
+ 
+091301212.xml
+Exception Type
+SqlException
+
+Massage
+Cannot insert the value NULL into column 'ProjectName', table '@sourcetable'; column does not allow nulls. INSERT fails.
+The data for table-valued parameter "@sourcetable" doesn't conform to the table type of the parameter. SQL Server error is: 515, state: 2
+The statement has been terminated.
+
+Stack Trace
+   at DataManager.DataUpdater.UpdateData(Dictionary`2 teamsD) in C:\Users\Galust\Source\Repos\Teamproject\DataManager\DataUpdater.cs:line 36
+   at FileManager.XMLParser.XMLFileReader(String direction) in C:\Users\Galust\Source\Repos\Teamproject\FileManager\XMLParser.cs:line 296
+
+, 2016-11-15 21:25:27
+ Info,   was moved to Wrong Files folder,  091301212.xml,  2016-11-15 21:25:27
+ Info,  Json success,  091301212.xml,  2016-11-15 21:26:40
+ 
+091301212.xml
+Exception Type
+SqlException
+
+Massage
+Cannot insert the value NULL into column 'ProjectName', table '@sourcetable'; column does not allow nulls. INSERT fails.
+The data for table-valued parameter "@sourcetable" doesn't conform to the table type of the parameter. SQL Server error is: 515, state: 2
+The statement has been terminated.
+
+Stack Trace
+   at DataManager.DataUpdater.UpdateData(Dictionary`2 teamsD) in C:\Users\Galust\Source\Repos\Teamproject\DataManager\DataUpdater.cs:line 36
+   at FileManager.XMLParser.XMLFileReader(String direction) in C:\Users\Galust\Source\Repos\Teamproject\FileManager\XMLParser.cs:line 296
+
+, 2016-11-15 21:26:41
+ Info,   was moved to Wrong Files folder,  091301212.xml,  2016-11-15 21:26:41
+ Info,  DB success,  091301212.xml,  2016-11-15 21:36:32
+ 
+093840784.xml
+Exception Type
+SqlException
+
+Massage
+Cannot insert the value NULL into column 'ProjectName', table '@sourcetable'; column does not allow nulls. INSERT fails.
+The data for table-valued parameter "@sourcetable" doesn't conform to the table type of the parameter. SQL Server error is: 515, state: 2
+The statement has been terminated.
+
+Stack Trace
+   at DataManager.DataUpdater.UpdateData(Dictionary`2 teamsD) in C:\Users\Galust\Source\Repos\Teamproject\DataManager\DataUpdater.cs:line 36
+   at FileManager.XMLParser.XMLFileReader(String direction) in C:\Users\Galust\Source\Repos\Teamproject\FileManager\XMLParser.cs:line 298
+
+, 2016-11-15 21:40:34
+ Info,   was moved to Wrong Files folder,  093840784.xml,  2016-11-15 21:40:34
+ 
+093840784.xml
+Exception Type
+SqlException
+
+Massage
+Cannot insert the value NULL into column 'ProjectName', table '@sourcetable'; column does not allow nulls. INSERT fails.
+The data for table-valued parameter "@sourcetable" doesn't conform to the table type of the parameter. SQL Server error is: 515, state: 2
+The statement has been terminated.
+
+Stack Trace
+   at DataManager.DataUpdater.UpdateData(Dictionary`2 teamsD) in C:\Users\Galust\Source\Repos\Teamproject\DataManager\DataUpdater.cs:line 36
+   at FileManager.XMLParser.XMLFileReader(String direction) in C:\Users\Galust\Source\Repos\Teamproject\FileManager\XMLParser.cs:line 312
+
+, 2016-11-15 22:13:39
+ Info,   was moved to Wrong Files folder,  093840784.xml,  2016-11-15 22:13:39
+ Error,  4,  123328337.xml,  2016-11-16 00:33:43
+ Info,   was moved to Wrong Files folder,  123328337.xml,  2016-11-16 00:33:43
+ Info,  DB success,  123328337.xml,  2016-11-16 00:40:32
+ Info,  DB success,  124128618.xml,  2016-11-16 00:42:19
+ Info,  DB success,  124317111.xml,  2016-11-16 00:43:48
+ Info,  DB success,  124317111 - Copy - Copy.xml,  2016-11-16 00:44:26
+ Info,  Json success,  124317111 - Copy - Copy.xml,  2016-11-16 00:45:50
+ Info,  Json success,  125518653.xml,  2016-11-16 00:55:53

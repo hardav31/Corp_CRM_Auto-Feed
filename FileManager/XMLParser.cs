@@ -24,7 +24,7 @@ namespace FileManager
         {
             bool IsAllRight = true;
             Dictionary<int, Team> TeamsD = new Dictionary<int, Team>();
-            Dictionary<int, char> MembersD = new Dictionary<int, char>(); // for compare all Member's 
+            Dictionary<int, Member> MembersD = new Dictionary<int, Member>(); // for compare all Member's 
             Dictionary<int, Project> ProjectsD = new Dictionary<int, Project>(); // for compare All Project's 
             try
             {
@@ -32,7 +32,7 @@ namespace FileManager
                 Member current_Member = null;
                 Project current_Project = null;
 
-                Project current_Project1 = new Project();
+
 
                 int Teamattributecount = 2;
                 int Memberattributecount = 3;
@@ -41,7 +41,6 @@ namespace FileManager
 
                 using (XmlTextReader xml = new XmlTextReader(direction))
                 {
-                    ProgressBar.Print("XmlOpen " + DateTime.Now);
                     while (xml.Read())
                     {
                         switch (xml.NodeType)
@@ -140,7 +139,7 @@ namespace FileManager
                                     }
                                     if (IsAllRight && !MembersD.Keys.Contains(current_Member.MemberID))
                                     {
-                                        MembersD.Add(current_Member.MemberID, 'a');
+                                        MembersD.Add(current_Member.MemberID, current_Member);
                                     }
                                     else
                                     {
@@ -152,10 +151,7 @@ namespace FileManager
                                 #region Project5
                                 if (xml.Name == "Project")
                                 {
-                                    if (xml.LineNumber == 502)
-                                    {
-
-                                    }
+                                    current_Project = new Project();
                                     if (xml.AttributeCount != Projectattributecount)
                                     {
                                         IsAllRight = false;
@@ -170,7 +166,7 @@ namespace FileManager
                                                 IsAllRight = Int32.TryParse(xml.GetAttribute(i), out x);
                                                 if (x > 0)
                                                 {
-                                                    current_Project1.ProjectID = x;
+                                                    current_Project.ProjectID = x;
                                                 }
                                                 else
                                                 {
@@ -181,13 +177,13 @@ namespace FileManager
                                             }
                                             if (i == 1)
                                             {
-                                                current_Project1.ProjectName = xml.GetAttribute(i);
+                                                current_Project.ProjectName = xml.GetAttribute(i);
                                             }
                                             if (i == 2)
                                             {
                                                 DateTime x;
                                                 IsAllRight = DateTime.TryParse(xml.GetAttribute(i), out x);
-                                                current_Project1.ProjectCreatedDate = x;
+                                                current_Project.ProjectCreatedDate = x;
                                                 if (x == DateTime.MinValue)
                                                 {
                                                     IsAllRight = false;
@@ -198,7 +194,7 @@ namespace FileManager
                                             {
                                                 DateTime x;
                                                 IsAllRight = DateTime.TryParse(xml.GetAttribute(i), out x);
-                                                current_Project1.ProjectDueDate = x;
+                                                current_Project.ProjectDueDate = x;
                                                 if (x == DateTime.MinValue)
                                                 {
                                                     IsAllRight = false;
@@ -207,7 +203,7 @@ namespace FileManager
                                             }
                                             if (i == 4)
                                             {
-                                                current_Project1.ProjectDescription = xml.GetAttribute(i);
+                                                current_Project.ProjectDescription = xml.GetAttribute(i);
                                             }
                                         }
                                         else
@@ -215,12 +211,14 @@ namespace FileManager
                                             IsAllRight = false;
                                         }
                                     }
-                                    if (IsAllRight && ProjectsD.Keys.Contains(current_Project1.ProjectID))
+                                    if (IsAllRight && !ProjectsD.Keys.Contains(current_Project.ProjectID))
                                     {
-                                        ProjectsD[current_Project1.ProjectID].ProjectName = current_Project1.ProjectName;
-                                        ProjectsD[current_Project1.ProjectID].ProjectCreatedDate = current_Project1.ProjectCreatedDate;
-                                        ProjectsD[current_Project1.ProjectID].ProjectDueDate = current_Project1.ProjectDueDate;
-                                        ProjectsD[current_Project1.ProjectID].ProjectDescription = current_Project1.ProjectDescription;
+                                          ProjectsD[current_Project.ProjectID] = current_Project;
+                                        //ProjectsD[current_Project1.ProjectID].ProjectName = current_Project1.ProjectName;
+                                        //ProjectsD[current_Project1.ProjectID].ProjectCreatedDate = current_Project1.ProjectCreatedDate;
+                                        //ProjectsD[current_Project1.ProjectID].ProjectDueDate = current_Project1.ProjectDueDate;
+                                        //ProjectsD[current_Project1.ProjectID].ProjectDescription = current_Project1.ProjectDescription;
+                                       
                                     }
                                     else
                                     {
@@ -233,25 +231,20 @@ namespace FileManager
 
                             case XmlNodeType.Text:
                                 #region ProjectID
-                                current_Project = new Project() { };
-                                int y;
-                                IsAllRight = Int32.TryParse(xml.Value, out y);
-                                if (y > 0)
-                                {
-                                    current_Project.ProjectID = y;
-                                }
-                                else
+                                int ID;
+                                IsAllRight = Int32.TryParse(xml.Value, out ID);
+                                if (ID <= 0)
                                 {
                                     IsAllRight = false;
                                 }
-
-                                if (IsAllRight && !current_Member.Projects.Exists(p => p.ProjectID == current_Project.ProjectID))
+                                if (IsAllRight && !current_Member.Projects.Exists(p => p.ProjectID == ID))
                                 {
-                                    if (!ProjectsD.Keys.Contains(current_Project.ProjectID))
+                                    if (!ProjectsD.Keys.Contains(ID))
                                     {
-                                        ProjectsD.Add(current_Project.ProjectID, current_Project);
+                                        IsAllRight = false;
+                                        break;
                                     }
-                                    current_Member.Projects.Add(current_Project);
+                                    current_Member.Projects.Add(ProjectsD[ID]);
                                 }
                                 else
                                 {
@@ -267,7 +260,7 @@ namespace FileManager
                                 {
                                     if (IsAllRight)
                                     {
-                                        current_Team.Members.Add(current_Member);
+                                        current_Team.Members.Add(current_Member);  
                                     }
                                 }
                                 #endregion
@@ -280,11 +273,30 @@ namespace FileManager
                             break;
                         }
                     }
+
                     if (IsAllRight)
                     {
-                        LoggerType.WriteToLog(LogType.Info, Path.GetFileName(direction), "XML success");
+                        //foreach (var x in TeamsD.Values)
+                        //{
+                        //    Console.WriteLine(x.TeamID + " " + x.TeamName);
+                        //    foreach (var y in x.Members)
+                        //    {
+                        //        Console.WriteLine("   " + y.MemberID + " " + y.MemberName + " " + y.MemberSurname);
+                        //        foreach (var z in y.Projects)
+                        //        {
+                        //            Console.WriteLine("      " + z.ProjectID + " " + z.ProjectName + " " + z.ProjectCreatedDate + " " + z.ProjectDueDate + " " + z.ProjectDescription);
+                        //        }
+                        //    }
+                        //}
+                        //foreach (var x in ProjectsD.Keys)
+                        //{
+                        //    Console.WriteLine(x);
+                        //}
+
+
                         if (AppConfigManager.appSettings.SaveInJson)
                         {
+                            ProgressBar.Print("Starting Json");
                             StringBuilder sb = new StringBuilder();
                             JsonParser jsParser = new JsonParser();
                             jsParser.FilePath = sb.Append(AppConfigManager.appSettings.JsonFolderPath + jsParser.jsonFoldername(direction)).ToString();
@@ -293,11 +305,11 @@ namespace FileManager
                         }
                         if (AppConfigManager.appSettings.SaveInDB)
                         {
+                            ProgressBar.Print("starting DB");
                             DataUpdater dUpdater = new DataUpdater();
                             dUpdater.UpdateData(TeamsD);
                             LoggerType.WriteToLog(LogType.Info, Path.GetFileName(direction), "DB success");
                         }
-                        LoggerType.WriteToLog(LogType.Info, Path.GetFileName(direction), "All Success " + DateTime.Now.ToLocalTime());
                     }
                 }
 
@@ -317,12 +329,13 @@ namespace FileManager
             {
                 if (!IsAllRight)
                 {
-                    ProgressBar.Print("File was moved in WrongFile");
                     File.Move(direction, AppConfigManager.appSettings.WrongFilePath + Path.GetFileName(direction));
+                    LoggerType.WriteToLog(LogType.Info, Path.GetFileName(direction), " was moved to Wrong Files folder");
                 }
                 else
                 {
                     File.Delete(direction);
+                    ProgressBar.Print($"{ Path.GetFileName(direction)} file was deleted at {DateTime.Now}");
                 }
             }
 
