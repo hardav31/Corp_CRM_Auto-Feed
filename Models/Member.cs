@@ -18,7 +18,7 @@ namespace Models
 
         public Member()
         {
-
+            Projects = new List<Project>();
         }
         public Member(int memberId, string memberName, string memberSurname)
         {

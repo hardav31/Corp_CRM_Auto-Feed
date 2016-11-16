@@ -335,3 +335,64 @@ Stack Trace
  Info,  DB success,  124317111 - Copy - Copy.xml,  2016-11-16 00:44:26
  Info,  Json success,  124317111 - Copy - Copy.xml,  2016-11-16 00:45:50
  Info,  Json success,  125518653.xml,  2016-11-16 00:55:53
+ Info,  Json success,  081345541.xml,  2016-11-16 20:18:30
+ Info,  Json success,  081421051.xml,  2016-11-16 20:19:38
+ Info,   was moved to Wrong Files folder,  091317889 — копия.xml,  2016-11-16 21:17:44
+ Error,  36,  091317889 — копия.xml,  2016-11-16 21:20:10
+ 
+091317889 — копия.xml
+Exception Type
+IOException
+
+Massage
+Невозможно создать файл, так как он уже существует.
+
+
+Stack Trace
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   в System.IO.File.Move(String sourceFileName, String destFileName)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 334
+   в FileManager.FolderMonitor.Watcher_Created(Object sender, FileSystemEventArgs e) в C:\Users\user\Source\Repos\Teamproject\FileManager\FolderMonitor.cs:строка 42
+
+, 2016-11-16 21:20:10
+ Error,  36,  091317889 — копия.xml,  2016-11-16 21:20:51
+ Info,   was moved to Wrong Files folder,  091317889 — копия.xml,  2016-11-16 21:20:51
+ Error,  36,  091317889 — копия.xml,  2016-11-16 21:21:07
+ 
+091317889 — копия.xml
+Exception Type
+IOException
+
+Massage
+Невозможно создать файл, так как он уже существует.
+
+
+Stack Trace
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   в System.IO.File.Move(String sourceFileName, String destFileName)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 334
+   в FileManager.FolderMonitor.Watcher_Created(Object sender, FileSystemEventArgs e) в C:\Users\user\Source\Repos\Teamproject\FileManager\FolderMonitor.cs:строка 42
+
+, 2016-11-16 21:21:07
+ 
+091317889 — копия.xml
+Exception Type
+XmlException
+
+Massage
+Знак "<", шестнадцатеричное значение 0x3C, не может использоваться в именах., строка 29, позиция 28.
+
+Stack Trace
+   в System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   в System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   в System.Xml.XmlTextReaderImpl.Throw(Int32 pos, String res, String[] args)
+   в System.Xml.XmlTextReaderImpl.ParseElement()
+   в System.Xml.XmlTextReaderImpl.ParseElementContent()
+   в System.Xml.XmlTextReaderImpl.Read()
+   в System.Xml.XmlTextReader.Read()
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 45
+
+, 2016-11-16 21:25:36
+ Info,   was moved to Wrong Files folder,  091317889 — копия.xml,  2016-11-16 21:25:36

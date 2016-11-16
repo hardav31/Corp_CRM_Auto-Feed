@@ -16,7 +16,7 @@ namespace Models
 
         public Team()
         {
-
+            Members = new List<Member>();
         }
         public Team(int teamId, string teamName)
         {

@@ -78,3 +78,11 @@ C:\Users\ldavtyan\Desktop\PR Project\New\FileGenerator\obj\Debug\FileGenerator.c
 C:\Users\user\Source\Repos\Teamproject\FileGenerator\bin\Debug\FileGenerator.exe.config
 C:\Users\user\Source\Repos\Teamproject\FileGenerator\obj\Debug\FileGenerator.exe
 C:\Users\user\Source\Repos\Teamproject\FileGenerator\obj\Debug\FileGenerator.pdb
+C:\Users\user\Source\Repos\Teamproject\FileGenerator\bin\Debug\FileGenerator.exe
+C:\Users\user\Source\Repos\Teamproject\FileGenerator\bin\Debug\FileGenerator.pdb
+C:\Users\user\Source\Repos\Teamproject\FileGenerator\bin\Debug\Models.dll
+C:\Users\user\Source\Repos\Teamproject\FileGenerator\bin\Debug\Models.pdb
+C:\Users\user\Source\Repos\Teamproject\FileGenerator\obj\Debug\FileGenerator.csprojResolveAssemblyReference.cache
+C:\Users\user\Source\Repos\Teamproject\FileGenerator\obj\Debug\FileGenerator.Form1.resources
+C:\Users\user\Source\Repos\Teamproject\FileGenerator\obj\Debug\FileGenerator.Properties.Resources.resources
+C:\Users\user\Source\Repos\Teamproject\FileGenerator\obj\Debug\FileGenerator.csproj.GenerateResource.Cache
