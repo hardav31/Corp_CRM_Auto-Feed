@@ -124,6 +124,10 @@ namespace FileManager
                 {
                     if (AppConfigManager.appSettings.SaveInJson)
                     {
+                        ProgressBar.Print(TeamsD.Count.ToString());
+                        ProgressBar.Print(MembersD.Count.ToString());
+                        ProgressBar.Print(ProjectsD.Count.ToString());
+                        
                         ProgressBar.Print("Starting Json");
                         StringBuilder sb = new StringBuilder();
                         JsonParser jsParser = new JsonParser();
