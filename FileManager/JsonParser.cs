@@ -38,7 +38,7 @@ namespace FileManager
                         jsonrow.AppendLine("\t  {");
                         jsonrow.AppendLine("\t    \"TeamID\":" + teams.TeamID + ",");
                         jsonrow.AppendLine("\t    \"TeamName\":" + "\""+ teams.TeamName + "\",");
-                        jsonrow.AppendLine("\t    \"Member\":");
+                        jsonrow.AppendLine("\t    \"Members\":");
                         jsonrow.AppendLine("\t\t[");
 
                         memberCount = teams.Members.Count;
@@ -49,7 +49,7 @@ namespace FileManager
                             jsonrow.AppendLine("\t\t    \"MemberID\":" + members.MemberID + ",");
                             jsonrow.AppendLine("\t\t    \"MemberName\":" + "\"" + members.MemberName + "\",");
                             jsonrow.AppendLine("\t\t    \"MemberSurname\":" + "\"" + members.MemberSurname + "\",");
-                            jsonrow.AppendLine("\t\t    \"Project\":");
+                            jsonrow.AppendLine("\t\t    \"Projects\":");
                             jsonrow.AppendLine("\t\t\t[");
 
                             projectCount = members.Projects.Count;
@@ -95,7 +95,7 @@ namespace FileManager
                     }
                     sw.WriteLine("\t],");
                     jsonrow.Clear();
-                    sw.WriteLine("\"Project\":");
+                    sw.WriteLine("\"Projects\":");
                     sw.WriteLine("\t[");
                     projectCount = projectlist.Values.Count;
                     foreach (Project item in projectlist.Values)
