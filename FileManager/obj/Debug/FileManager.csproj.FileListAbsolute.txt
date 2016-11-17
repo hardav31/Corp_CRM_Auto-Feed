@@ -118,3 +118,5 @@ C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\bin\Debug\Models.pdb
 C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\bin\Debug\Pbar.pdb
 C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\bin\Debug\DAL.pdb
 C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\obj\Debug\FileManager.csprojResolveAssemblyReference.cache
+C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\bin\Debug\Newtonsoft.Json.xml

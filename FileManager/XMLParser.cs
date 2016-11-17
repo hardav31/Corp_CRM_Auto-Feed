@@ -10,6 +10,7 @@ using DataManager;
 using Pbar;
 using LogManager;
 
+
 namespace FileManager
 {
     class XMLParser
