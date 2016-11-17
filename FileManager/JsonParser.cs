@@ -97,11 +97,8 @@ namespace FileManager
 
                         sw.Write(jsonrow);
                     }
-                    sw.WriteLine("\t]");
-                    sw.WriteLine("}");
-
+                    sw.WriteLine("\t],");
                     jsonrow.Clear();
-                    sw.WriteLine("{");
                     sw.WriteLine("\"Project\":");
                     sw.WriteLine("\t[");
                     projectCount = projectlist.Values.Count;
