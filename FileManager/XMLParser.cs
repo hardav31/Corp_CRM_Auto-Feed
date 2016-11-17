@@ -25,14 +25,14 @@ namespace FileManager
         {
             bool IsAllRight = true;
             Dictionary<int, Team> TeamsD = new Dictionary<int, Team>();
-            Dictionary<int, Member> MembersD = new Dictionary<int, Member>(); // for compare all Member's 
+            HashSet<int> MembersH = new HashSet<int>();// for compare all Member's 
             Dictionary<int, Project> ProjectsD = new Dictionary<int, Project>(); // for compare All Project's 
             try
             {
                 Team current_Team = null;
                 Member current_Member = null;
                 Project current_Project = null;
-
+                int MembersCountDynamic;
 
 
                 int Teamattributecount = 2;
@@ -50,7 +50,7 @@ namespace FileManager
                                 #region Team
                                 if (xml.Name == "Team")
                                 {
-                                    current_Team = new Team() { Members = new List<Member>() };
+                                    current_Team = new Team();
 
                                     if (xml.AttributeCount != Teamattributecount)
                                     {
@@ -99,7 +99,7 @@ namespace FileManager
                                 #region Member
                                 if (xml.Name == "Member")
                                 {
-                                    current_Member = new Member() { Projects = new List<Project>() };
+                                    current_Member = new Member();
                                     if (xml.AttributeCount != Memberattributecount)
                                     {
                                         IsAllRight = false;
@@ -138,14 +138,15 @@ namespace FileManager
                                             break;
                                         }
                                     }
-                                    if (IsAllRight && !MembersD.Keys.Contains(current_Member.MemberID))
+                                    MembersCountDynamic = MembersH.Count;
+                                    MembersH.Add(current_Member.MemberID);
+                                    if (MembersCountDynamic == MembersH.Count)
                                     {
-                                        MembersD.Add(current_Member.MemberID, current_Member);
+                                        IsAllRight = false;
                                     }
-                                    else
+                                    if (!IsAllRight)
                                     {
                                         LoggerType.WriteToLog(LogType.Error, Path.GetFileName(direction), xml.LineNumber.ToString());
-                                        xml.Skip();
                                     }
                                 }
                                 #endregion
@@ -261,7 +262,7 @@ namespace FileManager
                                 {
                                     if (IsAllRight)
                                     {
-                                        current_Team.Members.Add(current_Member);  
+                                        current_Team.Members.Add(current_Member); //adding current_Member in current_Team 
                                     }
                                 }
                                 #endregion
@@ -277,24 +278,6 @@ namespace FileManager
 
                     if (IsAllRight)
                     {
-                        //foreach (var x in TeamsD.Values)
-                        //{
-                        //    Console.WriteLine(x.TeamID + " " + x.TeamName);
-                        //    foreach (var y in x.Members)
-                        //    {
-                        //        Console.WriteLine("   " + y.MemberID + " " + y.MemberName + " " + y.MemberSurname);
-                        //        foreach (var z in y.Projects)
-                        //        {
-                        //            Console.WriteLine("      " + z.ProjectID + " " + z.ProjectName + " " + z.ProjectCreatedDate + " " + z.ProjectDueDate + " " + z.ProjectDescription);
-                        //        }
-                        //    }
-                        //}
-                        //foreach (var x in ProjectsD.Keys)
-                        //{
-                        //    Console.WriteLine(x);
-                        //}
-
-
                         if (AppConfigManager.appSettings.SaveInJson)
                         {
                             ProgressBar.Print("Starting Json");

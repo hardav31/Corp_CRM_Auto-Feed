@@ -25,3 +25,5 @@ C:\Users\ldavtyan\Desktop\PR Project\New\App_Configuration\obj\Debug\App_Configu
 C:\Users\ldavtyan\Desktop\PR Project\New\App_Configuration\obj\Debug\App_Configuration.pdb
 C:\Users\Galust\Source\Repos\Teamproject\App_Configuration\bin\Debug\Pbar.dll
 C:\Users\Galust\Source\Repos\Teamproject\App_Configuration\bin\Debug\Pbar.pdb
+C:\Users\user\Source\Repos\Teamproject\App_Configuration\bin\Debug\Pbar.dll
+C:\Users\user\Source\Repos\Teamproject\App_Configuration\bin\Debug\Pbar.pdb
