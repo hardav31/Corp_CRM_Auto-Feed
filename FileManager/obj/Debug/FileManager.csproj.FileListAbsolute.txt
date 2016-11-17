@@ -139,3 +139,4 @@ C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\Newtonsoft.Json.x
 C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\DAL.pdb
 C:\Users\Galust\Source\Repos\Teamproject\FileManager\obj\Debug\FileManager.exe
 C:\Users\Galust\Source\Repos\Teamproject\FileManager\obj\Debug\FileManager.pdb
+C:\Users\user\Source\Repos\Teamproject\FileManager\bin\Debug\Newtonsoft.Json.xml
