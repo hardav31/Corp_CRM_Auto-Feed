@@ -18,45 +18,22 @@ namespace FileManager
             watcher.IncludeSubdirectories = true;
             watcher.EnableRaisingEvents = true;
             watcher.Created += Watcher_Created;
-            //watcher.Filter = "*.*";
+            watcher.Filter = "*.*";
         }
 
         private static  void Watcher_Created(object sender, FileSystemEventArgs e)
         {
+            while (DirectoryReader.directoryReader.IsInProccess) ;
             try
             {
-                
+
                 bool isloaded = false;
                 while (!isloaded)
                 {
-                    
                     isloaded = IsFileLoaded(e.FullPath);
                 }
 
-                if (Path.GetExtension(e.FullPath) == ".xml")
-                {
-                   
-                    ProgressBar.Print("File "+ e.Name+ "is in processing " + DateTime.Now.ToLocalTime());
-
-                    ProgressBar.StartProgressBar();
-                    XMLParser.xmlParserObj.XMLFileReader(e.FullPath);
-                    ProgressBar.EndProgressBar();
-                }
-
-                else if (Path.GetExtension(e.FullPath) == ".csv")
-                {
-                   
-                    ProgressBar.Print("File " + e.Name + "is in processing  " + DateTime.Now.ToLocalTime());
-
-                    ProgressBar.StartProgressBar();
-                    CsvParser.csvParserObj.CSVFileReader(e.FullPath);
-                    ProgressBar.EndProgressBar();
-                }
-                else
-                {
-                    File.Move(e.FullPath, AppConfigManager.appSettings.WrongFilePath + Path.GetFileName(e.FullPath));
-                    LoggerType.WriteToLog(LogType.Warning, Path.GetFileName(e.FullPath), "has uexpected file extention and moved to Wrong Files folder");
-                }
+                FileReader.fileReader.Read(e.FullPath);
             }
             catch (Exception ex)
             {
@@ -74,12 +51,7 @@ namespace FileManager
             {
                 using (FileStream stream = File.Open(direction, FileMode.Open, FileAccess.Read, FileShare.None))
                 {
-                    //if (stream.Length == 0)
-                    //{
-                    //    File.Move(direction, AppConfigManager.appSettings.WrongFilePath + Path.GetFileName(direction));
-                    //    LoggerType.WriteToLog(LogType.Warning, Path.GetFileName(direction), " file was empty and moved to wrong files folder");
-                    //}
-                    return stream.Length >= 0;
+                    return true;
                 }
             }
             catch

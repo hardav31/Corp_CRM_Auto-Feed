@@ -27,3 +27,10 @@ C:\Users\Galust\Source\Repos\Teamproject\App_Configuration\bin\Debug\Pbar.dll
 C:\Users\Galust\Source\Repos\Teamproject\App_Configuration\bin\Debug\Pbar.pdb
 C:\Users\user\Source\Repos\Teamproject\App_Configuration\bin\Debug\Pbar.dll
 C:\Users\user\Source\Repos\Teamproject\App_Configuration\bin\Debug\Pbar.pdb
+C:\Users\labuser02\Desktop\praemium\Teamproject\App_Configuration\bin\Debug\App_Configuration.dll
+C:\Users\labuser02\Desktop\praemium\Teamproject\App_Configuration\bin\Debug\App_Configuration.pdb
+C:\Users\labuser02\Desktop\praemium\Teamproject\App_Configuration\bin\Debug\Pbar.dll
+C:\Users\labuser02\Desktop\praemium\Teamproject\App_Configuration\bin\Debug\Pbar.pdb
+C:\Users\labuser02\Desktop\praemium\Teamproject\App_Configuration\obj\Debug\App_Configuration.csprojResolveAssemblyReference.cache
+C:\Users\labuser02\Desktop\praemium\Teamproject\App_Configuration\obj\Debug\App_Configuration.dll
+C:\Users\labuser02\Desktop\praemium\Teamproject\App_Configuration\obj\Debug\App_Configuration.pdb
