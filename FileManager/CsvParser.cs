@@ -20,7 +20,7 @@ namespace FileManager
         }
 
         public void CSVFileReader(string direction)
-        {           
+        {
             int i = 0;
             int team_Id;
             int member_Id;
@@ -54,21 +54,21 @@ namespace FileManager
                         break;
                     }
 
-                    if (!int.TryParse(line[0], out team_Id))
+                    if (!int.TryParse(line[0], out team_Id) || team_Id < 0)
                     {
                         LoggerType.WriteToLog(LogType.Error, Path.GetFileName(direction), i.ToString());
                         IsAllRight = false;
                         break;
                     }
 
-                    if (!int.TryParse(line[2], out member_Id))
+                    if (!int.TryParse(line[2], out member_Id) || member_Id < 0)
                     {
                         LoggerType.WriteToLog(LogType.Error, Path.GetFileName(direction), i.ToString());
                         IsAllRight = false;
                         break;
                     }
 
-                    if (!int.TryParse(line[5], out project_Id))
+                    if (!int.TryParse(line[5], out project_Id) || project_Id < 0)
                     {
                         LoggerType.WriteToLog(LogType.Error, Path.GetFileName(direction), i.ToString());
                         IsAllRight = false;
@@ -112,8 +112,8 @@ namespace FileManager
                     }
                 }
 
-                
-                if(IsAllRight)
+
+                if (IsAllRight)
                 {
                     if (AppConfigManager.appSettings.SaveInJson)
                     {
@@ -133,13 +133,13 @@ namespace FileManager
                     }
                 }
 
-           }
-           
+            }
+
 
             catch (Exception ex)
             {
                 IsAllRight = false;
-                LoggerType.WriteToLog(Path.GetFileName(direction), ex);                
+                LoggerType.WriteToLog(Path.GetFileName(direction), ex);
             }
 
             finally

@@ -8086,3 +8086,5 @@ Stack Trace
  Info,  Json success,  033430557.csv,  2016-11-17 15:37:41
  Info,  DB success,  033430557.csv,  2016-11-17 15:37:42
  Warning,   has uexpected file extention and moved to Wrong Files folder,  .suo,  2016-11-17 19:14:52
+ Error,  1,  071159454.csv,  2016-11-17 20:06:59
+ Info,   was moved to Wrong Files folder,  071159454.csv,  2016-11-17 20:06:59
