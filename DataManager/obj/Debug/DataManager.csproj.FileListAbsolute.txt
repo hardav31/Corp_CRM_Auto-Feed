@@ -73,3 +73,18 @@ C:\Users\ldavtyan\Desktop\PR Project\New\DataManager\bin\Debug\Pbar.pdb
 C:\Users\ldavtyan\Desktop\PR Project\New\DataManager\obj\Debug\DataManager.csprojResolveAssemblyReference.cache
 C:\Users\ldavtyan\Desktop\PR Project\New\DataManager\obj\Debug\DataManager.dll
 C:\Users\ldavtyan\Desktop\PR Project\New\DataManager\obj\Debug\DataManager.pdb
+C:\Users\labuser02\Desktop\praemium\Teamproject\DataManager\bin\Debug\DataManager.dll
+C:\Users\labuser02\Desktop\praemium\Teamproject\DataManager\bin\Debug\DataManager.pdb
+C:\Users\labuser02\Desktop\praemium\Teamproject\DataManager\bin\Debug\DAL.dll
+C:\Users\labuser02\Desktop\praemium\Teamproject\DataManager\bin\Debug\LogManager.dll
+C:\Users\labuser02\Desktop\praemium\Teamproject\DataManager\bin\Debug\Models.dll
+C:\Users\labuser02\Desktop\praemium\Teamproject\DataManager\bin\Debug\App_Configuration.dll
+C:\Users\labuser02\Desktop\praemium\Teamproject\DataManager\bin\Debug\Pbar.dll
+C:\Users\labuser02\Desktop\praemium\Teamproject\DataManager\bin\Debug\DAL.pdb
+C:\Users\labuser02\Desktop\praemium\Teamproject\DataManager\bin\Debug\LogManager.pdb
+C:\Users\labuser02\Desktop\praemium\Teamproject\DataManager\bin\Debug\Models.pdb
+C:\Users\labuser02\Desktop\praemium\Teamproject\DataManager\bin\Debug\App_Configuration.pdb
+C:\Users\labuser02\Desktop\praemium\Teamproject\DataManager\bin\Debug\Pbar.pdb
+C:\Users\labuser02\Desktop\praemium\Teamproject\DataManager\obj\Debug\DataManager.csprojResolveAssemblyReference.cache
+C:\Users\labuser02\Desktop\praemium\Teamproject\DataManager\obj\Debug\DataManager.dll
+C:\Users\labuser02\Desktop\praemium\Teamproject\DataManager\obj\Debug\DataManager.pdb

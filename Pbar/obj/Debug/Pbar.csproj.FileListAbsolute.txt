@@ -23,3 +23,8 @@ C:\Users\ldavtyan\Desktop\PR Project\New\Pbar\bin\Debug\Pbar.pdb
 C:\Users\ldavtyan\Desktop\PR Project\New\Pbar\obj\Debug\Pbar.csprojResolveAssemblyReference.cache
 C:\Users\ldavtyan\Desktop\PR Project\New\Pbar\obj\Debug\Pbar.dll
 C:\Users\ldavtyan\Desktop\PR Project\New\Pbar\obj\Debug\Pbar.pdb
+C:\Users\labuser02\Desktop\praemium\Teamproject\Pbar\bin\Debug\Pbar.dll
+C:\Users\labuser02\Desktop\praemium\Teamproject\Pbar\bin\Debug\Pbar.pdb
+C:\Users\labuser02\Desktop\praemium\Teamproject\Pbar\obj\Debug\Pbar.csprojResolveAssemblyReference.cache
+C:\Users\labuser02\Desktop\praemium\Teamproject\Pbar\obj\Debug\Pbar.dll
+C:\Users\labuser02\Desktop\praemium\Teamproject\Pbar\obj\Debug\Pbar.pdb

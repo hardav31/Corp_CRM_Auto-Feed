@@ -120,3 +120,22 @@ C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\bin\Debug\DAL.pdb
 C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\obj\Debug\FileManager.csprojResolveAssemblyReference.cache
 C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\bin\Debug\Newtonsoft.Json.dll
 C:\Users\ldavtyan\Desktop\PR Project\New\FileManager\bin\Debug\Newtonsoft.Json.xml
+C:\Users\labuser02\Desktop\praemium\Teamproject\FileManager\bin\Debug\FileManager.exe.config
+C:\Users\labuser02\Desktop\praemium\Teamproject\FileManager\obj\Debug\FileManager.exe
+C:\Users\labuser02\Desktop\praemium\Teamproject\FileManager\obj\Debug\FileManager.pdb
+C:\Users\labuser02\Desktop\praemium\Teamproject\FileManager\bin\Debug\FileManager.exe
+C:\Users\labuser02\Desktop\praemium\Teamproject\FileManager\bin\Debug\FileManager.pdb
+C:\Users\labuser02\Desktop\praemium\Teamproject\FileManager\bin\Debug\App_Configuration.dll
+C:\Users\labuser02\Desktop\praemium\Teamproject\FileManager\bin\Debug\DataManager.dll
+C:\Users\labuser02\Desktop\praemium\Teamproject\FileManager\bin\Debug\LogManager.dll
+C:\Users\labuser02\Desktop\praemium\Teamproject\FileManager\bin\Debug\Models.dll
+C:\Users\labuser02\Desktop\praemium\Teamproject\FileManager\bin\Debug\Pbar.dll
+C:\Users\labuser02\Desktop\praemium\Teamproject\FileManager\bin\Debug\DAL.dll
+C:\Users\labuser02\Desktop\praemium\Teamproject\FileManager\bin\Debug\App_Configuration.pdb
+C:\Users\labuser02\Desktop\praemium\Teamproject\FileManager\bin\Debug\DataManager.pdb
+C:\Users\labuser02\Desktop\praemium\Teamproject\FileManager\bin\Debug\LogManager.pdb
+C:\Users\labuser02\Desktop\praemium\Teamproject\FileManager\bin\Debug\Models.pdb
+C:\Users\labuser02\Desktop\praemium\Teamproject\FileManager\bin\Debug\Pbar.pdb
+C:\Users\labuser02\Desktop\praemium\Teamproject\FileManager\bin\Debug\Newtonsoft.Json.xml
+C:\Users\labuser02\Desktop\praemium\Teamproject\FileManager\bin\Debug\DAL.pdb
+C:\Users\labuser02\Desktop\praemium\Teamproject\FileManager\obj\Debug\FileManager.csprojResolveAssemblyReference.cache

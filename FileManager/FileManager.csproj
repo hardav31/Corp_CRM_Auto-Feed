@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DirectoryReader.cs" />
+    <Compile Include="FileReader.cs" />
     <Compile Include="FolderMonitor.cs" />
     <Compile Include="CsvParser.cs" />
     <Compile Include="JsonParser.cs" />
@@ -58,7 +60,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\App_Configuration\App_Configuration.csproj">
