@@ -1,8 +1,3 @@
-C:\Users\Galust\Source\Repos\Teamproject\App_Configuration\obj\Debug\App_Configuration.csprojResolveAssemblyReference.cache
-C:\Users\Galust\Source\Repos\Teamproject\App_Configuration\bin\Debug\App_Configuration.dll
-C:\Users\Galust\Source\Repos\Teamproject\App_Configuration\bin\Debug\App_Configuration.pdb
-C:\Users\Galust\Source\Repos\Teamproject\App_Configuration\obj\Debug\App_Configuration.dll
-C:\Users\Galust\Source\Repos\Teamproject\App_Configuration\obj\Debug\App_Configuration.pdb
 C:\Users\user\Source\Repos\Teamproject\App_Configuration\bin\Debug\App_Configuration.dll
 C:\Users\user\Source\Repos\Teamproject\App_Configuration\bin\Debug\App_Configuration.pdb
 C:\Users\user\Source\Repos\Teamproject\App_Configuration\obj\Debug\App_Configuration.csprojResolveAssemblyReference.cache
@@ -23,8 +18,6 @@ C:\Users\ldavtyan\Desktop\PR Project\New\App_Configuration\bin\Debug\App_Configu
 C:\Users\ldavtyan\Desktop\PR Project\New\App_Configuration\obj\Debug\App_Configuration.csprojResolveAssemblyReference.cache
 C:\Users\ldavtyan\Desktop\PR Project\New\App_Configuration\obj\Debug\App_Configuration.dll
 C:\Users\ldavtyan\Desktop\PR Project\New\App_Configuration\obj\Debug\App_Configuration.pdb
-C:\Users\Galust\Source\Repos\Teamproject\App_Configuration\bin\Debug\Pbar.dll
-C:\Users\Galust\Source\Repos\Teamproject\App_Configuration\bin\Debug\Pbar.pdb
 C:\Users\user\Source\Repos\Teamproject\App_Configuration\bin\Debug\Pbar.dll
 C:\Users\user\Source\Repos\Teamproject\App_Configuration\bin\Debug\Pbar.pdb
 C:\Users\labuser02\Desktop\praemium\Teamproject\App_Configuration\bin\Debug\App_Configuration.dll
@@ -36,3 +29,10 @@ C:\Users\labuser02\Desktop\praemium\Teamproject\App_Configuration\obj\Debug\App_
 C:\Users\labuser02\Desktop\praemium\Teamproject\App_Configuration\obj\Debug\App_Configuration.pdb
 C:\Users\ldavtyan\Desktop\PR Project\New\App_Configuration\bin\Debug\Pbar.dll
 C:\Users\ldavtyan\Desktop\PR Project\New\App_Configuration\bin\Debug\Pbar.pdb
+C:\Users\Galust\Source\Repos\Teamproject\App_Configuration\bin\Debug\App_Configuration.dll
+C:\Users\Galust\Source\Repos\Teamproject\App_Configuration\bin\Debug\App_Configuration.pdb
+C:\Users\Galust\Source\Repos\Teamproject\App_Configuration\bin\Debug\Pbar.dll
+C:\Users\Galust\Source\Repos\Teamproject\App_Configuration\bin\Debug\Pbar.pdb
+C:\Users\Galust\Source\Repos\Teamproject\App_Configuration\obj\Debug\App_Configuration.csprojResolveAssemblyReference.cache
+C:\Users\Galust\Source\Repos\Teamproject\App_Configuration\obj\Debug\App_Configuration.dll
+C:\Users\Galust\Source\Repos\Teamproject\App_Configuration\obj\Debug\App_Configuration.pdb

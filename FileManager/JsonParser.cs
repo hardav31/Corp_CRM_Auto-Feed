@@ -145,24 +145,24 @@ namespace FileManager
 
         //FOR TESTING JSON SERIALIZER/DESERIALIZER
         #region Testing JSON deserialization
-        public void JsonDeserializ()
-        {
-            //Read object from the file
-            string json = File.ReadAllText(@"C:\Users\ldavtyan\Desktop\PR Project\JSON\20161117175049_054428110 - Copy.csv");
-            //Deserialize the object
-            forjson jsondata = JsonConvert.DeserializeObject<forjson>(json);
+        //public void JsonDeserializ()
+        //{
+        //    //Read object from the file
+        //    string json = File.ReadAllText(@"C:\Users\ldavtyan\Desktop\PR Project\JSON\20161117175049_054428110 - Copy.csv");
+        //    //Deserialize the object
+        //    forjson jsondata = JsonConvert.DeserializeObject<forjson>(json);
 
-            foreach (var item1 in jsondata.Teams)
-            {
-                foreach (var item2 in jsondata.Projects)
-                {
+        //    foreach (var item1 in jsondata.Teams)
+        //    {
+        //        foreach (var item2 in jsondata.Projects)
+        //        {
 
-                    Console.WriteLine(item1.TeamID.ToString() + ' ' + item1.TeamName);
-                    Console.WriteLine(item2.ProjectName + ' ' + item2.ProjectDescription);
-                }
+        //            Console.WriteLine(item1.TeamID.ToString() + ' ' + item1.TeamName);
+        //            Console.WriteLine(item2.ProjectName + ' ' + item2.ProjectDescription);
+        //        }
 
-            }
-        }
+        //    }
+        //}
         #endregion
     }
 }

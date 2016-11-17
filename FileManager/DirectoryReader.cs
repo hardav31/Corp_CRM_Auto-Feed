@@ -1,4 +1,7 @@
-﻿using App_Configuration;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using App_Configuration;
 using LogManager;
 using Pbar;
 using System;
@@ -34,7 +37,7 @@ namespace FileManager
 
                 foreach (string filePath in filePaths)
                 {
-                    FileReader.fileReader.Read(filePath);                   
+                    FileReader.fileReader.Read(filePath);
                 }
                 IsInProccess = false;
             }
