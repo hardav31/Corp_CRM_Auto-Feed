@@ -20,20 +20,20 @@ namespace FileManager
 
         public void ConverToJson(Dictionary<int, Team> TeamsD, Dictionary<int, Project> ProjectsD, string direction)
         {
-            ProgressBar.Print("Starting converting data to Json format");
+            ProgressBar.Print("Starting to convert data to Json format");
             StringBuilder sb = new StringBuilder();
           
             JsonParser.JsonParserObject.FilePath = sb.Append(String.Concat(AppConfigManager.appSettings.JsonFolderPath + direction.AppendTimeStamp()+".txt")).ToString();
             JsonParser.JsonParserObject.JsonSerializer(TeamsD, ProjectsD);
-            ProgressBar.Print(" Data was converted to Json format ");
+            ProgressBar.Print(" Data was successfully converted to Json format ");
         }
 
         public void StoreInDB(Dictionary<int, Team> TeamsD)
         {
-            ProgressBar.Print("Starting storing data in DataBase");
+            ProgressBar.Print("Starting to store data in DataBase");
             DataUpdater dUpdater = new DataUpdater();
             dUpdater.UpdateData(TeamsD);
-            ProgressBar.Print(" Data was stored in DataBase");
+            ProgressBar.Print(" Data was successfully stored in DataBase");
         }
     }
 }
