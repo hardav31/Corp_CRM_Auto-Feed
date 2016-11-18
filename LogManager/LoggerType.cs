@@ -1,4 +1,4 @@
-﻿using App_Configuration;
+﻿
 using System;
 
 namespace LogManager

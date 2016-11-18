@@ -1,8 +1,5 @@
 ﻿using System;
 using System.IO;
-using Pbar;
-using App_Configuration;
-using System.Threading.Tasks;
 using LogManager;
 
 namespace FileManager
