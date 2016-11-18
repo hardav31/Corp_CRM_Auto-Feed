@@ -46,13 +46,13 @@ namespace FileManager
                     }
                     else
                     {
-                        File.Move(directory, AppConfigManager.appSettings.WrongFilePath + Path.GetFileName(directory));
+                        File.Move(directory, AppConfigManager.appSettings.WrongFilePath + directory.AppendTimeStamp());
                         LoggerType.WriteToLog(LogType.Warning, Path.GetFileName(directory), " has unexpected file extention and moved to Wrong Files folder");
                     }
                 }
                 else
                 {
-                    File.Move(directory, AppConfigManager.appSettings.WrongFilePath + Path.GetFileName(directory));
+                    File.Move(directory, AppConfigManager.appSettings.WrongFilePath + directory.AppendTimeStamp());
                     LoggerType.WriteToLog(LogType.Warning, Path.GetFileName(directory), " file was empty and has moved to Wrong File's folder");
                 }
             }

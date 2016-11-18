@@ -133,7 +133,6 @@ C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\DataManager.pdb
 C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\LogManager.pdb
 C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\Models.pdb
 C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\Pbar.pdb
-C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\DAL.pdb
 C:\Users\Galust\Source\Repos\Teamproject\FileManager\obj\Debug\FileManager.exe
 C:\Users\Galust\Source\Repos\Teamproject\FileManager\obj\Debug\FileManager.pdb
