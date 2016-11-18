@@ -8,18 +8,15 @@ namespace FileManager
 {
     class JsonParser
     {
+        private static readonly Lazy<JsonParser> lazy = new Lazy<JsonParser>(() => new JsonParser());
+        public static JsonParser JsonParserObject { get { return lazy.Value; } }
+        private JsonParser()
+        {
+        }
         public string FilePath;
         Dictionary<int, Project> projectD = new Dictionary<int, Project>();
 
-        public string jsonFoldername(string filepath)
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.Append("\\" + DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Day.ToString() + DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString() + DateTime.Now.Second.ToString() + "_");
-            sb.Append(filepath.Substring(filepath.LastIndexOf('\\') + 1, filepath.Length - filepath.LastIndexOf('\\') - 1));
-            return sb.ToString();
-        }
-
-        public void JsonWrite(Dictionary<int, Team> teamlist,Dictionary<int, Project> projectlist)
+        public void JsonSerializer(Dictionary<int, Team> teamlist,Dictionary<int, Project> projectlist)
         {
             int teamCount, memberCount, projectCount;
             StringBuilder jsonrow = new StringBuilder();

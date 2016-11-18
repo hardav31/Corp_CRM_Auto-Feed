@@ -282,9 +282,8 @@ namespace FileManager
                         {
                             ProgressBar.Print("Starting converting data to Json format");
                             StringBuilder sb = new StringBuilder();
-                            JsonParser jsParser = new JsonParser();
-                            jsParser.FilePath = sb.Append(AppConfigManager.appSettings.JsonFolderPath + jsParser.jsonFoldername(direction)).ToString();
-                            jsParser.JsonWrite(TeamsD, ProjectsD);
+                            JsonParser.JsonParserObject.FilePath = sb.Append(String.Concat(AppConfigManager.appSettings.JsonFolderPath,direction.AppendTimeStamp(), ".txt")).ToString();
+                            JsonParser.JsonParserObject.JsonSerializer(TeamsD, ProjectsD);
                             ProgressBar.Print(" Data was converted to Json format ");
                         }
                         if (AppConfigManager.appSettings.SaveInDB)
