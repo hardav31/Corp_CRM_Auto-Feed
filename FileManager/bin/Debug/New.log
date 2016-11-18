@@ -8737,3 +8737,8 @@ Stack Trace
  Warning,   file was empty and moved to Wrong Files folder,  092202874 — копия (2).xml,  2016-11-17 22:14:02
  Warning,   file was empty and moved to Wrong Files folder,  092202874 — копия (4).xml,  2016-11-17 22:14:02
  Warning,   file was empty and moved to Wrong Files folder,  092202874 — копия (5).xml,  2016-11-17 22:14:02
+ Warning,   has uexpected file extention and moved to Wrong Files folder,  debug.log,  2016-11-18 13:04:22
+ Warning,   has uexpected file extention and moved to Wrong Files folder,  loading.gif,  2016-11-18 13:04:35
+ Warning,   file was empty and moved to Wrong Files folder,  New Text Document.txt,  2016-11-18 13:04:44
+ Error,  6,  013025002.csv,  2016-11-18 13:30:59
+ Info,   was moved to Wrong Files folder,  013025002.csv,  2016-11-18 13:30:59

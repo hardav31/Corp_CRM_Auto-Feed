@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangeFileName.cs" />
     <Compile Include="DirectoryReader.cs" />
     <Compile Include="FileReader.cs" />
     <Compile Include="FolderMonitor.cs" />

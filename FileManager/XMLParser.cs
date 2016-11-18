@@ -20,13 +20,7 @@ namespace FileManager
         private XMLParser()
         {
         }
-        public string ChangeFileName(string filepath)
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.Append(DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Day.ToString() + DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString() + DateTime.Now.Second.ToString() + "_");
-            sb.Append(filepath.Substring(filepath.LastIndexOf('\\') + 1, filepath.Length - filepath.LastIndexOf('\\') - 1));
-            return sb.ToString();
-        }
+
         public void XMLFileReader(string direction)
         {
             bool IsAllRight = true;
@@ -319,11 +313,7 @@ namespace FileManager
             {
                 if (!IsAllRight)
                 {
-                    string filename=ChangeFileName(direction);
-                    string filePresentName = Path.GetDirectoryName(direction)+"\\" + filename;
-                    string fileFutureName = AppConfigManager.appSettings.WrongFilePath + filename;
-                    File.Move(direction, filePresentName);
-                    File.Move(filePresentName, fileFutureName);
+                    File.Move(direction, AppConfigManager.appSettings.WrongFilePath + direction.AppendTimeStamp());
                     LoggerType.WriteToLog(LogType.Info, Path.GetFileName(direction), " was moved to Wrong Files folder");
                 }
                 else
