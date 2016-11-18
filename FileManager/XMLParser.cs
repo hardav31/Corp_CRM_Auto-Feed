@@ -13,7 +13,7 @@ using LogManager;
 
 namespace FileManager
 {
-    class XMLParser
+   public class XMLParser
     {
         private static readonly Lazy<XMLParser> lazy = new Lazy<XMLParser>(() => new XMLParser());
         public static XMLParser xmlParserObj { get { return lazy.Value; } }
@@ -313,7 +313,7 @@ namespace FileManager
             {
                 if (!IsAllRight)
                 {
-                    File.Move(direction, AppConfigManager.appSettings.WrongFilePath + Path.GetFileName(direction));
+                    File.Move(direction, AppConfigManager.appSettings.WrongFilePath + direction.AppendTimeStamp());
                     LoggerType.WriteToLog(LogType.Info, Path.GetFileName(direction), " was moved to Wrong Files folder");
                 }
                 else

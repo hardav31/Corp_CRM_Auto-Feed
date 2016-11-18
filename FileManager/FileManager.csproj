@@ -49,6 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangeFileName.cs" />
+    <Compile Include="DirectoryReader.cs" />
+    <Compile Include="FileReader.cs" />
     <Compile Include="FolderMonitor.cs" />
     <Compile Include="CsvParser.cs" />
     <Compile Include="JsonParser.cs" />

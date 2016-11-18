@@ -12,11 +12,6 @@ C:\Users\ldavtyan\Desktop\PR Project\TeamProject\Models\bin\Debug\Models.pdb
 C:\Users\ldavtyan\Desktop\PR Project\TeamProject\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
 C:\Users\ldavtyan\Desktop\PR Project\TeamProject\Models\obj\Debug\Models.dll
 C:\Users\ldavtyan\Desktop\PR Project\TeamProject\Models\obj\Debug\Models.pdb
-C:\Users\Galust\Source\Repos\Teamproject\Models\bin\Debug\Models.dll
-C:\Users\Galust\Source\Repos\Teamproject\Models\bin\Debug\Models.pdb
-C:\Users\Galust\Source\Repos\Teamproject\Models\obj\Debug\Models.dll
-C:\Users\Galust\Source\Repos\Teamproject\Models\obj\Debug\Models.pdb
-C:\Users\Galust\Source\Repos\Teamproject\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
 C:\Users\user\Source\Repos\Teamproject\Models\bin\Debug\Models.dll
 C:\Users\user\Source\Repos\Teamproject\Models\bin\Debug\Models.pdb
 C:\Users\user\Source\Repos\Teamproject\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
@@ -42,3 +37,7 @@ C:\Users\labuser02\Desktop\praemium\Teamproject\Models\bin\Debug\Models.pdb
 C:\Users\labuser02\Desktop\praemium\Teamproject\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
 C:\Users\labuser02\Desktop\praemium\Teamproject\Models\obj\Debug\Models.dll
 C:\Users\labuser02\Desktop\praemium\Teamproject\Models\obj\Debug\Models.pdb
+C:\Users\Galust\Source\Repos\Teamproject\Models\bin\Debug\Models.dll
+C:\Users\Galust\Source\Repos\Teamproject\Models\bin\Debug\Models.pdb
+C:\Users\Galust\Source\Repos\Teamproject\Models\obj\Debug\Models.dll
+C:\Users\Galust\Source\Repos\Teamproject\Models\obj\Debug\Models.pdb

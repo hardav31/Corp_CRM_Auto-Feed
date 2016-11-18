@@ -36,28 +36,10 @@ C:\Users\ldavtyan\Desktop\PR Project\TeamProject\FileManager\bin\Debug\FileManag
 C:\Users\ldavtyan\Desktop\PR Project\TeamProject\FileManager\bin\Debug\FileManager.pdb
 C:\Users\ldavtyan\Desktop\PR Project\TeamProject\FileManager\bin\Debug\Models.dll
 C:\Users\ldavtyan\Desktop\PR Project\TeamProject\FileManager\bin\Debug\Models.pdb
-C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\FileManager.exe.config
-C:\Users\Galust\Source\Repos\Teamproject\FileManager\obj\Debug\FileManager.exe
-C:\Users\Galust\Source\Repos\Teamproject\FileManager\obj\Debug\FileManager.pdb
-C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\FileManager.exe
-C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\FileManager.pdb
-C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\LogManager.dll
-C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\Models.dll
-C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\LogManager.pdb
-C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\Models.pdb
-C:\Users\Galust\Source\Repos\Teamproject\FileManager\obj\Debug\FileManager.csprojResolveAssemblyReference.cache
 C:\Users\Home\Desktop\Public2\Teamproject\FileManager\bin\Debug\LogManager.dll
 C:\Users\Home\Desktop\Public2\Teamproject\FileManager\bin\Debug\LogManager.pdb
 C:\Users\Home\Desktop\Public2\Teamproject\FileManager\bin\Debug\DAL.dll
 C:\Users\Home\Desktop\Public2\Teamproject\FileManager\bin\Debug\DAL.pdb
-C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\App_Configuration.dll
-C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\DAL.dll
-C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\App_Configuration.pdb
-C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\DAL.pdb
-C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\DataManager.dll
-C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\DataManager.pdb
-C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\Pbar.dll
-C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\Pbar.pdb
 C:\Users\Home\Desktop\Public2\Teamproject\FileManager\bin\Debug\App_Configuration.dll
 C:\Users\Home\Desktop\Public2\Teamproject\FileManager\bin\Debug\DataManager.dll
 C:\Users\Home\Desktop\Public2\Teamproject\FileManager\bin\Debug\Pbar.dll
@@ -135,6 +117,25 @@ C:\Users\labuser02\Desktop\praemium\Teamproject\FileManager\bin\Debug\DataManage
 C:\Users\labuser02\Desktop\praemium\Teamproject\FileManager\bin\Debug\LogManager.pdb
 C:\Users\labuser02\Desktop\praemium\Teamproject\FileManager\bin\Debug\Models.pdb
 C:\Users\labuser02\Desktop\praemium\Teamproject\FileManager\bin\Debug\Pbar.pdb
-C:\Users\labuser02\Desktop\praemium\Teamproject\FileManager\bin\Debug\Newtonsoft.Json.xml
 C:\Users\labuser02\Desktop\praemium\Teamproject\FileManager\bin\Debug\DAL.pdb
 C:\Users\labuser02\Desktop\praemium\Teamproject\FileManager\obj\Debug\FileManager.csprojResolveAssemblyReference.cache
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\obj\Debug\FileManager.csprojResolveAssemblyReference.cache
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\FileManager.exe.config
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\FileManager.exe
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\FileManager.pdb
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\App_Configuration.dll
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\DataManager.dll
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\LogManager.dll
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\Models.dll
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\Pbar.dll
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\DAL.dll
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\App_Configuration.pdb
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\DataManager.pdb
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\LogManager.pdb
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\Models.pdb
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\Pbar.pdb
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\DAL.pdb
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\obj\Debug\FileManager.exe
+C:\Users\Galust\Source\Repos\Teamproject\FileManager\obj\Debug\FileManager.pdb
+C:\Users\user\Source\Repos\Teamproject\FileManager\bin\Debug\Newtonsoft.Json.xml

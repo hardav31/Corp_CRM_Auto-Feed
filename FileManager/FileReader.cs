@@ -20,38 +20,49 @@ namespace FileManager
 
         public void Read(string directory)
         {
-            if (!(new FileInfo(directory).Length == 0))
+            try
             {
-
-                if (Path.GetExtension(directory) == ".xml")
+                if (!(new FileInfo(directory).Length == 0))
                 {
 
-                    ProgressBar.Print("File " + Path.GetFileName(directory) + " is in processing " + DateTime.Now.ToLocalTime());
+                    if (Path.GetExtension(directory) == ".xml")
+                    {
 
-                    ProgressBar.StartProgressBar();
-                    XMLParser.xmlParserObj.XMLFileReader(directory);
-                    ProgressBar.EndProgressBar();
-                }
+                        ProgressBar.Print("File " + Path.GetFileName(directory) + " is in processing " + DateTime.Now.ToLocalTime());
 
-                else if (Path.GetExtension(directory) == ".csv")
-                {
+                        ProgressBar.StartProgressBar();
+                        XMLParser.xmlParserObj.XMLFileReader(directory);
+                        ProgressBar.EndProgressBar();
+                    }
 
-                    ProgressBar.Print("File " + Path.GetFileName(directory) + " is in processing  " + DateTime.Now.ToLocalTime());
+                    else if (Path.GetExtension(directory) == ".csv")
+                    {
 
-                    ProgressBar.StartProgressBar();
-                    CsvParser.csvParserObj.CSVFileReader(directory);
-                    ProgressBar.EndProgressBar();
+                        ProgressBar.Print("File " + Path.GetFileName(directory) + " is in processing  " + DateTime.Now.ToLocalTime());
+
+                        ProgressBar.StartProgressBar();
+                        CsvParser.csvParserObj.CSVFileReader(directory);
+                        ProgressBar.EndProgressBar();
+                    }
+                    else
+                    {
+                        File.Move(directory, AppConfigManager.appSettings.WrongFilePath + Path.GetFileName(directory));
+                        LoggerType.WriteToLog(LogType.Warning, Path.GetFileName(directory), " has uexpected file extention and moved to Wrong Files folder");
+                    }
                 }
                 else
                 {
                     File.Move(directory, AppConfigManager.appSettings.WrongFilePath + Path.GetFileName(directory));
-                    LoggerType.WriteToLog(LogType.Warning, Path.GetFileName(directory), " has uexpected file extention and moved to Wrong Files folder");
+                    LoggerType.WriteToLog(LogType.Warning, Path.GetFileName(directory), " file was empty and moved to Wrong Files folder");
                 }
             }
-            else
+            catch(IOException e)
             {
-                File.Move(directory, AppConfigManager.appSettings.WrongFilePath + Path.GetFileName(directory));
-                LoggerType.WriteToLog(LogType.Warning, Path.GetFileName(directory), " file was empty and moved to Wrong Files folder");
+                LoggerType.WriteToLog(Path.GetFileName(directory), e);
+            }
+            catch (Exception e)
+            {
+                LoggerType.WriteToLog(Path.GetFileName(directory), e);
             }
         }
     }

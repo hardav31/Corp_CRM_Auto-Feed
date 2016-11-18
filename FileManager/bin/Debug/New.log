@@ -8085,3 +8085,660 @@ Stack Trace
  Info,  DB success,  033438395.xml,  2016-11-17 15:37:41
  Info,  Json success,  033430557.csv,  2016-11-17 15:37:41
  Info,  DB success,  033430557.csv,  2016-11-17 15:37:42
+ Warning,   has uexpected file extention and moved to Wrong Files folder,  .suo,  2016-11-17 19:14:52
+ Error,  1,  071159454.csv,  2016-11-17 20:06:59
+ Info,   was moved to Wrong Files folder,  071159454.csv,  2016-11-17 20:06:59
+ 
+062230629 — копия.xml
+Exception Type
+IOException
+
+Massage
+Невозможно создать файл, так как он уже существует.
+
+
+Stack Trace
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   в System.IO.File.Move(String sourceFileName, String destFileName)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 316
+   в FileManager.FileReader.Read(String directory) в C:\Users\user\Source\Repos\Teamproject\FileManager\FileReader.cs:строка 34
+
+, 2016-11-17 20:42:03
+ Info,   was moved to Wrong Files folder,  062230629.xml,  2016-11-17 20:42:03
+ 
+062230629 — копия.xml
+Exception Type
+IOException
+
+Massage
+Невозможно создать файл, так как он уже существует.
+
+
+Stack Trace
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   в System.IO.File.Move(String sourceFileName, String destFileName)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 316
+   в FileManager.FileReader.Read(String directory) в C:\Users\user\Source\Repos\Teamproject\FileManager\FileReader.cs:строка 34
+
+, 2016-11-17 20:42:30
+ 
+062230629 — копия.xml
+Exception Type
+IOException
+
+Massage
+Невозможно создать файл, так как он уже существует.
+
+
+Stack Trace
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   в System.IO.File.Move(String sourceFileName, String destFileName)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 316
+   в FileManager.FileReader.Read(String directory) в C:\Users\user\Source\Repos\Teamproject\FileManager\FileReader.cs:строка 34
+
+, 2016-11-17 20:47:59
+ 
+062230629 — копия.xml
+Exception Type
+IOException
+
+Massage
+Невозможно создать файл, так как он уже существует.
+
+
+Stack Trace
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   в System.IO.File.Move(String sourceFileName, String destFileName)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 316
+   в FileManager.FileReader.Read(String directory) в C:\Users\user\Source\Repos\Teamproject\FileManager\FileReader.cs:строка 34
+
+, 2016-11-17 20:48:48
+ Warning,   has uexpected file extention and moved to Wrong Files folder,  062230629 — копия.xml_,  2016-11-17 20:49:41
+ 
+062230629 — копия.xml
+Exception Type
+IOException
+
+Massage
+Невозможно создать файл, так как он уже существует.
+
+
+Stack Trace
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   в System.IO.File.Move(String sourceFileName, String destFileName)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 316
+   в FileManager.FileReader.Read(String directory) в C:\Users\user\Source\Repos\Teamproject\FileManager\FileReader.cs:строка 34
+
+, 2016-11-17 20:51:06
+ 
+062230629 — копия.xml
+Exception Type
+IOException
+
+Massage
+Невозможно создать файл, так как он уже существует.
+
+
+Stack Trace
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   в System.IO.File.Move(String sourceFileName, String destFileName)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 316
+   в FileManager.FileReader.Read(String directory) в C:\Users\user\Source\Repos\Teamproject\FileManager\FileReader.cs:строка 34
+
+, 2016-11-17 20:54:21
+ 
+062230629 — копия.xml
+Exception Type
+IOException
+
+Massage
+Невозможно создать файл, так как он уже существует.
+
+
+Stack Trace
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   в System.IO.File.Move(String sourceFileName, String destFileName)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 316
+   в FileManager.FileReader.Read(String directory) в C:\Users\user\Source\Repos\Teamproject\FileManager\FileReader.cs:строка 34
+
+, 2016-11-17 20:55:06
+ 
+062230629 — копия.xml
+Exception Type
+IOException
+
+Massage
+Невозможно создать файл, так как он уже существует.
+
+
+Stack Trace
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   в System.IO.File.Move(String sourceFileName, String destFileName)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 316
+   в FileManager.FileReader.Read(String directory) в C:\Users\user\Source\Repos\Teamproject\FileManager\FileReader.cs:строка 34
+
+, 2016-11-17 20:55:38
+ 
+062230629 — копия.xml
+Exception Type
+IOException
+
+Massage
+Невозможно создать файл, так как он уже существует.
+
+
+Stack Trace
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   в System.IO.File.Move(String sourceFileName, String destFileName)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 316
+   в FileManager.FileReader.Read(String directory) в C:\Users\user\Source\Repos\Teamproject\FileManager\FileReader.cs:строка 34
+
+, 2016-11-17 20:56:24
+ 
+062230629 — копия.xml
+Exception Type
+IOException
+
+Massage
+Невозможно создать файл, так как он уже существует.
+
+
+Stack Trace
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   в System.IO.File.Move(String sourceFileName, String destFileName)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 316
+   в FileManager.FileReader.Read(String directory) в C:\Users\user\Source\Repos\Teamproject\FileManager\FileReader.cs:строка 34
+
+, 2016-11-17 20:57:34
+ 
+062230629 — копия.xml
+Exception Type
+IOException
+
+Massage
+Невозможно создать файл, так как он уже существует.
+
+
+Stack Trace
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   в System.IO.File.Move(String sourceFileName, String destFileName)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 316
+   в FileManager.FileReader.Read(String directory) в C:\Users\user\Source\Repos\Teamproject\FileManager\FileReader.cs:строка 34
+
+, 2016-11-17 20:58:28
+ 
+062230629 — копия.xml
+Exception Type
+IOException
+
+Massage
+Невозможно создать файл, так как он уже существует.
+
+
+Stack Trace
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   в System.IO.File.Move(String sourceFileName, String destFileName)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 316
+   в FileManager.FileReader.Read(String directory) в C:\Users\user\Source\Repos\Teamproject\FileManager\FileReader.cs:строка 34
+
+, 2016-11-17 20:59:03
+ 
+062230629 — копия.xml
+Exception Type
+IOException
+
+Massage
+Невозможно создать файл, так как он уже существует.
+
+
+Stack Trace
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   в System.IO.File.Move(String sourceFileName, String destFileName)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 316
+   в FileManager.FileReader.Read(String directory) в C:\Users\user\Source\Repos\Teamproject\FileManager\FileReader.cs:строка 34
+
+, 2016-11-17 20:59:23
+ 
+062230629 — копия.xml
+Exception Type
+IOException
+
+Massage
+Невозможно создать файл, так как он уже существует.
+
+
+Stack Trace
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   в System.IO.File.Move(String sourceFileName, String destFileName)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 316
+   в FileManager.FileReader.Read(String directory) в C:\Users\user\Source\Repos\Teamproject\FileManager\FileReader.cs:строка 34
+
+, 2016-11-17 20:59:41
+ Info,   was moved to Wrong Files folder,  _062230629 — копия.xml,  2016-11-17 21:00:04
+ 
+062230629 — копия.xml
+Exception Type
+IOException
+
+Massage
+Невозможно создать файл, так как он уже существует.
+
+
+Stack Trace
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   в System.IO.File.Move(String sourceFileName, String destFileName)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 316
+   в FileManager.FileReader.Read(String directory) в C:\Users\user\Source\Repos\Teamproject\FileManager\FileReader.cs:строка 34
+
+, 2016-11-17 21:00:58
+ 
+_062230629 — копия.xml
+Exception Type
+IOException
+
+Massage
+Невозможно создать файл, так как он уже существует.
+
+
+Stack Trace
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   в System.IO.File.Move(String sourceFileName, String destFileName)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 316
+   в FileManager.FileReader.Read(String directory) в C:\Users\user\Source\Repos\Teamproject\FileManager\FileReader.cs:строка 34
+
+, 2016-11-17 21:01:04
+ 
+062230629 — копия.xml
+Exception Type
+IOException
+
+Massage
+Невозможно создать файл, так как он уже существует.
+
+
+Stack Trace
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   в System.IO.File.Move(String sourceFileName, String destFileName)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 316
+   в FileManager.FileReader.Read(String directory) в C:\Users\user\Source\Repos\Teamproject\FileManager\FileReader.cs:строка 34
+
+, 2016-11-17 21:01:33
+ Info,   was moved to Wrong Files folder,  _062230629 — копия.xml,  2016-11-17 21:02:34
+ 
+062230629 — копия.xml
+Exception Type
+IOException
+
+Massage
+Невозможно создать файл, так как он уже существует.
+
+
+Stack Trace
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   в System.IO.File.Move(String sourceFileName, String destFileName)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 316
+   в FileManager.FileReader.Read(String directory) в C:\Users\user\Source\Repos\Teamproject\FileManager\FileReader.cs:строка 34
+
+, 2016-11-17 21:03:08
+ 
+062230629 — копия.xml
+Exception Type
+IOException
+
+Massage
+Невозможно создать файл, так как он уже существует.
+
+
+Stack Trace
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   в System.IO.File.Move(String sourceFileName, String destFileName)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 316
+   в FileManager.FileReader.Read(String directory) в C:\Users\user\Source\Repos\Teamproject\FileManager\FileReader.cs:строка 34
+
+, 2016-11-17 21:04:05
+ 
+062230629 — копия.xml
+Exception Type
+IOException
+
+Massage
+Невозможно создать файл, так как он уже существует.
+
+
+Stack Trace
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   в System.IO.File.Move(String sourceFileName, String destFileName)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 316
+   в FileManager.FileReader.Read(String directory) в C:\Users\user\Source\Repos\Teamproject\FileManager\FileReader.cs:строка 34
+
+, 2016-11-17 21:05:55
+ Info,   was moved to Wrong Files folder,  _062230629 — копия.xml,  2016-11-17 21:05:55
+ Info,   was moved to Wrong Files folder,  _062230629 — копия.xml,  2016-11-17 21:06:36
+ 
+062230629 — копия.xml
+Exception Type
+IOException
+
+Massage
+Невозможно создать файл, так как он уже существует.
+
+
+Stack Trace
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   в System.IO.File.Move(String sourceFileName, String destFileName)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 316
+   в FileManager.FileReader.Read(String directory) в C:\Users\user\Source\Repos\Teamproject\FileManager\FileReader.cs:строка 34
+
+, 2016-11-17 21:08:09
+ Info,   was moved to Wrong Files folder,  062230629 — копия — копия — копия (5) — копия.xml,  2016-11-17 21:08:49
+ Error,  4,  073425693 — копия — копия.xml,  2016-11-17 21:08:49
+ Info,   was moved to Wrong Files folder,  073425693 — копия — копия.xml,  2016-11-17 21:08:49
+ 
+894541eb-9475-4082-b167-54f79239db7f — копия (6) — копия.xml
+Exception Type
+ArgumentOutOfRangeException
+
+Massage
+Заданный аргумент находится вне диапазона допустимых значений.
+Имя параметра: i
+
+Stack Trace
+   в System.Xml.XmlTextReaderImpl.GetAttribute(Int32 i)
+   в System.Xml.XmlTextReader.GetAttribute(Int32 i)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 163
+
+, 2016-11-17 21:09:00
+ Info,   was moved to Wrong Files folder,  894541eb-9475-4082-b167-54f79239db7f — копия (6) — копия.xml,  2016-11-17 21:09:00
+ 
+894541eb-9475-4082-b167-54f79239db7f — копия (7) — копия.xml
+Exception Type
+ArgumentOutOfRangeException
+
+Massage
+Заданный аргумент находится вне диапазона допустимых значений.
+Имя параметра: i
+
+Stack Trace
+   в System.Xml.XmlTextReaderImpl.GetAttribute(Int32 i)
+   в System.Xml.XmlTextReader.GetAttribute(Int32 i)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 163
+
+, 2016-11-17 21:09:00
+ Info,   was moved to Wrong Files folder,  894541eb-9475-4082-b167-54f79239db7f — копия (7) — копия.xml,  2016-11-17 21:09:00
+ 
+894541eb-9475-4082-b167-54f79239db7f — копия (8) — копия.xml
+Exception Type
+ArgumentOutOfRangeException
+
+Massage
+Заданный аргумент находится вне диапазона допустимых значений.
+Имя параметра: i
+
+Stack Trace
+   в System.Xml.XmlTextReaderImpl.GetAttribute(Int32 i)
+   в System.Xml.XmlTextReader.GetAttribute(Int32 i)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 163
+
+, 2016-11-17 21:09:06
+ Info,   was moved to Wrong Files folder,  894541eb-9475-4082-b167-54f79239db7f — копия (8) — копия.xml,  2016-11-17 21:09:06
+ 
+894541eb-9475-4082-b167-54f79239db7f — копия (9) — копия.xml
+Exception Type
+ArgumentOutOfRangeException
+
+Massage
+Заданный аргумент находится вне диапазона допустимых значений.
+Имя параметра: i
+
+Stack Trace
+   в System.Xml.XmlTextReaderImpl.GetAttribute(Int32 i)
+   в System.Xml.XmlTextReader.GetAttribute(Int32 i)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 163
+
+, 2016-11-17 21:09:07
+ Info,   was moved to Wrong Files folder,  894541eb-9475-4082-b167-54f79239db7f — копия (9) — копия.xml,  2016-11-17 21:09:07
+ 
+894541eb-9475-4082-b167-54f79239db7f — копия (11) — копия.xml
+Exception Type
+ArgumentOutOfRangeException
+
+Massage
+Заданный аргумент находится вне диапазона допустимых значений.
+Имя параметра: i
+
+Stack Trace
+   в System.Xml.XmlTextReaderImpl.GetAttribute(Int32 i)
+   в System.Xml.XmlTextReader.GetAttribute(Int32 i)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 163
+
+, 2016-11-17 21:09:13
+ Info,   was moved to Wrong Files folder,  894541eb-9475-4082-b167-54f79239db7f — копия (11) — копия.xml,  2016-11-17 21:09:13
+ 
+894541eb-9475-4082-b167-54f79239db7f — копия (3).xml
+Exception Type
+ArgumentOutOfRangeException
+
+Massage
+Заданный аргумент находится вне диапазона допустимых значений.
+Имя параметра: i
+
+Stack Trace
+   в System.Xml.XmlTextReaderImpl.GetAttribute(Int32 i)
+   в System.Xml.XmlTextReader.GetAttribute(Int32 i)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 163
+
+, 2016-11-17 21:09:17
+ Info,   was moved to Wrong Files folder,  894541eb-9475-4082-b167-54f79239db7f — копия (3).xml,  2016-11-17 21:09:17
+ 
+894541eb-9475-4082-b167-54f79239db7f — копия (3) — копия.xml
+Exception Type
+ArgumentOutOfRangeException
+
+Massage
+Заданный аргумент находится вне диапазона допустимых значений.
+Имя параметра: i
+
+Stack Trace
+   в System.Xml.XmlTextReaderImpl.GetAttribute(Int32 i)
+   в System.Xml.XmlTextReader.GetAttribute(Int32 i)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 163
+
+, 2016-11-17 21:09:21
+ Info,   was moved to Wrong Files folder,  894541eb-9475-4082-b167-54f79239db7f — копия (3) — копия.xml,  2016-11-17 21:09:21
+ 
+894541eb-9475-4082-b167-54f79239db7f — копия (4) — копия.xml
+Exception Type
+ArgumentOutOfRangeException
+
+Massage
+Заданный аргумент находится вне диапазона допустимых значений.
+Имя параметра: i
+
+Stack Trace
+   в System.Xml.XmlTextReaderImpl.GetAttribute(Int32 i)
+   в System.Xml.XmlTextReader.GetAttribute(Int32 i)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 163
+
+, 2016-11-17 21:09:21
+ Info,   was moved to Wrong Files folder,  894541eb-9475-4082-b167-54f79239db7f — копия (4) — копия.xml,  2016-11-17 21:09:21
+ 
+894541eb-9475-4082-b167-54f79239db7f — копия (5) — копия.xml
+Exception Type
+ArgumentOutOfRangeException
+
+Massage
+Заданный аргумент находится вне диапазона допустимых значений.
+Имя параметра: i
+
+Stack Trace
+   в System.Xml.XmlTextReaderImpl.GetAttribute(Int32 i)
+   в System.Xml.XmlTextReader.GetAttribute(Int32 i)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 163
+
+, 2016-11-17 21:09:40
+ Info,   was moved to Wrong Files folder,  894541eb-9475-4082-b167-54f79239db7f — копия (5) — копия.xml,  2016-11-17 21:09:40
+ Info,   was moved to Wrong Files folder,  062230629 — копия — копия — копия (4) — копия.xml,  2016-11-17 21:09:41
+ Info,   was moved to Wrong Files folder,  062230629 — копия — копия — копия (3) — копия.xml,  2016-11-17 21:09:41
+ Info,   was moved to Wrong Files folder,  062204052.xml,  2016-11-17 21:09:41
+ Error,  36,  091317889 — копия.xml,  2016-11-17 21:15:32
+ 
+091317889 — копия.xml
+Exception Type
+IOException
+
+Massage
+Невозможно создать файл, так как он уже существует.
+
+
+Stack Trace
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   в System.IO.File.Move(String sourceFileName, String destFileName)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 316
+   в FileManager.FileReader.Read(String directory) в C:\Users\user\Source\Repos\Teamproject\FileManager\FileReader.cs:строка 34
+
+, 2016-11-17 21:15:32
+ Error,  36,  091317889 — копия.xml,  2016-11-17 21:17:18
+ Info,   was moved to Wrong Files folder,  091317889 — копия.xml,  2016-11-17 21:17:18
+ Error,  36,  091317889 — копия — копия (2).xml,  2016-11-17 21:17:18
+ Info,   was moved to Wrong Files folder,  091317889 — копия — копия (2).xml,  2016-11-17 21:17:18
+ Error,  36,  091317889 — копия — копия.xml,  2016-11-17 21:17:18
+ Info,   was moved to Wrong Files folder,  091317889 — копия — копия.xml,  2016-11-17 21:17:18
+ Error,  36,  091317889 — копия — копия — копия.xml,  2016-11-17 21:17:19
+ Info,   was moved to Wrong Files folder,  091317889 — копия — копия — копия.xml,  2016-11-17 21:17:19
+ Error,  36,  091317889 — копия — копия (3).xml,  2016-11-17 21:17:25
+ Info,   was moved to Wrong Files folder,  091317889 — копия — копия (3).xml,  2016-11-17 21:17:25
+ Error,  36,  091317889 — копия — копия (5).xml,  2016-11-17 21:17:25
+ Info,   was moved to Wrong Files folder,  091317889 — копия — копия (5).xml,  2016-11-17 21:17:25
+ Error,  36,  091317889 — копия — копия (4).xml,  2016-11-17 21:17:26
+ Info,   was moved to Wrong Files folder,  091317889 — копия — копия (4).xml,  2016-11-17 21:17:26
+ Error,  36,  091317889 — копия — копия — копия (4).xml,  2016-11-17 21:17:26
+ Info,   was moved to Wrong Files folder,  091317889 — копия — копия — копия (4).xml,  2016-11-17 21:17:26
+ Error,  36,  091317889 — копия — копия — копия (3).xml,  2016-11-17 21:17:26
+ Info,   was moved to Wrong Files folder,  091317889 — копия — копия — копия (3).xml,  2016-11-17 21:17:26
+ Error,  36,  091317889 — копия — копия (5) — копия.xml,  2016-11-17 21:17:26
+ Info,   was moved to Wrong Files folder,  091317889 — копия — копия (5) — копия.xml,  2016-11-17 21:17:26
+ Error,  36,  091317889 — копия — копия (3) — копия.xml,  2016-11-17 21:17:27
+ Info,   was moved to Wrong Files folder,  091317889 — копия — копия (3) — копия.xml,  2016-11-17 21:17:27
+ Error,  36,  091317889 — копия — копия — копия (3) — копия.xml,  2016-11-17 21:17:27
+ Info,   was moved to Wrong Files folder,  091317889 — копия — копия — копия (3) — копия.xml,  2016-11-17 21:17:27
+ Error,  36,  091317889 — копия — копия (4) — копия.xml,  2016-11-17 21:17:42
+ Info,   was moved to Wrong Files folder,  091317889 — копия — копия (4) — копия.xml,  2016-11-17 21:17:42
+ Error,  36,  091317889 — копия — копия — копия — копия.xml,  2016-11-17 21:17:46
+ Info,   was moved to Wrong Files folder,  091317889 — копия — копия — копия — копия.xml,  2016-11-17 21:17:46
+ Error,  36,  091317889 — копия — копия — копия — копия (2).xml,  2016-11-17 21:17:48
+ Info,   was moved to Wrong Files folder,  091317889 — копия — копия — копия — копия (2).xml,  2016-11-17 21:17:48
+ Error,  36,  091317889 — копия — копия — копия (2) — копия.xml,  2016-11-17 21:17:52
+ Info,   was moved to Wrong Files folder,  091317889 — копия — копия — копия (2) — копия.xml,  2016-11-17 21:17:52
+ Error,  36,  091317889 — копия — копия — копия (2).xml,  2016-11-17 21:17:55
+ Info,   was moved to Wrong Files folder,  091317889 — копия — копия — копия (2).xml,  2016-11-17 21:17:55
+ Error,  36,  091317889 — копия — копия (2) — копия.xml,  2016-11-17 21:17:57
+ Info,   was moved to Wrong Files folder,  091317889 — копия — копия (2) — копия.xml,  2016-11-17 21:17:57
+ Error,  4,  092202874.xml,  2016-11-17 21:30:13
+ 
+092202874.xml
+Exception Type
+NotSupportedException
+
+Massage
+Данный формат пути не поддерживается.
+
+Stack Trace
+   в System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   в System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   в System.IO.File.Move(String sourceFileName, String destFileName)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 319
+   в FileManager.FileReader.Read(String directory) в C:\Users\user\Source\Repos\Teamproject\FileManager\FileReader.cs:строка 34
+
+, 2016-11-17 21:30:13
+ Error,  4,  092202874.xml,  2016-11-17 21:30:43
+ 
+092202874.xml
+Exception Type
+NotSupportedException
+
+Massage
+Данный формат пути не поддерживается.
+
+Stack Trace
+   в System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   в System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   в System.IO.File.Move(String sourceFileName, String destFileName)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 319
+   в FileManager.FileReader.Read(String directory) в C:\Users\user\Source\Repos\Teamproject\FileManager\FileReader.cs:строка 34
+
+, 2016-11-17 21:30:43
+ Error,  4,  092202874.xml,  2016-11-17 21:31:01
+ Error,  4,  092202874.xml,  2016-11-17 21:44:05
+ Error,  4,  092202874.xml,  2016-11-17 21:54:22
+ 
+092202874.xml
+Exception Type
+FileNotFoundException
+
+Massage
+Файл 'C:\20161117215422_092202874.xml' не найден.
+
+Stack Trace
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   в System.IO.File.Move(String sourceFileName, String destFileName)
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 333
+   в FileManager.FileReader.Read(String directory) в C:\Users\user\Source\Repos\Teamproject\FileManager\FileReader.cs:строка 34
+
+, 2016-11-17 21:54:22
+ Error,  4,  092202874.xml,  2016-11-17 21:54:36
+ Error,  4,  092202874.xml,  2016-11-17 21:58:40
+ Error,  4,  092202874.xml,  2016-11-17 21:59:14
+ Error,  4,  092202874.xml,  2016-11-17 22:00:55
+ Error,  4,  092202874.xml,  2016-11-17 22:02:55
+ Error,  4,  092202874.xml,  2016-11-17 22:03:20
+ Error,  4,  092202874.xml,  2016-11-17 22:08:08
+ Info,   was moved to Wrong Files folder,  092202874.xml,  2016-11-17 22:08:27
+ 
+092202874.xml
+Exception Type
+IOException
+
+Massage
+Невозможно создать файл, так как он уже существует.
+
+
+Stack Trace
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   в System.IO.File.Move(String sourceFileName, String destFileName)
+   в FileManager.FileReader.Read(String directory) в C:\Users\user\Source\Repos\Teamproject\FileManager\FileReader.cs:строка 55
+
+, 2016-11-17 22:14:02
+ Warning,   file was empty and moved to Wrong Files folder,  092202874 — копия (3).xml,  2016-11-17 22:14:02
+ Warning,   file was empty and moved to Wrong Files folder,  092202874 — копия.xml,  2016-11-17 22:14:02
+ Warning,   file was empty and moved to Wrong Files folder,  092202874 — копия (2).xml,  2016-11-17 22:14:02
+ Warning,   file was empty and moved to Wrong Files folder,  092202874 — копия (4).xml,  2016-11-17 22:14:02
+ Warning,   file was empty and moved to Wrong Files folder,  092202874 — копия (5).xml,  2016-11-17 22:14:02
+ Warning,   has uexpected file extention and moved to Wrong Files folder,  debug.log,  2016-11-18 13:04:22
+ Warning,   has uexpected file extention and moved to Wrong Files folder,  loading.gif,  2016-11-18 13:04:35
+ Warning,   file was empty and moved to Wrong Files folder,  New Text Document.txt,  2016-11-18 13:04:44
+ Error,  6,  013025002.csv,  2016-11-18 13:30:59
+ Info,   was moved to Wrong Files folder,  013025002.csv,  2016-11-18 13:30:59

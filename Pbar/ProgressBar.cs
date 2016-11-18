@@ -53,30 +53,37 @@ namespace Pbar
         {
             lock (obj)
             {
-                Console.SetCursorPosition(0, index);
+                int x = info.Length + message.Length + type.Length;
+                x = x / Console.WindowWidth+1;
+                Console.SetCursorPosition(0, index + x);
                 Console.WriteLine("{0},  {1},  {2}", info, message, type);
                 currentCursor = currentCursordynamic;
-                index++;
+                index = index + x;
             }
         }
         public static void Print(string str)
         {
             lock (obj)
             {
-                Console.SetCursorPosition(0, index);
+                int x = str.Length;
+                x = x / Console.WindowWidth+1;
+                Console.SetCursorPosition(0, index + x);
                 Console.WriteLine(str);
                 currentCursor = currentCursordynamic;
-                index++;
+                index = index + x;
             }
         }
         public static void Print(string info, Exception ex)
         {
             lock (obj)
             {
-                Console.SetCursorPosition(0, index);
+                int x = info.Length + ex.Message.Length;
+                x = x / Console.WindowWidth+1;
+
+                Console.SetCursorPosition(0, index + x);
                 Console.WriteLine("{0},  {1}", info, ex.Message);
                 currentCursor = currentCursordynamic;
-                index++;
+                index = index + x;
             }
         }
         private static void ClearCurrentConsoleLine()
