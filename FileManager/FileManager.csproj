@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="ChangeFileName.cs" />
     <Compile Include="DirectoryReader.cs" />
+    <Compile Include="FileConverter.cs" />
     <Compile Include="FileReader.cs" />
     <Compile Include="FolderMonitor.cs" />
     <Compile Include="CsvParser.cs" />

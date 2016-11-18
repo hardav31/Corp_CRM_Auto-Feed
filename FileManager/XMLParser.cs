@@ -280,19 +280,11 @@ namespace FileManager
                     {
                         if (AppConfigManager.appSettings.SaveInJson)
                         {
-                            ProgressBar.Print("Starting converting data to Json format");
-                            StringBuilder sb = new StringBuilder();
-                            JsonParser jsParser = new JsonParser();
-                            jsParser.FilePath = sb.Append(AppConfigManager.appSettings.JsonFolderPath + jsParser.jsonFoldername(direction)).ToString();
-                            jsParser.JsonWrite(TeamsD, ProjectsD);
-                            ProgressBar.Print(" Data was converted to Json format ");
+                            FileConverter.fileConverter.ConverToJson(TeamsD, ProjectsD, direction);
                         }
                         if (AppConfigManager.appSettings.SaveInDB)
                         {
-                            ProgressBar.Print("Starting storing data in DataBase");
-                            DataUpdater dUpdater = new DataUpdater();
-                            dUpdater.UpdateData(TeamsD);
-                            ProgressBar.Print(" Data was stored in DataBase");
+                            FileConverter.fileConverter.StoreInDB(TeamsD);
                         }
                     }
                 }
