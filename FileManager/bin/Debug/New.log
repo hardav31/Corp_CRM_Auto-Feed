@@ -8744,3 +8744,4 @@ Stack Trace
  Info,   was moved to Wrong Files folder,  013025002.csv,  2016-11-18 13:30:59
  Error,  6,  013025002_20161118133059826.csv,  2016-11-18 14:50:50
  Info,   was moved to Wrong Files folder,  013025002_20161118133059826.csv,  2016-11-18 14:50:50
+ Warning,   file was empty and has moved to Wrong File's folder,  054428110.csv,  2016-11-18 16:59:34

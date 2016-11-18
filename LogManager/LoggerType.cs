@@ -8,7 +8,42 @@ namespace LogManager
 
         protected LoggerType() { }
         private static ILogger logger;
-        public static void CreateLogger(AppConfigManager reader)
+        //public static void CreateLogger(bool logToConsole, bool logToEventLog, bool logToFile)
+        //{
+         public static void CreateLogger(AppConfigManager reader)
+
+
+        //    if (logToConsole && logToEventLog && logToFile)
+        //    {
+        //        CreateLogger(new FileWinEventConsoleLogger());
+        //    }
+        //    else if (logToConsole && logToEventLog && !logToFile)
+        //    {
+        //        CreateLogger(new WinEventConsoleLogger());
+        //    }
+        //    else if (logToConsole && !logToEventLog && logToFile)
+        //    {
+        //        CreateLogger(new FileConsoleLogger());
+        //    }
+        //    else if(!logToConsole && logToEventLog && logToFile)
+        //    {
+        //        CreateLogger(new FileWinEventLogger());
+        //    }
+        //    else if(!logToConsole && !logToEventLog && logToFile)
+        //    {
+        //        CreateLogger(new FileLogger());
+        //    }
+        //    else if(!logToConsole && logToEventLog && !logToFile)
+        //    {
+        //        CreateLogger(new WinEventLogger());
+        //    }
+        //    else if(logToConsole && !logToEventLog && !logToFile)
+        //    {
+        //        CreateLogger(new ConsoleLogger());
+        //    }
+
+        //}
+
         {
 
             if (reader.LogToConsole && reader.LogToEventLog && reader.LogToFile)
@@ -23,19 +58,19 @@ namespace LogManager
             {
                 CreateLogger(new FileConsoleLogger());
             }
-            else if(!reader.LogToConsole && reader.LogToEventLog && reader.LogToFile)
+            else if (!reader.LogToConsole && reader.LogToEventLog && reader.LogToFile)
             {
                 CreateLogger(new FileWinEventLogger());
             }
-            else if(!reader.LogToConsole && !reader.LogToEventLog && reader.LogToFile)
+            else if (!reader.LogToConsole && !reader.LogToEventLog && reader.LogToFile)
             {
                 CreateLogger(new FileLogger());
             }
-            else if(!reader.LogToConsole && reader.LogToEventLog && !reader.LogToFile)
+            else if (!reader.LogToConsole && reader.LogToEventLog && !reader.LogToFile)
             {
                 CreateLogger(new WinEventLogger());
             }
-            else if(reader.LogToConsole && !reader.LogToEventLog && !reader.LogToFile)
+            else if (reader.LogToConsole && !reader.LogToEventLog && !reader.LogToFile)
             {
                 CreateLogger(new ConsoleLogger());
             }

@@ -10,6 +10,7 @@ namespace FileManager
         static void Main(string[] args)
         {
             AppConfigManager.appSettings.AppReader();
+            //LoggerType.CreateLogger(AppConfigManager.appSettings.LogToConsole, AppConfigManager.appSettings.LogToEventLog, AppConfigManager.appSettings.LogToFile);
             LoggerType.CreateLogger(AppConfigManager.appSettings);
             FolderMonitor check = new FolderMonitor(AppConfigManager.appSettings.FolderMonitorPath);
             DirectoryReader.directoryReader.ReadAllFiles(AppConfigManager.appSettings.FolderMonitorPath);
