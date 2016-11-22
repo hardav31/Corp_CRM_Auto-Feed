@@ -41,3 +41,4 @@ C:\Users\Galust\Source\Repos\Teamproject\Models\bin\Debug\Models.pdb
 C:\Users\Galust\Source\Repos\Teamproject\Models\obj\Debug\Models.dll
 C:\Users\Galust\Source\Repos\Teamproject\Models\obj\Debug\Models.pdb
 C:\Users\Galust\Source\Repos\Teamproject\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+C:\Users\ldavtyan\Desktop\PR Project\New\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
