@@ -4,9 +4,7 @@ using System.Linq;
 using System.Xml;
 using Models;
 using System.IO;
-using System.Text;
 using App_Configuration;
-using DataManager;
 using Pbar;
 using LogManager;
 

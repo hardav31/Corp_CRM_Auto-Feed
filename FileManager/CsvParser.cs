@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Models;
-using System.Text;
 using LogManager;
-using DataManager;
 using App_Configuration;
 using Pbar;
 
@@ -21,7 +19,7 @@ namespace FileManager
 
         public void CSVFileReader(string direction)
         {
-            int i = 0;
+            int i = 1;
             int team_Id;
             int member_Id;
             int project_Id;
