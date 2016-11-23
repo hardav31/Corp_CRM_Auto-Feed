@@ -13,6 +13,6 @@ namespace FileGenerator
         public List<Project> Projects { get; set; }
         [XmlArray("Teams")]
         [XmlArrayItem("Team")]
-        public List<xTeam> xTeams { get; set; }
+        public List<SerializableTeam> xTeams { get; set; }
     }
 }
