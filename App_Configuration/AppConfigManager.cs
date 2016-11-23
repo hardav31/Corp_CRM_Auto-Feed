@@ -16,7 +16,7 @@ namespace App_Configuration
         {
         }
         public string ConString { get; set; }
-        public string JsonFolderPath{ get; set; }
+        public string JsonFolderPath { get; set; }
         public bool SaveInDB { get; set; }
         public bool SaveInJson { get; set; }
         public bool LogToFile { get; set; }
@@ -32,6 +32,8 @@ namespace App_Configuration
         {
             Dictionary<string, string> AppDictionary = ConfigurationManager.AppSettings.AllKeys.ToDictionary(
                                                                             k => k, v => ConfigurationManager.AppSettings[v]);
+
+            string filePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
             bool value;
             ConString = AppDictionary["conString"];
@@ -63,10 +65,10 @@ namespace App_Configuration
             }
 
             if (!Directory.Exists(FolderMonitorPath))
-            {
-                ProgressBar.Print("Wrong directory for Monitoring");
-                Console.ReadKey();
-                Environment.Exit(0);                
+            {                
+                string directoryForFolderMonitor = filePath + @"\FolderMonitorPath";
+                Directory.CreateDirectory(directoryForFolderMonitor);
+                FolderMonitorPath = directoryForFolderMonitor;               
             }
 
             if (SaveInDB)
@@ -90,19 +92,19 @@ namespace App_Configuration
             {
                 if (!Directory.Exists(JsonFolderPath))
                 {
-                    ProgressBar.Print("Wrong directory for Json");
-                    Console.ReadKey();
-                    Environment.Exit(0);
+                    string directoruForJson = filePath + @"\JsonFolderPath\";
+                    Directory.CreateDirectory(directoruForJson);
+                    JsonFolderPath = directoruForJson;
                 }
             }
 
             if (!Directory.Exists(WrongFilePath))
             {
-                ProgressBar.Print("Directory of wrong files is invalid");
-                Console.ReadKey();
-                Environment.Exit(0);
+                string directoryForWrongFiles = filePath + @"\WrongFilePath\";
+                Directory.CreateDirectory(directoryForWrongFiles);
+                WrongFilePath = directoryForWrongFiles;
             }
-            
+
 
         }
     }
