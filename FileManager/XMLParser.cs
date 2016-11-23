@@ -308,6 +308,7 @@ namespace FileManager
                 }
                 else
                 {
+                    LoggerType.WriteToLog(LogType.Info, " Data was successfully saved", Path.GetFileName(direction));
                     File.Delete(direction);
                     ProgressBar.Print($"{ Path.GetFileName(direction)} file was deleted at {DateTime.Now}");
                 }

@@ -1,9 +1,11 @@
 ﻿using App_Configuration;
 using DataManager;
+using LogManager;
 using Models;
 using Pbar;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 
@@ -24,7 +26,6 @@ namespace FileManager
 
             JsonParser.JsonParserObject.FilePath = sb.Append(String.Concat(AppConfigManager.appSettings.JsonFolderPath + direction.AppendTimeStamp() + ".txt")).ToString();
             JsonParser.JsonParserObject.JsonSerializer(TeamsD, ProjectsD);
-            ProgressBar.Print(" Data was successfully converted to Json format ");
         }
 
         public void StoreInDB(Dictionary<int, Team> TeamsD)
@@ -32,7 +33,7 @@ namespace FileManager
             ProgressBar.Print("Starting to store data in DataBase");
             DataUpdater dUpdater = new DataUpdater();
             dUpdater.UpdateData(TeamsD, DAL.DBType.SQL);
-            ProgressBar.Print(" Data was successfully stored in DataBase");
+
         }
     }
 }
