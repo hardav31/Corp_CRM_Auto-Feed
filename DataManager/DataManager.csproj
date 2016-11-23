@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommandParameter.cs" />
     <Compile Include="DataUpdater.cs" />
     <Compile Include="DTable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

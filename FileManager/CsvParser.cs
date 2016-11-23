@@ -94,6 +94,7 @@ namespace FileManager
                     {
                         if (MembersD[member_Id].Projects.Contains(ProjectsD[project_Id]))
                         {
+                            ProgressBar.Print("----------------------");
                             continue;
                         }
                     }

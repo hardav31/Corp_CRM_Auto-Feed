@@ -41,9 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBConnection.cs" />
+    <Compile Include="DBType.cs" />
+    <Compile Include="SQLDBConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLCommandParameter.cs" />
     <Compile Include="SQLHelper.cs" />
+    <Compile Include="SQLUpdater.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\App_Configuration\App_Configuration.csproj">

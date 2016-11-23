@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace FileManager
 {
     class FileConverter
@@ -20,8 +21,8 @@ namespace FileManager
         {
             ProgressBar.Print("Starting to convert data to Json format");
             StringBuilder sb = new StringBuilder();
-          
-            JsonParser.JsonParserObject.FilePath = sb.Append(String.Concat(AppConfigManager.appSettings.JsonFolderPath + direction.AppendTimeStamp()+".txt")).ToString();
+
+            JsonParser.JsonParserObject.FilePath = sb.Append(String.Concat(AppConfigManager.appSettings.JsonFolderPath + direction.AppendTimeStamp() + ".txt")).ToString();
             JsonParser.JsonParserObject.JsonSerializer(TeamsD, ProjectsD);
             ProgressBar.Print(" Data was successfully converted to Json format ");
         }
@@ -30,7 +31,7 @@ namespace FileManager
         {
             ProgressBar.Print("Starting to store data in DataBase");
             DataUpdater dUpdater = new DataUpdater();
-            dUpdater.UpdateData(TeamsD);
+            dUpdater.UpdateData(TeamsD, DAL.DBType.SQL);
             ProgressBar.Print(" Data was successfully stored in DataBase");
         }
     }
