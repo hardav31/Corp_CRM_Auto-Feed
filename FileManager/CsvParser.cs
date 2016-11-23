@@ -110,7 +110,12 @@ namespace FileManager
                         TeamsD[team_Id].Members.Add(MembersD[member_Id]);
                     }
                 }
+                ProgressBar.Print(ProjectsD.Count.ToString());
 
+                foreach (int id in ProjectsD.Keys)
+                {
+                    ProgressBar.Print(id.ToString());
+                }
 
                 if (IsAllRight)
                 {
