@@ -21,6 +21,7 @@ namespace FileManager
 
         public void XMLFileReader(string direction)
         {
+            string fileName = Path.GetFileName(direction);
             bool IsAllRight = true;
             Dictionary<int, Team> TeamsD = new Dictionary<int, Team>();
             HashSet<int> MembersH = new HashSet<int>();// for compare all Member's 
@@ -89,7 +90,7 @@ namespace FileManager
                                     }
                                     else
                                     {
-                                        LoggerType.WriteToLog(LogType.Error, Path.GetFileName(direction), xml.LineNumber.ToString());
+                                        LoggerType.WriteToLog(LogType.Error, fileName, xml.LineNumber.ToString());
                                         xml.Skip();
                                     }
                                 }
@@ -144,7 +145,7 @@ namespace FileManager
                                     }
                                     if (!IsAllRight)
                                     {
-                                        LoggerType.WriteToLog(LogType.Error, Path.GetFileName(direction), xml.LineNumber.ToString());
+                                        LoggerType.WriteToLog(LogType.Error, fileName, xml.LineNumber.ToString());
                                     }
                                 }
                                 #endregion
@@ -223,7 +224,7 @@ namespace FileManager
                                     else
                                     {
                                         IsAllRight = false;
-                                        LoggerType.WriteToLog(LogType.Error, Path.GetFileName(direction), xml.LineNumber.ToString());
+                                        LoggerType.WriteToLog(LogType.Error, fileName, xml.LineNumber.ToString());
                                     }
                                 }
                                 #endregion                            
@@ -249,7 +250,7 @@ namespace FileManager
                                 else
                                 {
                                     IsAllRight = false;
-                                    LoggerType.WriteToLog(LogType.Error, Path.GetFileName(direction), xml.LineNumber.ToString());
+                                    LoggerType.WriteToLog(LogType.Error, fileName, xml.LineNumber.ToString());
                                 }
                                 #endregion
                                 break;
@@ -292,25 +293,25 @@ namespace FileManager
             catch (IOException e)
             {
                 IsAllRight = false;
-                LoggerType.WriteToLog(Path.GetFileName(direction), e);
+                LoggerType.WriteToLog(fileName, e);
             }
             catch (Exception e)
             {
                 IsAllRight = false;
-                LoggerType.WriteToLog(Path.GetFileName(direction), e);
+                LoggerType.WriteToLog(fileName, e);
             }
             finally
             {
                 if (!IsAllRight)
                 {
                     File.Move(direction, AppConfigManager.appSettings.WrongFilePath + direction.AppendTimeStamp());
-                    LoggerType.WriteToLog(LogType.Info, Path.GetFileName(direction), " was moved to Wrong Files folder");
+                    LoggerType.WriteToLog(LogType.Info, fileName, " was moved to Wrong Files folder");
                 }
                 else
                 {
-                    LoggerType.WriteToLog(LogType.Info, " Data was successfully saved", Path.GetFileName(direction));
+                    LoggerType.WriteToLog(LogType.Info, " Data was successfully saved", fileName);
                     File.Delete(direction);
-                    ProgressBar.Print($"{ Path.GetFileName(direction)} file was deleted at {DateTime.Now}");
+                    ProgressBar.Print($"{ fileName} file was deleted at {DateTime.Now}");
                 }
             }
 

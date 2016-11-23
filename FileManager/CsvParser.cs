@@ -19,6 +19,7 @@ namespace FileManager
 
         public void CSVFileReader(string direction)
         {
+            string fileName = Path.GetFileName(direction);
             int i = 1;
             int team_Id;
             int member_Id;
@@ -39,7 +40,7 @@ namespace FileManager
 
                     if (line.Length != 10)
                     {
-                        LoggerType.WriteToLog(LogType.Warning, Path.GetFileName(direction), i.ToString());
+                        LoggerType.WriteToLog(LogType.Warning, fileName, i.ToString());
                         IsAllRight = false;
                         break;
                     }
@@ -47,28 +48,28 @@ namespace FileManager
 
                     if (Array.Exists(line, s => string.IsNullOrEmpty(s)))
                     {
-                        LoggerType.WriteToLog(LogType.Warning, Path.GetFileName(direction), i.ToString());
+                        LoggerType.WriteToLog(LogType.Warning, fileName, i.ToString());
                         IsAllRight = false;
                         break;
                     }
 
                     if (!int.TryParse(line[0], out team_Id) || team_Id < 0)
                     {
-                        LoggerType.WriteToLog(LogType.Error, Path.GetFileName(direction), i.ToString());
+                        LoggerType.WriteToLog(LogType.Error, fileName, i.ToString());
                         IsAllRight = false;
                         break;
                     }
 
                     if (!int.TryParse(line[2], out member_Id) || member_Id < 0)
                     {
-                        LoggerType.WriteToLog(LogType.Error, Path.GetFileName(direction), i.ToString());
+                        LoggerType.WriteToLog(LogType.Error, fileName, i.ToString());
                         IsAllRight = false;
                         break;
                     }
 
                     if (!int.TryParse(line[5], out project_Id) || project_Id < 0)
                     {
-                        LoggerType.WriteToLog(LogType.Error, Path.GetFileName(direction), i.ToString());
+                        LoggerType.WriteToLog(LogType.Error, fileName, i.ToString());
                         IsAllRight = false;
                         break;
                     }
@@ -136,13 +137,13 @@ namespace FileManager
                 if (!IsAllRight)
                 {
                     File.Move(direction, AppConfigManager.appSettings.WrongFilePath + direction.AppendTimeStamp());
-                    LoggerType.WriteToLog(LogType.Info, Path.GetFileName(direction), " was moved to Wrong Files folder");
+                    LoggerType.WriteToLog(LogType.Info, fileName, " was moved to Wrong Files folder");
                 }
                 else
                 {
-                    LoggerType.WriteToLog(LogType.Info, " Data was successfully saved",Path.GetFileName(direction));
+                    LoggerType.WriteToLog(LogType.Info, " Data was successfully saved", fileName);
                     File.Delete(direction);
-                    ProgressBar.Print($"{ Path.GetFileName(direction)} file was deleted at {DateTime.Now}");
+                    ProgressBar.Print($"{ fileName} file was deleted at {DateTime.Now}");
                 }
             }
         }
