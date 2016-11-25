@@ -5,7 +5,7 @@ using System.Xml.Serialization;
 namespace FileGenerator
 {
     [Serializable]
-    public class xMember
+    public class SerializableMember
     {
         [XmlAttribute]
         public int MemberID { get; set; }
@@ -17,11 +17,11 @@ namespace FileGenerator
         [XmlElement("ProjectID")]
         public List<int> ProjectIDs;
 
-        public xMember()
+        public SerializableMember()
         {
 
         }
-        public xMember(int memberId, string memberName, string memberSurname)
+        public SerializableMember(int memberId, string memberName, string memberSurname)
         {
             MemberID = memberId;
             MemberName = memberName;

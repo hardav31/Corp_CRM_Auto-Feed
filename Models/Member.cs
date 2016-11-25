@@ -5,14 +5,10 @@ using System.Xml.XmlConfiguration;
 
 namespace Models
 {
-    [Serializable]
     public class Member
     {
-        [XmlAttribute]
         public int MemberID { get; set; }
-        [XmlAttribute]
         public string MemberName { get; set; }
-        [XmlAttribute]
         public string MemberSurname { get; set; }
         public List<Project> Projects;
 

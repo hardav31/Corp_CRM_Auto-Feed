@@ -36,3 +36,17 @@ C:\Users\Galust\Source\Repos\Teamproject\App_Configuration\bin\Debug\Pbar.pdb
 C:\Users\Galust\Source\Repos\Teamproject\App_Configuration\obj\Debug\App_Configuration.csprojResolveAssemblyReference.cache
 C:\Users\Galust\Source\Repos\Teamproject\App_Configuration\obj\Debug\App_Configuration.dll
 C:\Users\Galust\Source\Repos\Teamproject\App_Configuration\obj\Debug\App_Configuration.pdb
+C:\Users\LabUser08\Desktop\New folder (3)\App_Configuration\bin\Debug\App_Configuration.dll
+C:\Users\LabUser08\Desktop\New folder (3)\App_Configuration\bin\Debug\App_Configuration.pdb
+C:\Users\LabUser08\Desktop\New folder (3)\App_Configuration\bin\Debug\Pbar.dll
+C:\Users\LabUser08\Desktop\New folder (3)\App_Configuration\bin\Debug\Pbar.pdb
+C:\Users\LabUser08\Desktop\New folder (3)\App_Configuration\obj\Debug\App_Configuration.csprojResolveAssemblyReference.cache
+C:\Users\LabUser08\Desktop\New folder (3)\App_Configuration\obj\Debug\App_Configuration.dll
+C:\Users\LabUser08\Desktop\New folder (3)\App_Configuration\obj\Debug\App_Configuration.pdb
+C:\Users\LabUser08\Desktop\New folder (4)\App_Configuration\bin\Debug\App_Configuration.dll
+C:\Users\LabUser08\Desktop\New folder (4)\App_Configuration\bin\Debug\App_Configuration.pdb
+C:\Users\LabUser08\Desktop\New folder (4)\App_Configuration\bin\Debug\Pbar.dll
+C:\Users\LabUser08\Desktop\New folder (4)\App_Configuration\bin\Debug\Pbar.pdb
+C:\Users\LabUser08\Desktop\New folder (4)\App_Configuration\obj\Debug\App_Configuration.csprojResolveAssemblyReference.cache
+C:\Users\LabUser08\Desktop\New folder (4)\App_Configuration\obj\Debug\App_Configuration.dll
+C:\Users\LabUser08\Desktop\New folder (4)\App_Configuration\obj\Debug\App_Configuration.pdb

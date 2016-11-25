@@ -1,42 +1,40 @@
 ﻿using DAL;
-using LogManager;
 using Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
 
 namespace DataManager
 {
     public class DataUpdater
     {
-        public void UpdateData(Dictionary<int, Team> teamsD)
+        public void UpdateData(object data, DBType type)
         {
-            try
+            switch (type)
             {
-                using (DTable dTable = new DTable())
-                {
-                    DataTable dt = dTable.Create();
+                case DBType.SQL:
+                    {
+                        try
+                        {
+                            using (DTable dTable = new DTable())
+                            {
+                                DataTable dt = dTable.Create();
 
-                    var filledDT = dTable.Fill(dt, teamsD);
+                                var filledDT = dTable.Fill(dt, data as Dictionary<int, Team>);
 
-                    CommandParameter cmdParam = new CommandParameter();
-                    cmdParam.AddParameter("@sourcetable", filledDT);
-                    var parameters=cmdParam.GetSqlParameters();
+                                SQLUpdater sqlUpdater = new SQLUpdater();
+                                sqlUpdater.Update(filledDT);
+                                break;
+                            }
+                        }
 
-                    using (DBConnection dbcon = new DBConnection())
-                    { 
-                        SQLHelper sqlHelper = new SQLHelper();
-                        sqlHelper.ExecuteNonQuery(dbcon.Connection, "dbo.insertData", CommandType.StoredProcedure, parameters);
+                        catch (Exception e)
+                        {
+                            throw e;
+                        }
                     }
-                }
             }
-            catch (Exception e)
-            {
-                throw e;
-            }
-
-
         }
     }
 }
+

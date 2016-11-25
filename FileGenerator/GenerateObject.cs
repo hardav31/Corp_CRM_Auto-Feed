@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Windows.Forms;
 
 namespace FileGenerator
 {
@@ -28,18 +29,23 @@ namespace FileGenerator
         }
         private void GenerateMember()
         {
+            int k = 0;
             for (int i = 0; i < mCount; i++)
             {
                 int id = int.Parse(DateTime.Now.ToString("hhmmssfff"));
                 members.Add(i, new Member(id + i, "Name" + id + i, "Surname" + id + i));
-                int r_count = rand.Next(1, 5);
-                for (int j = 0; j < r_count;)
+
+                int r_count = pCount / mCount;
+                if (r_count < 1) r_count = 1;
+
+                for (int j = 0; j < r_count + 1;)
                 {
-                    var pIndex = rand.Next(0, projects.Count);
-                    if (!members[i].Projects.Contains(projects[pIndex]))
+                    members[i].Projects.Add(projects[k]);
+                    j++;
+                    k++;
+                    if (k == projects.Count)
                     {
-                        members[i].Projects.Add(projects[pIndex]);
-                        j++;
+                        k = 0;
                     }
                     if (members[i].Projects.Count == projects.Count)
                     {

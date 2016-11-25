@@ -5,24 +5,24 @@ using System.Xml.Serialization;
 namespace FileGenerator
 {
     [Serializable]
-    public class xTeam
+    public class SerializableTeam
     {
         [XmlAttribute]
         public int TeamID { get; set; }
         [XmlAttribute]
         public string TeamName { get; set; }
         [XmlArrayItem("Member")]
-        public List<xMember> Members;
+        public List<SerializableMember> Members;
 
-        public xTeam()
+        public SerializableTeam()
         {
 
         }
-        public xTeam(int teamId, string teamName)
+        public SerializableTeam(int teamId, string teamName)
         {
             TeamID = teamId;
             TeamName = teamName;
-            Members = new List<xMember>();
+            Members = new List<SerializableMember>();
         }
     }
 }

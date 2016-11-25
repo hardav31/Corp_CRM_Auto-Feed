@@ -57,7 +57,7 @@ namespace FileGenerator
                 {
                     Save sv = new Save(textBox1.Text + $"\\{fileName}.xml");
                     Records rec = new Records();
-                    rec.xTeams = TeamToxTeam.Convert(GenerateObject.generateObject.GetTeamsList());
+                    rec.xTeams = TeamToSerializableTeam.Convert(GenerateObject.generateObject.GetTeamsList());
                     rec.Projects = GenerateObject.generateObject.GetProjectsList();
                     await Task.Run(() => sv.ToXml(rec));
                     buttonEnable(generate);

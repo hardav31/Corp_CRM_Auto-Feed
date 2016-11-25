@@ -52,3 +52,21 @@ C:\Users\Galust\Source\Repos\Teamproject\LogManager\bin\Debug\Pbar.pdb
 C:\Users\Galust\Source\Repos\Teamproject\LogManager\obj\Debug\LogManager.csprojResolveAssemblyReference.cache
 C:\Users\Galust\Source\Repos\Teamproject\LogManager\obj\Debug\LogManager.dll
 C:\Users\Galust\Source\Repos\Teamproject\LogManager\obj\Debug\LogManager.pdb
+C:\Users\LabUser08\Desktop\New folder (3)\LogManager\bin\Debug\LogManager.dll
+C:\Users\LabUser08\Desktop\New folder (3)\LogManager\bin\Debug\LogManager.pdb
+C:\Users\LabUser08\Desktop\New folder (3)\LogManager\bin\Debug\App_Configuration.dll
+C:\Users\LabUser08\Desktop\New folder (3)\LogManager\bin\Debug\Pbar.dll
+C:\Users\LabUser08\Desktop\New folder (3)\LogManager\bin\Debug\App_Configuration.pdb
+C:\Users\LabUser08\Desktop\New folder (3)\LogManager\bin\Debug\Pbar.pdb
+C:\Users\LabUser08\Desktop\New folder (3)\LogManager\obj\Debug\LogManager.csprojResolveAssemblyReference.cache
+C:\Users\LabUser08\Desktop\New folder (3)\LogManager\obj\Debug\LogManager.dll
+C:\Users\LabUser08\Desktop\New folder (3)\LogManager\obj\Debug\LogManager.pdb
+C:\Users\LabUser08\Desktop\New folder (4)\LogManager\bin\Debug\LogManager.dll
+C:\Users\LabUser08\Desktop\New folder (4)\LogManager\bin\Debug\LogManager.pdb
+C:\Users\LabUser08\Desktop\New folder (4)\LogManager\bin\Debug\App_Configuration.dll
+C:\Users\LabUser08\Desktop\New folder (4)\LogManager\bin\Debug\Pbar.dll
+C:\Users\LabUser08\Desktop\New folder (4)\LogManager\bin\Debug\App_Configuration.pdb
+C:\Users\LabUser08\Desktop\New folder (4)\LogManager\bin\Debug\Pbar.pdb
+C:\Users\LabUser08\Desktop\New folder (4)\LogManager\obj\Debug\LogManager.csprojResolveAssemblyReference.cache
+C:\Users\LabUser08\Desktop\New folder (4)\LogManager\obj\Debug\LogManager.dll
+C:\Users\LabUser08\Desktop\New folder (4)\LogManager\obj\Debug\LogManager.pdb

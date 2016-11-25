@@ -137,3 +137,39 @@ C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\DAL.pdb
 C:\Users\Galust\Source\Repos\Teamproject\FileManager\obj\Debug\FileManager.exe
 C:\Users\Galust\Source\Repos\Teamproject\FileManager\obj\Debug\FileManager.pdb
 C:\Users\user\Source\Repos\Teamproject\FileManager\bin\Debug\Newtonsoft.Json.xml
+C:\Users\LabUser08\Desktop\New folder (3)\FileManager\bin\Debug\FileManager.exe.config
+C:\Users\LabUser08\Desktop\New folder (3)\FileManager\obj\Debug\FileManager.exe
+C:\Users\LabUser08\Desktop\New folder (3)\FileManager\obj\Debug\FileManager.pdb
+C:\Users\LabUser08\Desktop\New folder (3)\FileManager\bin\Debug\FileManager.exe
+C:\Users\LabUser08\Desktop\New folder (3)\FileManager\bin\Debug\FileManager.pdb
+C:\Users\LabUser08\Desktop\New folder (3)\FileManager\bin\Debug\App_Configuration.dll
+C:\Users\LabUser08\Desktop\New folder (3)\FileManager\bin\Debug\DAL.dll
+C:\Users\LabUser08\Desktop\New folder (3)\FileManager\bin\Debug\DataManager.dll
+C:\Users\LabUser08\Desktop\New folder (3)\FileManager\bin\Debug\LogManager.dll
+C:\Users\LabUser08\Desktop\New folder (3)\FileManager\bin\Debug\Models.dll
+C:\Users\LabUser08\Desktop\New folder (3)\FileManager\bin\Debug\Pbar.dll
+C:\Users\LabUser08\Desktop\New folder (3)\FileManager\bin\Debug\App_Configuration.pdb
+C:\Users\LabUser08\Desktop\New folder (3)\FileManager\bin\Debug\DAL.pdb
+C:\Users\LabUser08\Desktop\New folder (3)\FileManager\bin\Debug\DataManager.pdb
+C:\Users\LabUser08\Desktop\New folder (3)\FileManager\bin\Debug\LogManager.pdb
+C:\Users\LabUser08\Desktop\New folder (3)\FileManager\bin\Debug\Models.pdb
+C:\Users\LabUser08\Desktop\New folder (3)\FileManager\bin\Debug\Pbar.pdb
+C:\Users\LabUser08\Desktop\New folder (3)\FileManager\obj\Debug\FileManager.csprojResolveAssemblyReference.cache
+C:\Users\LabUser08\Desktop\New folder (4)\FileManager\bin\Debug\FileManager.exe.config
+C:\Users\LabUser08\Desktop\New folder (4)\FileManager\obj\Debug\FileManager.exe
+C:\Users\LabUser08\Desktop\New folder (4)\FileManager\obj\Debug\FileManager.pdb
+C:\Users\LabUser08\Desktop\New folder (4)\FileManager\bin\Debug\FileManager.exe
+C:\Users\LabUser08\Desktop\New folder (4)\FileManager\bin\Debug\FileManager.pdb
+C:\Users\LabUser08\Desktop\New folder (4)\FileManager\bin\Debug\App_Configuration.dll
+C:\Users\LabUser08\Desktop\New folder (4)\FileManager\bin\Debug\DAL.dll
+C:\Users\LabUser08\Desktop\New folder (4)\FileManager\bin\Debug\DataManager.dll
+C:\Users\LabUser08\Desktop\New folder (4)\FileManager\bin\Debug\LogManager.dll
+C:\Users\LabUser08\Desktop\New folder (4)\FileManager\bin\Debug\Models.dll
+C:\Users\LabUser08\Desktop\New folder (4)\FileManager\bin\Debug\Pbar.dll
+C:\Users\LabUser08\Desktop\New folder (4)\FileManager\bin\Debug\App_Configuration.pdb
+C:\Users\LabUser08\Desktop\New folder (4)\FileManager\bin\Debug\DAL.pdb
+C:\Users\LabUser08\Desktop\New folder (4)\FileManager\bin\Debug\DataManager.pdb
+C:\Users\LabUser08\Desktop\New folder (4)\FileManager\bin\Debug\LogManager.pdb
+C:\Users\LabUser08\Desktop\New folder (4)\FileManager\bin\Debug\Models.pdb
+C:\Users\LabUser08\Desktop\New folder (4)\FileManager\bin\Debug\Pbar.pdb
+C:\Users\LabUser08\Desktop\New folder (4)\FileManager\obj\Debug\FileManager.csprojResolveAssemblyReference.cache

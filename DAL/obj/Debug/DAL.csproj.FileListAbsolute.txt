@@ -76,3 +76,29 @@ C:\Users\Galust\Source\Repos\Teamproject\DAL\bin\Debug\Pbar.pdb
 C:\Users\Galust\Source\Repos\Teamproject\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\Galust\Source\Repos\Teamproject\DAL\obj\Debug\DAL.dll
 C:\Users\Galust\Source\Repos\Teamproject\DAL\obj\Debug\DAL.pdb
+C:\Users\LabUser08\Desktop\New folder (3)\DAL\bin\Debug\DAL.dll
+C:\Users\LabUser08\Desktop\New folder (3)\DAL\bin\Debug\DAL.pdb
+C:\Users\LabUser08\Desktop\New folder (3)\DAL\bin\Debug\App_Configuration.dll
+C:\Users\LabUser08\Desktop\New folder (3)\DAL\bin\Debug\LogManager.dll
+C:\Users\LabUser08\Desktop\New folder (3)\DAL\bin\Debug\Models.dll
+C:\Users\LabUser08\Desktop\New folder (3)\DAL\bin\Debug\Pbar.dll
+C:\Users\LabUser08\Desktop\New folder (3)\DAL\bin\Debug\App_Configuration.pdb
+C:\Users\LabUser08\Desktop\New folder (3)\DAL\bin\Debug\LogManager.pdb
+C:\Users\LabUser08\Desktop\New folder (3)\DAL\bin\Debug\Models.pdb
+C:\Users\LabUser08\Desktop\New folder (3)\DAL\bin\Debug\Pbar.pdb
+C:\Users\LabUser08\Desktop\New folder (3)\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\LabUser08\Desktop\New folder (3)\DAL\obj\Debug\DAL.dll
+C:\Users\LabUser08\Desktop\New folder (3)\DAL\obj\Debug\DAL.pdb
+C:\Users\LabUser08\Desktop\New folder (4)\DAL\bin\Debug\DAL.dll
+C:\Users\LabUser08\Desktop\New folder (4)\DAL\bin\Debug\DAL.pdb
+C:\Users\LabUser08\Desktop\New folder (4)\DAL\bin\Debug\App_Configuration.dll
+C:\Users\LabUser08\Desktop\New folder (4)\DAL\bin\Debug\LogManager.dll
+C:\Users\LabUser08\Desktop\New folder (4)\DAL\bin\Debug\Models.dll
+C:\Users\LabUser08\Desktop\New folder (4)\DAL\bin\Debug\Pbar.dll
+C:\Users\LabUser08\Desktop\New folder (4)\DAL\bin\Debug\App_Configuration.pdb
+C:\Users\LabUser08\Desktop\New folder (4)\DAL\bin\Debug\LogManager.pdb
+C:\Users\LabUser08\Desktop\New folder (4)\DAL\bin\Debug\Models.pdb
+C:\Users\LabUser08\Desktop\New folder (4)\DAL\bin\Debug\Pbar.pdb
+C:\Users\LabUser08\Desktop\New folder (4)\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\LabUser08\Desktop\New folder (4)\DAL\obj\Debug\DAL.dll
+C:\Users\LabUser08\Desktop\New folder (4)\DAL\obj\Debug\DAL.pdb

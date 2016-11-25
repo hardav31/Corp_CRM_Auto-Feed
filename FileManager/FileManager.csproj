@@ -68,6 +68,10 @@
       <Project>{CC42D27D-2737-4216-8FCC-6D3EF0EFC955}</Project>
       <Name>App_Configuration</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{8423f123-3119-486b-8a92-2122644363c2}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataManager\DataManager.csproj">
       <Project>{47D45165-BF5A-46F8-9868-32856E277144}</Project>
       <Name>DataManager</Name>

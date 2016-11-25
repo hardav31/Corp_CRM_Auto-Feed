@@ -1,6 +1,8 @@
 ﻿using App_Configuration;
+using Pbar;
 using System;
 using System.Diagnostics;
+using System.Security;
 using System.Text;
 
 
@@ -11,10 +13,23 @@ namespace LogManager
         public EventLog myLog;
         public WinEventLogger()
         {
-            if (!EventLog.SourceExists(AppConfigManager.appSettings.EventLogAppName))
+            try
             {
-                EventLog.CreateEventSource(AppConfigManager.appSettings.EventLogAppName, AppConfigManager.appSettings.EventLogFileName);
+                if (!EventLog.SourceExists(AppConfigManager.appSettings.EventLogAppName))
+                {
+                    EventLog.CreateEventSource(AppConfigManager.appSettings.EventLogAppName, AppConfigManager.appSettings.EventLogFileName);
+                }
             }
+            catch (SecurityException e)
+            {
+                ProgressBar.Print($"{e.GetType()} \nPlease try to run as Administrator ");
+            }
+            catch (Exception e)
+            {
+
+                ProgressBar.Print(e.Message);
+            }
+            
             myLog = new EventLog(AppConfigManager.appSettings.EventLogFileName);
             myLog.Source = AppConfigManager.appSettings.EventLogAppName;
         }
