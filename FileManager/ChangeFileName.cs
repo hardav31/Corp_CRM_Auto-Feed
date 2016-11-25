@@ -8,7 +8,7 @@ namespace FileManager
     {
         public static string AppendTimeStamp(this string fileName)
         {
-            return Path.Combine(
+            return String.Concat(
                 Path.GetFileNameWithoutExtension(fileName) + "_",
                 DateTime.Now.ToString("yyyyMMddHHmmssfff"),
                 Path.GetExtension(fileName)
