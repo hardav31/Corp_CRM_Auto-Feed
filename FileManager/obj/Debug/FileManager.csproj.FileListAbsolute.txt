@@ -136,7 +136,6 @@ C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\Pbar.pdb
 C:\Users\Galust\Source\Repos\Teamproject\FileManager\bin\Debug\DAL.pdb
 C:\Users\Galust\Source\Repos\Teamproject\FileManager\obj\Debug\FileManager.exe
 C:\Users\Galust\Source\Repos\Teamproject\FileManager\obj\Debug\FileManager.pdb
-C:\Users\user\Source\Repos\Teamproject\FileManager\bin\Debug\Newtonsoft.Json.xml
 C:\Users\LabUser08\Desktop\New folder (3)\FileManager\bin\Debug\FileManager.exe.config
 C:\Users\LabUser08\Desktop\New folder (3)\FileManager\obj\Debug\FileManager.exe
 C:\Users\LabUser08\Desktop\New folder (3)\FileManager\obj\Debug\FileManager.pdb

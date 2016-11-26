@@ -91,7 +91,7 @@ namespace FileManager
                                     else
                                     {
                                         LoggerType.WriteToLog(LogType.Error, fileName, xml.LineNumber.ToString());
-                                        xml.Skip();
+                                        IsAllRight = false;
                                     }
                                 }
                                 #endregion

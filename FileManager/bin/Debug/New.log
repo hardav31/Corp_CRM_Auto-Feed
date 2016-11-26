@@ -2526,3 +2526,65 @@ Stack Trace
    at FileManager.FileReader.Read(String directory) in C:\Users\LabUser08\Desktop\New folder (2)\FileManager\FileReader.cs:line 41
 
 , 2016-11-26 13:27:54
+ Error,  26,  071915118.xml,  2016-11-26 21:46:32
+ Info,   was moved to Wrong Files folder,  071915118.xml,  2016-11-26 21:46:32
+ Error,  26,  071915118_20161126214632161.xml,  2016-11-26 21:46:51
+ Info,   was moved to Wrong Files folder,  071915118_20161126214632161.xml,  2016-11-26 21:46:51
+ Error,  12,  071915118_20161126214632161_20161126214651797.xml,  2016-11-26 21:47:07
+ Info,   was moved to Wrong Files folder,  071915118_20161126214632161_20161126214651797.xml,  2016-11-26 21:47:07
+ Error,  12,  071915118_20161126214632161_20161126214651797_20161126214707564.xml,  2016-11-26 21:47:50
+ Info,   was moved to Wrong Files folder,  071915118_20161126214632161_20161126214651797_20161126214707564.xml,  2016-11-26 21:47:50
+ 
+065459394 — копия.xml
+Exception Type
+XmlException
+
+Massage
+Открывающий тег "Team" в позиции 6 строки 6486 не соответствует закрывающему тегу "Members"., строка 6528, позиция 9.
+
+Stack Trace
+   в System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   в System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   в System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   в System.Xml.XmlTextReaderImpl.ParseEndElement()
+   в System.Xml.XmlTextReaderImpl.ParseElementContent()
+   в System.Xml.XmlTextReaderImpl.Read()
+   в System.Xml.XmlTextReader.Read()
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 44
+
+, 2016-11-26 21:49:06
+ Info,   was moved to Wrong Files folder,  065459394 — копия.xml,  2016-11-26 21:49:06
+ Info,  071602850.xml,   Data was successfully saved,  2016-11-26 21:49:38
+ Info,  071606314.xml,   Data was successfully saved,  2016-11-26 21:49:38
+ Info,  071559430.xml,   Data was successfully saved,  2016-11-26 21:49:39
+ Info,  071919847.xml,   Data was successfully saved,  2016-11-26 21:49:39
+ Error,  15,  071607905.xml,  2016-11-26 21:49:39
+ Info,   was moved to Wrong Files folder,  071607905.xml,  2016-11-26 21:49:39
+ Info,  065454212 — копия.csv,   Data was successfully saved,  2016-11-26 21:49:44
+ Error,  15,  071607905 — копия.xml,  2016-11-26 21:49:44
+ Info,   was moved to Wrong Files folder,  071607905 — копия.xml,  2016-11-26 21:49:44
+ Info,  065512036.csv,   Data was successfully saved,  2016-11-26 21:50:09
+ 
+065459394 — копия_20161126214906793.xml
+Exception Type
+XmlException
+
+Massage
+Открывающий тег "Team" в позиции 6 строки 6486 не соответствует закрывающему тегу "Members"., строка 6528, позиция 9.
+
+Stack Trace
+   в System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   в System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   в System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   в System.Xml.XmlTextReaderImpl.ParseEndElement()
+   в System.Xml.XmlTextReaderImpl.ParseElementContent()
+   в System.Xml.XmlTextReaderImpl.Read()
+   в System.Xml.XmlTextReader.Read()
+   в FileManager.XMLParser.XMLFileReader(String direction) в C:\Users\user\Source\Repos\Teamproject\FileManager\XMLParser.cs:строка 44
+
+, 2016-11-26 21:50:30
+ Info,   was moved to Wrong Files folder,  065459394 — копия_20161126214906793.xml,  2016-11-26 21:50:30
+ Error,  15,  071607905 — копия_20161126214944944.xml,  2016-11-26 21:50:30
+ Info,   was moved to Wrong Files folder,  071607905 — копия_20161126214944944.xml,  2016-11-26 21:50:30
+ Error,  15,  071607905_20161126214939657.xml,  2016-11-26 21:50:30
+ Info,   was moved to Wrong Files folder,  071607905_20161126214939657.xml,  2016-11-26 21:50:30
