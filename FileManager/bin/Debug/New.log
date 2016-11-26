@@ -2504,3 +2504,25 @@ Stack Trace
  Info,  111922329.xml,   Data was successfully saved,  2016-11-23 11:28:30
  Info,  111848734.csv,   Data was successfully saved,  2016-11-23 11:29:34
  Info,  111911464.csv,   Data was successfully saved,  2016-11-23 11:50:41
+ Info,  012708446.csv,   Data was successfully saved,  2016-11-26 13:27:54
+ 
+012708446.csv
+Exception Type
+SecurityException
+
+Massage
+The source was not found, but some or all event logs could not be searched.  To create the source, you need permission to read all event logs to make sure that the new source name is unique.  Inaccessible logs: Security.
+
+Stack Trace
+   at System.Diagnostics.EventLog.FindSourceRegistration(String source, String machineName, Boolean readOnly, Boolean wantToCreate)
+   at System.Diagnostics.EventLog.SourceExists(String source, String machineName, Boolean wantToCreate)
+   at System.Diagnostics.EventLogInternal.VerifyAndCreateSource(String sourceName, String currentMachineName)
+   at System.Diagnostics.EventLogInternal.WriteEntry(String message, EventLogEntryType type, Int32 eventID, Int16 category, Byte[] rawData)
+   at System.Diagnostics.EventLog.WriteEntry(String message, EventLogEntryType type)
+   at LogManager.WinEventLogger.WriteToLog(LogType logeType, String info, String message) in C:\Users\LabUser08\Desktop\New folder (2)\LogManager\Loggers\WinEventLogger.cs:line 47
+   at LogManager.FileWinEventConsoleLogger.WriteToLog(LogType logeType, String info, String message) in C:\Users\LabUser08\Desktop\New folder (2)\LogManager\Loggers\FileWinEventConsoleLogger.cs:line 27
+   at LogManager.LoggerType.WriteToLog(LogType logeType, String info, String message) in C:\Users\LabUser08\Desktop\New folder (2)\LogManager\LoggerType.cs:line 52
+   at FileManager.CsvParser.CSVFileReader(String direction) in C:\Users\LabUser08\Desktop\New folder (2)\FileManager\CsvParser.cs:line 144
+   at FileManager.FileReader.Read(String directory) in C:\Users\LabUser08\Desktop\New folder (2)\FileManager\FileReader.cs:line 41
+
+, 2016-11-26 13:27:54

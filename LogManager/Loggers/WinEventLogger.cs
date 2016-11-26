@@ -23,17 +23,20 @@ namespace LogManager
             catch (SecurityException e)
             {
                 ProgressBar.Print($"{e.GetType()} \nPlease try to run as Administrator ");
+                Console.ReadKey();
+                Environment.Exit(0);
             }
             catch (Exception e)
             {
-
                 ProgressBar.Print(e.Message);
+                Console.ReadKey();
+                Environment.Exit(0);
             }
-            
+
             myLog = new EventLog(AppConfigManager.appSettings.EventLogFileName);
             myLog.Source = AppConfigManager.appSettings.EventLogAppName;
         }
-        
+
         public void WriteToLog(string info, Exception ex)
         {
             WriteExceptionToEventLog(info, ex);
