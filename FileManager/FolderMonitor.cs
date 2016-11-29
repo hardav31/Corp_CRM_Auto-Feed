@@ -16,6 +16,7 @@ namespace FileManager
             watcher.EnableRaisingEvents = true;
             watcher.Created += Watcher_Created;
             watcher.Filter = "*.*";
+
              
         }
 
