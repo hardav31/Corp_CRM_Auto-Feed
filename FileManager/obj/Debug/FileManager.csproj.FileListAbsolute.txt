@@ -187,3 +187,6 @@ C:\Users\LabUser08\Desktop\New folder (2)\FileManager\bin\Debug\LogManager.pdb
 C:\Users\LabUser08\Desktop\New folder (2)\FileManager\bin\Debug\Models.pdb
 C:\Users\LabUser08\Desktop\New folder (2)\FileManager\bin\Debug\Pbar.pdb
 C:\Users\LabUser08\Desktop\New folder (2)\FileManager\obj\Debug\FileManager.csprojResolveAssemblyReference.cache
+C:\Users\user\Source\Github\PraemiumProject_\FileManager\bin\Debug\FileManager.exe.config
+C:\Users\user\Source\Github\PraemiumProject_\FileManager\obj\Debug\FileManager.exe
+C:\Users\user\Source\Github\PraemiumProject_\FileManager\obj\Debug\FileManager.pdb
