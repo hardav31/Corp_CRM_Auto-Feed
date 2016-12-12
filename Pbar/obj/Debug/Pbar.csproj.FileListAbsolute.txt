@@ -42,3 +42,8 @@ C:\Users\LabUser08\Desktop\New folder (2)\Pbar\bin\Debug\Pbar.pdb
 C:\Users\LabUser08\Desktop\New folder (2)\Pbar\obj\Debug\Pbar.csprojResolveAssemblyReference.cache
 C:\Users\LabUser08\Desktop\New folder (2)\Pbar\obj\Debug\Pbar.dll
 C:\Users\LabUser08\Desktop\New folder (2)\Pbar\obj\Debug\Pbar.pdb
+C:\Users\user\Source\Repos\TeamProj\Pbar\bin\Debug\Pbar.dll
+C:\Users\user\Source\Repos\TeamProj\Pbar\bin\Debug\Pbar.pdb
+C:\Users\user\Source\Repos\TeamProj\Pbar\obj\Debug\Pbar.csprojResolveAssemblyReference.cache
+C:\Users\user\Source\Repos\TeamProj\Pbar\obj\Debug\Pbar.dll
+C:\Users\user\Source\Repos\TeamProj\Pbar\obj\Debug\Pbar.pdb

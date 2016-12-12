@@ -52,3 +52,8 @@ C:\Users\LabUser08\Desktop\New folder (4)\Models\bin\Debug\Models.pdb
 C:\Users\LabUser08\Desktop\New folder (4)\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
 C:\Users\LabUser08\Desktop\New folder (4)\Models\obj\Debug\Models.dll
 C:\Users\LabUser08\Desktop\New folder (4)\Models\obj\Debug\Models.pdb
+C:\Users\user\Source\Repos\TeamProj\Models\bin\Debug\Models.dll
+C:\Users\user\Source\Repos\TeamProj\Models\bin\Debug\Models.pdb
+C:\Users\user\Source\Repos\TeamProj\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+C:\Users\user\Source\Repos\TeamProj\Models\obj\Debug\Models.dll
+C:\Users\user\Source\Repos\TeamProj\Models\obj\Debug\Models.pdb

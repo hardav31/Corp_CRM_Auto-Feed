@@ -115,3 +115,16 @@ C:\Users\LabUser08\Desktop\New folder (2)\DAL\bin\Debug\Pbar.pdb
 C:\Users\LabUser08\Desktop\New folder (2)\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\LabUser08\Desktop\New folder (2)\DAL\obj\Debug\DAL.dll
 C:\Users\LabUser08\Desktop\New folder (2)\DAL\obj\Debug\DAL.pdb
+C:\Users\user\Source\Repos\TeamProj\DAL\bin\Debug\DAL.dll
+C:\Users\user\Source\Repos\TeamProj\DAL\bin\Debug\DAL.pdb
+C:\Users\user\Source\Repos\TeamProj\DAL\bin\Debug\App_Configuration.dll
+C:\Users\user\Source\Repos\TeamProj\DAL\bin\Debug\LogManager.dll
+C:\Users\user\Source\Repos\TeamProj\DAL\bin\Debug\Models.dll
+C:\Users\user\Source\Repos\TeamProj\DAL\bin\Debug\Pbar.dll
+C:\Users\user\Source\Repos\TeamProj\DAL\bin\Debug\App_Configuration.pdb
+C:\Users\user\Source\Repos\TeamProj\DAL\bin\Debug\LogManager.pdb
+C:\Users\user\Source\Repos\TeamProj\DAL\bin\Debug\Models.pdb
+C:\Users\user\Source\Repos\TeamProj\DAL\bin\Debug\Pbar.pdb
+C:\Users\user\Source\Repos\TeamProj\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\user\Source\Repos\TeamProj\DAL\obj\Debug\DAL.dll
+C:\Users\user\Source\Repos\TeamProj\DAL\obj\Debug\DAL.pdb

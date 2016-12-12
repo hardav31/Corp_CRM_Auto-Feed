@@ -79,3 +79,12 @@ C:\Users\LabUser08\Desktop\New folder (2)\LogManager\bin\Debug\Pbar.pdb
 C:\Users\LabUser08\Desktop\New folder (2)\LogManager\obj\Debug\LogManager.csprojResolveAssemblyReference.cache
 C:\Users\LabUser08\Desktop\New folder (2)\LogManager\obj\Debug\LogManager.dll
 C:\Users\LabUser08\Desktop\New folder (2)\LogManager\obj\Debug\LogManager.pdb
+C:\Users\user\Source\Repos\TeamProj\LogManager\bin\Debug\LogManager.dll
+C:\Users\user\Source\Repos\TeamProj\LogManager\bin\Debug\LogManager.pdb
+C:\Users\user\Source\Repos\TeamProj\LogManager\bin\Debug\App_Configuration.dll
+C:\Users\user\Source\Repos\TeamProj\LogManager\bin\Debug\Pbar.dll
+C:\Users\user\Source\Repos\TeamProj\LogManager\bin\Debug\App_Configuration.pdb
+C:\Users\user\Source\Repos\TeamProj\LogManager\bin\Debug\Pbar.pdb
+C:\Users\user\Source\Repos\TeamProj\LogManager\obj\Debug\LogManager.csprojResolveAssemblyReference.cache
+C:\Users\user\Source\Repos\TeamProj\LogManager\obj\Debug\LogManager.dll
+C:\Users\user\Source\Repos\TeamProj\LogManager\obj\Debug\LogManager.pdb

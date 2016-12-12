@@ -190,3 +190,27 @@ C:\Users\LabUser08\Desktop\New folder (2)\FileManager\obj\Debug\FileManager.cspr
 C:\Users\user\Source\Github\PraemiumProject_\FileManager\bin\Debug\FileManager.exe.config
 C:\Users\user\Source\Github\PraemiumProject_\FileManager\obj\Debug\FileManager.exe
 C:\Users\user\Source\Github\PraemiumProject_\FileManager\obj\Debug\FileManager.pdb
+C:\Users\user\Source\Repos\TeamProj\FileManager\bin\Debug\FileManager.exe.config
+C:\Users\user\Source\Repos\TeamProj\FileManager\obj\Debug\FileManager.exe
+C:\Users\user\Source\Repos\TeamProj\FileManager\obj\Debug\FileManager.pdb
+C:\Users\user\Source\Repos\TeamProj\FileManager\bin\Debug\FileManager.exe
+C:\Users\user\Source\Repos\TeamProj\FileManager\bin\Debug\FileManager.pdb
+C:\Users\user\Source\Repos\TeamProj\FileManager\bin\Debug\App_Configuration.dll
+C:\Users\user\Source\Repos\TeamProj\FileManager\bin\Debug\DAL.dll
+C:\Users\user\Source\Repos\TeamProj\FileManager\bin\Debug\DataManager.dll
+C:\Users\user\Source\Repos\TeamProj\FileManager\bin\Debug\LogManager.dll
+C:\Users\user\Source\Repos\TeamProj\FileManager\bin\Debug\Models.dll
+C:\Users\user\Source\Repos\TeamProj\FileManager\bin\Debug\Pbar.dll
+C:\Users\user\Source\Repos\TeamProj\FileManager\bin\Debug\App_Configuration.pdb
+C:\Users\user\Source\Repos\TeamProj\FileManager\bin\Debug\DAL.pdb
+C:\Users\user\Source\Repos\TeamProj\FileManager\bin\Debug\DataManager.pdb
+C:\Users\user\Source\Repos\TeamProj\FileManager\bin\Debug\LogManager.pdb
+C:\Users\user\Source\Repos\TeamProj\FileManager\bin\Debug\Models.pdb
+C:\Users\user\Source\Repos\TeamProj\FileManager\bin\Debug\Pbar.pdb
+C:\Users\user\Source\Repos\TeamProj\FileManager\obj\Debug\FileManager.csprojResolveAssemblyReference.cache
+C:\Users\hardav31\Documents\Visual Studio 2015\Projects\TeamProj\FileManager\bin\Debug\FileManager.exe.config
+C:\Users\hardav31\Documents\Visual Studio 2015\Projects\TeamProj\FileManager\obj\Debug\FileManager.exe
+C:\Users\hardav31\Documents\Visual Studio 2015\Projects\TeamProj\FileManager\obj\Debug\FileManager.pdb
+C:\Users\hardav31\Documents\Visual Studio 2015\Github\PraemiumTeamProject\FileManager\bin\Debug\FileManager.exe.config
+C:\Users\hardav31\Documents\Visual Studio 2015\Github\PraemiumTeamProject\FileManager\obj\Debug\FileManager.exe
+C:\Users\hardav31\Documents\Visual Studio 2015\Github\PraemiumTeamProject\FileManager\obj\Debug\FileManager.pdb
